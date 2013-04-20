@@ -4,16 +4,6 @@ html, body {
 	height: 100%;
 }
 
-html:lang(ja) h1,
-html:lang(ja) h2,
-html:lang(ja) h3,
-html:lang(ja) h4,
-html:lang(ja) h5,
-html:lang(ja) h6,
-html:lang(ja) heading-text {
-	font-family: "HGP創英角ｺﾞｼｯｸUB", "HGP Gothic UB";
-}
-
 #wrapper {
     min-height: 100%;
     height: auto !important;
@@ -75,7 +65,7 @@ html:lang(ja) heading-text {
 /* Components: sitemap, menu, etc. */
 .sitemap {
 	position: fixed;
-	width: 320px;
+	width: 200px;
 	z-index: 10001;
 	left: 0;
 	top: 0;

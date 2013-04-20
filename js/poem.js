@@ -25,7 +25,7 @@ $(document).ready(function () {
 	$("[data-prompt='today']").attr("placeholder", dateText);
 	
 	// prevent page-load on <a href='#'>Something</a>
-	$("a").live("click", function(e) {
+	$(document).on("click", "a", function(e) {
 		if ($(this).attr("href") === "#") {
 			e.preventDefault();
 		}
@@ -170,7 +170,7 @@ $(document).ready(function () {
 			if (args.timing === "now") {
 				internalPerform();
 			} else {
-				$(selfTag).live(args.timing, internalPerform);
+				$(selfTag).on(args.timing, internalPerform);
 			}
 		});
 		};
