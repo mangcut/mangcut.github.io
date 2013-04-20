@@ -1,47 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>mangcut by Truong Hong Thi</title>
+    <meta charset="utf-8">
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <title>Măng cụt</title>
+	<link href="css/prettify.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/poem.css" rel="stylesheet">
+	<style type="text/css">
+		.containter-first {
+			padding-top: 20px;
+		}
+		section {
+			padding-top: 30px;
+		}
+	</style>
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
-
-        <header>
-          <h1>Măng cụt</h1>
-          <h2>Ăn măng cụt cho đỡ buồn</h2>
-        </header>
-
-        <hr>
-
-        <section id="main_content">
-          <h3>Trang đang xây dựng.</h3>
-            <p>Mời bạn quay lại sau.</p>
-
-<pre><code>foreach (day in life) {
+  
+  <div id="wrapper">
+	<div class="navbar navbar-top navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+			  <div class="brand" style="padding-top:5px;padding-bottom:0px"><img src="img/mangcut.svg" width="30px" height="30px"></div>
+			  <div>
+				<ul class="nav" role="navigation">
+					<li class="active"><a href="#">Blog</a></li>
+					<li><a href="#">Sản phẩm</a></li>
+					<li><a href="#">Giới thiệu</a></li>
+                  </ul>
+			    </div>
+			  <button type="button" class="btn btn-navbar" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay" style="display:block">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container-fluid containter-first">
+		<section>
+			<div class="page-header">
+			  <h1>Trang đang xây dựng</h1>
+			</div>
+			<p class="lead">Mời bạn quay lại sau.</p>
+			
+<pre class="prettyprint linenums">
+foreach (day in life) {
     read mangcut.vn
 }
-</code></pre>
+</pre>
+			<p><span class="label label-info">Rảnh?</span> Lướt fây <a href="http://m.facebook.com/ILoveGooogle">I Love Google</a>.</p>
+		</section>
+		
+		<p class="push-down"></p>
+	</div>
 
-          <p>Rảnh? Lướt fây <a href="http://m.facebook.com/ILoveGooogle">I Love Google</a>.</p>
-        </section>
+  </div>
 
-        <footer>
-          Trương Hồng Thi là 1 nhân viên lập trình ở FPT Software.
-        </footer>
-
-        
+  <div id="footer">
+      <div class="container-fluid text-center">
+        <p class="muted"><strong>Măng cụt</strong> &copy; 2013 <a href="mailto:thi1981@gmail.com?subject=About%20Mangcut.vn&body=Hi%20Thi,">Trương Hồng Thi</a></a><br>
+		Trương Hồng Thi là 1 nhân viên lập trình ở <a href="http://fpt-software.com/">FPT Software</a>
+		</p>
       </div>
-    </div>
+  </div>
+	
+  <div id="sitemap" class="sitemap shadow hide">
+		<div class="sitemap-heading">
+			<table class="table-layout">
+				<tr>
+				<td class="sitemap-text heading-text bold font-xxlarge">Menu</td>
+				<td align="right"><button type="button" class="close" data-action="trigger" data-target="#overlay" data-options="click" aria-hidden="true">&times;</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="sitemap-content">
+			<ul class="nav nav-list">
+				<li class="nav-header heading-text font-large">BLOG</li>
+				<li><a href="#">Công nghệ</a></li>
+				<li><a href="#">Suy ngẫm</a></li>
+				<li><a href="#">Thơ</a></li>
+				<li><a href="#">Truyện ngắn</a></li>
+				<li><a href="#">Bài bằng tiếng Anh</a></li>
+				<li class="divider"></li>
+				<li class="nav-header heading-text font-large">Sản phẩm</li>
+				<li><a href="#">Phần mềm</a></li>
+				<li><a href="#">Mã nguồn mở</a></li>
+				<li class="divider"></li>
+				<li><a href="mailto:thi1981@gmail.com?subject=About%20Mangcut.vn&body=Hi%20Thi,">
+				<img class="border-dark" src="http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d"></img>
+				<br><i class="icon-envelope"></i> Feedback</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+	<script src="js/poem.js"></script>
+	<script src="js/prettify.js"></script>
+	<script>
+		$(document).ready(function () {
+			// make code pretty
+			window.prettyPrint && prettyPrint();
+		});
+	</script>
   </body>
 </html>
