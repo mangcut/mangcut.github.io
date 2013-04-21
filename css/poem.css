@@ -24,6 +24,10 @@ html, body {
 	height: 60px;
 }
 
+.push-down2 {
+	height: 80px;
+}
+
 .containter-first{
 	padding-top: 41px;
 }
@@ -49,6 +53,14 @@ html.touch  .dropdown-menu>li>a {
 	border-bottom: 1px solid #f5f5f5;
 }
 
+html.touch visible-touch {
+	display: block;
+}
+
+html.touch hidden-touch {
+	display: none;
+}
+
 .table-layout {
 	width: 100%;
 	padding: 0;
@@ -72,12 +84,10 @@ html.touch  .dropdown-menu>li>a {
 	color: black;
 	overflow-x: hidden;
 	overflow-y: auto;
-	display: none;
 }
 
 html.touch .sitemap {
 	overflow-y: hidden;
-	display: block;
 }
 
 .sitemap .sitemap-heading {
@@ -93,8 +103,9 @@ html.touch .sitemap {
 }
 
 .sitemap .sitemap-content {
-	margin-top: 10px;
-	height: 100%;
+	padding-top: 9px;
+	right: 0; bottom: 0; top:37px;left:0;
+	position: absolute;
 }
 
 #overlay {
