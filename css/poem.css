@@ -43,7 +43,10 @@ html, body {
 	}
 }
 
-.heading-text {
+html.touch  .dropdown-menu>li>a {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #f5f5f5;
 }
 
 .table-layout {
@@ -55,20 +58,6 @@ html, body {
 .table-layout th, .table-layout td {
 	padding: 0;
 	margin: 0;
-}
-
-.table-toolbar .pagination {
-	margin: 0;
-	padding: 0;
-}
-
- .table-toolbar .btn-toolbar {
- 	margin: 0 0 5px 0;
-	padding: 0;
-}
-
-.table-select tbody tr.selected td {
-	background-color: #ffffea;
 }
 
 /* Components: sitemap, menu, etc. */

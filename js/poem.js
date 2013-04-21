@@ -1,29 +1,4 @@
 $(document).ready(function () {
-
-	// on PC, FireFox does not support yet, Safari support a little
-	if (window.Modernizr) {
-		if (!Modernizr.inputtypes.date || !Modernizr.touch) {
-			var $date = $("input[type='date']");
-			if ($date.datepicker) {
-				if ($date.data("date-format")) {
-					$date.prop("type", "text").datepicker();
-				} else {
-					$date.prop("type", "text").datepicker({format: 'dd/mm/yyyy'});
-				}
-			}
-		}
-	}
-    var today = new Date();
-    var year = today.getFullYear().toString();
-    var month = (today.getMonth() + 1).toString();
-    if (month.length < 2) month = "0" + month;
-    var day = today.getDate().toString();
-    if (day.length < 2) day = "0" + day;
-	var dateText = day + "/" + month + "/" + year;
-    $("[data-value='today']").val(dateText);
-	$("[data-text='today']").text(dateText);
-	$("[data-prompt='today']").attr("placeholder", dateText);
-	
 	// prevent page-load on <a href='#'>Something</a>
 	$(document).on("click", "a", function(e) {
 		if ($(this).attr("href") === "#") {
@@ -318,4 +293,3 @@ $(document).ready(function () {
   global.$P = Poem;
 
 })( this );
-

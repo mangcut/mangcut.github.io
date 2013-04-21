@@ -88,7 +88,7 @@ foreach (day in life) {
 				</tr>
 			</table>
 		</div>
-		<div class="sitemap-content">
+		<div id="sitemapContent" class="sitemap-content">
 			<ul class="nav nav-list">
 				<li class="nav-header heading-text font-large">BLOG</li>
 				<li><a href="#">Công nghệ</a></li>
@@ -109,16 +109,19 @@ foreach (day in life) {
 		</div>
 	</div>
 	
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/modernizr.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
 	<script src="js/poem.js"></script>
 	<script src="js/prettify.js"></script>
+	<script src="js/iscroll.js"></script>
 	<script>
 		$(document).ready(function () {
 			// make code pretty
 			window.prettyPrint && prettyPrint();
 		});
+		var myScroll = new iScroll('sitemapContent');
 	</script>
   </body>
 </html>
