@@ -72,6 +72,12 @@ html.touch  .dropdown-menu>li>a {
 	color: black;
 	overflow-x: hidden;
 	overflow-y: auto;
+	display: none;
+}
+
+html.touch .sitemap {
+	overflow-y: hidden;
+	display: block;
 }
 
 .sitemap .sitemap-heading {
@@ -86,15 +92,9 @@ html.touch  .dropdown-menu>li>a {
 	box-shadow: 0 1px 10px rgba(0,0,0,.1);
 }
 
-.sitemap  .sitemap-close {
-	background: url("../img/close.png") right center no-repeat;
-	margin-right: 3px;
-	width: 40px;
-	height: 40px;
-}
-
 .sitemap .sitemap-content {
 	margin-top: 10px;
+	height: 100%;
 }
 
 #overlay {

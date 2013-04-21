@@ -79,7 +79,7 @@ foreach (day in life) {
       </div>
   </div>
 	
-  <div id="sitemap" class="sitemap shadow hide">
+  <div id="sitemap" class="sitemap shadow">
 		<div class="sitemap-heading">
 			<table class="table-layout">
 				<tr>
@@ -115,13 +115,17 @@ foreach (day in life) {
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
 	<script src="js/poem.js"></script>
 	<script src="js/prettify.js"></script>
-	<script src="js/iscroll.js"></script>
+	<script src="js/iscroll-lite.js"></script>
 	<script>
 		$(document).ready(function () {
+			if (Modernizr.touch) {
+				window.sitemapScroll = new iScroll('sitemapContent', {momentum: false });
+				$('#sitemap').hide();
+			}
+			
 			// make code pretty
 			window.prettyPrint && prettyPrint();
 		});
-		var myScroll = new iScroll('sitemapContent');
 	</script>
   </body>
 </html>
