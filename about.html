@@ -2,7 +2,8 @@
 <html lang="vi">
   <head>
     <meta charset="utf-8">
-    <meta content="initial-scale=1, width=device-width" name="viewport">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Măng cụt - Giới thiệu</title>
 	<!--link href="css/prettify.css" rel="stylesheet"-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,14 +28,14 @@
 		<div class="navbar-inner">
 			<div class="container-fluid">
 			  <div class="brand"><a href="index.html"><i class="logo"></i></a></div>
-			  <div class="hide">
+			  <div class="hidden-phone-v">
 				<ul class="nav" role="navigation" class="hidden-phone-v">
 					<li><a href="index.html">Blog</a></li>
 					<li><a href="work.html">Sản phẩm</a></li>
 					<li class="active"><a href="about.html">Giới thiệu</a></li>
                 </ul>
 			   </div>
-			   <div class="">
+			   <div class="hide visible-phone-v">
 			   <ul class="nav" role="navigation">
 					<li class="dropdown">
 						<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
@@ -129,14 +130,8 @@
 	<script src="js/poem.js"></script>
 	<script src="js/fastclick.js"></script>
 	<!--script src="js/prettify.js"></script>
-	<script src="js/iscroll.js"></script>
 	<script>
-		$(document).ready(function () {
-			if (Modernizr.touch) {
-				window.sitemapScroll = new iScroll('sitemapContent', {momentum: false });
-				$('#sitemap').hide();
-			}
-			
+		$(document).ready(function () {			
 			// make code pretty
 			window.prettyPrint && prettyPrint();
 		});

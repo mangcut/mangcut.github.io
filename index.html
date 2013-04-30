@@ -119,18 +119,18 @@
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
 	<script src="js/poem.js"></script>
+	<script src="js/fastclick.js"></script>
 	<!--script src="js/prettify.js"></script>
-	<script src="js/iscroll.js"></script>
 	<script>
-		$(document).ready(function () {
-			//if (Modernizr.touch) {
-			//	window.sitemapScroll = new iScroll('sitemapContent', {momentum: false });
-			//	$('#sitemap').hide();
-			//}
-			
+		$(document).ready(function () {			
 			// make code pretty
-			//window.prettyPrint && prettyPrint();
+			window.prettyPrint && prettyPrint();
 		});
 	</script-->
+	<script>
+		window.addEventListener('load', function() {
+			new FastClick(document.body);
+		}, false);
+	</script>
   </body>
 </html>
