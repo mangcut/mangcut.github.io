@@ -2,21 +2,21 @@
 <html lang="vi">
   <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-    <title>Măng cụt</title>
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <title>Măng cụt - Giới thiệu</title>
 	<!--link href="css/prettify.css" rel="stylesheet"-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/poem.css" rel="stylesheet">
 	<link rel='icon' href='img/favicon.png' type='image/png' />
 	<style type="text/css">
-		section.article-list article {
-			padding-top: 20px;
-			padding-bottom: 20px;
-			border-top: solid 1px #e5e5e5;
+		.dl-horizontal {
+			margin: 0;
 		}
-		
-		section.article-list article:first-child {
-			border-top: 0;
+		.dl-horizontal dt {
+			width: 80px;
+		}
+		.dl-horizontal dd {
+			margin-left: 100px;
 		}
 	</style>
   </head>
@@ -29,9 +29,9 @@
 			  <div class="brand"><a href="index.html"><i class="logo"></i></a></div>
 			  <div class="hidden-phone-v">
 				<ul class="nav" role="navigation" class="hidden-phone-v">
-					<li class="active"><a href="index.html">Blog</a></li>
+					<li><a href="index.html">Blog</a></li>
 					<li><a href="work.html">Sản phẩm</a></li>
-					<li><a href="about.html">Giới thiệu</a></li>
+					<li class="active"><a href="about.html">Giới thiệu</a></li>
                 </ul>
 			   </div>
 			   <div class="hide visible-phone-v">
@@ -46,7 +46,7 @@
 					</li>
 				</ul>
 			  </div>
-			  <button type="button" class="btn btn-navbar" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay">
+			  <button type="button" class="btn btn-navbar" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay" style="display:block">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -56,22 +56,30 @@
 	</div>
 	
 	<div class="container-fluid container-first">
-		<section class="article-list">			
-			<article>
-				<div class="label label-info cursor-pointer">Thơ</div>
-				<h4><a href="blog/2013-05-01-bai-tho-viet-trong-long-dat.html">Bài thơ viết trong lòng đất</a></h4>
-				<p class="font-small muted">Viết bởi <a href="about.html">Trương Hồng Thi</a>, đăng ngày 1/5/2013</p>
-				<figure data-origin="flyadvisor.blogspot.com">
-				  <img src="media/moai.jpg"></img>
-				</figure>
-				<p>Khi tôi tìm đến những pho tượng<br>
-				1, 2, 3, 4, 5... một hàng dài không đếm xuể<br>
-				Những hòn đá vô tri bị đục đẽo<br>
-				Sống nhờ linh hồn rừng cây phía sau</p>
-				<a href='#'>[Đọc bài...]</a>
-			</article>
+		<section>
+			<br><p class="alert alert-info alert-block"><b>Cảm ơn bạn đã quan tâm đến mangcut.vn!</b></p>
+			<p>Đây là trang web cá nhân của Trương Hồng Thi, một nhân viên lập trình ở công ty FPT Software, và những người bạn.</p>
+			<div class="clearfix">
+			<div class="pull-left valign-middle"><img class="border-dark" src="http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d"></img></div>
+			<div class="pull-left">
+			  <dl class="dl-horizontal">
+			    <dt>Google</dt>
+				<dd>thi1981</dd>
+				<dt>Yahoo</dt>
+				<dd>tr_h_thi</dd>
+				<dt>Facebook</dt>
+				<dd><a target="_blank" href="https://www.facebook.com/thith">thith</a></dd>
+				<dt>Github</dt>
+				<dd><a target="_blank" href="https://github.com/thith">thith</a></dd>
+			  </dl>
+			</div>
+			</div>
 		</section>
 		
+		<div class="spacy-line"></div>
+		
+		<p><span class="label label-inverse">Công nghệ</span> Trang web có sử dụng <a target="_blank" href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a> và lưu trữ trên <a target="_blank" href="http://pages.github.com/">Github Pages</a>.</p>
+		<p><span class="label label-important">Bản quyền</span> Toàn bộ nội dung của trang web này được viết bởi Trương Hồng Thi, trừ khi có ghi chú khác. Nếu sử dụng lại, xin vui lòng dẫn nguồn <b><i>mangcut.vn</i></b></p>
 		<p class="push-down"></p>
 	</div>
 
@@ -123,13 +131,13 @@
 	<script src="js/iscroll.js"></script>
 	<script>
 		$(document).ready(function () {
-			//if (Modernizr.touch) {
-			//	window.sitemapScroll = new iScroll('sitemapContent', {momentum: false });
-			//	$('#sitemap').hide();
-			//}
+			if (Modernizr.touch) {
+				window.sitemapScroll = new iScroll('sitemapContent', {momentum: false });
+				$('#sitemap').hide();
+			}
 			
 			// make code pretty
-			//window.prettyPrint && prettyPrint();
+			window.prettyPrint && prettyPrint();
 		});
 	</script-->
   </body>

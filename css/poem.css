@@ -1,4 +1,4 @@
-/* Twitter Bootstrap Helper */
+﻿/* Twitter Bootstrap Helper */
 
 html, body {
 	height: 100%;
@@ -14,7 +14,7 @@ html, body {
 
 #footer {
 	height: 40px;
-	padding: 9px 20px;
+	padding: 9px 0px;
 	background-color: #f5f5f5;
 	color: #333333;
 	border-top: 1px solid #e5e5e5;
@@ -28,37 +28,29 @@ html, body {
 	height: 80px;
 }
 
-.containter-first{
+.container-first{
 	padding-top: 41px;
 }
 
-@media (max-width: 979px) {
-	.containter-first{
-		padding-top: 51px;
-	}
+.navbar .brand {
+	padding: 5px 20px;
 }
 
-@media (max-width: 400px) {
-	.hidden-phone-v {
-		display: none;
-	}
-	.visible-phone-v {
-		display: block;
-	}
+.img-polaroid {
+	padding: 3px;
 }
 
-html.touch  .dropdown-menu>li>a {
-	padding-top: 8px;
-	padding-bottom: 8px;
-	border-bottom: 1px solid #f5f5f5;
-}
-
-html.touch visible-touch {
+.navbar .btn-navbar {
+	margin-right: 0;
+	margin-left: 1px;
 	display: block;
 }
 
-html.touch hidden-touch {
-	display: none;
+.logo {
+	display: block;
+	background: url("../img/mangcut.svg") center center no-repeat;
+	height: 30px;
+	width: 30px;
 }
 
 .table-layout {
@@ -73,39 +65,90 @@ html.touch hidden-touch {
 }
 
 /* Components: sitemap, menu, etc. */
+
+figure {
+	margin: 0 0 10px;
+}
+
+figure[data-origin]:hover {
+}
+
+figure[data-origin]:hover:after {
+	font-size: 85%;
+	line-height: 20px;
+	background: rgba(255, 255, 255, 0.8);
+	display: table;
+	content: "Nguồn hình: " attr(data-origin);
+	margin: -20px 0 0 0;
+	padding: 0 5px;
+	position: absolute;
+}
+
+figure[data-origin].raised-origin-text:hover:after {
+	margin: -42px 0 0 0;
+}
+
+figure figcaption {
+	font-size: 85%;
+	line-height: 20px;
+	color: #999999;
+	margin-top: 3px;
+}
+
+figure figcaption.inside {
+	margin: -20px 0 0 0;
+	padding: 0 5px;
+	color: #ddd;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: table;
+	position: relative;
+}
+
+.poem {
+	padding: 0 0 0 15px;
+	margin: 20px 0;
+	border-left: 5px solid #eeeeee;
+}
+
+.poem p {
+	margin-bottom: 20px;
+}
+
+.poem small {
+	display: block;
+	line-height: 20px;
+	color: #999999;
+}
+
+.poem small:before {
+	content: '\2014 \00A0';
+}
+
 .sitemap {
 	position: fixed;
-	width: 200px;
+	width: 400px;
 	z-index: 10001;
 	left: 0;
 	top: 0;
 	bottom: 0;
-	background-color: #fff;
+	background-color: #f5f5f5;
 	color: black;
 	overflow-x: hidden;
 	overflow-y: auto;
-}
-
-html.touch .sitemap {
-	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 
 .sitemap .sitemap-heading {
 	padding: 9px 8px 8px 14px;
-	background-color: #f5f5f5;
+	background-color: #eeeeee;
 	border-radius: 0px;
 	margin: 0;
 	color: #777;
 	border-bottom: 1px solid #d4d4d4;
-	-webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
-	-moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
-	box-shadow: 0 1px 10px rgba(0,0,0,.1);
 }
 
 .sitemap .sitemap-content {
 	padding-top: 9px;
-	right: 0; bottom: 0; top:37px;left:0;
-	position: absolute;
 }
 
 #overlay {
@@ -220,6 +263,19 @@ html.touch .sitemap {
 	border-bottom:  1px solid #eeeeee;
 }
 
+.spacy-line {
+	height: 1px;
+	border-bottom:  1px solid #eeeeee;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.spacy {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
 .block {
 	display: block;
 }
@@ -245,11 +301,11 @@ html.touch .sitemap {
 }
 
 .font-xsmall {
-	font-size: 0.850;
+	font-size: 0.850em;
 }
 
 .font-xxsmall {
-	font-size: 0.775;
+	font-size: 0.775em;
 }
 
 .font-large {
@@ -343,4 +399,112 @@ html.touch .sitemap {
     -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.margin-auto-x {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 399px) {
+	.container-fluid {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.navbar .nav>li>a {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.navbar .brand {
+		padding-right: 10px;
+	}
+}
+
+@media (max-width: 359px) {
+	.navbar .nav>li>a {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+
+@media (max-width: 339px) {
+	.navbar .nav>li>a {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+}
+
+@media (max-width: 200px) {
+	.navbar .brand {
+		display: none;
+	}
+}
+
+@media (max-width: 319px) {
+	.hidden-phone-v {
+		display: none;
+	}
+	.visible-phone-v {
+		display: block;
+	}
+}
+
+@media (min-width: 840px) {
+	#wrapper, .navbar, #footer {
+		width: 840px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	body {
+		background-color: #ccc;
+	}
+	#wrapper{
+		background-color: #ffffff;
+	}
+	#wrapper, #footer{
+		-webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+		-moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+		box-shadow: 0 1px 10px rgba(0,0,0,.1);
+	}
+}
+
+@media (max-width: 499px) {
+	.sitemap {
+		width: 80%;
+	}
+}
+
+@media (max-width: 400px) {
+	.sitemap {
+		width: 85%;
+	}
+}
+
+/* Don't show scrollbar when using iScroll */
+/*
+html.touch .sitemap {
+	overflow-y: hidden;
+} */
+
+html.touch  .dropdown-menu>li>a {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+html.touch  .dropdown-menu>li:last-child>a {
+	border-bottom: 0;
+}
+
+html.touch  .nav-list>li>a {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+html.touch visible-touch {
+	display: block;
+}
+
+html.touch hidden-touch {
+	display: none;
 }

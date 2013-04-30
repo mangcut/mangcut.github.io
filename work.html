@@ -2,21 +2,15 @@
 <html lang="vi">
   <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-    <title>Măng cụt</title>
+    <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+    <title>Măng cụt - Sản phẩm</title>
 	<!--link href="css/prettify.css" rel="stylesheet"-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/poem.css" rel="stylesheet">
 	<link rel='icon' href='img/favicon.png' type='image/png' />
 	<style type="text/css">
-		section.article-list article {
-			padding-top: 20px;
-			padding-bottom: 20px;
-			border-top: solid 1px #e5e5e5;
-		}
-		
-		section.article-list article:first-child {
-			border-top: 0;
+		section {
+			margin-top: 30px;
 		}
 	</style>
   </head>
@@ -29,8 +23,8 @@
 			  <div class="brand"><a href="index.html"><i class="logo"></i></a></div>
 			  <div class="hidden-phone-v">
 				<ul class="nav" role="navigation" class="hidden-phone-v">
-					<li class="active"><a href="index.html">Blog</a></li>
-					<li><a href="work.html">Sản phẩm</a></li>
+					<li><a href="index.html">Blog</a></li>
+					<li class="active"><a href="work.html">Sản phẩm</a></li>
 					<li><a href="about.html">Giới thiệu</a></li>
                 </ul>
 			   </div>
@@ -46,7 +40,7 @@
 					</li>
 				</ul>
 			  </div>
-			  <button type="button" class="btn btn-navbar" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay">
+			  <button type="button" class="btn btn-navbar" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay" style="display:block">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -56,20 +50,8 @@
 	</div>
 	
 	<div class="container-fluid container-first">
-		<section class="article-list">			
-			<article>
-				<div class="label label-info cursor-pointer">Thơ</div>
-				<h4><a href="blog/2013-05-01-bai-tho-viet-trong-long-dat.html">Bài thơ viết trong lòng đất</a></h4>
-				<p class="font-small muted">Viết bởi <a href="about.html">Trương Hồng Thi</a>, đăng ngày 1/5/2013</p>
-				<figure data-origin="flyadvisor.blogspot.com">
-				  <img src="media/moai.jpg"></img>
-				</figure>
-				<p>Khi tôi tìm đến những pho tượng<br>
-				1, 2, 3, 4, 5... một hàng dài không đếm xuể<br>
-				Những hòn đá vô tri bị đục đẽo<br>
-				Sống nhờ linh hồn rừng cây phía sau</p>
-				<a href='#'>[Đọc bài...]</a>
-			</article>
+		<section>
+			<p class="alert alert-info alert-block"><b>mangcut.vn</b> đang phát triển và sẽ sớm công bố một số ứng dụng smartphone miễn phí và thư viện Javascript mã nguồn mở.</p>
 		</section>
 		
 		<p class="push-down"></p>
@@ -123,13 +105,13 @@
 	<script src="js/iscroll.js"></script>
 	<script>
 		$(document).ready(function () {
-			//if (Modernizr.touch) {
-			//	window.sitemapScroll = new iScroll('sitemapContent', {momentum: false });
-			//	$('#sitemap').hide();
-			//}
+			if (Modernizr.touch) {
+				window.sitemapScroll = new iScroll('sitemapContent', {momentum: false });
+				$('#sitemap').hide();
+			}
 			
 			// make code pretty
-			//window.prettyPrint && prettyPrint();
+			window.prettyPrint && prettyPrint();
 		});
 	</script-->
   </body>
