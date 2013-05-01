@@ -52,7 +52,7 @@ html, body {
 
 .logo {
 	display: block;
-	background: url("../img/mangcut.svg") center center no-repeat;
+	background: url("../img/mangcut.png") center center no-repeat;
 	height: 30px;
 	width: 30px;
 }
