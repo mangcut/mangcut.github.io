@@ -29,7 +29,7 @@
 	<div class="navbar navbar-top navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-			  <div class="brand"><a href="index.html"><i class="logo"></i></a></div>
+			  <div class="brand"><a href="index.html" title="Măng cụt"><i class="logo"></i></a></div>
 			  <div class="hidden-phone-v">
 				<ul class="nav" role="navigation" class="hidden-phone-v">
 					<li class="active"><a href="index.html">Blog</a></li>
@@ -59,13 +59,25 @@
 	</div>
 	
 	<div class="container-fluid container-first">
-		<section class="article-list">			
+		<section class="article-list">
+			<article>
+				<div class="label label-info cursor-pointer">Văn hóa</div>
+				<h4><a href="blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo.html">Lan man nghĩ từ phi trường Tokyo...</a></h4>
+				<p class="font-small muted">Viết bởi <a href="about.html">Trương Hồng Thi</a>, đăng ngày 2/5/2013</p>
+				<figure data-origin="Nickdrj cung cấp trên Wikipedia" class="raised-origin-text">
+				  <img src="media/sumo_ceremony.jpg" alt="Các đô vật Sumo đang làm lễ"></img>
+				  <figcaption>[Minh họa] Các đô vật Sumo đang làm lễ</figcaption>
+				</figure>
+				<p>Từ câu chuyện lỡ chuyến bay, đến những vấn đề văn hóa, con người Nhât và Việt.</p>
+				<a href='blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo.html'>[Đọc bài...]</a>
+			</article>
+			
 			<article>
 				<div class="label label-info cursor-pointer">Thơ</div>
 				<h4><a href="blog/2013-05-01-bai-tho-viet-trong-long-dat.html">Bài thơ viết trong lòng đất</a></h4>
 				<p class="font-small muted">Viết bởi <a href="about.html">Trương Hồng Thi</a>, đăng ngày 1/5/2013</p>
 				<figure data-origin="flyadvisor.blogspot.com">
-				  <img src="media/moai.jpg"></img>
+				  <img src="media/moai.jpg" alt="Khi tôi tìm đến những pho tượng"></img>
 				</figure>
 				<p>Khi tôi tìm đến những pho tượng<br>
 				1, 2, 3, 4, 5... một hàng dài không đếm xuể<br>
@@ -82,8 +94,8 @@
 
   <div id="footer">
       <div class="container-fluid text-center">
-        <p class="muted">Măng cụt &copy; 2013 Trương Hồng Thi<br>
-		<a href="about.html">Giới thiệu</a>
+        <p class="muted">Măng cụt - Thiền và công việc lập trình<br>
+		&copy; 2013 - <a href="about.html">Trương Hồng Thi</a>
 		</p>
       </div>
   </div>
@@ -99,20 +111,9 @@
 		</div>
 		<div id="sitemapContent" class="sitemap-content">
 			<ul class="nav nav-list">
-				<li class="nav-header heading-text">Bài tiêu biểu</li>
-				<li><a href="#">Tiền đề và câu chuyện tòa lâu đài trên không</a></li>
-				<li><a href="#">Liệu Google Glass có thay đổi cuộc chơi?</a></li>
-				<li><a href="#">Abenomics sẽ tiếp sức cho nước Nhật thế nào?</a></li>
-				<li><a href="#">[Hiện thêm...]</a></li>
-				<li class="divider"></li>
 				<li class="nav-header heading-text">Bài gần đây</li>
-				<li><a href="#">Sức mạnh của hình dung</a></li>
-				<li><a href="#">Bước chân trên con đường ngàn dặm</a></li>
-				<li><a href="#">Giấc mơ nói điều gì?</a></li>
-				<li><a href="#">Chuyện một người quản lý tầm thường</a></li>
-				<li><a href="#">Giác quan và giới hạn của nhận thức</a></li>
-				<li><a href="#">[Các bài cũ hơn...]</a></li>
-				<!--div class="push-down2 hide visible-touch"></div-->
+				<li><a href="blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo.html">Lan man nghĩ từ phi trường Tokyo...</a></li>
+				<li><a href="blog/2013-05-01-bai-tho-viet-trong-long-dat.html">Bài thơ viết trong lòng đất</a></li>
 			</ul>
 		</div>
 	</div>
@@ -121,13 +122,7 @@
 	<script src="js/modernizr.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+	<!--script src="js/prettify.js"></script-->
 	<script src="js/poem.js"></script>
-	<!--script src="js/prettify.js"></script>
-	<script>
-		$(document).ready(function () {			
-			// make code pretty
-			window.prettyPrint && prettyPrint();
-		});
-	</script-->
   </body>
 </html>

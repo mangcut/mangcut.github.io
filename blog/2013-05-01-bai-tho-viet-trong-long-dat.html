@@ -13,7 +13,6 @@
 	<style type="text/css">
 		section.article-list article {
 			padding-top: 20px;
-			padding-bottom: 20px;
 		}
 	</style>
   </head>
@@ -23,7 +22,7 @@
 	<div class="navbar navbar-top navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-			  <div class="brand"><a href="../index.html"><i class="logo"></i></a></div>
+			  <div class="brand"><a href="../index.html" title="Măng cụt"><i class="logo"></i></a></div>
 			  <div class="hidden-phone-v">
 				<ul class="nav" role="navigation" class="hidden-phone-v">
 					<li><a href="../index.html">Blog</a></li>
@@ -54,11 +53,11 @@
 	
 	<div class="container-fluid container-first">
 		<section class="article-list">			
-			<article>
+			<article class="article">
 				<div class="label label-info cursor-pointer">Thơ</div>
 				<h4 class="post-title">Bài thơ viết trong lòng đất</h4>
 				<p class="font-small muted">Viết bởi <a href="../about.html">Trương Hồng Thi</a>, đăng ngày 1/5/2013</p>
-				<div class="poem">
+				<div class="poem article-content">
 
 					<p>Chẳng có gì to tát cả<br>
 					Chỉ là mặt đất đột nhiên nóng chảy<br>
@@ -98,7 +97,7 @@
 					<small>Hà Nội - 7/2012</small>
 				</div>
 				<figure data-origin="flyadvisor.blogspot.com" class="raised-origin-text">
-				  <img src="../media/moai.jpg"></img>
+				  <img src="../media/moai.jpg" alt="Khi tôi tìm đến những pho tượng"></img>
 				  <figcaption>[Minh họa] Khi tôi tìm đến những pho tượng</figcaption>
 				</figure>
 			</article>
@@ -127,8 +126,8 @@
 
   <div id="footer">
       <div class="container-fluid text-center">
-        <p class="muted">Măng cụt &copy; 2013 Trương Hồng Thi<br>
-		<a href="../about.html">Giới thiệu</a>
+        <p class="muted">Măng cụt - Thiền và công việc lập trình<br>
+		&copy; 2013 - <a href="about.html">Trương Hồng Thi</a>
 		</p>
       </div>
   </div>
@@ -144,20 +143,9 @@
 		</div>
 		<div id="sitemapContent" class="sitemap-content">
 			<ul class="nav nav-list">
-				<li class="nav-header heading-text">Bài tiêu biểu</li>
-				<li><a href="#">Tiền đề và câu chuyện tòa lâu đài trên không</a></li>
-				<li><a href="#">Liệu Google Glass có thay đổi cuộc chơi?</a></li>
-				<li><a href="#">Abenomics sẽ tiếp sức cho nước Nhật thế nào?</a></li>
-				<li><a href="#">[Hiện thêm...]</a></li>
-				<li class="divider"></li>
 				<li class="nav-header heading-text">Bài gần đây</li>
-				<li><a href="#">Sức mạnh của hình dung</a></li>
-				<li><a href="#">Bước chân trên con đường ngàn dặm</a></li>
-				<li><a href="#">Giấc mơ nói điều gì?</a></li>
-				<li><a href="#">Chuyện một người quản lý tầm thường</a></li>
-				<li><a href="#">Giác quan và giới hạn của nhận thức</a></li>
-				<li><a href="#">[Các bài cũ hơn...]</a></li>
-				<!--div class="push-down2 hide visible-touch"></div-->
+				<li><a href="2013-05-02-lan-man-nghi-tu-phi-truong-tokyo.html">Lan man nghĩ từ phi trường Tokyo...</a></li>
+				<li class="active"><a href="2013-05-01-bai-tho-viet-trong-long-dat.html">Bài thơ viết trong lòng đất</a></li>
 			</ul>
 		</div>
 	</div>
@@ -166,28 +154,11 @@
 	<script src="../js/modernizr.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 	<script src="../js/jquery-ui-1.10.0.custom.min.js"></script>
-	<script src="../js/poem.js"></script>
-	<!--script src="js/prettify.js"></script>
-	<script>
-		$(document).ready(function () {			
-			// make code pretty
-			window.prettyPrint && prettyPrint();
-		});
-	</script-->
+	<!--script src="js/prettify.js"></script-->
     <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'mangcut'; // required: replace example with your forum shortname
-		var disqus_identifier = "blog/2013-05-01-bai-tho-viet-trong-long-dat";
-		//var disqus_title = $(".post-title").text();
-		var disqus_url = 'http://mangcut.vn/' + disqus_identifier + ".html";
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+        var disqus_identifier = "blog/2013-05-01-bai-tho-viet-trong-long-dat";
     </script>
-    
+	<script src="../js/disqus.js"></script>
+	<script src="../js/poem.js"></script>
   </body>
 </html>

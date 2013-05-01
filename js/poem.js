@@ -7,11 +7,13 @@ $(document).ready(function () {
 	});
 
 	// auto switch
-	$(".switch").flipswitch();
+	//$(".switch").flipswitch();
+	
+	// make code pretty
+	window.prettyPrint && prettyPrint();
 	
 	// auto action
 	$("[data-action]").perform();
-	
 });
 
 (function( $ ){

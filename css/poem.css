@@ -20,11 +20,15 @@ html, body {
 	border-top: 1px solid #e5e5e5;
 }
 
+.push-down-small {
+	height: 30px;
+}
+
 .push-down {
 	height: 60px;
 }
 
-.push-down2 {
+.push-down-large {
 	height: 80px;
 }
 
@@ -106,7 +110,6 @@ figure figcaption.inside {
 
 .poem {
 	padding: 0 0 0 15px;
-	margin: 20px 0;
 	border-left: 5px solid #eeeeee;
 }
 
@@ -114,13 +117,17 @@ figure figcaption.inside {
 	margin-bottom: 20px;
 }
 
-.poem small {
+.article-content {
+	margin: 20px 0;
+}
+
+.article-content small {
 	display: block;
 	line-height: 20px;
 	color: #999999;
 }
 
-.poem small:before {
+.article-content small:before {
 	content: '\2014 \00A0';
 }
 
@@ -404,6 +411,10 @@ figure figcaption.inside {
 .margin-auto-x {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.clear-both {
+	clear: both;
 }
 
 @media (max-width: 399px) {
