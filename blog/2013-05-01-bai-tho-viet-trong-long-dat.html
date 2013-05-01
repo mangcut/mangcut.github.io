@@ -57,7 +57,7 @@
 			<article>
 				<div class="label label-info cursor-pointer">Thơ</div>
 				<h4 class="post-title">Bài thơ viết trong lòng đất</h4>
-				<p class="font-small muted">Viết bởi <a href="#">Trương Hồng Thi</a>, đăng ngày 1/5/2013</p>
+				<p class="font-small muted">Viết bởi <a href="../about.html">Trương Hồng Thi</a>, đăng ngày 1/5/2013</p>
 				<div class="poem">
 
 					<p>Chẳng có gì to tát cả<br>
@@ -106,11 +106,17 @@
 		
 		<section>
 			<div class="spacy-line"></div>
-			<p><a href="#" data-action='trigger' data-target=".btn-navbar" data-options="click" title="Hiển thị danh sách bài viết khác"><i class="icon icon-list"></i> Chọn và đọc các bài viết khác</a></p>
-			<p><a href="#" data-action='[{"action": "show", "target": "#disqusZone"}, {"action": "$(this).hide"}, {"action": "scrollBy", "options": [0, 300]}]' title="Hiển thị ô để đọc và viết bình luận"><i class="icon icon-comment"></i> Viết bình luận</a></p>
+			<p><a href="#" data-action='trigger' data-target=".btn-navbar" data-options="click" title="Hiển thị danh sách bài viết khác"><i class="icon icon-list"></i> Các bài khác</a></p>
+			<p><a href="#" data-action='[{"action": "show", "target": "#disqusZone"}, {"action": "$(this).hide"}, {"action": "scrollBy", "options": [0, 250]}]' title="Hiển thị ô để đọc và viết bình luận"><i class="icon icon-comment"></i> Viết bình luận</a></p>
 			<div id="disqusZone" class="hide">
 				<div class="spacy-line"></div>
-				<p class="alert font-small"><b>Lưu ý</b> Bạn có thể đăng nhập bằng Facebook hoặc Google để bình luận.</p>
+				<div class="alert font-small"><b>Lưu ý:</b>
+					<ol>
+					<li>Nhập nội dung bình luận</li>
+					<li>Chọn đăng nhập bằng Facebook, Google, Twitter <em>nếu chưa đăng nhập</em>. Hệ thống <em>không cho phép</em> bình luận ẩn danh</li>
+					<li>Gửi bình luận</li>
+					</ol>
+				</div>
 				<div id="disqus_thread"></div>
 			</div>
 		</section>
