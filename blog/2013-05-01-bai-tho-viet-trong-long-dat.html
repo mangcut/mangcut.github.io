@@ -2,8 +2,10 @@
 <html lang="vi">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Măng cụt - Bài thơ viết trong lòng đất</title>
+    <meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="description" content="Khi tôi tìm đến những pho tượng. 1, 2, 3, 4, 5 một hàng dài không đếm xuể. Những hòn đá vô tri bị đục đẽo. Sống nhờ linh hồn rừng cây phía sau">
+	<title>Măng cụt - Bài thơ viết trong lòng đất</title>
 	<!--link href="../css/prettify.css" rel="stylesheet"-->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/poem.css" rel="stylesheet">
@@ -103,11 +105,12 @@
 		</section>
 		
 		<section>
-			<p>
-				<a href="#" data-action='[{"action": "show", "target": "#disqusZone"}, {"action": "$(this).hide"}]'><i class="icon icon-comment"></i> Hiển thị bình luận</a>
-			</p>
+			<div class="spacy-line"></div>
+			<p><a href="#" data-action='trigger' data-target=".btn-navbar" data-options="click" title="Hiển thị danh sách bài viết khác"><i class="icon icon-list"></i> Chọn và đọc các bài viết khác</a></p>
+			<p><a href="#" data-action='[{"action": "show", "target": "#disqusZone"}, {"action": "$(this).hide"}, {"action": "scrollBy", "options": [0, 300]}]' title="Hiển thị ô để đọc và viết bình luận"><i class="icon icon-comment"></i> Viết bình luận</a></p>
 			<div id="disqusZone" class="hide">
-				<p class="alert"><b>Lưu ý</b> Bạn có thể đăng nhập bằng Facebook hoặc Google để bình luận.</p>
+				<div class="spacy-line"></div>
+				<p class="alert font-small"><b>Lưu ý</b> Bạn có thể đăng nhập bằng Facebook hoặc Google để bình luận.</p>
 				<div id="disqus_thread"></div>
 			</div>
 		</section>
