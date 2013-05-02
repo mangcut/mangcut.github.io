@@ -16,7 +16,7 @@
 		}
 	</style>
 	<!--[if IE 6]>
-		<link href="css/ie6.css" rel="stylesheet">
+		<link href="../css/ie6.css" rel="stylesheet">
 	<![endif]-->
 	<script src="../js/modernizr.js"></script>
   </head>
@@ -26,7 +26,7 @@
 	<div class="navbar navbar-top navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-			  <div class="brand"><a href="../index.html" title="Măng cụt"><i class="logo"></i></a></div>
+			  <a class="brand" href="../index.html" title="Măng cụt"><img src="../img/mangcut.png" alt="Măng cụt"></a>
 			  <div class="hidden-phone-v">
 				<ul class="nav" role="navigation" class="hidden-phone-v">
 					<li><a href="../index.html">Blog</a></li>
@@ -46,11 +46,7 @@
 					</li>
 				</ul>
 			  </div>
-			  <button type="button" class="btn btn-navbar" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
+			  <a id="btnList" href="#" title="Hiển thị danh sách bài viết" class="navbar-button pull-right" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay"><img src="../img/list.png" alt="..."></a>
 			</div>
 		</div>
 	</div>
@@ -111,7 +107,7 @@
 		
 		<section>
 			<div class="spacy-line"></div>
-			<p><a href="#" data-action='trigger' data-target=".btn-navbar" data-options="click" title="Hiển thị danh sách bài viết khác"><i class="icon icon-list"></i> Các bài khác</a></p>
+			<p><a href="#" data-action='trigger' data-target="#btnList" data-options="click" title="Hiển thị danh sách bài viết khác"><i class="icon icon-list"></i> Các bài khác</a></p>
 			<p><a href="#" data-action='[{"action": "show", "target": "#disqusZone"}, {"action": "$(this).hide"}, {"action": "scrollBy", "options": [0, 250]}]' title="Hiển thị ô để đọc và viết bình luận"><i class="icon icon-comment"></i> Viết bình luận</a></p>
 			<div id="disqusZone" class="hide">
 				<div class="spacy-line"></div>

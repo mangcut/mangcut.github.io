@@ -11,8 +11,8 @@
 	<link href="css/poem.css" rel="stylesheet">
 	<link rel='icon' href='img/favicon.png' type='image/png' />
 	<style type="text/css">
-		section {
-			margin-top: 30px;
+		section.article-list article {
+			padding-top: 13px;
 		}
 	</style>
 	<!--[if IE 6]>
@@ -26,7 +26,7 @@
 	<div class="navbar navbar-top navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-			  <div class="brand"><a href="index.html" title="Măng cụt"><i class="logo"></i></a></div>
+			  <a class="brand" href="index.html" title="Măng cụt"><img src="img/mangcut.png" alt="Măng cụt"></a>
 			  <div class="hidden-phone-v">
 				<ul class="nav" role="navigation" class="hidden-phone-v">
 					<li><a href="index.html">Blog</a></li>
@@ -46,18 +46,16 @@
 					</li>
 				</ul>
 			  </div>
-			  <button type="button" class="btn btn-navbar" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay" style="display:block">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
+			  <a href="#" title="Hiển thị danh sách bài viết" class="navbar-button pull-right" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay"><img src="img/list.png" alt="..."></a>
 			</div>
 		</div>
 	</div>
 	
 	<div class="container-fluid container-first">
-		<section>
+		<section class="article-list">
+		  <article>
 			<p class="alert alert-info alert-block"><b>mangcut.vn</b> đang phát triển và sẽ sớm công bố một số ứng dụng smartphone miễn phí và thư viện Javascript mã nguồn mở.</p>
+		  </article>
 		</section>
 		
 		<p class="push-down"></p>

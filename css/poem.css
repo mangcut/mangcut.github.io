@@ -37,24 +37,23 @@ html, body {
 }
 
 .navbar .brand {
-	padding: 5px 20px;
+	padding: 0 20px 0px 0;
+	margin: 5px 0 0 0;
 }
 
 .img-polaroid {
 	padding: 3px;
 }
 
-.navbar .btn-navbar {
-	margin-right: 0;
-	margin-left: 1px;
+.navbar .navbar-button {
+	margin: 3px 0 0 0;
+	padding: 3px 5px;
 	display: block;
+	border: 1px solid #dfdfdf;
 }
 
-.logo {
-	display: block;
-	background: url("../img/mangcut.png") center center no-repeat;
-	height: 30px;
-	width: 30px;
+.navbar .navbar-button:hover {
+	border: 1px solid #afafaf;
 }
 
 .table-layout {

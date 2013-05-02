@@ -1,21 +1,27 @@
 /* Bootstrap Navbar Fix */
 .nav li a {display: block}
-.navbar .nav .active  a, .navbar .nav .active  a:hover {background-color:#000;color: #FFFFFF;text-decoration: none}
-    .navbar .nav li {display:block;float:left}
-        .navbar .nav li a {float:none;line-height:19px;padding:10px 10px 11px}
-        .navbar .nav li a:hover {background-color:transparent;color:#ffffff;text-decoration:none}
+.navbar .nav li {float:left}
+.navbar .nav li a {float: none;padding: 10px 15px 10px;color: #777777;text-decoration: none;}
 
-        .navbar .nav .active a, 
-            .navbar .nav .active a:hover {color:#ffffff;text-decoration:none;background-color:#222222;background-color:#000}
-        .navbar .nav .open .dropdown-toggle, 
-            .navbar .nav .active .dropdown-toggle,
-            .navbar .nav .open.active .dropdown-toggle{background-color:transparent}
-        .navbar .nav .active .dropdown-toggle:hover {color:#ffffff}
+/* Bootstrap Icon Fix */
+.icon {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image: url("../img/glyphicons-halflings.png");
+	background-repeat: no-repeat;
+	margin-top: 1px;
+	padding-left:3px;
+}
+.icon-white {
+	background-image: url("../img/glyphicons-halflings-white.png");
+}
+/* IE6 does not support position:fixed, so remove the padding */
+.container-first{
+	padding-top: 0;
+}
 
-    .dropdown .dropdown-toggle {margin-bottom:1px;position:relative;top:2px;left:0px}
-    
-    .dropdown-menu li {width:100%}
-        .dropdown-menu li a {width:100%;padding:3px 0px 3px 5px}
-        .dropdown-menu li a:hover, 
-        .dropdown-menu .active a, 
-        .dropdown-menu .active a:hover {background-color:#0088CC;color:#FFFFFF;text-decoration:none}
+
+
