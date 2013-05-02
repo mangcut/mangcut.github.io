@@ -22,6 +22,7 @@
 			border-top: 0;
 		}
 	</style>
+	<script src="js/modernizr.js"></script>
   </head>
   <body>
   
@@ -64,9 +65,11 @@
 				<div class="label label-info cursor-pointer">Văn hóa</div>
 				<h4><a href="blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo.html">Lan man nghĩ từ phi trường Tokyo...</a></h4>
 				<p class="font-small muted">Viết bởi <a href="about.html">Trương Hồng Thi</a>, đăng ngày 2/5/2013</p>
-				<figure data-origin="Nickdrj cung cấp trên Wikipedia" class="raised-origin-text">
-				  <img src="media/sumo_ceremony.jpg" alt="Các đô vật Sumo đang làm lễ"></img>
-				  <figcaption>[Minh họa] Các đô vật Sumo đang làm lễ</figcaption>
+				<figure>
+				  <div class="img-container" data-origin="Nickdrj cung cấp trên Wikipedia">
+				    <img src="media/sumo_ceremony.jpg" alt="Các đô vật Sumo thực hiện 1 nghi lễ"></img>
+				  </div>
+				  <figcaption>[Minh họa] Các đô vật Sumo thực hiện 1 nghi lễ</figcaption>
 				</figure>
 				<p>Từ câu chuyện lỡ chuyến bay, đến những vấn đề văn hóa, con người Nhât và Việt.</p>
 				<a href='blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo.html'>[Đọc bài...]</a>
@@ -76,8 +79,10 @@
 				<div class="label label-info cursor-pointer">Thơ</div>
 				<h4><a href="blog/2013-05-01-bai-tho-viet-trong-long-dat.html">Bài thơ viết trong lòng đất</a></h4>
 				<p class="font-small muted">Viết bởi <a href="about.html">Trương Hồng Thi</a>, đăng ngày 1/5/2013</p>
-				<figure data-origin="flyadvisor.blogspot.com">
-				  <img src="media/moai.jpg" alt="Khi tôi tìm đến những pho tượng"></img>
+				<figure>
+					<div class="img-container" data-origin="flyadvisor.blogspot.com">
+					  <img src="media/moai.jpg" alt="Khi tôi tìm đến những pho tượng"></img>
+					</div>
 				</figure>
 				<p>Khi tôi tìm đến những pho tượng<br>
 				1, 2, 3, 4, 5... một hàng dài không đếm xuể<br>
@@ -119,7 +124,6 @@
 	</div>
 	
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="js/modernizr.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
 	<!--script src="js/prettify.js"></script-->

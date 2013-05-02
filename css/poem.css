@@ -74,10 +74,10 @@ figure {
 	margin: 0 0 10px;
 }
 
-figure[data-origin]:hover {
+div[data-origin].img-container:hover {
 }
 
-figure[data-origin]:hover:after {
+div[data-origin].img-container:hover:after {
 	font-size: 85%;
 	line-height: 20px;
 	background: rgba(255, 255, 255, 0.8);
@@ -88,9 +88,11 @@ figure[data-origin]:hover:after {
 	position: absolute;
 }
 
-figure[data-origin].raised-origin-text:hover:after {
+/* not work since add img-container -> review later
+div.raised-origin-text:hover:after {
 	margin: -42px 0 0 0;
 }
+*/
 
 figure figcaption {
 	font-size: 85%;
