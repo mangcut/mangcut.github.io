@@ -178,7 +178,9 @@ figure figcaption.inside {
 #overlay {
 	z-index: 10000;
 	background-color: black;
-	opacity: 0.4;
+	zoom: 1; /* hack for IE opacity to work */
+	filter: alpha(opacity=30);
+	opacity: 0.3;
 	position: fixed;
 	left: 0; right: 0; bottom: 0; top: 0;
 }
