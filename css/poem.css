@@ -46,14 +46,10 @@ html, body {
 }
 
 .navbar .navbar-button {
-	margin: 3px 0 0 0;
-	padding: 3px 5px;
+	margin: 9px 0 0 0;
+	padding: 0 0 0 4px;
 	display: block;
-	border: 1px solid #dfdfdf;
-}
-
-.navbar .navbar-button:hover {
-	border: 1px solid #afafaf;
+	width: 22px;
 }
 
 .table-layout {
