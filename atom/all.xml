@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Măng cụt - Thiền và công việc lập trình</title>
+	<subtitle>Góc nhìn của Trương Hồng Thi về công nghệ và con người.</subtitle>
+	<link href="http://mangcut.vn/"/>
+	<updated>2013-05-05T12:00:00Z</updated>
+	<author>
+		<name>Trương Hồng Thi</name>
+		<uri>http://mangcut.vn/about.html</uri>
+	</author>
+	<id>tag:mangcut.vn,2013-05-01:index</id>
+	<rights>Copyright (c) 2013, Trương Hồng Thi</rights>
+
+	<entry>
+		<title>Lan man nghĩ từ phi trường Tokyo...</title>
+		<link href="http://mangcut.vn/blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo.html"/>
+		<id>tag:mangcut.vn,2013-05-02:blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo</id>
+		<category>Thơ</category>
+		<updated>2013-05-02T6:20:30Z</updated>
+		<summary>Từ câu chuyện lỡ chuyến bay, đến những vấn đề văn hóa, con người Nhật và Việt.</summary>
+	</entry>
+	
+	<entry>
+		<title>Bài thơ viết trong lòng đất</title>
+		<link href="http://mangcut.vn/blog/2013-05-01-bai-tho-viet-trong-long-dat.html"/>
+		<id>tag:mangcut.vn,2013-05-01:blog/2013-05-01-bai-tho-viet-trong-long-dat</id>
+		<category>Thơ</category>
+		<updated>2013-05-01T6:30:10Z</updated>
+		<summary type="html">Khi tôi tìm đến những pho tượng&lt;br&gt;1, 2, 3, 4, 5... một hàng dài không đếm xuể&lt;br&gt;Những hòn đá vô tri bị đục đẽo&lt;br&gt;Sống nhờ linh hồn rừng cây phía sau&lt;br&gt;</summary>
+	</entry>
+
+</feed>
