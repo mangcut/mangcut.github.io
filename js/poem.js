@@ -18,7 +18,8 @@ $(document).ready(function () {
 
 	$(".btn-share").click(function(e) {
 		var sharer = "https://upload.facebook.com/sharer/sharer.php?u=";
-		window.open(sharer + location.href, 'sharer', 'width=626,height=436');
+		var url = Poem.getData($(this), "href", location.href);
+		window.open(sharer + url, 'sharer', 'width=626,height=436');
 		e.preventDefault();
 	});
 	
