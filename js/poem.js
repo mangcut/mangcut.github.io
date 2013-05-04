@@ -16,6 +16,12 @@ $(document).ready(function () {
 		}
 	});
 
+	$(".btn-share").click(function(e) {
+		var sharer = "https://upload.facebook.com/sharer/sharer.php?u=";
+		window.open(sharer + location.href, 'sharer', 'width=626,height=436');
+		e.preventDefault();
+	});
+	
 	// auto switch
 	//$(".switch").flipswitch();
 	
