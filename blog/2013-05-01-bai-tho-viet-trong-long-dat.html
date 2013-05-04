@@ -23,14 +23,6 @@
 	<script src="../js/modernizr.js"></script>
   </head>
   <body>
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
   <div id="wrapper">
 	<div class="navbar navbar-top navbar-fixed-top">
 		<div class="navbar-inner">
@@ -111,6 +103,8 @@
 				  </div>
 				  <figcaption>[Minh họa] Khi tôi tìm đến những pho tượng</figcaption>
 				</figure>
+				<div id="fbLikePoem" class="fb-like" data-send="false" data-layout="standard" data-width="450" data-show-faces="true"></div>
+		<p class="push-down"></p>
 			</article>
 		</section>
 		
@@ -130,8 +124,6 @@
 				<div id="disqus_thread"></div>
 			</div>
 		</section>
-		<div class="fb-like" data-href="http://mangcut.vn" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-		<p class="push-down"></p>
 	</div>
 
   </div>
@@ -162,6 +154,8 @@
 		</div>
 	</div>
 	
+	<!-- dummy tag for Facebook API to attach script tag -->
+	<div id="fb-root"></div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 	<script src="../js/jquery-ui-1.10.0.custom.min.js"></script>
