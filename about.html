@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="no-js">
   <head>
     <meta charset="utf-8">
 	<meta name="HandheldFriendly" content="True">
@@ -59,7 +59,7 @@
 						</li>
 					</ul>
 			  </div>
-			  <a href="#" title="Hiển thị danh sách bài viết" class="navbar-button pull-right" data-action="toggle" data-target="#sitemap" data-options="slide" data-advanced="overlay"><img src="img/list.png" alt="..."></a>
+			  <a href="#" title="Hiển thị danh sách bài viết" class="navbar-button pull-right" data-action="toggle" data-target="#sitemap" data-advanced="overlay"><img src="img/list.png" alt="..."></a>
 			</div>
 		</div>
 	</div>
@@ -121,10 +121,15 @@
 		</div>
 	</div>
 	
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/jquery-1.9.0.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]><!-->
+    <script src="js/jquery-2.0.0.js"></script>
+	<!--<![endif]-->
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
-	<!--script src="js/prettify.js"></script-->
+	<!--script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+	<script src="js/prettify.js"></script-->
 	<script src="js/poem.js"></script>
   </body>
 </html>
