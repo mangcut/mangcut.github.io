@@ -57,7 +57,7 @@
 						</li>
 					</ul>
 			  </div>
-			  <a href="#" title="Hiển thị danh sách bài viết" class="navbar-button pull-right" data-action="toggle" data-target="#sitemap" data-advanced="overlay"><img src="img/list.png" alt="..."></a>
+			  <a id="showSitemap" href="#" title="Hiển thị danh sách bài viết" class="navbar-button pull-right" data-action="toggleClass" data-target="#sitemap" data-options=" sitemap-show" data-advanced=":overlay"><img src="img/list.png" alt="..."></a>
 			</div>
 		</div>
 	</div>
@@ -70,7 +70,6 @@
 			<div class="pull-right" style="margin:5px;"><img class="border-dark" src="http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d"></img></div>
 			<p>Đây là trang web cá nhân của Trương Hồng Thi, một nhân viên lập trình ở công ty FPT Software.
 			Ngoài việc lập trình, tôi còn quản lý 1 đơn vị làm phầm mềm nhỏ và tham gia viết lách.</p>
-			<p>Hiện tại, tôi sống ở Hà Nội cùng vợ và con gái.</p>
 		    <dl class="dl-horizontal">
 			<dt>Google</dt>
 			<dd><a rel="me" href="https://plus.google.com/111647249588253595106">thi1981</a> (có dùng Gmail)</dd>
@@ -101,8 +100,8 @@
       </div>
   </div>
 	
-  <div id="sitemap" class="sitemap shadow hide visible-touch">
-		<div class="sitemap-heading" data-action="trigger" data-target="#overlay" data-options="click">
+  <div id="sitemap" class="sitemap shadow">
+		<div class="sitemap-heading" data-action="trigger" data-target="#showSitemap" data-options="click">
 			<table class="table-layout">
 				<tr>
 				<td class="sitemap-text heading-text bold font-xxlarge">Bạn tìm gì?</td>

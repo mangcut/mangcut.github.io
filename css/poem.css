@@ -147,7 +147,7 @@ figure figcaption.inside {
 	position: fixed;
 	width: 400px;
 	z-index: 10001;
-	left: 0;
+	left: -450px;
 	top: 0;
 	bottom: 0;
 	background-color: #f5f5f5;
@@ -155,6 +155,14 @@ figure figcaption.inside {
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+	-moz-transition:left 300ms;
+    -webkit-transition:left 300ms;
+    -o-transition:left 300ms;
+    transition:left 300ms;
+}
+
+.sitemap-show {
+	left:0;
 }
 
 .sitemap .sitemap-heading {

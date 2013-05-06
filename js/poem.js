@@ -52,19 +52,19 @@ $(document).ready(function () {
 	};
 	
 	var doCoreAction = function($target, args) {
-		if (args.action === "toggle" || args.action === "show") {
-			if (args.advanced === "overlay") {
+		//if (args.action === "toggle" || args.action === "show") {
+			if (args.advanced === ":overlay") {
 				var $overlay = $('#overlay');
 				if ($overlay.length === 0) {
 					$("<div id='overlay'></div>").appendTo($("body")).show().click(function() {
-						$target.hide(args.options);
+						$(args.self).trigger(args.timing);
 						$(this).fadeOut();
 					});
 				} else {
 					$overlay.show();
 				}
 			}
-		}
+		//}
 		
 		if (args.action === "remove" || args.action === "detach") {
 			if (typeof args.options === "object") {
