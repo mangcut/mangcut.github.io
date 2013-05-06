@@ -196,53 +196,10 @@ $(document).ready(function () {
   }	
 })( jQuery );
 
-(function( $ ){
-	$.fn.flipswitch = function() {
-		var template = 
-			'<label class="switch-ui">' +
-			'	<div class="switch-inner"></div>' +
-			'	<div class="switch-switch"></div>' +
-			'</label>';
-		var $switchUI;
-		return this.hide().wrap("<div class='switch-wrapper' />").after(function() {
-			if ($switchUI) {
-				$switchUI = $switchUI.clone();
-			} else {
-				$switchUI = $(template);
-			}
-			return $switchUI.attr("for", this.id);
-		});
-	}
-})( jQuery );
-
 (function( global ) {
   var Poem = (function() {
 
     return {
-		checkAll: function(target, notHilight) {
-			var $target = $(target);
-			if ($target.not(":checked").length) {
-				$target.prop('checked', true);
-				$(this).prop('checked', true);
-			} else {
-				$target.prop('checked', false);
-				$(this).prop('checked', false);
-			}
-			
-			if (!notHilight) {
-				$target.each(function() {
-					$c = $(this);
-					if ($c.closest("table.table-select")) {
-						var checked = $c.prop('checked');
-						if (checked) {
-							$c.closest("tr").addClass("selected");
-						} else {
-							$c.closest("tr").removeClass("selected");
-						}
-					}
-				});
-			}
-		},
 		// getData with default. Please note the passed-in object must be a jQuery object
 		getData: function(jObject, dataName, defaultValue) {
 				var value = jObject.data(dataName);
@@ -252,58 +209,11 @@ $(document).ready(function () {
 				
 				return value;
 		},
-		format: function() {
-		  var s = arguments[0];
-		  for (var i = 0; i < arguments.length - 1; i++) {
-			var reg = new RegExp("\\{" + i + "\\}", "gm");
-			s = s.replace(reg, arguments[i + 1]);
-		  }
-
-		  return s;
-		},
-		param: function(name) {
-			var match = RegExp('[?&]' + name + '=([^&]*)')
-							.exec(window.location.search);
-			return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-		},
-		addCommas: function(nStr) {
-			nStr += '';
-			x = nStr.split('.');
-			x1 = x[0];
-			x2 = x.length > 1 ? '.' + x[1] : '';
-			var rgx = /(\d+)(\d{3})/;
-			while (rgx.test(x1)) {
-				x1 = x1.replace(rgx, '$1' + ',' + '$2');
-			}
-			return x1 + x2;
-		},
-		padZeros: function(number, length) {
-			var str = '' + number;
-			while (str.length < length) {
-				str = '0' + str;
-			}
-			return str;
-		},
 		nullOrEmpty: function(something) {
 			if (typeof something === 'undefined' || something === null || something === "") {
 				return true;
 			}
 			return false;
-		},
-		toggleColumn: function(table, index, effect) {
-			return $(table).find('td:nth-child(' + index + '),th:nth-child(' + index + ')').toggle(effect || "fade");
-		},
-		alert: function(message, title) {
-			var appTitle = title || this.AppTitle || document.title;
-			alert(message);
-		},
-		ask: function(message, title) {
-			var appTitle = title || this.AppTitle || document.title;
-			confirm(message);
-		},
-		confirm: function(message, title) {
-			var appTitle = title || this.AppTitle || document.title;
-			confirm(message);
 		}
     };
   })();
