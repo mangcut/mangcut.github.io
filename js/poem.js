@@ -11,6 +11,7 @@
 $(document).ready(function () {
 	// prevent page-load on <a href='#'>Something</a>
 	$(document).on("click", "a", function(e) {
+		alert(theHref);
 		var theHref = $(this).attr("href");
 		if (theHref === "#" || theHref === "") {
 			e.preventDefault();
