@@ -11,13 +11,13 @@
 $(document).ready(function () {
 	// prevent page-load on <a href='#'>Something</a>
 	$(document).on("click", "a", function(e) {
-		alert(theHref);
 		var theHref = $(this).attr("href");
+		var theTarget = $(this).attr("target");
 		if (theHref === "#" || theHref === "") {
 			e.preventDefault();
 		} else if (("standalone" in window.navigator) && window.navigator.standalone) {
-			if (theHref.indexOf("#") !== 0 && theHref.toLowerCase().indexOf("http") !== 0) {
-				alert(theHref);
+			if ( theHref.indexOf("#") !== 0 && theHref.toLowerCase().indexOf("http") !== 0 && 
+				($P.nullOrEmpty(theTarget) || theTarget === "_self")) {
 				e.preventDefault();
 				location.href = theHref;
 			}
