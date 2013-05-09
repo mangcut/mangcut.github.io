@@ -11,8 +11,15 @@
 $(document).ready(function () {
 	// prevent page-load on <a href='#'>Something</a>
 	$(document).on("click", "a", function(e) {
-		if ($(this).attr("href") === "#") {
+		var theHref = $(this).attr("href");
+		if (theHref === "#" || theHref === "") {
 			e.preventDefault();
+		} else if (("standalone" in window.navigator) && window.navigator.standalone) {
+			if (theHref.indexOf("#") !== 0 && theHref.toLowerCase().indexOf("http") !== 0) {
+				alert(theHref);
+				e.preventDefault();
+				location.href = theHref;
+			}
 		}
 	});
 
