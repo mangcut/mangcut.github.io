@@ -41,6 +41,11 @@ html, body {
 	margin: 5px 0 0 0;
 }
 
+.navbar .brand img {
+	width: 30px;
+	height: 30px;
+}
+
 .img-polaroid {
 	padding: 3px;
 }
@@ -49,7 +54,11 @@ html, body {
 	margin: 9px 0 0 0;
 	padding: 0 0 0 4px;
 	display: block;
+}
+
+#showSitemap img {
 	width: 22px;
+	height: 18px;
 }
 
 .table-layout {
