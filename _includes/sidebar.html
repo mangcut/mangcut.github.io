@@ -1,0 +1,19 @@
+<div id="sitemap" class="sitemap shadow">
+	<div class="sitemap-heading" data-action="trigger" data-target="#overlay" data-options="click">
+		<table class="table-layout">
+			<tr>
+			<td class="sitemap-text heading-text bold font-xxlarge">Bạn tìm gì?</td>
+			<td align="right"><button type="button" class="close" aria-hidden="true">&times;</button></td>
+			</tr>
+		</table>
+	</div>
+	<div id="sitemapContent" class="sitemap-content">
+		<ul class="nav nav-list">
+			<li class="nav-header heading-text">Bài gần đây</li>
+			{% for post in site.posts %}
+			  <li {% if page.url == post.url %} class="active"<{% endif %}><a href="{{ post.url }}">[{{ post.date | date: "%d/%m" }}] {{ post.title }}</a></li>
+			{% endfor %}
+			{% include shareline.html %}
+		</ul>
+	</div>
+</div>

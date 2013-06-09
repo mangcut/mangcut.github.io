@@ -68,6 +68,16 @@ html, body {
 	margin: 0;
 }
 
+.dl-horizontal {
+	margin: 0;
+}
+.dl-horizontal dt {
+	width: 80px;
+}
+.dl-horizontal dd {
+	margin-left: 100px;
+}
+
 /* Components: sitemap, menu, etc. */
 
 figure {
@@ -132,6 +142,19 @@ figure figcaption.inside {
 
 .poem p {
 	margin-bottom: 20px;
+}
+
+section.article-list article {
+	padding-top: 20px;
+}
+
+html.site-home section.article-list article {
+	padding-bottom: 20px;
+	border-top: solid 1px #e5e5e5;
+}
+		
+html.site-home  section.article-list article:first-child, section.article-list article.first-child {
+	border-top: 0;
 }
 
 .article-content {

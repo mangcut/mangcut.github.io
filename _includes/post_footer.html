@@ -1,0 +1,18 @@
+{% if page.comment != false %}
+<section>
+	<div class="spacy-line"></div>
+	<p><a href="#" data-action='trigger' data-target="#showSitemap" data-options="click" title="Hiển thị danh sách bài viết khác"><i class="icon icon-list"></i> Các bài khác</a></p>
+	<p><a href="#" data-action='[{"action": "show", "target": "#disqusZone"}, {"action": "$(this).hide"}, {"action": "scrollBy", "options": [0, 250]}]' title="Hiển thị ô để đọc và viết bình luận"><i class="icon icon-comment"></i> Viết bình luận</a></p>
+	<div id="disqusZone" class="hide">
+		<div class="spacy-line"></div>
+		<div class="alert font-small"><b>Lưu ý:</b>
+			<ol>
+			<li>Nhập nội dung bình luận</li>
+			<li>Chọn đăng nhập bằng Facebook, Google, Twitter <em>nếu chưa đăng nhập</em>. Hệ thống <em>không cho phép</em> bình luận ẩn danh</li>
+			<li>Gửi bình luận</li>
+			</ol>
+		</div>
+		<div id="disqus_thread"></div>
+	</div>
+</section>
+{% endif %}
