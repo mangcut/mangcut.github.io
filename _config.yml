@@ -5,3 +5,12 @@ permalink: /:categories/:year-:month-:day-:title.html
 url: http://mangcut.vn
 author: Trương Hồng Thi
 pygments: false
+markdown: kramdown
+kramdown:
+  use_coderay: false
+  coderay:
+    coderay_css: class
+syntax:
+  hilight: false;
+  css: prettify
+  js: http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js

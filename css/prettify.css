@@ -1,3 +1,4 @@
+/*
 .com { color: #93a1a1; }
 .lit { color: #195f91; }
 .pun, .opn, .clo { color: #93a1a1; }
@@ -6,6 +7,17 @@
 .kwd, .prettyprint .tag { color: #1e347b; }
 .typ, .atn, .dec, .var { color: teal; }
 .pln { color: #48484c; }
+*/
+.com { color: #008000;  font-style: italic; }
+.str, .prettyprint .tag { color: #A31515; }
+.kwd, .atv { color: #0000FF; }
+.typ { color: #2B91AF; }
+.lit, .atn { color: #FF0000; }
+.pln { color: #000000; }
+.pun { color: #003300; font-weight: bold; }
+.dec { color: purple; }
+.kwd { font-weight: bold; }
+.str { background-color:hsla(0,100%,50%,0.05); }
 
 .prettyprint {
   padding: 8px;

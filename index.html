@@ -3,6 +3,7 @@ layout: default
 categories: blog
 title: Thiền và công việc lập trình
 description: Góc nhìn của Trương Hồng Thi về công nghệ và con người.
+image: /media/moai.jpg
 site_home: true
 comment: false
 ---
@@ -13,7 +14,7 @@ comment: false
 	<p class="font-small muted">Viết bởi <a href="about.html">{% if post.author %}{{ post.author }}{% else %}Trương Hồng Thi{% endif %}</a>, đăng ngày {{ post.date | date: "%d/%m/%Y" }}</p>
 	{% if post.image %}
 	<figure>
-	  <div class="img-container" {% if post.post.image_origin %}data-origin="{{post.image_origin}}{% endif %}">
+	  <div class="img-container" {% if post.image_origin %}data-origin="{{post.image_origin}}{% endif %}">
 		<img src="{{ post.image }}" {% if post.image_caption %}alt="{{ post.image_caption }}" title="{{ post.image_caption }}"{% endif %}></img>
 	  </div>
 	  {% if post.image_caption %}

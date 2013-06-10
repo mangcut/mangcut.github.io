@@ -7,15 +7,15 @@
 <meta name="description" content="{{page.description}}">
 <meta property="og:title" content="{{page.title}}" />
 {% if page.image %}
-<meta property="og:image" content="{{site.url}}{{page.image}}" />
+<meta property="og:image" content="{{page.image}}" />
 {% endif %}
 <title>{{site.name}} - {{page.title}}</title>
 {% if page.site_home %}
 <link rel="canonical" href="{{site.url}}"/>
 {% endif %}
 <link href="http://feeds.feedburner.com/mangcut" type="application/atom+xml" rel="alternate" title="All articles's ATOM Feed">
-{% if page.syntax %}
-<link href="/css/prettify.css" rel="stylesheet">
+{% if page.hilight %}
+<link href="/css/{{site.syntax.css}}.css" rel="stylesheet">
 {% endif %}
 <link href="/css/bootstrap.min.css" rel="stylesheet">
 <link href="/css/poem.css" rel="stylesheet">
