@@ -1,0 +1,23 @@
+---
+layout: default
+title: Trang không tồn tại
+description: Có thể địa chỉ bị sai, hoặc trang đã thay đổi địa chỉ.
+shareline: false
+comment: false
+---
+<div style="padding-top:30px;" class="text-center">
+<h1 style="color: red;">Trang không tồn tại!</h1>
+<p>Có thể địa chỉ bị sai, hoặc trang đã thay đổi địa chỉ.</p>
+<p>Chẳng sao cả, chuyện này vẫn thường xảy ra. Đã đến đây rồi, sao bạn không đọc thử vài bài?</p>
+</div>
+
+<div class="spacy-line"></div>
+
+<div>
+{% for post in site.posts %}
+<article>
+	<h4 class="index-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+	<p>{{ post.excerpt }}</p>
+</article>
+{% endfor %}
+</div>

@@ -9,7 +9,9 @@
 	  <div class="container-fluid container-first">
         <section class="article-list">
           {{ content }}
-          {% include shareline.html %}
+		  {% if page.shareline %}
+		    {% include shareline.html %}
+          {% endif %}
           {% include post_footer.html %}
         </section>
 
