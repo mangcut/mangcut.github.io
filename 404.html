@@ -6,16 +6,15 @@ shareline: false
 comment: false
 ---
 <div style="padding-top:20px;" class="text-center">
-<h3 style="color: #3a87ad;">Trang không tồn tại!</h3>
-<p>Có thể địa chỉ sai hoặc đã bị thay đổi.</p>
-<p>Chẳng sao cả, chuyện này vẫn thường xảy ra. Đã đến đây rồi, sao bạn không đọc thử vài bài?</p>
+<h3>Trang không tồn tại!</h3>
+<p>Có thể địa chỉ sai hoặc đã bị thay đổi. Chẳng sao cả, chuyện này vẫn thường xảy ra. Đã đến đây rồi, sao bạn không đọc thử vài bài?</p>
 </div>
 
 <div class="spacy-line"></div>
 
 <div>
 {% for post in site.posts %}
-<article{% unless forloop.last %} class="bottom-line"{% endunless %}>
+<article{% unless forloop.last %} class="bottom-line"{% endunless %} style="margin-top: -10px;margin-bottom: 20px;">
 	<h4 class="index-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
 	<p>{{ post.excerpt }}</p>
 </article>
