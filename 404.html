@@ -4,15 +4,14 @@ title: Trang không tồn tại
 description: Có thể địa chỉ bị sai, hoặc trang đã thay đổi địa chỉ.
 shareline: false
 comment: false
+site_home: true
 ---
-<div style="padding-top:20px;" class="alert alert-block">
-<h3>Trang không tồn tại!</h3>
+<section style="margin-top:20px;" class="alert alert-block">
+<h4>Trang không tồn tại!</h4>
 <p>Có thể địa chỉ sai hoặc đã bị thay đổi. Chẳng sao cả, chuyện này vẫn thường xảy ra. Đã đến đây rồi, sao bạn không đọc thử vài bài?</p>
-</div>
+</section>
 
-<div class="spacy-line"></div>
-
-<div>
+<section>
 {% for post in site.posts %}
 <article {% if forloop.first %}class="first-child"{% endif %}>
 	<span class="topic">{{ post.topic }}</span>
@@ -32,4 +31,4 @@ comment: false
 	<a href='{{ post.url }}'>[Đọc bài...]</a>
 </article>
 {% endfor %}
-</div>
+</section>
