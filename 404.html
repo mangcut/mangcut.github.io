@@ -5,9 +5,9 @@ description: Có thể địa chỉ bị sai, hoặc trang đã thay đổi đ�
 shareline: false
 comment: false
 ---
-<div style="padding-top:30px;" class="text-center">
-<h1 style="color: red;">Trang không tồn tại!</h1>
-<p>Có thể địa chỉ bị sai, hoặc trang đã thay đổi địa chỉ.</p>
+<div style="padding-top:20px;" class="text-center">
+<h3 style="color: #3a87ad;">Trang không tồn tại!</h3>
+<p>Có thể địa chỉ sai hoặc đã bị thay đổi.</p>
 <p>Chẳng sao cả, chuyện này vẫn thường xảy ra. Đã đến đây rồi, sao bạn không đọc thử vài bài?</p>
 </div>
 
@@ -15,7 +15,7 @@ comment: false
 
 <div>
 {% for post in site.posts %}
-<article>
+<article{% unless forloop.last %} class="bottom-line"{% endunless %}>
 	<h4 class="index-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
 	<p>{{ post.excerpt }}</p>
 </article>

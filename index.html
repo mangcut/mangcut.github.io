@@ -9,7 +9,7 @@ comment: false
 ---
 {% for post in site.posts %}
 <article {% if forloop.first %}class="first-child"{% endif %}>
-	<span class="label label-info cursor-pointer">{{ post.topic }}</span>
+	<span class="topic">{{ post.topic }}</span>
 	<h4 class="index-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
 	<p class="font-small muted">Viết bởi <a href="about.html">{% if post.author %}{{ post.author }}{% else %}Trương Hồng Thi{% endif %}</a>, đăng ngày {{ post.date | date: "%d/%m/%Y" }}</p>
 	{% if post.image %}

@@ -1,11 +1,6 @@
 <section>
 <div class="spacy-line"></div>
-<p class="font-large"><strong>Thích mangcut.vn?</strong></p>
-<p style="margin-top: 10px">
-	<iframe src="//upload.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fmangcut.vn&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:20px;" allowTransparency="true"></iframe>
-	<a href="#" class="btn-share valign-top" data-href="http://mangcut.vn"><img class="valign-top" src="/img/facebook.png" alt="Share" title="Share on Facebook"></a>
-	</p>
-	<p>
-	<iframe src="//upload.facebook.com/plugins/like.php?href=http%3A%2F%2Fmangcut.vn{% unless page.site_home %}{{ page.url | cgi_escape }}{% endunless %}&amp;send=false&amp;layout=standard&amp;width=250&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=recommend&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:80px;" allowTransparency="true"></iframe>
+<p>
+	<iframe src="//upload.facebook.com/plugins/like.php?href=http%3A%2F%2Fmangcut.vn{% unless page.site_home %}{{ page.url | cgi_escape }}{% endunless %}&amp;send=false&amp;layout=standard&amp;width=250&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:80px;" allowTransparency="true"></iframe>
 </p>
 </section>
