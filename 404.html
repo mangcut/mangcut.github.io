@@ -14,7 +14,7 @@ comment: false
 
 <div>
 {% for post in site.posts %}
-<article{% unless forloop.last %} class="bottom-line"{% endunless %} style="margin-top: -10px;margin-bottom: 20px;">
+<article{% unless forloop.last %} class="bottom-line"{% endunless %} style="padding-top: -20px;padding-bottom: 20px;">
 	<h4 class="index-title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
 	<p>{{ post.excerpt }}</p>
 </article>
