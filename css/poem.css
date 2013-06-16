@@ -36,6 +36,13 @@ html, body {
 	padding-top: 41px;
 }
 
+.post-title {
+	margin-top: 2px;
+}
+
+.index-title {
+}
+
 .navbar .brand {
 	padding: 0 20px 0px 0;
 	margin: 5px 0 0 0;

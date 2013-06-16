@@ -11,9 +11,6 @@
 		<ul class="nav nav-list">
 			{% for post in site.posts %}
 			  <li {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span style="color:#bbb">{{ post.date | date: "%d/%m" }}</span>&nbsp;{{ post.title }}</a></li>
-			  {% unless forloop.last %}
-			    <li class="divider"></li>
-			  {% endunless %}
 			{% endfor %}
 			{% include share_home.html %}
 		</ul>
