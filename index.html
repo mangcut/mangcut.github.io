@@ -7,22 +7,4 @@ image: /media/moai.jpg
 site_home: true
 comment: false
 ---
-{% for post in site.posts %}
-<article {% if forloop.first %}class="first-child"{% endif %}>
-	<span class="topic">{{ post.topic }}</span>
-	<h2 class="index-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<p class="font-small muted">Viết bởi <a href="about.html">{% if post.author %}{{ post.author }}{% else %}Trương Hồng Thi{% endif %}</a>, đăng ngày {{ post.date | date: "%d/%m/%Y" }}</p>
-	{% if post.image %}
-	<figure>
-	  <div class="img-container" {% if post.image_origin %}data-origin="{{post.image_origin}}{% endif %}">
-		<img src="{{ post.image }}" {% if post.image_caption %}alt="{{ post.image_caption }}" title="{{ post.image_caption }}"{% endif %}></img>
-	  </div>
-	  {% if post.image_caption %}
-	  <figcaption>[Minh họa] {{ post.image_caption }}</figcaption>
-	  {% endif %}
-	</figure>
-	{% endif %}
-	<p>{{ post.excerpt }}</p>
-	<a href='{{ post.url }}'>[Đọc bài...]</a>
-</article>
-{% endfor %}
+{% include index.html %}

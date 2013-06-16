@@ -416,7 +416,7 @@ html.site-home  section.article-list article:first-child, section.article-list a
 	clear: both;
 }
 
-@media (max-width: 399px) {
+@media (max-width: 449px) {
 	.container-fluid {
 		padding-right: 10px;
 		padding-left: 10px;
@@ -430,14 +430,14 @@ html.site-home  section.article-list article:first-child, section.article-list a
 	}
 }
 
-@media (max-width: 359px) {
+@media (max-width: 379px) {
 	.navbar .nav>li>a {
 		padding-left: 8px;
 		padding-right: 8px;
 	}
 }
 
-@media (max-width: 339px) {
+@media (max-width: 359px) {
 	.navbar .nav>li>a {
 		padding-left: 6px;
 		padding-right: 6px;
