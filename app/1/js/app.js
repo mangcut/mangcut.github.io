@@ -15,7 +15,7 @@ var lonelyCell;
 
 $(document).ready(function () {
 	// setup menu
-	$("#menu td").click(function() {
+	$("#menu td").tap(function() {
 		if (!$(this).hasClass("disabled")) {
 			$("#menu td.active").removeClass("active");
 			$(this).addClass("active");
@@ -23,17 +23,17 @@ $(document).ready(function () {
 		}
 	});
 	
-	$("#showMenu").click(function() {
+	$("#showMenu").tap(function() {
 		toggleMenu();
 	});
 	
 	// setup buttons
-	$("#restart").click(start);
+	$("#restart").tap(start);
 	
 	// setup cells
 	// cache the cells
 	var $cells = $("#playGround .row div");
-	$cells.click(function() {
+	$cells.tap(function() {
 		var $t = $(this);
 		if ($t.hasClass("open") === false) {
 			$t.addClass("open");
