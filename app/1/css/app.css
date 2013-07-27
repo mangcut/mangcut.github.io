@@ -1,0 +1,164 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	font-weight: 300;
+	line-height: 1.5em;
+	color: HSL(105,75%,20%);
+	background-color: #f0f0f0;
+}
+
+table {
+	background-color: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+	max-width: 100%;
+}
+
+table td {
+	vertical-align: middle;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+}
+
+#menu {
+	position: fixed;
+	width: 100%;
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-transition: top 0.3s ease;
+	-moz-transition: top 0.3s ease;
+	-o-transition: top 0.3s ease;
+	transition: top 0.3s ease;
+}
+
+#menu.collapsed{
+	top: -243px;
+}
+
+#menu.expanded{
+	top: 35px;
+}
+
+table.tile-menu {
+	width: 100%;
+	max-width: 240px;
+}
+
+table.tile-menu td {
+	border: 2px solid HSL(105, 75%, 30%);
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 300;
+	background-color: HSL(105, 75%, 40%);
+	color: HSL(105, 75%, 100%);
+}
+
+table.tile-menu td.active {
+	background-color: HSL(105, 75%, 30%);
+	cursor: default;
+}
+
+table.tile-menu td.disabled {
+	background-color: #c8c8c8;
+	color: #999999;
+	cursor: default;
+}
+
+table.tile-menu tr {
+	height: 40px;
+}
+
+table.tile-menu.large tr {
+	height: 60px;
+}
+
+.tile-arrow {
+	width:0;
+	height:0;
+	margin-left: 10px;
+	border-top-width: 0;
+	border-left-color: transparent;
+	border-left-width: 10px;
+	border-left-style: solid;
+	border-right-color: transparent;
+	border-right-width: 10px;
+	border-right-style: solid;
+	border-bottom-color: HSL(105, 75%, 30%);
+	border-bottom-width: 7px;
+	border-bottom-style: solid;
+}
+
+#topbar {
+	border: 0;
+	background-color: HSL(105, 75%, 85%);
+	font-size: 16px;
+	height: 35px;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.app-icon {
+	padding: 5px 15px;
+	background-color: HSL(105, 75%, 40%);
+	color: HSL(105, 75%, 100%);
+	cursor: pointer;
+}
+
+.app-icon.active {
+	background-color: HSL(105, 75%, 30%);
+	cursor: default;
+}
+
+.app-title {
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+.app-info {
+	background-color: HSL(105, 75%, 80%);
+	padding: 5px 10px;
+	font-size: 85%;
+}
+
+#playGround {
+	margin: 10% auto;
+	display: table;
+}
+
+#playGround .row {
+	display: table-row;
+}
+
+#playGround .row div {
+	display: table-cell;
+	width: 60px;
+	height: 60px;
+	margin: 0;
+	padding: 0;
+	border: 3px solid #f0f0f0;
+	/*cursor: pointer;*/
+	transition: background-color 0.5s ease;
+}
+
+#playGround .row div.open {
+	/*cursor: default;*/
+}
+
+.btn {
+	background-color: HSL(105, 75%, 40%);
+	color: HSL(105, 75%, 100%);
+	cursor: pointer;
+	padding: 5px 10px;
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	text-align: center;
+}
