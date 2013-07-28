@@ -168,15 +168,22 @@ table.tile-menu.large tr {
 	-moz-transition: background-color 0.5s ease;
 	-o-transition: background-color 0.5s ease;
 	transition: background-color 0.5s ease;
+	
+	color: gray;
+	text-align: center;
+	font-weight: bold;
+	font-family: serif;
+	vertical-align: middle;
 }
 
 #playGround .row div.open {
 	/*cursor: default;*/
+	
+	color: white;
 }
 
 #bottomPart {
 	text-align: center;
-	padding: 10px 0;
 }
 
 .btn {

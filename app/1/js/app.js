@@ -1,28 +1,50 @@
-var colors = [
-		"red",
+var standardColors = [
+		//"red",
+		"#f33",
 		"darkorange",
-		"yellow",
+		//"yellow",
+		"#dd3",
 		"limegreen",
-		"blue",
-		"purple",
+		//"blue",
+		"#33f",
+		//"purple",
+		"darkviolet",
 		"hotpink",
-		"black"
+		//"black",
+		"#333",
+		//"cyan",
+		"#3dd",
+		"olive",
+		"saddlebrown",
+		"darkkhaki"
 	];
-var cells = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7];
+var colors = standardColors;	
 
 var startTime;
 var lonelyCell;
 var secondCounter;
 
+var column = 4;
+var row = 4;
+var cells;
+var showNumber = false;
+
 $(document).ready(function () {
 	// build the play ground
-	buildPlayGround(4, 4);
+	buildPlayGround();
 	
 	// setup menu
 	$("#menu td").tap(function() {
-		if (!$(this).hasClass("disabled")) {
+		if (!$(this).hasClass("active")) {
 			$("#menu td.active").removeClass("active");
 			$(this).addClass("active");
+			toggleMenu();
+			
+			column = $(this).data("column");
+			row = $(this).data("row");
+			buildPlayGround();
+			start();
+		} else {
 			toggleMenu();
 		}
 	});
@@ -36,8 +58,7 @@ $(document).ready(function () {
 	
 	// setup cells
 	// cache the cells
-	var $cells = $("#playGround .row div");
-	$cells.tap(function() {
+	$("#playGround").on("tap", "#playGround .row div", function() {
 		var $t = $(this);
 		if ($t.hasClass("open") === false) {
 			$t.addClass("open");
@@ -52,7 +73,7 @@ $(document).ready(function () {
 					lonelyCell = null;
 					
 					// if win
-					if ($("#playGround .row div.fixed").length === 16) {
+					if ($("#playGround .row div.fixed").length === (colors.length * 2)) {
 						$("body").css({'background-color': 'pink'});
 						clearInterval(secondCounter);
 						secondCounter = null;
@@ -62,8 +83,8 @@ $(document).ready(function () {
 					var lonelyPhamtom = lonelyCell;
 					lonelyCell = null;
 					setTimeout(function() {
-						setCellColor(lonelyPhamtom, "grey").removeClass("open");
-						setCellColor($t, "grey").removeClass("open");
+						setCellColor(lonelyPhamtom, "gray").removeClass("open");
+						setCellColor($t, "gray").removeClass("open");
 					}, 1000);
 				}
 			} else {
@@ -85,15 +106,22 @@ function start() {
 	clearInterval(secondCounter);
 	secondCounter = null;
 	
-	cells = shuffle(cells);
-	setCellColor($("#playGround .row div"), 'grey').each(function(index) {
-		$(this).data("color", colors[cells[index]]).removeClass("open fixed");
+	cells = shuffle(makeCells());
+	colors = makeColors();
+	
+	setCellColor($("#playGround .row div"), 'gray').each(function(index) {
+		var number = cells[index];
+		$(this).data("color", colors[number]).removeClass("open fixed");
+		if (showNumber) {
+			$(this).text("" + (number + 1));
+		}
 	});
 	
 	$("#counter").text("000");
 	$("body").css({'background-color': '#f0f0f0'});
 	
 	startTime = new Date();
+	startTime.setSeconds(startTime.getSeconds() + 2);
 	secondCounter = window.setInterval(function() {
 		$("#counter").text(secondPassed());
 	}, 1000)
@@ -128,6 +156,8 @@ function shuffle(array) {
 
 function secondPassed() {
 	var endTime = new Date();
+	if (endTime <= startTime) return "000";
+	
 	var passedSeconds = ((endTime - startTime) / 1000) | 0; // bitwise for Math.floor
 	if (passedSeconds > 999) passedSeconds = 999;
 	if (passedSeconds < 10) {
@@ -140,15 +170,55 @@ function secondPassed() {
 	
 }
 
-function buildPlayGround(col, row) {
+function makeColors() {
+	var count = (column * row) / 2;
+	
+	if (count <= standardColors.length) {
+		colors = standardColors;
+		showNumber = false;
+	} else {
+		colors = new Array();
+		var hueStep = 360 / count;
+		for (var i = 0; i < count; i++) {
+			var hue = (i * hueStep) | 0;
+			var sat = Math.round((100 - Math.random() * 10));
+			var light = Math.round((30 + Math.random() * 10));
+			var c = "HSL(" + hue + ",100%,40%)";
+			
+			colors.push(c);
+		}
+		showNumber = true;
+	}
+	
+	return colors; // for chaining
+}
+
+function makeCells() {
+	cells = new Array();
+	var count = (column * row) / 2;
+	
+	for (var i = 0; i < count; i++) {
+		cells.push(i);
+		cells.push(i);
+	}
+	
+	return cells; // for chaining
+}
+
+function buildPlayGround() {
 	var width = calcCellSize(4, 4);
 	var sw = "width:" + width + "px";
 	var sh = "height:" + width + "px";
-	var style = "style='" + sw + ";" + sh + ";'";
+	var style = "style='" + sw + ";" + sh + ";";
+	
+	// set fontsize and padding-top
+	var fontSize = ((width / 2) | 0) + 1;
+	style += "font-size:" + fontSize + "px;'";
+	
 	var html = "";
 	for (var i = 0; i < row; i++)  {
 		var rowHtml = "<div class='row'>";
-		for (var j = 0; j < col; j++) {
+		for (var j = 0; j < column; j++) {
 			rowHtml += "<div " + style + "></div>";
 		}
 		rowHtml += "</div>";
@@ -161,21 +231,29 @@ function buildPlayGround(col, row) {
 	var topH = $("#topbar").height();
 	var bottomH = $("#bottomPart").height();
 	var nowH = $(window).height() - topH - bottomH - $pg.height();
-	var paddingTop = (nowH / 2) | 0
-	var paddingBottom = nowH - paddingTop;
-	$pg.css({'margin-top': paddingTop, 'margin-bottom': paddingBottom});
+	var p1 = (nowH / 3) | 0
+	var p2 = p1;
+	var p3 = nowH - p1 - p2;
+	$pg.css({'margin-top': p1, 'margin-bottom': p2});
+	$("#bottomPart").css({'margin-bottom': p3});
 }
 
 // assume cell must be square
-function calcCellSize(col, row) {
-	var w = $(window).width() - 10;
-	var x = (w / col) | 0;
+function calcCellSize() {
+	var w = $(window).width() - 40;
+	var x = (w / column) | 0;
 	
 	var topH = $("#topbar").height();
 	var bottomH = $("#bottomPart").height();
 	
-	var h = $(window).height() - topH - bottomH - 10; // 10 for some padding
+	var h = $(window).height() - topH - bottomH - 40; // 10 for some padding
 	var y = (h / row) | 0;
 	
-	return Math.min(x, y);
+	var z = Math.min(x, y);
+	
+	//if (x < y && z >= 60) {
+	//	z = 60;
+	//}
+	
+	return z;
 }
