@@ -35,24 +35,19 @@ table td {
 #menu {
 	position: fixed;
 	width: 100%;
-	-webkit-transform: translate3d(0, 0, 0);
-	-webkit-transition: top 0.3s ease;
-	-moz-transition: top 0.3s ease;
-	-o-transition: top 0.3s ease;
-	transition: top 0.3s ease;
+	top: 35px;
+	display: none;
 }
 
 #menu.collapsed{
-	top: -243px;
+	
 }
 
 #menu.expanded{
-	top: 35px;
 }
 
 table.tile-menu {
-	width: 100%;
-	max-width: 240px;
+	width: 240px;
 }
 
 table.tile-menu td {
@@ -154,9 +149,9 @@ table.tile-menu.large tr {
 	padding: 0;
 	border: 3px solid #f0f0f0;
 	/*cursor: pointer;*/
-	-o-transition: background-color 0.5s ease;
 	-webkit-transition: background-color 0.5s ease;
 	-moz-transition: background-color 0.5s ease;
+	-o-transition: background-color 0.5s ease;
 	transition: background-color 0.5s ease;
 }
 

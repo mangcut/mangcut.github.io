@@ -88,7 +88,12 @@ function start() {
 
 function toggleMenu() {
 	$("#showMenu").toggleClass("active");
-	$("#menu").toggleClass("collapsed expanded");
+	var $m = $("#menu");
+	if ($m.hasClass("bounceIn") === false) {
+		$m.show().removeClass("hinge").addClass("bounceIn");
+	} else {
+		$m.removeClass("bounceIn").addClass("hinge");
+	}
 }
 
 function shuffle(array) {
