@@ -7,7 +7,13 @@
 	user-select:none;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
+
+html{
+	height:100%;
+}
+
 body {
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
@@ -132,8 +138,14 @@ table.tile-menu.large tr {
 	font-size: 85%;
 }
 
+#page {
+}
+
+#content {
+}
+
 #playGround {
-	margin: 10% auto;
+	margin: 0 auto;
 	display: table;
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -162,6 +174,11 @@ table.tile-menu.large tr {
 	/*cursor: default;*/
 }
 
+#bottomPart {
+	text-align: center;
+	padding: 10px 0;
+}
+
 .btn {
 	background-color: HSL(105, 75%, 40%);
 	color: HSL(105, 75%, 100%);
@@ -170,5 +187,4 @@ table.tile-menu.large tr {
 	display: block;
 	width: 100px;
 	margin: 0 auto;
-	text-align: center;
 }

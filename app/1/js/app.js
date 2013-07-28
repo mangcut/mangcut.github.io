@@ -155,13 +155,27 @@ function buildPlayGround(col, row) {
 		html += rowHtml;
 	}
 	
-	$("#playGround").html(html);
+	var $pg = $("#playGround");
+	$pg.html(html);
+	
+	var topH = $("#topbar").height();
+	var bottomH = $("#bottomPart").height();
+	var nowH = $(window).height() - topH - bottomH - $pg.height();
+	var paddingTop = (nowH / 2) | 0
+	var paddingBottom = nowH - paddingTop;
+	$pg.css({'margin-top': paddingTop, 'margin-bottom': paddingBottom});
 }
 
 // assume cell must be square
 function calcCellSize(col, row) {
-	var w = window.innerWidth - 10;
+	var w = $(window).width() - 10;
 	var x = (w / col) | 0;
 	
-	return x;
+	var topH = $("#topbar").height();
+	var bottomH = $("#bottomPart").height();
+	
+	var h = $(window).height() - topH - bottomH - 10; // 10 for some padding
+	var y = (h / row) | 0;
+	
+	return Math.min(x, y);
 }
