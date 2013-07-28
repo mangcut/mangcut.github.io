@@ -143,11 +143,12 @@ table.tile-menu.large tr {
 
 #playGround .row div {
 	display: table-cell;
-	width: 60px;
-	height: 60px;
 	margin: 0;
 	padding: 0;
 	border: 3px solid #f0f0f0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
 	/*cursor: pointer;*/
 	-webkit-transition: background-color 0.5s ease;
 	-moz-transition: background-color 0.5s ease;
