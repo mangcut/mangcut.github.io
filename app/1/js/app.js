@@ -134,7 +134,10 @@ function secondPassed() {
 		return "00" + passedSeconds;
 	} else if (passedSeconds < 100) {
 		return "0" + passedSeconds;
+	} else {
+		return "" + passedSeconds;
 	}
+	
 }
 
 function buildPlayGround(col, row) {
