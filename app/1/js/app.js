@@ -157,7 +157,7 @@ function buildPlayGround(col, row) {
 
 // assume cell must be square
 function calcCellSize(col, row) {
-	var w = window.innerWidth;
+	var w = window.innerWidth - 10;
 	var x = (w / col) | 0;
 	
 	return x;
