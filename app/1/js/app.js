@@ -90,7 +90,7 @@ function toggleMenu() {
 	$("#showMenu").toggleClass("active");
 	var $m = $("#menu");
 	if ($m.hasClass("bounceIn") === false) {
-		$m.show().removeClass("hinge").addClass("bounceIn");
+		$m.removeClass("hinge").show().addClass("bounceIn");
 	} else {
 		$m.removeClass("bounceIn").addClass("hinge");
 	}
