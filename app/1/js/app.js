@@ -73,10 +73,11 @@ $(document).ready(function () {
 					lonelyCell = null;
 					
 					// if win
-					if ($("#playGround .row div.fixed").length === (colors.length * 2)) {
-						$("body").css({'background-color': 'pink'});
+					if ($("#playGround .row div.fixed").length === cells.length) {
 						clearInterval(secondCounter);
 						secondCounter = null;
+						$("body").css({'background-color': 'pink'});
+						$("#playGround").addClass("swing");
 					}
 				} else {
 					// not match -> close both cell
@@ -109,6 +110,7 @@ function start() {
 	cells = shuffle(makeCells());
 	colors = makeColors();
 	
+	$("#playGround").removeClass("swing");
 	setCellColor($("#playGround .row div"), 'gray').each(function(index) {
 		var number = cells[index];
 		$(this).data("color", colors[number]).removeClass("open fixed");
