@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="132"
+   height="132"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="C:\Users\thith\Documents\GitHub\thith.github.io\app\1\apple_iconicon.png"
+   inkscape:export-xdpi="98.181816"
+   inkscape:export-ydpi="98.181816">
+  <defs
+     id="defs4">
+    <marker
+       markerWidth="182.85715"
+       markerHeight="171.42857"
+       orient="auto"
+       id="marker3001">
+      <path
+         inkscape:connector-curvature="0"
+         id="path2997"
+         d="m -91.42857,-5e-6 0,-85.71428 91.42857,0 91.42857,0 0,85.71428 0,85.71429 -91.42857,0 -91.42857,0 0,-85.71429 z"
+         style="fill:#008080" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="-158.92857"
+     inkscape:cy="176.60443"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="false"
+     inkscape:snap-global="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2999"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       originx="0px"
+       originy="1.4494629e-005px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-920.3622)">
+    <rect
+       style="fill:#00e6e6;fill-rule:evenodd;stroke:#000000;stroke-width:0.33165798000000002px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       id="rect2989"
+       width="59.668343"
+       height="59.668343"
+       x="4.1658292"
+       y="988.52802" />
+    <rect
+       style="fill:#00e600;fill-rule:evenodd;stroke:#000000;stroke-width:0.33199999000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       id="rect2991"
+       width="59.668133"
+       height="59.668133"
+       x="4.1659999"
+       y="924.52808" />
+    <path
+       style="fill:#e600e6;stroke:#000000;stroke-width:0.33199999000000002;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 68.166,1018.1962 0,-30.00002 30,0 30,0 0,30.00002 0,30 -30,0 -30,0 z"
+       id="path2993"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       style="fill:#e6e600;stroke:#000000;stroke-width:0.33199999000000002;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
+       d="m 68.166,954.1962 0,-30 30.000001,0 29.999999,0 0,30 0,30 -29.999999,0 -30.000001,0 z"
+       id="path2995"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+  </g>
+</svg>
