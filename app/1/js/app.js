@@ -18,7 +18,45 @@ var standardColors = [
 		"saddlebrown",
 		"darkkhaki"
 	];
-var colors = standardColors;	
+var fruits = [
+		"apple",
+		"banana",
+		"pear",
+		"orange",
+		"tomato",
+		"kiwi",
+		"mango",
+		"lemon",
+		"peach",
+		"cherry",
+		"strawberry",
+		"apricot"
+	];
+
+var colors = standardColors;
+var maxSize = 80;
+
+var mode = {
+	color: {
+		data: colors,
+		set: function($item, cellID) {
+			return $item.css({"background-color": currentMode.data[cellID]});
+		},
+		reset: function($item) {
+			return $item.css({"background-color": "gray", "background-image": "none"});
+		}
+	},
+	fruit: {
+		data: fruits,
+		set: function($item, cellID) {
+			return $item.css({"background-color": "HSL(105,15%,70%);", "background-image": "url('mode/fruit/" + currentMode.data[cellID] + ".png')"});
+		},
+		reset: function($item) {
+			return $item.css({"background-color": "gray", "background-image": "none"});
+		}
+	}
+}
+var currentMode = mode.fruit;
 
 var startTime;
 var lonelyCell;
@@ -62,11 +100,11 @@ $(document).ready(function () {
 		var $t = $(this);
 		if ($t.hasClass("open") === false) {
 			$t.addClass("open");
-			var revealedColor = $t.data("color");
-			setCellColor($t, revealedColor);
+			var cellID = $t.data("cell");
+			currentMode.set($t, cellID);
 			
 			if (lonelyCell) {
-				if (revealedColor == lonelyCell.data("color")) {
+				if (cellID == lonelyCell.data("cell")) {
 					// match
 					$t.addClass("fixed");
 					lonelyCell.addClass("fixed");
@@ -84,9 +122,9 @@ $(document).ready(function () {
 					var lonelyPhamtom = lonelyCell;
 					lonelyCell = null;
 					setTimeout(function() {
-						setCellColor(lonelyPhamtom, "gray").removeClass("open");
-						setCellColor($t, "gray").removeClass("open");
-					}, 1000);
+						currentMode.reset(lonelyPhamtom).removeClass("open");
+						currentMode.reset($t).removeClass("open");
+					}, 700);
 				}
 			} else {
 				lonelyCell = $t;
@@ -98,22 +136,27 @@ $(document).ready(function () {
 	start();
 });
 
-function setCellColor($item, color) {
-	return $item.css({'background-color': color});
-}
-
 function start() {
 	lonelyCell = null;
 	clearInterval(secondCounter);
 	secondCounter = null;
 	
 	cells = shuffle(makeCells());
-	colors = makeColors();
+	
+	if ( ((row * column) / 2) > 12 ) {
+		currentMode = mode.color;
+	} else {
+		currentMode = (new Date().getTime() % 2 === 0) ? mode.color : mode.fruit;
+	}
+	
+	if (currentMode === mode.color) {
+		shuffle(makeColors());
+	}
 	
 	$("#playGround").removeClass("swing");
-	setCellColor($("#playGround .row div"), 'gray').each(function(index) {
+	currentMode.reset($("#playGround .row div")).each(function(index) {
 		var number = cells[index];
-		$(this).data("color", colors[number]).removeClass("open fixed");
+		$(this).data("cell", number).removeClass("open fixed");
 		if (showNumber) {
 			$(this).text("" + (number + 1));
 		}
@@ -183,8 +226,8 @@ function makeColors() {
 		var hueStep = 360 / count;
 		for (var i = 0; i < count; i++) {
 			var hue = (i * hueStep) | 0;
-			var sat = Math.round((100 - Math.random() * 10));
-			var light = Math.round((30 + Math.random() * 10));
+			var sat = Math.round((100 - Math.random() * 50));
+			var light = Math.round((20 + Math.random() * 20));
 			var c = "HSL(" + hue + ",100%,40%)";
 			
 			colors.push(c);
@@ -251,7 +294,7 @@ function calcCellSize() {
 	var h = $(window).height() - topH - bottomH - 40; // 10 for some padding
 	var y = (h / row) | 0;
 	
-	var z = Math.min(x, y);
+	var z = Math.min(x, y, maxSize);
 	
 	//if (x < y && z >= 60) {
 	//	z = 60;

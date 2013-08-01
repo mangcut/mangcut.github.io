@@ -165,12 +165,16 @@ table.tile-menu.large tr {
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	/*cursor: pointer;*/
-	-webkit-transition: background-color 0.5s ease;
-	-moz-transition: background-color 0.5s ease;
-	-o-transition: background-color 0.5s ease;
-	transition: background-color 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+	-webkit-transition-property: background-color, background-image;
+	-moz-transition-property: background-color, background-image;
+	-o-transition-property: background-color, background-image;
+	transition-property: background-color, background-image;
 	
-	color: gray;
+	color: rgba(0,0,0,0);
 	text-align: center;
 	font-weight: bold;
 	font-family: serif;
@@ -181,6 +185,8 @@ table.tile-menu.large tr {
 	/*cursor: default;*/
 	
 	color: white;
+	background-repeat:no-repeat;
+	background-position:center;
 }
 
 #bottomPart {
