@@ -150,8 +150,11 @@ function start() {
 	}
 	
 	if (currentMode === mode.color) {
-		shuffle(makeColors());
+		currentMode.data = makeColors();
+	} else {
+		showNumber = false;
 	}
+	shuffle(currentMode.data);
 	
 	$("#playGround").removeClass("swing");
 	currentMode.reset($("#playGround .row div")).each(function(index) {
