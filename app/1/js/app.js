@@ -151,6 +151,14 @@ function preload() {
 			manifest.push(fileName);
 		}
 	}
+	
+	var count = 0;
+	queue.addEventListener("fileload ", function() {
+		count++;
+		var pc = Math.round(count / manifest.length) + "%";
+		console.log(pc);
+		$("#indicator").css({'width': pc});
+	});
 	queue.loadManifest(manifest);
 }
 
