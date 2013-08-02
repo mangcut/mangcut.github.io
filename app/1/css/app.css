@@ -20,7 +20,7 @@ body {
 	font-weight: 300;
 	line-height: 1.5em;
 	color: HSL(105,75%,20%);
-	background-color: #f0f0f0;
+	background-color: #333;
 }
 
 table {
@@ -139,12 +139,6 @@ table.tile-menu.large tr {
 	font-size: 85%;
 }
 
-.page {
-}
-
-#content {
-}
-
 #playGround {
 	margin: 0 auto;
 	display: table;
@@ -208,4 +202,44 @@ table.tile-menu.large tr {
 	display: block;
 	width: 100px;
 	margin: 0 auto;
+}
+
+#main {
+	display: none;
+}
+
+#splash {
+	background-color: whitesmoke;
+	height: 100%;
+}
+
+#logo {
+	height: 60%;
+	background-repeat:no-repeat;
+	background-position:center 30%;
+	background-image: url('../img/apple_icon.png');
+}
+
+#status {
+	height: 20%;
+}
+
+#progress {
+	height: 15px;
+	width: 200px;
+	background-color: #333;
+	margin: 0 auto;
+}
+
+#indicator {
+	width: 40%;
+	height: 100%;
+	background-color: limegreen;
+}
+
+#mangcut {
+	height: 20%;
+	background-repeat:no-repeat;
+	background-position:center 70%;
+	background-image: url('../../../img/favicon.png');
 }

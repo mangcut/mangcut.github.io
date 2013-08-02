@@ -26,14 +26,15 @@ var cellDecor = {
 		return $item.css({"background-color": currentMode.data[cellID]});
 	},
 	setImage: function($item, cellID) {
-		return $item.css({"background-color": "HSL(105,15%,70%);", "background-image": "url('mode/" + currentMode.name + "/" + currentMode.data[cellID] + ".png')"});
+		return $item.css({"background-color": currentMode.wall, "background-image": "url('mode/" + currentMode.name + "/" + currentMode.data[cellID] + ".png')"});
 	},
 	reset: function($item) {
 		return $item.css({"background-color": cardBackColor, "background-image": "none"});
 	},
-	makeImageMode: function(name, max) {
+	makeImageMode: function(name, max, wallColor) {
 		return {
 			name: name,
+			wall: wallColor,
 			data: makeData(max),
 			set: cellDecor.setImage,
 			reset: cellDecor.reset
@@ -48,9 +49,9 @@ var modes = [
 		set: cellDecor.setColor,
 		reset: cellDecor.reset
 	},
-	cellDecor.makeImageMode("fruit", 12),
-	cellDecor.makeImageMode("moon", 32),
-	cellDecor.makeImageMode("monster", 28)
+	cellDecor.makeImageMode("fruit", 12, "HSL(105,15%,70%);"),
+	cellDecor.makeImageMode("moon", 32, "HSL(330,15%,70%)"),
+	cellDecor.makeImageMode("monster", 28, "HSL(220,15%,70%)")
 ];
 
 var currentMode = modes[1];
@@ -63,11 +64,8 @@ var column = 4;
 var row = 4;
 var cells;
 var showNumber = false;
-
+ 
 $(document).ready(function () {
-	// build the play ground
-	buildPlayGround();
-	
 	// setup menu
 	$("#menu td").tap(function() {
 		if (!$(this).hasClass("active")) {
@@ -129,9 +127,35 @@ $(document).ready(function () {
 		}
 	});
 	
-	// start the game
-	start();
+	// Load data
+	preload();
 });
+
+function preload() {
+	var queue = new createjs.LoadQueue(true, "mode/");
+	queue.addEventListener("complete", function() {
+		$("#splash").remove();
+		$("#main").show();
+		// build the play ground
+		buildPlayGround();
+		// start the game
+		start();
+	});
+	queue.addEventListener("error", function(e) {
+		console.log(e);
+	});
+	var manifest = new Array();
+	for (var i = 1; i < modes.length; i ++) {
+		for (var j = 0; j < modes[i].data.length; j++) {
+			var fileName = modes[i].name + "/" + modes[i].data[j] + ".png";
+			manifest.push(fileName);
+		}
+	}
+	queue.loadManifest(manifest);
+}
+
+function updateLoadProgress() {
+}
 
 function start() {
 	lonelyCell = null;
