@@ -1,62 +1,59 @@
 var standardColors = [
-		//"red",
-		"#f33",
+		"e33",
 		"darkorange",
-		//"yellow",
-		"#dd3",
+		"#ee3",
 		"limegreen",
-		//"blue",
-		"#33f",
-		//"purple",
+		"#33e",
 		"darkviolet",
 		"hotpink",
-		//"black",
-		"#333",
-		//"cyan",
-		"#3dd",
-		"olive",
-		"saddlebrown",
-		"darkkhaki"
-	];
-var fruits = [
-		"apple",
-		"banana",
-		"pear",
-		"orange",
-		"tomato",
-		"kiwi",
-		"mango",
-		"lemon",
-		"peach",
-		"cherry",
-		"strawberry",
-		"apricot"
+		"black",
+		"#3ee",
+		"whitesmoke"
 	];
 
 var colors = standardColors;
+
+var defaultBackColor = "#333";
+var winningColor = "black";
+var cardBackColor = "gray";
+
+
+var cellSize = 64;
 var maxSize = 80;
 
-var mode = {
-	color: {
-		data: colors,
-		set: function($item, cellID) {
-			return $item.css({"background-color": currentMode.data[cellID]});
-		},
-		reset: function($item) {
-			return $item.css({"background-color": "gray", "background-image": "none"});
-		}
+var cellDecor = {
+	setColor: function($item, cellID) {
+		return $item.css({"background-color": currentMode.data[cellID]});
 	},
-	fruit: {
-		data: fruits,
-		set: function($item, cellID) {
-			return $item.css({"background-color": "HSL(105,15%,70%);", "background-image": "url('mode/fruit/" + currentMode.data[cellID] + ".png')"});
-		},
-		reset: function($item) {
-			return $item.css({"background-color": "gray", "background-image": "none"});
+	setImage: function($item, cellID) {
+		return $item.css({"background-color": "HSL(105,15%,70%);", "background-image": "url('mode/" + currentMode.name + "/" + currentMode.data[cellID] + ".png')"});
+	},
+	reset: function($item) {
+		return $item.css({"background-color": cardBackColor, "background-image": "none"});
+	},
+	makeImageMode: function(name, max) {
+		return {
+			name: name,
+			data: makeData(max),
+			set: cellDecor.setImage,
+			reset: cellDecor.reset
 		}
 	}
 }
-var currentMode = mode.fruit;
+
+var modes = [
+	{
+		name: "color",
+		data: colors,
+		set: cellDecor.setColor,
+		reset: cellDecor.reset
+	},
+	cellDecor.makeImageMode("fruit", 12),
+	cellDecor.makeImageMode("moon", 32),
+	cellDecor.makeImageMode("monster", 28)
+];
+
+var currentMode = modes[1];
 
 var startTime;
 var lonelyCell;
@@ -114,7 +111,7 @@ $(document).ready(function () {
 					if ($("#playGround .row div.fixed").length === cells.length) {
 						clearInterval(secondCounter);
 						secondCounter = null;
-						$("body").css({'background-color': 'pink'});
+						$("body").css({'background-color': winningColor});
 						$("#playGround").addClass("swing");
 					}
 				} else {
@@ -146,10 +143,11 @@ function start() {
 	if ( ((row * column) / 2) > 12 ) {
 		currentMode = mode.color;
 	} else {
-		currentMode = (new Date().getTime() % 2 === 0) ? mode.color : mode.fruit;
+		var index = (Math.random()*modes.length) | 0
+		currentMode = modes[index];
 	}
 	
-	if (currentMode === mode.color) {
+	if (currentMode.name === "color") {
 		currentMode.data = makeColors();
 	} else {
 		showNumber = false;
@@ -165,14 +163,19 @@ function start() {
 		}
 	});
 	
+	$("#playGround").addClass("bounceInDown").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+		function(e) {
+			$(this).removeClass("bounceInDown");
+		});
+	
 	$("#counter").text("000");
-	$("body").css({'background-color': '#f0f0f0'});
+	$("body").css({'background-color': defaultBackColor});
 	
 	startTime = new Date();
 	startTime.setSeconds(startTime.getSeconds() + 2);
 	secondCounter = window.setInterval(function() {
 		$("#counter").text(secondPassed());
-	}, 1000)
+	}, 1000);
 }
 
 function toggleMenu() {
@@ -253,6 +256,15 @@ function makeCells() {
 	return cells; // for chaining
 }
 
+function makeData(max) {
+	var d = new Array();
+	for (var i = 1; i <= max; i++) {
+		d.push(i);
+	}
+	
+	return d; // for chaining
+}
+
 function buildPlayGround() {
 	var width = calcCellSize(4, 4);
 	var sw = "width:" + width + "px";
@@ -263,11 +275,13 @@ function buildPlayGround() {
 	var fontSize = ((width / 2) | 0) + 1;
 	style += "font-size:" + fontSize + "px;'";
 	
+	var className = (width < 64) ? "class='stretch-image'" : "class=''";
+	
 	var html = "";
 	for (var i = 0; i < row; i++)  {
 		var rowHtml = "<div class='row'>";
 		for (var j = 0; j < column; j++) {
-			rowHtml += "<div " + style + "></div>";
+			rowHtml += "<div " + className + " " + style + "></div>";
 		}
 		rowHtml += "</div>";
 		html += rowHtml;
@@ -297,11 +311,6 @@ function calcCellSize() {
 	var h = $(window).height() - topH - bottomH - 40; // 10 for some padding
 	var y = (h / row) | 0;
 	
-	var z = Math.min(x, y, maxSize);
-	
-	//if (x < y && z >= 60) {
-	//	z = 60;
-	//}
-	
-	return z;
+	cellSize = Math.min(x, y, maxSize);
+	return cellSize;
 }

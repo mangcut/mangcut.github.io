@@ -139,7 +139,7 @@ table.tile-menu.large tr {
 	font-size: 85%;
 }
 
-#page {
+.page {
 }
 
 #content {
@@ -160,7 +160,7 @@ table.tile-menu.large tr {
 	display: table-cell;
 	margin: 0;
 	padding: 0;
-	border: 4px solid #f0f0f0;
+	border: 2px solid #333;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -187,6 +187,13 @@ table.tile-menu.large tr {
 	color: white;
 	background-repeat:no-repeat;
 	background-position:center;
+}
+
+#playGround .row div.open.stretch-image {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 #bottomPart {
