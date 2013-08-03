@@ -1,3 +1,42 @@
+var _SUPPORT_MOUSE = true;
+var _LOCAL = (location.protocol === "file:");
+
+var sounds = {
+	enable: true,
+	standard: {
+		music: "music.mp3",
+		start: "start.mp3",
+		revealSoundVaries: false,
+		reveal: function(cellID) {
+			if (sounds.standard.revealSoundVaries) {
+				return cellID + ".mp3";
+			} else {
+				return "reveal.mp3";
+			}
+		},
+		match: "match.mp3",
+		win: "win.mp3",
+		play: function(id, cellID) {
+			if (sounds.enable) {
+				if (id === "reveal" && sounds.standard.revealSoundVaries) {
+					return createjs.Sound.play(id + cellID);
+				} else if (id === "music") {
+					return createjs.Sound.play(
+						id,
+						createjs.Sound.INTERRUPT_ANY, 
+						0, // delay
+						0, // offset
+						-1, // loop forever
+						0.5 // volumn, haft of sound :)
+					);
+				} else {
+					return createjs.Sound.play(id);
+				}
+			}
+		}
+	}
+};
+
 var standardColors = [
 		"#e33",
 		"darkorange",
@@ -23,13 +62,18 @@ var maxSize = 80;
 
 var cellDecor = {
 	setColor: function($item, cellID) {
-		return $item.css({"background-color": currentMode.data[cellID]});
+		$item.css({"background-color": currentMode.data[cellID]});
+		showNumber && $item.text(($item.data("cell") + 1) + "");
+		
+		return $item;
 	},
 	setImage: function($item, cellID) {
-		return $item.css({"background-color": currentMode.wall, "background-image": "url('mode/" + currentMode.name + "/" + currentMode.data[cellID] + ".png')"});
+		return $item.css({"background-color": currentMode.wall, "background-image": "url('mode/" + currentMode.name + "/img/" + currentMode.data[cellID] + ".png')"});
 	},
 	reset: function($item) {
-		return $item.css({"background-color": cardBackColor, "background-image": "none"});
+		$item.removeClass("open fixed").css({"background-color": cardBackColor, "background-image": "none"});
+		showNumber && $item.text("");
+		return $item;
 	},
 	makeImageMode: function(name, max, wallColor) {
 		return {
@@ -66,6 +110,16 @@ var cells;
 var showNumber = false;
  
 $(document).ready(function () {
+
+	if (_SUPPORT_MOUSE === true) {
+		if (!('ontouchend' in window)) {
+			console.log("Non-touch devices detected.");
+			$(document).delegate('body', 'click', function(e) {
+				$(e.target).trigger('tap');
+			});
+		}
+	}
+
 	// setup menu
 	$("#menu td").tap(function() {
 		if (!$(this).hasClass("active")) {
@@ -111,18 +165,25 @@ $(document).ready(function () {
 						secondCounter = null;
 						$("body").css({'background-color': winningColor});
 						$("#playGround").addClass("swing");
+						sounds.standard.play("win");
+					} else {
+						sounds.standard.play("match");
 					}
 				} else {
 					// not match -> close both cell
 					var lonelyPhamtom = lonelyCell;
 					lonelyCell = null;
+					sounds.standard.play("reveal", cellID);
 					setTimeout(function() {
-						currentMode.reset(lonelyPhamtom).removeClass("open");
-						currentMode.reset($t).removeClass("open");
-					}, 700);
+						currentMode.reset(lonelyPhamtom);
+						currentMode.reset($t);
+					}, 500);
 				}
 			} else {
 				lonelyCell = $t;
+				sounds.standard.play("reveal", cellID);
+				// close all open unfixed one (don't wait the timer)
+				//currentMode.reset($("#playGround .row div.open").not(".fixed"));
 			}
 		}
 	});
@@ -132,25 +193,41 @@ $(document).ready(function () {
 });
 
 function preload() {
-	var queue = new createjs.LoadQueue(true, "mode/");
+	var queue = new createjs.LoadQueue(!_LOCAL, "mode/");
+	queue.installPlugin(createjs.Sound);
 	queue.addEventListener("complete", function() {
 		$("#splash").remove();
 		$("#main").show();
+		
 		// build the play ground
 		buildPlayGround();
+		
+		// play some background music
+		sounds.standard.play("music");
+		
 		// start the game
 		start();
 	});
 	queue.addEventListener("error", function(e) {
-		console.log(e);
+		console.log("Could not preload " + e.item.type + ": " + e.item.src);
 	});
+	
 	var manifest = new Array();
+	
+	// add images
 	for (var i = 1; i < modes.length; i ++) {
 		for (var j = 0; j < modes[i].data.length; j++) {
-			var fileName = modes[i].name + "/" + modes[i].data[j] + ".png";
+			var fileName = modes[i].name + "/img/" + modes[i].data[j] + ".png";
 			manifest.push(fileName);
 		}
 	}
+	
+	// add sounds
+	manifest.push( {id: "music", src: "default/snd/" + sounds.standard.music});
+	manifest.push( {id: "start", src: "default/snd/" + sounds.standard.start});
+	manifest.push({id: "reveal", src: "default/snd/" + sounds.standard.reveal(1)});
+	manifest.push({id: "match", src: "default/snd/" + sounds.standard.match});
+	manifest.push({id: "win", src: "default/snd/" + sounds.standard.win});
 	
 	queue.addEventListener("progress", function(e) {
 		var pc = ((e.loaded / e.total)*100) + "%";
@@ -168,10 +245,10 @@ function start() {
 	
 	cells = shuffle(makeCells());
 	
-	if ( ((row * column) / 2) > 12 ) {
-		currentMode = modes[color];
+	if ( ((row * column) / 2) > modes[1].data.length ) {
+		currentMode = modes[0];
 	} else {
-		var index = (Math.random()*modes.length) | 0
+		var index = 1;// (Math.random()*modes.length) | 0
 		currentMode = modes[index];
 	}
 	
@@ -186,9 +263,9 @@ function start() {
 	currentMode.reset($("#playGround .row div")).each(function(index) {
 		var number = cells[index];
 		$(this).data("cell", number).removeClass("open fixed");
-		if (showNumber) {
-			$(this).text("" + (number + 1));
-		}
+		//if (showNumber) {
+		//	$(this).text("" + (number + 1));
+		//}
 	});
 	
 	$("#playGround").addClass("bounceInDown").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
@@ -204,6 +281,9 @@ function start() {
 	secondCounter = window.setInterval(function() {
 		$("#counter").text(secondPassed());
 	}, 1000);
+	
+	// play the sound
+	sounds.standard.play("start");
 }
 
 function toggleMenu() {

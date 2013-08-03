@@ -154,11 +154,12 @@ table.tile-menu.large tr {
 	display: table-cell;
 	margin: 0;
 	padding: 0;
+	/*background-color: gray;*/
 	border: 2px solid #333;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
-	/*cursor: pointer;*/
+	cursor: pointer;
 	-webkit-transition: 0.5s ease;
 	-moz-transition: 0.5s ease;
 	-o-transition: 0.5s ease;
@@ -168,7 +169,7 @@ table.tile-menu.large tr {
 	-o-transition-property: background-color, background-image;
 	transition-property: background-color, background-image;
 	
-	color: rgba(0,0,0,0);
+	/*color: rgba(0,0,0,0);*/
 	text-align: center;
 	font-weight: bold;
 	font-family: serif;
@@ -176,7 +177,7 @@ table.tile-menu.large tr {
 }
 
 #playGround .row div.open {
-	/*cursor: default;*/
+	cursor: default;
 	
 	color: white;
 	background-repeat:no-repeat;
