@@ -152,13 +152,12 @@ function preload() {
 		}
 	}
 	
-	queue.addEventListener("progress  ", function(e) {
-		count++;
-		var pc = Math.round(e.progress) + "%";
-		console.log(pc);
-		console.log("o: " + (e.loaded / e.total) + "%");
-		$("#indicator").css({'width': pc});
+	queue.addEventListener("progress", function(e) {
+		var pc = (e.loaded / e.total) + "%";
+		$("#indicator").width(pc);
 	});
+	
+	queue.setMaxConnections(5);
 	queue.loadManifest(manifest);
 }
 
