@@ -156,7 +156,7 @@ function preload() {
 		count++;
 		var pc = Math.round(e.progress) + "%";
 		console.log(pc);
-		console.log(("o: " + e.loaded / e.total) + "%"
+		console.log("o: " + (e.loaded / e.total) + "%");
 		$("#indicator").css({'width': pc});
 	});
 	queue.loadManifest(manifest);
