@@ -1,5 +1,5 @@
 var standardColors = [
-		"e33",
+		"#e33",
 		"darkorange",
 		"#ee3",
 		"limegreen",
@@ -152,17 +152,14 @@ function preload() {
 		}
 	}
 	
-	var count = 0;
-	queue.addEventListener("fileload ", function() {
+	queue.addEventListener("progress  ", function(e) {
 		count++;
-		var pc = Math.round(count / manifest.length) + "%";
+		var pc = Math.round(e.progress) + "%";
 		console.log(pc);
+		console.log(("o: " + e.loaded / e.total) + "%"
 		$("#indicator").css({'width': pc});
 	});
 	queue.loadManifest(manifest);
-}
-
-function updateLoadProgress() {
 }
 
 function start() {
@@ -173,7 +170,7 @@ function start() {
 	cells = shuffle(makeCells());
 	
 	if ( ((row * column) / 2) > 12 ) {
-		currentMode = mode.color;
+		currentMode = modes[color];
 	} else {
 		var index = (Math.random()*modes.length) | 0
 		currentMode = modes[index];
