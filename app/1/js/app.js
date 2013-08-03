@@ -153,7 +153,7 @@ function preload() {
 	}
 	
 	queue.addEventListener("progress", function(e) {
-		var pc = (e.loaded / e.total) + "%";
+		var pc = ((e.loaded / e.total)*100) + "%";
 		$("#indicator").width(pc);
 	});
 	
