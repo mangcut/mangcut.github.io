@@ -14,25 +14,19 @@
 	<link href="css/app.css" rel="stylesheet">
 </head>
 <body>
-	<div class="page" id="main">
-		<div id="menu" class="animated">
-			<div class="tile-arrow"></div>
-			<table class="tile-menu">
-				<tr>
-					<td class="active" data-row="4" data-column="4">4 x 4</td>
-				</tr>
-				<tr>
-					<td data-row="5" data-column="4">4 x 5</td>
-				</tr>
-				<tr>
-					<td data-row="6" data-column="5">5 x 6</td>
-				</tr>
-				<tr>
-					<td data-row="6" data-column="6">6 x 6</td>
-				</tr>
-			</table>
+
+	<div class="page" id="splash">
+		<div id="logo"></div>
+		<div id="status">
+			<div id="progress">
+				<div id="indicator"></div>
+			</div>
+			<div id="startGame" class="btn hide">Bắt đầu</div>
 		</div>
-		
+		<div id="mangcut"></div>
+	</div>
+	
+	<div class="page" id="main">
 		<div id="topbar">
 			<div class="app-icon pull-left" id="showMenu" class="btn"><b>&Xi;</b></div>
 			<div class="app-title pull-left">Nhớ rồi Lật</div>
@@ -47,17 +41,55 @@
 		<div id="bottomPart">
 			<div id="restart" class="btn">Chơi lại</div>
 		</div>
-		
 	</div>
 	
-	<div class="page" id="splash">
-		<div id="logo"></div>
-		<div id="status">
-			<div id="progress">
-				<div id="indicator"></div>
-			</div>
+	<div id="settings" class="page animated">
+		<div class="page-header">
+			<div class="app-icon pull-right" data-role="close" class="btn"><b>&times;</b></div><div class="app-title">CHỌN</div>
 		</div>
-		<div id="mangcut"></div>
+		
+		<div class="section">
+			<div class="section-heading">Kích thước</div>
+			<table id="tableSize" class="tile-menu radio">
+				<tr>
+					<td class="active" data-row="4" data-column="4">4 x 4</td>
+					<td data-row="5" data-column="4">4 x 5</td>
+				</tr>
+				<tr>
+					<td data-row="6" data-column="5">5 x 6</td>
+					<td data-row="6" data-column="6">6 x 6</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="section">
+			<div class="section-heading">Chủ đề</div>
+			<table id="tableTheme" class="tile-menu three-col radio">
+				<tr>
+					<td data-row="4" data-column="4">Màu</td>
+					<td data-row="5" data-column="4">Số</td>
+					<td data-row="5" data-column="4">Chữ</td>
+				</tr>
+				<tr>
+					<td class="active" data-row="6" data-column="5">Trái cây</td>
+					<td data-row="6" data-column="6">Quái vật</td>
+					<td data-row="6" data-column="6">Trăng</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="section">
+			<div class="section-heading">Âm thanh</div>
+			<table id="tableSound" class="tile-menu">
+				<tr>
+					<td class="active" data-row="4" data-column="4">Nhạc nền</td>
+					<td class="active" data-row="5" data-column="4">Hiệu ứng</td>
+				</tr>
+			</table>
+		</div>
+		<div class="bottom-buttons">
+			<div data-role="close" class="btn">OK</div>
+		</div>
 	</div>
 	
     <script src="js/zepto.js"></script>

@@ -1,6 +1,35 @@
 var _SUPPORT_MOUSE = true;
 var _LOCAL = (location.protocol === "file:");
 
+var settings = {
+	size: {column: 4, row: 4},
+	theme: 3, // fruit
+	sound: true,
+	music: true,
+	vibrate: true,
+	load: function() {
+		settings.size.column = localStorage["flip.settings.size.column"] || 4;
+		settings.size.row = localStorage["flip.settings.size.row"] || 4;
+		settings.theme = localStorage["flip.settings.theme"] || 3;
+		settings.music = localStorage["flip.settings.music"] || true;
+		settings.sound = localStorage["flip.settings.sound"] || true;
+		settings.vibrate = localStorage["flip.settings.vibrate"] || true;
+		
+		return settings;
+	},
+	save: function() {
+		localStorage["flip.settings.size.column"] = settings.size.column;
+		localStorage["flip.settings.size.row"] = settings.size.row;
+		localStorage["flip.settings.theme"] = settings.theme;
+		localStorage["flip.settings.music"] = settings.music;
+		localStorage["flip.settings.sound"] = settings.sound;
+		localStorage["flip.settings.vibrate"] = settings.vibrate;
+		
+		return settings;
+	}
+};
+settings.load();
+
 var sounds = {
 	enable: true,
 	standard: {
@@ -121,19 +150,29 @@ $(document).ready(function () {
 	}
 
 	// setup menu
-	$("#menu td").tap(function() {
-		if (!$(this).hasClass("active")) {
-			$("#menu td.active").removeClass("active");
+	$(".tile-menu td").tap(function() {
+		var $parentTable = $(this).closest(".tile-menu");
+		if ($parentTable.hasClass("radio")) {
+			$parentTable.find("td.active").removeClass("active");
 			$(this).addClass("active");
-			toggleMenu();
-			
-			column = $(this).data("column");
-			row = $(this).data("row");
-			buildPlayGround();
-			start();
 		} else {
-			toggleMenu();
+			$(this).toggleClass("active");
 		}
+	});
+	
+	$("#settings [data-role='close']").tap(function(){
+		var $sizeCell = $("#tableSize td.active");
+		settings.size.column = $sizeCell.data("column");
+		settings.size.row = $sizeCell.data("row");
+		
+		settings.save();
+		toggleMenu();
+		
+		column = settings.size.column;
+		row = settings.size.row;
+		
+		buildPlayGround();
+		start();
 	});
 	
 	$("#showMenu").tap(function() {
@@ -196,17 +235,21 @@ function preload() {
 	var queue = new createjs.LoadQueue(!_LOCAL, "mode/");
 	queue.installPlugin(createjs.Sound);
 	queue.addEventListener("complete", function() {
-		$("#splash").remove();
-		$("#main").show();
 		
-		// build the play ground
-		buildPlayGround();
-		
-		// play some background music
-		sounds.standard.play("music");
-		
-		// start the game
-		start();
+		$("#progress").hide();
+		$("#startGame").show().click(function() {
+			$("#splash").remove();
+			$("#main").show();
+			
+			// build the play ground
+			buildPlayGround();
+			
+			// play some background music
+			sounds.standard.play("music");
+			
+			// start the game
+			start();
+		});
 	});
 	queue.addEventListener("error", function(e) {
 		console.log("Could not preload " + e.item.type + ": " + e.item.src);
@@ -288,11 +331,11 @@ function start() {
 
 function toggleMenu() {
 	$("#showMenu").toggleClass("active");
-	var $m = $("#menu");
+	var $m = $("#settings");
 	if ($m.hasClass("bounceIn") === false) {
 		$m.removeClass("hinge").show().addClass("bounceIn");
 	} else {
-		$m.removeClass("bounceIn").addClass("hinge");
+		$m.removeClass("bounceIn").hide();//.addClass("hinge");
 	}
 }
 
