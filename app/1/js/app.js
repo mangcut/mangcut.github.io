@@ -73,8 +73,12 @@ var sounds = {
 		} else {
 			sounds.enableAll();
 		}
-		createjs.Sound.stop();
-		sounds.playMusic();
+		if (!settings.music) {
+			createjs.Sound.stop();
+		}
+		if (!createjs.Sound.instances || createjs.Sound.instances.length === 0) {
+			sounds.playMusic();
+		}
 	},
 	configMusic: function(value) {
 		sounds.config.music = value;
@@ -219,25 +223,25 @@ $(document).ready(function () {
 		}
 	});
 	
+	$("#tableSound td").tap(function(){
+		settings[$(this).data("settings")] = $(this).hasClass("active");
+		sounds.refresh();
+	});
+	
 	$("#settings [data-role='close']").tap(function(){
 		var $sizeCell = $("#tableSize td.active");
 		settings.column = $sizeCell.data("column");
 		settings.row = $sizeCell.data("row");
-		
-		$("#tableSound td").each(function(){
-			settings[$(this).data("settings")] = $(this).hasClass("active");
-		});
-		
+				
 		settings.save();
 		toggleMenu();
 		
 		buildPlayGround();
-		sounds.refresh();
 		
 		start();
 	});
 	
-	$("#showMenu").tap(function() {
+	$("#topbar").tap(function() {
 		toggleMenu();
 	});
 	
@@ -392,7 +396,7 @@ function start() {
 	$("body").css({'background-color': defaultBackColor});
 	
 	startTime = new Date();
-	startTime.setSeconds(startTime.getSeconds() + 2);
+	startTime.setSeconds(startTime.getSeconds() + 1);
 	secondCounter = window.setInterval(function() {
 		$("#counter").text(secondPassed());
 	}, 1000);

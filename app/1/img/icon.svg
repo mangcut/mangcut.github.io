@@ -1,9 +1,0 @@
-<svg width="144" height="144" xmlns="http://www.w3.org/2000/svg">
- <g>
-   <rect id="ground" height="100%" width="100%" y="0" x="0" fill="#eeeeee"/>
-   <rect id="sq1" height="31.25%" width="31.25%" y="12.5%" x="12.5%" fill="#00ff00"/>
-   <rect id="sq2" height="31.25%" width="31.25%" y="12.5%" x="56.25%" fill="#00ffff"/>
-   <rect id="sq3" height="31.25%" width="31.25%" y="56.25%" x="12.5%" fill="#ff7f00"/>
-   <rect id="sq4" height="31.25%" width="31.25%" y="56.25%" x="56.25%" fill="#ff56ff"/>
- </g>
-</svg>
