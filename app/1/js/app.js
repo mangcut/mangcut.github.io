@@ -2,14 +2,15 @@ var _SUPPORT_MOUSE = true;
 var _LOCAL = (location.protocol === "file:");
 
 var settings = {
-	size: {column: 4, row: 4},
+	column: 4,
+	row: 4,
 	theme: 3, // fruit
 	sound: true,
 	music: true,
 	vibrate: true,
 	load: function() {
-		settings.size.column = localStorage["flip.settings.size.column"] || 4;
-		settings.size.row = localStorage["flip.settings.size.row"] || 4;
+		settings.column = localStorage["flip.settings.column"] || 4;
+		settings.row = localStorage["flip.settings.row"] || 4;
 		settings.theme = localStorage["flip.settings.theme"] || 3;
 		settings.music = localStorage["flip.settings.music"] || true;
 		settings.sound = localStorage["flip.settings.sound"] || true;
@@ -18,8 +19,8 @@ var settings = {
 		return settings;
 	},
 	save: function() {
-		localStorage["flip.settings.size.column"] = settings.size.column;
-		localStorage["flip.settings.size.row"] = settings.size.row;
+		localStorage["flip.settings.column"] = settings.column;
+		localStorage["flip.settings.row"] = settings.row;
 		localStorage["flip.settings.theme"] = settings.theme;
 		localStorage["flip.settings.music"] = settings.music;
 		localStorage["flip.settings.sound"] = settings.sound;
@@ -30,38 +31,98 @@ var settings = {
 };
 settings.load();
 
-var sounds = {
-	enable: true,
+var soundThemes = {
 	standard: {
 		music: "music.mp3",
 		start: "start.mp3",
-		revealSoundVaries: false,
-		reveal: function(cellID) {
-			if (sounds.standard.revealSoundVaries) {
-				return cellID + ".mp3";
-			} else {
-				return "reveal.mp3";
-			}
-		},
+		cellPrivateSound: false,
+		privateSoundAction: "reveal",
+		reveal: "reveal.mp3",
 		match: "match.mp3",
-		win: "win.mp3",
-		play: function(id, cellID) {
-			if (sounds.enable) {
-				if (id === "reveal" && sounds.standard.revealSoundVaries) {
-					return createjs.Sound.play(id + cellID);
-				} else if (id === "music") {
-					return createjs.Sound.play(
-						id,
-						createjs.Sound.INTERRUPT_ANY, 
-						0, // delay
-						0, // offset
-						-1, // loop forever
-						0.5 // volumn, haft of sound :)
-					);
-				} else {
-					return createjs.Sound.play(id);
-				}
+		win: "win.mp3"
+	}
+};
+
+var sounds = {
+	enableAll: function() {
+		sounds.config.music = settings.music;
+		sounds.config.start = settings.sound;
+		sounds.config.reveal = settings.sound;
+		sounds.config.match = settings.sound;
+		sounds.config.win = settings.sound;
+	},
+	disableAll: function() {
+		sounds.config.music = false;
+		sounds.config.start = false;
+		sounds.config.reveal = false;
+		sounds.config.match = false;
+		sounds.config.win = false;
+	},
+	disableAdvanced: function() {
+		sounds.config.music = false;
+		sounds.config.start = settings.sound;
+		sounds.config.reveal = false;
+		sounds.config.match = settings.sound;
+		sounds.config.win = settings.sound;
+	},
+	refresh: function() {
+		if (!createjs.Sound.isReady()) {
+			sounds.disableAll();
+		} else if (createjs.Sound.activePlugin.toString() !== "[WebAudioPlugin]") {
+			sounds.disableAdvanced();
+		} else {
+			sounds.enableAll();
+		}
+		createjs.Sound.stop();
+		sounds.playMusic();
+	},
+	configMusic: function(value) {
+		sounds.config.music = value;
+	},
+	toggleMusic: function() {
+		sounds.config.music = !sounds.config.music;
+	},
+	configSound: function(value) {
+		sounds.config.start = value;
+		sounds.config.reveal = value;
+		sounds.config.match = value;
+		sounds.config.win = value;
+	},
+	toggleMusic: function() {
+		sounds.config.start = !sounds.config.start;
+		sounds.config.reveal = !sounds.config.reveal;
+		sounds.config.match = !sounds.config.match;
+		sounds.config.win = !sounds.config.win;
+	},
+	config: {
+		music: settings.music,
+		start: settings.sound,
+		reveal: settings.sound,
+		match: settings.sound,
+		win: settings.sound,
+	},
+	theme: "standard",
+	play: function(id, cellID) {
+		if (sounds.config[id]) {
+			var theTheme = soundThemes[sounds.theme];
+			var soundID = sounds.theme + "_" + id;
+			if (id === theTheme.privateSoundAction && theTheme.cellPrivateSound) {
+				soundID = sound.theme + "_" + cellID;
 			}
+			
+			return createjs.Sound.play(soundID, createjs.Sound.INTERRUPT_ANY);
+		}
+	},
+	playMusic: function() {
+		if (sounds.config.music) {
+			return createjs.Sound.play(
+				sounds.theme + "_music",
+				createjs.Sound.INTERRUPT_ANY, 
+				0, // delay
+				0, // offset
+				-1, // loop forever
+				0.5 // volumn, haft of sound :)
+			);
 		}
 	}
 };
@@ -133,8 +194,6 @@ var startTime;
 var lonelyCell;
 var secondCounter;
 
-var column = 4;
-var row = 4;
 var cells;
 var showNumber = false;
  
@@ -162,16 +221,19 @@ $(document).ready(function () {
 	
 	$("#settings [data-role='close']").tap(function(){
 		var $sizeCell = $("#tableSize td.active");
-		settings.size.column = $sizeCell.data("column");
-		settings.size.row = $sizeCell.data("row");
+		settings.column = $sizeCell.data("column");
+		settings.row = $sizeCell.data("row");
+		
+		$("#tableSound td").each(function(){
+			settings[$(this).data("settings")] = $(this).hasClass("active");
+		});
 		
 		settings.save();
 		toggleMenu();
 		
-		column = settings.size.column;
-		row = settings.size.row;
-		
 		buildPlayGround();
+		sounds.refresh();
+		
 		start();
 	});
 	
@@ -204,15 +266,15 @@ $(document).ready(function () {
 						secondCounter = null;
 						$("body").css({'background-color': winningColor});
 						$("#playGround").addClass("swing");
-						sounds.standard.play("win");
+						sounds.play("win", cellID);
 					} else {
-						sounds.standard.play("match");
+						sounds.play("match", cellID);
 					}
 				} else {
 					// not match -> close both cell
 					var lonelyPhamtom = lonelyCell;
 					lonelyCell = null;
-					sounds.standard.play("reveal", cellID);
+					sounds.play("reveal", cellID);
 					setTimeout(function() {
 						currentMode.reset(lonelyPhamtom);
 						currentMode.reset($t);
@@ -220,7 +282,7 @@ $(document).ready(function () {
 				}
 			} else {
 				lonelyCell = $t;
-				sounds.standard.play("reveal", cellID);
+				sounds.play("reveal", cellID);
 				// close all open unfixed one (don't wait the timer)
 				//currentMode.reset($("#playGround .row div.open").not(".fixed"));
 			}
@@ -232,6 +294,10 @@ $(document).ready(function () {
 });
 
 function preload() {
+	createjs.Sound.initializeDefaultPlugins();
+	//createjs.Sound.registerPlugins([createjs.HTMLAudioPlugin]);
+	sounds.refresh();
+	
 	var queue = new createjs.LoadQueue(!_LOCAL, "mode/");
 	queue.installPlugin(createjs.Sound);
 	queue.addEventListener("complete", function() {
@@ -245,7 +311,7 @@ function preload() {
 			buildPlayGround();
 			
 			// play some background music
-			sounds.standard.play("music");
+			sounds.playMusic();
 			
 			// start the game
 			start();
@@ -265,12 +331,18 @@ function preload() {
 		}
 	}
 	
+	var cacheSound = function(mf, id) {
+		if (sounds.config[id]) {
+			mf.push( {id: sounds.theme + "_" + id, src: "default/snd/" + soundThemes[sounds.theme][id]});
+		}
+	}
+	
 	// add sounds
-	manifest.push( {id: "music", src: "default/snd/" + sounds.standard.music});
-	manifest.push( {id: "start", src: "default/snd/" + sounds.standard.start});
-	manifest.push({id: "reveal", src: "default/snd/" + sounds.standard.reveal(1)});
-	manifest.push({id: "match", src: "default/snd/" + sounds.standard.match});
-	manifest.push({id: "win", src: "default/snd/" + sounds.standard.win});
+	cacheSound(manifest, "music");
+	cacheSound(manifest, "start");
+	cacheSound(manifest, "reveal");
+	cacheSound(manifest, "match");
+	cacheSound(manifest, "win");
 	
 	queue.addEventListener("progress", function(e) {
 		var pc = ((e.loaded / e.total)*100) + "%";
@@ -288,7 +360,7 @@ function start() {
 	
 	cells = shuffle(makeCells());
 	
-	if ( ((row * column) / 2) > modes[1].data.length ) {
+	if ( ((settings.row * settings.column) / 2) > modes[1].data.length ) {
 		currentMode = modes[0];
 	} else {
 		var index = 1;// (Math.random()*modes.length) | 0
@@ -326,7 +398,7 @@ function start() {
 	}, 1000);
 	
 	// play the sound
-	sounds.standard.play("start");
+	sounds.play("start");
 }
 
 function toggleMenu() {
@@ -373,7 +445,7 @@ function secondPassed() {
 }
 
 function makeColors() {
-	var count = (column * row) / 2;
+	var count = (settings.column * settings.row) / 2;
 	
 	if (count <= standardColors.length) {
 		colors = standardColors;
@@ -397,7 +469,7 @@ function makeColors() {
 
 function makeCells() {
 	cells = new Array();
-	var count = (column * row) / 2;
+	var count = (settings.column * settings.row) / 2;
 	
 	for (var i = 0; i < count; i++) {
 		cells.push(i);
@@ -429,9 +501,9 @@ function buildPlayGround() {
 	var className = (width < 64) ? "class='stretch-image'" : "class=''";
 	
 	var html = "";
-	for (var i = 0; i < row; i++)  {
+	for (var i = 0; i < settings.row; i++)  {
 		var rowHtml = "<div class='row'>";
-		for (var j = 0; j < column; j++) {
+		for (var j = 0; j < settings.column; j++) {
 			rowHtml += "<div " + className + " " + style + "></div>";
 		}
 		rowHtml += "</div>";
@@ -454,13 +526,13 @@ function buildPlayGround() {
 // assume cell must be square
 function calcCellSize() {
 	var w = $(window).width() - 40;
-	var x = (w / column) | 0;
+	var x = (w / settings.column) | 0;
 	
 	var topH = $("#topbar").height();
 	var bottomH = $("#bottomPart").height();
 	
 	var h = $(window).height() - topH - bottomH - 40; // 10 for some padding
-	var y = (h / row) | 0;
+	var y = (h / settings.row) | 0;
 	
 	cellSize = Math.min(x, y, maxSize);
 	return cellSize;
