@@ -1,5 +1,6 @@
 var _SUPPORT_MOUSE = true;
 var _LOCAL = (location.protocol === "file:");
+var CELL_CSS = "#playGround span";
 
 var settings = {
 	column: 4,
@@ -69,7 +70,7 @@ var sounds = {
 		if (!createjs.Sound.isReady()) {
 			sounds.disableAll();
 		} else if (createjs.Sound.activePlugin.toString() !== "[WebAudioPlugin]") {
-			sounds.disableAdvanced();
+			(!!$.os.phone || !!os.tablet) ? sounds.disableAll() : sounds.disableAdvanced();
 		} else {
 			sounds.enableAll();
 		}
@@ -202,7 +203,6 @@ var cells;
 var showNumber = false;
  
 $(document).ready(function () {
-
 	if (_SUPPORT_MOUSE === true) {
 		if (!('ontouchend' in window)) {
 			console.log("Non-touch devices detected.");
@@ -250,7 +250,7 @@ $(document).ready(function () {
 	
 	// setup cells
 	// cache the cells
-	$("#playGround").on("tap", "#playGround .row div", function() {
+	$("#playGround").on("tap", CELL_CSS, function() {
 		var $t = $(this);
 		if ($t.hasClass("open") === false) {
 			$t.addClass("open");
@@ -265,11 +265,11 @@ $(document).ready(function () {
 					lonelyCell = null;
 					
 					// if win
-					if ($("#playGround .row div.fixed").length === cells.length) {
+					if ($(CELL_CSS + ".fixed").length === cells.length) {
 						clearInterval(secondCounter);
 						secondCounter = null;
 						$("body").css({'background-color': winningColor});
-						$("#playGround").addClass("swing");
+						celebrateWin();
 						sounds.play("win", cellID);
 					} else {
 						sounds.play("match", cellID);
@@ -288,7 +288,7 @@ $(document).ready(function () {
 				lonelyCell = $t;
 				sounds.play("reveal", cellID);
 				// close all open unfixed one (don't wait the timer)
-				//currentMode.reset($("#playGround .row div.open").not(".fixed"));
+				//currentMode.reset($(CELL_CSS + ".open").not(".fixed"));
 			}
 		}
 	});
@@ -308,6 +308,7 @@ function preload() {
 		
 		$("#progress").hide();
 		$("#startGame").show().click(function() {
+			makeFullScreen(document.documentElement);
 			$("#splash").remove();
 			$("#main").show();
 			
@@ -378,8 +379,8 @@ function start() {
 	}
 	shuffle(currentMode.data);
 	
-	$("#playGround").removeClass("swing");
-	currentMode.reset($("#playGround .row div")).each(function(index) {
+	celebrateEnd();
+	currentMode.reset($(CELL_CSS)).each(function(index) {
 		var number = cells[index];
 		$(this).data("cell", number).removeClass("open fixed");
 		//if (showNumber) {
@@ -387,7 +388,7 @@ function start() {
 		//}
 	});
 	
-	$("#playGround").addClass("bounceInDown").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+	$(CELL_CSS).addClass("bounceInDown").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
 		function(e) {
 			$(this).removeClass("bounceInDown");
 		});
@@ -500,22 +501,16 @@ function buildPlayGround() {
 	
 	// set fontsize and padding-top
 	var fontSize = ((width / 2) | 0) + 1;
-	style += "font-size:" + fontSize + "px;'";
+	style += "font-size:" + fontSize + "px;line-height:" + (width - 2) + "px'"; // 2 is for border, because we use border-box
 	
-	var className = (width < 64) ? "class='stretch-image'" : "class=''";
+	var className = (width < 64) ? "class='stretch-image animated'" : "class='animated'";
 	
 	var html = "";
-	for (var i = 0; i < settings.row; i++)  {
-		var rowHtml = "<div class='row'>";
-		for (var j = 0; j < settings.column; j++) {
-			rowHtml += "<div " + className + " " + style + "></div>";
-		}
-		rowHtml += "</div>";
-		html += rowHtml;
+	for (var i = 0, n = settings.row * settings.column; i < n; i++) {
+		html += "<span " + className + " " + style + "></span>";
 	}
 	
-	var $pg = $("#playGround");
-	$pg.html(html);
+	var $pg = $("#playGround").width(width * settings.column).html(html);
 	
 	var topH = $("#topbar").height();
 	var bottomH = $("#bottomPart").height();
@@ -540,4 +535,25 @@ function calcCellSize() {
 	
 	cellSize = Math.min(x, y, maxSize);
 	return cellSize;
+}
+
+function makeFullScreen(element) {
+    if (!!$.os.phone) {
+		var requestMethod = element.requestFullscreen ||
+							element.webkitRequestFullScreen || element.webkitRequestFullscreen ||
+							element.mozRequestFullScreen || element.mozRequestFullscreen ||
+							element.msRequestFullScreen || element.msRequestFullscreen;
+
+		if (requestMethod) {
+			requestMethod.call(element);
+		}
+	}
+}
+
+function celebrateWin() {
+	$(CELL_CSS).addClass("swing");
+}
+
+function celebrateEnd() {
+	$(CELL_CSS).removeClass("swing");
 }

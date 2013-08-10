@@ -80,21 +80,14 @@ table td {
 
 #playGround {
 	margin: 0 auto;
-	display: table;
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 
-#playGround .row {
-	display: table-row;
-}
-
-#playGround .row div {
-	display: table-cell;
+#playGround span {
+	display: inline-block;
 	margin: 0;
 	padding: 0;
 	/*background-color: gray;*/
-	border: 2px solid #333;
+	border: 1px solid #333;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
@@ -115,7 +108,7 @@ table td {
 	vertical-align: middle;
 }
 
-#playGround .row div.open {
+#playGround span.open {
 	cursor: default;
 	
 	color: white;
@@ -123,7 +116,7 @@ table td {
 	background-position:center;
 }
 
-#playGround .row div.open.stretch-image {
+#playGround span.open.stretch-image {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
