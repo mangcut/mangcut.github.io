@@ -308,7 +308,7 @@ function preload() {
 		
 		$("#progress").hide();
 		$("#startGame").show().click(function() {
-			makeFullScreen(document.documentElement);
+			//makeFullScreen(document.documentElement);
 			$("#splash").remove();
 			$("#main").show();
 			
