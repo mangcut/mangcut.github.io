@@ -51,13 +51,13 @@
 			<div class="section-heading">Kích thước</div>
 			<table id="tableSize" class="tile-menu radio">
 				<tr>
-					<td class="active" data-row="4" data-column="4">4 x 4</td>
+					<td data-row="4" data-column="4">4 x 4</td>
 					<td data-row="5" data-column="4">4 x 5</td>
 				</tr>
-				<tr>
+				<!--tr>
 					<td data-row="6" data-column="5">5 x 6</td>
 					<td data-row="6" data-column="6">6 x 6</td>
-				</tr>
+				</tr-->
 			</table>
 		</div>
 		
@@ -66,23 +66,26 @@
 			<table id="tableTheme" class="tile-menu three-col radio">
 				<tr>
 					<td data-theme="0">Màu</td>
-					<td data-theme="1">Số</td>
-					<td data-theme="2">Chữ</td>
+					<td data-theme="1" data-text0="2" data-text1="1">Số</td>
+					<td data-theme="2" data-text0="B" data-text1="A">Chữ</td>
 				</tr>
 				<tr>
-					<td class="active" data-theme="3">Trái</td>
+					<td data-theme="3">Trái</td>
 					<td data-theme="4">Quái</td>
 					<td data-theme="5">Trăng</td>
 				</tr>
 			</table>
+			<div class="play-ground theme-sample">
+				<span>1</span><span>2</span>
+			</div>
 		</div>
 		
 		<div class="section">
 			<div class="section-heading">Âm thanh</div>
 			<table id="tableSound" class="tile-menu">
 				<tr>
-					<td class="active" data-settings="music">Nhạc nền</td>
-					<td class="active" data-settings="sound">Hiệu ứng</td>
+					<td data-settings="music">Nhạc nền</td>
+					<td data-settings="sound">Hiệu ứng</td>
 				</tr>
 			</table>
 		</div>

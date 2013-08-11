@@ -78,11 +78,11 @@ table td {
 	font-size: 85%;
 }
 
-#playGround {
+#playGround, .play-ground {
 	margin: 0 auto;
 }
 
-#playGround span {
+#playGround span, .play-ground span {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -247,6 +247,55 @@ table.tile-menu.large tr {
 	border-bottom-width: 7px;
 	border-bottom-style: solid;
 }
+
+.theme-sample {
+	padding: 5px 0 0;
+	overflow: hidden;
+}
+
+.theme-sample:after {
+	clear: both;
+}
+
+.theme-sample span {
+	width: 36px;
+	height: 36px;
+	margin: 0 1px;
+	border: 0;
+	line-height: 36px;
+	font-size: 18px;
+	
+	cursor: default;
+	
+	color: white;
+	background-repeat:no-repeat;
+	background-position:center;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	float: right;
+}
+
+.theme-sample .theme-0-0 {background-color: hotpink;}
+.theme-sample .theme-0-1 {background-color: limegreen;}
+
+.theme-sample .theme-1-0 {background-color: hotpink;}
+.theme-sample .theme-1-1 {background-color: limegreen;}
+
+.theme-sample .theme-2-0 {background-color: hotpink;}
+.theme-sample .theme-2-1 {background-color: limegreen;}
+
+.theme-sample .theme-3-0 {background-color: HSL(105,15%,70%);background-image: url('../mode/fruit/img/12.png');}
+.theme-sample .theme-3-1 {background-color: HSL(105,15%,70%);background-image: url('../mode/fruit/img/10.png');}
+
+.theme-sample .theme-4-0 {background-color: HSL(330,15%,70%);background-image: url('../mode/monster/img/1.png');}
+.theme-sample .theme-4-1 {background-color: HSL(330,15%,70%);background-image: url('../mode/monster/img/3.png');}
+
+.theme-sample .theme-5-0 {background-color: HSL(220,15%,70%);background-image: url('../mode/moon/img/17.png');}
+.theme-sample .theme-5-1 {background-color: HSL(220,15%,70%);background-image: url('../mode/moon/img/6.png');}
 
 #splash {
 	background-color: #FFF;
