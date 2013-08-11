@@ -388,10 +388,7 @@ function start() {
 		//}
 	});
 	
-	$(CELL_CSS).addClass("bounceInDown").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
-		function(e) {
-			$(this).removeClass("bounceInDown");
-		});
+	animateStartGame();
 	
 	$("#counter").text("000");
 	$("body").css({'background-color': defaultBackColor});
@@ -449,6 +446,10 @@ function secondPassed() {
 	
 }
 
+function rand(max) {
+	return (Math.random() * max) | 0;
+}
+
 function makeColors() {
 	var count = (settings.column * settings.row) / 2;
 	
@@ -462,7 +463,7 @@ function makeColors() {
 			var hue = (i * hueStep) | 0;
 			var sat = Math.round((100 - Math.random() * 50));
 			var light = Math.round((20 + Math.random() * 20));
-			var c = "HSL(" + hue + ",100%,40%)";
+			var c = "HSL(" + hue + "," + sat + "%," + light + "%)";
 			
 			colors.push(c);
 		}
@@ -550,8 +551,24 @@ function makeFullScreen(element) {
 	}
 }
 
+function animateStartGame() {
+	var y = function() {console.log("");};
+	$(CELL_CSS).each(function(index, item) {
+		window.setTimeout(function() {
+			$(item).addClass("bounceInDown").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+			function(e) {
+				$(this).removeClass("bounceInDown");
+			});
+		}, 200 + rand(500));
+	});
+}
+
 function celebrateWin() {
-	$(CELL_CSS).addClass("swing");
+	$(CELL_CSS).each(function(index, item) {
+		window.setTimeout( function() {
+			$(item).addClass("swing");
+		}, rand(1000) + 500);
+	});
 }
 
 function celebrateEnd() {
