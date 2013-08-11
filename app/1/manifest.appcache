@@ -13,6 +13,12 @@ img/apple_icon.png
 img/icon.png
 img/mangcut.png
 
+mode/default/snd/music.mp3
+mode/default/snd/start.mp3
+mode/default/snd/reveal.mp3
+mode/default/snd/match.mp3
+mode/default/snd/win.mp3
+
 mode/fruit/img/1.png
 mode/fruit/img/2.png
 mode/fruit/img/3.png

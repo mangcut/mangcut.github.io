@@ -308,7 +308,7 @@ function preload() {
 		
 		$("#progress").hide();
 		$("#startGame").show().click(function() {
-			//makeFullScreen(document.documentElement);
+			makeFullScreen(document.documentElement);
 			$("#splash").remove();
 			$("#main").show();
 			
@@ -495,9 +495,10 @@ function makeData(max) {
 }
 
 function buildPlayGround() {
-	var width = calcCellSize(4, 4);
-	var sw = "width:" + width + "px";
-	var sh = "height:" + width + "px";
+	var width = calcCellSize();
+	var stageW = width * settings.column;
+	var sw = "width:" + 100/settings.column + "%";
+	var sh = "height:" + 100/settings.row + "%";
 	var style = "style='" + sw + ";" + sh + ";";
 	
 	// set fontsize and padding-top
@@ -511,7 +512,25 @@ function buildPlayGround() {
 		html += "<span " + className + " " + style + "></span>";
 	}
 	
-	var $pg = $("#playGround").width(width * settings.column).html(html);
+	resizePlayGround(true).html(html);
+}
+
+function resizePlayGround(initial) {
+	var width = calcCellSize();
+	
+	if (!initial) {
+		// set fontsize and padding-top
+		var fontSize = ((width / 2) | 0) + 1;
+
+		var $cells = $(CELL_CSS).css({fontSize: fontSize, lineHeight: width - 2});
+		if (width < 64)	{
+			$cells.removeClass("stretch-image");
+		} else {
+			$cells.addClass("stretch-image");
+		}
+	}
+	
+	var $pg = $("#playGround").width(width * settings.column).height(width * settings.row);
 	
 	var topH = $("#topbar").height();
 	var bottomH = $("#bottomPart").height();
@@ -521,6 +540,8 @@ function buildPlayGround() {
 	var p3 = nowH - p1 - p2;
 	$pg.css({'margin-top': p1, 'margin-bottom': p2});
 	$("#bottomPart").css({'margin-bottom': p3});
+	
+	return $pg;
 }
 
 // assume cell must be square
@@ -535,6 +556,7 @@ function calcCellSize() {
 	var y = (h / settings.row) | 0;
 	
 	cellSize = Math.min(x, y, maxSize);
+	
 	return cellSize;
 }
 
@@ -574,3 +596,35 @@ function celebrateWin() {
 function celebrateEnd() {
 	$(CELL_CSS).removeClass("swing");
 }
+
+(function($,sr){
+
+  // debouncing function from John Hann
+  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  var debounce = function (func, threshold, execAsap) {
+      var timeout;
+
+      return function debounced () {
+          var obj = this, args = arguments;
+          function delayed () {
+              if (!execAsap)
+                  func.apply(obj, args);
+              timeout = null;
+          };
+
+          if (timeout)
+              clearTimeout(timeout);
+          else if (execAsap)
+              func.apply(obj, args);
+
+          timeout = setTimeout(delayed, threshold || 100);
+      };
+  }
+  // smartresize 
+  $.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(Zepto,'smartresize');
+
+$(window).smartresize(function(){
+	resizePlayGround(false);
+});
