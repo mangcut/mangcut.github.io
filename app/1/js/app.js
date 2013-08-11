@@ -10,12 +10,29 @@ var settings = {
 	music: true,
 	vibrate: true,
 	load: function() {
-		settings.column = localStorage["flip.settings.column"] || 4;
-		settings.row = localStorage["flip.settings.row"] || 4;
-		settings.theme = localStorage["flip.settings.theme"] || 3;
-		settings.music = localStorage["flip.settings.music"] || true;
-		settings.sound = localStorage["flip.settings.sound"] || true;
-		settings.vibrate = localStorage["flip.settings.vibrate"] || true;
+		settings.column = parseInt(localStorage["flip.settings.column"]) || 4;
+		settings.row = parseInt(localStorage["flip.settings.row"]) || 4;
+		settings.theme = parseInt(localStorage["flip.settings.theme"]) || 3;
+		settings.music = localStorage["flip.settings.music"] !== "false";
+		settings.sound = localStorage["flip.settings.sound"] !== "false";
+		settings.vibrate = localStorage["flip.settings.vibrate"] !== "false";
+		
+		$("#tableSize td[data-row='" + settings.row + "']").addClass("active");
+		
+		var $c = $("#tableTheme td[data-theme='" + settings.theme + "']").addClass("active");
+		$(".theme-sample span").each(function(index) {
+			$(this).removeClass().addClass("theme-" + $c.data("theme") + "-" + index);
+			var text = $c.data("text" + index);
+			if (!!text) {
+				$(this).text(text);
+			} else {
+				$(this).text("");
+			}
+		});
+		
+		$("#tableSound td").each(function() {
+			settings[$(this).data("settings")] && $(this).addClass("active");
+		});
 		
 		return settings;
 	},
@@ -145,8 +162,6 @@ var standardColors = [
 		"whitesmoke"
 	];
 
-var colors = standardColors;
-
 var defaultBackColor = "#333";
 var winningColor = "black";
 var cardBackColor = "gray";
@@ -156,19 +171,32 @@ var cellSize = 64;
 var maxSize = 80;
 
 var cellDecor = {
-	setColor: function($item, cellID) {
+	setColor: function($item) {
+		var cellID = $item.data("cell");
 		$item.css({"background-color": currentMode.data[cellID]});
-		showNumber && $item.text(($item.data("cell") + 1) + "");
 		
 		return $item;
 	},
-	setImage: function($item, cellID) {
+	setNumber: function($item) {
+		var cellID = $item.data("cell");
+		$item.css({"background-color": currentMode.data[cellID]});
+		$item.text((cellID + 1) + "");
+		
+		return $item;
+	},
+	setAlpha: function($item) {
+		var cellID = $item.data("cell");
+		$item.css({"background-color": currentMode.data[cellID]});
+		$item.text(String.fromCharCode(cellID + 65));
+		
+		return $item;
+	},
+	setImage: function($item) {
+		var cellID = $item.data("cell");
 		return $item.css({"background-color": currentMode.wall, "background-image": "url('mode/" + currentMode.name + "/img/" + currentMode.data[cellID] + ".png')"});
 	},
 	reset: function($item) {
-		$item.removeClass("open fixed").css({"background-color": cardBackColor, "background-image": "none"});
-		showNumber && $item.text("");
-		return $item;
+		return $item.removeClass("open fixed").css({"background-color": cardBackColor, "background-image": "none"}).text("");
 	},
 	makeImageMode: function(name, max, wallColor) {
 		return {
@@ -184,23 +212,34 @@ var cellDecor = {
 var modes = [
 	{
 		name: "color",
-		data: colors,
+		color: "standard",
 		set: cellDecor.setColor,
 		reset: cellDecor.reset
 	},
+	{
+		name: "number",
+		color: "randome",
+		set: cellDecor.setNumber,
+		reset: cellDecor.reset
+	},
+	{
+		name: "alpha",
+		color: "randome",
+		set: cellDecor.setAlpha,
+		reset: cellDecor.reset
+	},
 	cellDecor.makeImageMode("fruit", 12, "HSL(105,15%,70%);"),
-	cellDecor.makeImageMode("moon", 32, "HSL(330,15%,70%)"),
-	cellDecor.makeImageMode("monster", 28, "HSL(220,15%,70%)")
+	cellDecor.makeImageMode("monster", 28, "HSL(220,15%,70%)"),
+	cellDecor.makeImageMode("moon", 32, "HSL(330,15%,70%)")
 ];
 
-var currentMode = modes[1];
+var currentMode = modes[settings.theme];
 
 var startTime;
 var lonelyCell;
 var secondCounter;
 
 var cells;
-var showNumber = false;
  
 $(document).ready(function () {
 	if (_SUPPORT_MOUSE === true) {
@@ -223,6 +262,19 @@ $(document).ready(function () {
 		}
 	});
 	
+	$("#tableTheme td").tap(function(){
+		var $c = $(this);
+		$(".theme-sample span").each(function(index) {
+			$(this).removeClass().addClass("theme-" + $c.data("theme") + "-" + index);
+			var text = $c.data("text" + index);
+			if (!!text) {
+				$(this).text(text);
+			} else {
+				$(this).text("");
+			}
+		});
+	});
+	
 	$("#tableSound td").tap(function(){
 		settings[$(this).data("settings")] = $(this).hasClass("active");
 		sounds.refresh();
@@ -232,7 +284,11 @@ $(document).ready(function () {
 		var $sizeCell = $("#tableSize td.active");
 		settings.column = $sizeCell.data("column");
 		settings.row = $sizeCell.data("row");
-				
+		
+		var $themeCell = $("#tableTheme td.active");
+		settings.theme = $themeCell.data("theme");
+		currentMode = modes[settings.theme];
+		
 		settings.save();
 		toggleMenu();
 		
@@ -255,7 +311,7 @@ $(document).ready(function () {
 		if ($t.hasClass("open") === false) {
 			$t.addClass("open");
 			var cellID = $t.data("cell");
-			currentMode.set($t, cellID);
+			currentMode.set($t);
 			
 			if (lonelyCell) {
 				if (cellID == lonelyCell.data("cell")) {
@@ -330,9 +386,11 @@ function preload() {
 	
 	// add images
 	for (var i = 1; i < modes.length; i ++) {
-		for (var j = 0; j < modes[i].data.length; j++) {
-			var fileName = modes[i].name + "/img/" + modes[i].data[j] + ".png";
-			manifest.push(fileName);
+		if (!modes[i].color) {
+			for (var j = 0; j < modes[i].data.length; j++) {
+				var fileName = modes[i].name + "/img/" + modes[i].data[j] + ".png";
+				manifest.push(fileName);
+			}
 		}
 	}
 	
@@ -365,17 +423,8 @@ function start() {
 	
 	cells = shuffle(makeCells());
 	
-	if ( ((settings.row * settings.column) / 2) > modes[1].data.length ) {
-		currentMode = modes[0];
-	} else {
-		var index = 1;// (Math.random()*modes.length) | 0
-		currentMode = modes[index];
-	}
-	
-	if (currentMode.name === "color") {
+	if (!!currentMode.color) {
 		currentMode.data = makeColors();
-	} else {
-		showNumber = false;
 	}
 	shuffle(currentMode.data);
 	
@@ -383,9 +432,6 @@ function start() {
 	currentMode.reset($(CELL_CSS)).each(function(index) {
 		var number = cells[index];
 		$(this).data("cell", number).removeClass("open fixed");
-		//if (showNumber) {
-		//	$(this).text("" + (number + 1));
-		//}
 	});
 	
 	animateStartGame();
@@ -451,12 +497,9 @@ function rand(max) {
 }
 
 function makeColors() {
-	var count = (settings.column * settings.row) / 2;
-	
-	if (count <= standardColors.length) {
-		colors = standardColors;
-		showNumber = false;
-	} else {
+	//var count = (settings.column * settings.row) / 2;
+	var colors = standardColors;
+	if (currentMode.color === "random") { //count > standardColors.length) {
 		colors = new Array();
 		var hueStep = 360 / count;
 		for (var i = 0; i < count; i++) {
@@ -467,7 +510,6 @@ function makeColors() {
 			
 			colors.push(c);
 		}
-		showNumber = true;
 	}
 	
 	return colors; // for chaining
@@ -574,7 +616,6 @@ function makeFullScreen(element) {
 }
 
 function animateStartGame() {
-	var y = function() {console.log("");};
 	$(CELL_CSS).each(function(index, item) {
 		window.setTimeout(function() {
 			$(item).addClass("bounceInDown").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
