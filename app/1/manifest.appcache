@@ -4,6 +4,10 @@ CACHE MANIFEST
 # Don't remove next line
 # Updated on: 2013-8-11
 
+css/app.css
+css/animate.css
+
+js/app.js
 js/zepto.min.js
 js/touch.js
 js/preloadjs-0.3.1.min.js
