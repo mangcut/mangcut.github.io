@@ -218,13 +218,13 @@ var modes = [
 	},
 	{
 		name: "number",
-		color: "randome",
+		color: "random",
 		set: cellDecor.setNumber,
 		reset: cellDecor.reset
 	},
 	{
 		name: "alpha",
-		color: "randome",
+		color: "random",
 		set: cellDecor.setAlpha,
 		reset: cellDecor.reset
 	},
@@ -497,7 +497,7 @@ function rand(max) {
 }
 
 function makeColors() {
-	//var count = (settings.column * settings.row) / 2;
+	var count = (settings.column * settings.row) / 2;
 	var colors = standardColors;
 	if (currentMode.color === "random") { //count > standardColors.length) {
 		colors = new Array();
@@ -505,7 +505,7 @@ function makeColors() {
 		for (var i = 0; i < count; i++) {
 			var hue = (i * hueStep) | 0;
 			var sat = Math.round((100 - Math.random() * 50));
-			var light = Math.round((20 + Math.random() * 20));
+			var light = Math.round((40 + Math.random() * 20));
 			var c = "HSL(" + hue + "," + sat + "%," + light + "%)";
 			
 			colors.push(c);
