@@ -144,7 +144,7 @@ table td {
 	background-color: HSL(105, 75%, 40%);
 	color: HSL(105, 75%, 100%);
 	cursor: pointer;
-	padding: 2px 10px;
+	padding: 3px 10px;
 	display: block;
 	width: 100px;
 	margin: 0 auto;

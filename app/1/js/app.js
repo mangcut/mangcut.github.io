@@ -12,7 +12,8 @@ var settings = {
 	load: function() {
 		settings.column = parseInt(localStorage["flip.settings.column"]) || 4;
 		settings.row = parseInt(localStorage["flip.settings.row"]) || 4;
-		settings.theme = parseInt(localStorage["flip.settings.theme"]) || 3;
+		settings.theme = parseInt(localStorage["flip.settings.theme"]);
+		if (isNaN(settings.theme)) settings.theme = 3;
 		settings.music = localStorage["flip.settings.music"] !== "false";
 		settings.sound = localStorage["flip.settings.sound"] !== "false";
 		settings.vibrate = localStorage["flip.settings.vibrate"] !== "false";
@@ -150,16 +151,16 @@ var sounds = {
 };
 
 var standardColors = [
-		"#e33",
-		"darkorange",
-		"#ee3",
-		"limegreen",
-		"#33e",
-		"darkviolet",
-		"hotpink",
-		"black",
-		"#3ee",
-		"whitesmoke"
+		"#111",
+		"#999",
+		"#f33",
+		"#f90",
+		"#ff3",
+		"#0f3",
+		"#03f",
+		"#f3c",
+		"#90c",
+		"#060"
 	];
 
 var defaultBackColor = "#333";
