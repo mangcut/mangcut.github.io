@@ -21,6 +21,7 @@ body {
 	line-height: 1.5em;
 	color: HSL(105,75%,20%);
 	background-color: #333;
+	background-image: url('../mode/default/img/groundback.png');
 }
 
 table {
@@ -43,6 +44,7 @@ table td {
 	background-color: HSL(105, 75%, 85%);
 	font-size: 1em;
 	overflow: hidden;
+	box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 .pull-left {
@@ -87,11 +89,13 @@ table td {
 	margin: 0;
 	padding: 0;
 	/*background-color: gray;*/
-	border: 1px solid #333;
+	background-clip: padding-box;
+	border: 1px solid transparent;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	cursor: pointer;
+	/*
 	-webkit-transition: 0.5s ease;
 	-moz-transition: 0.5s ease;
 	-o-transition: 0.5s ease;
@@ -100,12 +104,17 @@ table td {
 	-moz-transition-property: background-color, background-image;
 	-o-transition-property: background-color, background-image;
 	transition-property: background-color, background-image;
+	*/
 	
 	/*color: rgba(0,0,0,0);*/
 	text-align: center;
 	font-weight: bold;
 	font-family: serif;
 	vertical-align: middle;
+	
+	/*background-image: url('../mode/default/img/cardback.png');*/
+	
+	opacity: 0.6;
 }
 
 #playGround span.open {
@@ -169,11 +178,12 @@ table td {
 }
 
 .page-header {
-	margin: 5px -20px 20px;
+	margin: 0 -20px 20px;
 	clear: both;
-	background-color: HSL(105, 75%, 85%);;
+	background-color: HSL(105, 75%, 85%);
 	overflow: hidden;
 	text-align: left;
+	box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 .section {
@@ -275,18 +285,20 @@ table.tile-menu.large tr {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	
+	opacity: 1;
 
 	float: right;
 }
 
-.theme-sample .theme-0-0 {background-color: hotpink;}
-.theme-sample .theme-0-1 {background-color: limegreen;}
+.theme-sample .theme-0-0 {background-color: hotpink;background-image: none}
+.theme-sample .theme-0-1 {background-color: limegreen;background-image: none}
 
-.theme-sample .theme-1-0 {background-color: hotpink;}
-.theme-sample .theme-1-1 {background-color: limegreen;}
+.theme-sample .theme-1-0 {background-color: hotpink;background-image: none}
+.theme-sample .theme-1-1 {background-color: limegreen;background-image: none}
 
-.theme-sample .theme-2-0 {background-color: hotpink;}
-.theme-sample .theme-2-1 {background-color: limegreen;}
+.theme-sample .theme-2-0 {background-color: hotpink;background-image: none}
+.theme-sample .theme-2-1 {background-color: limegreen;background-image: none}
 
 .theme-sample .theme-3-0 {background-color: HSL(105,15%,70%);background-image: url('../mode/fruit/img/12.png');}
 .theme-sample .theme-3-1 {background-color: HSL(105,15%,70%);background-image: url('../mode/fruit/img/10.png');}

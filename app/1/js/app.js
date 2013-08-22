@@ -164,7 +164,7 @@ var standardColors = [
 
 var defaultBackColor = "#333";
 var winningColor = "black";
-var cardBackColor = "gray";
+var cardBackColor = "#fff";
 
 
 var cellSize = 64;
@@ -173,30 +173,30 @@ var maxSize = 80;
 var cellDecor = {
 	setColor: function($item) {
 		var cellID = $item.data("cell");
-		$item.css({"background-color": currentMode.data[cellID]});
+		$item.css({"background-color": currentMode.data[cellID], "background-image": "none", "opacity":1});
 		
 		return $item;
 	},
 	setNumber: function($item) {
 		var cellID = $item.data("cell");
-		$item.css({"background-color": currentMode.data[cellID]});
+		$item.css({"background-color": currentMode.data[cellID], "background-image": "none", "opacity":1});
 		$item.text((cellID + 1) + "");
 		
 		return $item;
 	},
 	setAlpha: function($item) {
 		var cellID = $item.data("cell");
-		$item.css({"background-color": currentMode.data[cellID]});
+		$item.css({"background-color": currentMode.data[cellID], "background-image": "none", "opacity":1});
 		$item.text(String.fromCharCode(cellID + 65));
 		
 		return $item;
 	},
 	setImage: function($item) {
 		var cellID = $item.data("cell");
-		return $item.css({"background-color": currentMode.wall, "background-image": "url('mode/" + currentMode.name + "/img/" + currentMode.data[cellID] + ".png')"});
+		return $item.css({"background-color": currentMode.wall, "opacity":1, "background-image": "url('mode/" + currentMode.name + "/img/" + currentMode.data[cellID] + ".png')"});
 	},
 	reset: function($item) {
-		return $item.removeClass("open fixed").css({"background-color": cardBackColor, "background-image": "none"}).text("");
+		return $item.removeClass("open fixed").css({"background-color": cardBackColor, "background-image": null, "opacity":null}).text("");
 	},
 	makeImageMode: function(name, max, wallColor) {
 		return {
@@ -228,9 +228,9 @@ var modes = [
 		set: cellDecor.setAlpha,
 		reset: cellDecor.reset
 	},
-	cellDecor.makeImageMode("fruit", 12, "HSL(105,15%,70%);"),
-	cellDecor.makeImageMode("monster", 28, "HSL(220,15%,70%)"),
-	cellDecor.makeImageMode("moon", 32, "HSL(330,15%,70%)")
+	cellDecor.makeImageMode("fruit", 12, "rgba(0,0,0,0.1)"),
+	cellDecor.makeImageMode("monster", 28, "rgba(0,0,0,0.1)"),
+	cellDecor.makeImageMode("moon", 32, "rgba(0,0,0,0.1)")
 ];
 
 var currentMode = modes[settings.theme];

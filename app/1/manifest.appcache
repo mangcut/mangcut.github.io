@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# verion 2h31
+# verion 2h32
 
 css/app.css
 css/animate.css
@@ -14,6 +14,9 @@ js/soundjs-0.4.1.min.js
 img/apple_icon.png
 img/icon.png
 img/mangcut.png
+
+mode/default/img/groundback.png
+#mode/default/img/cardback.png
 
 mode/default/snd/music.mp3
 mode/default/snd/start.mp3
