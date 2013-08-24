@@ -19,9 +19,8 @@ body {
 	font-family: sans-serif;
 	font-weight: 300;
 	line-height: 1.5em;
-	color: HSL(105,75%,20%);
-	background-color: #333;
-	background-image: url('../mode/default/img/groundback.png');
+	color: #333;
+	background-color: #FFF;
 }
 
 table {
@@ -137,12 +136,17 @@ table td {
 
 .bottom-buttons {
 	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.button-row .btn {
+	margin-bottom: 10px;
 }
 
 
 .btn {
 	background-color: HSL(105, 75%, 40%);
-	color: HSL(105, 75%, 100%);
+	color: #fff;
 	cursor: pointer;
 	padding: 3px 10px;
 	display: block;
@@ -156,25 +160,36 @@ table td {
 	border-radius: 14px;
 }
 
+.btn-modest {
+	background-color: transparent;
+	color: #333;
+}
+
+.btn-purple {
+	background-color: HSL(280, 75%, 40%);
+}
+
+.btn-cyan {
+	background-color: HSL(180, 75%, 40%);
+}
+
 #main {
-	display: none;
+	background-image: url('../mode/default/img/groundback.png');
 }
 
 #settings {
-	background-color: white;
 	position: fixed;
-	width: 100%;
-	height: 100%;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	top: 0;
 	left: 0;
-	display: none;
 	z-index: 9999;
 	padding: 0 20px;
 	/*border-radius: 8px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);*/
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .page-header {
@@ -253,7 +268,7 @@ table.tile-menu.large tr {
 	border-right-color: transparent;
 	border-right-width: 10px;
 	border-right-style: solid;
-	border-bottom-color: HSL(105, 75%, 30%);
+	border-bottom-color: #fff;
 	border-bottom-width: 7px;
 	border-bottom-style: solid;
 }
@@ -309,8 +324,8 @@ table.tile-menu.large tr {
 .theme-sample .theme-5-0 {background-color: HSL(220,15%,70%);background-image: url('../mode/moon/img/17.png');}
 .theme-sample .theme-5-1 {background-color: HSL(220,15%,70%);background-image: url('../mode/moon/img/6.png');}
 
-#splash {
-	background-color: #FFF;
+.page {
+	width: 100%;
 	height: 100%;
 }
 
@@ -347,4 +362,10 @@ table.tile-menu.large tr {
 
 .hide {
 	display: none;
+}
+
+.vertical-center {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
 }

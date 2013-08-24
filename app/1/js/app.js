@@ -281,7 +281,19 @@ $(document).ready(function () {
 		sounds.refresh();
 	});
 	
-	$("#settings [data-role='close']").tap(function(){
+	$("[data-page-role='back']").tap(function(){
+		Pages.back();
+	});
+	
+	$("[data-page-toggle]").tap(function(){
+		Pages.toggle($(this).data("page-toggle"));
+	});
+	
+	$("[data-page-replace]").tap(function(){
+		Pages.toggle($(this).data("page-replace"), true);
+	});
+	
+	$("#settings [data-page-role='close']").tap(function(){
 		var $sizeCell = $("#tableSize td.active");
 		settings.column = $sizeCell.data("column");
 		settings.row = $sizeCell.data("row");
@@ -291,19 +303,17 @@ $(document).ready(function () {
 		currentMode = modes[settings.theme];
 		
 		settings.save();
-		toggleMenu();
+		Pages.back();
 		
 		buildPlayGround();
 		
 		start();
 	});
 	
-	$("#topbar").tap(function() {
-		toggleMenu();
-	});
-	
 	// setup buttons
-	$("#restart").tap(start);
+	$("[data-action]").tap(function() {
+		window[$(this).data("action")].apply();
+	});
 	
 	// setup cells
 	// cache the cells
@@ -364,10 +374,12 @@ function preload() {
 	queue.addEventListener("complete", function() {
 		
 		$("#progress").hide();
-		$("#startGame").show().click(function() {
+		$("#splashButtons").show();
+		$("#startGame").click(function() {
 			makeFullScreen(document.documentElement);
-			$("#splash").remove();
-			$("#main").show();
+			//$("#splash").remove();
+			//$("#main").show();
+			Pages.toggle("#main");
 			
 			// build the play ground
 			buildPlayGround();
@@ -396,9 +408,9 @@ function preload() {
 	}
 	
 	var cacheSound = function(mf, id) {
-		if (sounds.config[id]) {
+		//if (sounds.config[id]) {
 			mf.push( {id: sounds.theme + "_" + id, src: "default/snd/" + soundThemes[sounds.theme][id]});
-		}
+		//}
 	}
 	
 	// add sounds
@@ -438,7 +450,7 @@ function start() {
 	animateStartGame();
 	
 	$("#counter").text("000");
-	$("body").css({'background-color': defaultBackColor});
+	//$("body").css({'background-color': defaultBackColor});
 	
 	startTime = new Date();
 	startTime.setSeconds(startTime.getSeconds() + 1);
@@ -448,16 +460,6 @@ function start() {
 	
 	// play the sound
 	sounds.play("start");
-}
-
-function toggleMenu() {
-	$("#showMenu").toggleClass("active");
-	var $m = $("#settings");
-	if ($m.hasClass("bounceIn") === false) {
-		$m.removeClass("hinge").show().addClass("bounceIn");
-	} else {
-		$m.removeClass("bounceIn").hide();//.addClass("hinge");
-	}
 }
 
 function shuffle(array) {
@@ -538,51 +540,61 @@ function makeData(max) {
 }
 
 function buildPlayGround() {
-	var width = calcCellSize();
-	var stageW = width * settings.column;
-	var sw = "width:" + 100/settings.column + "%";
-	var sh = "height:" + 100/settings.row + "%";
-	var style = "style='" + sw + ";" + sh + ";";
-	
-	// set fontsize and padding-top
-	var fontSize = ((width / 2) | 0) + 1;
-	style += "font-size:" + fontSize + "px;line-height:" + (width - 2) + "px'"; // 2 is for border, because we use border-box
-	
-	var className = (width < 64) ? "class='stretch-image animated'" : "class='animated'";
 	
 	var html = "";
 	for (var i = 0, n = settings.row * settings.column; i < n; i++) {
-		html += "<span " + className + " " + style + "></span>";
+		html += "<span class='animated'></span>";
 	}
 	
-	resizePlayGround(true).html(html);
+	$("#playGround").html(html);
+	resizePlayGround(true);
 }
 
 function resizePlayGround(initial) {
 	var width = calcCellSize();
 	
-	if (!initial) {
-		// set fontsize and padding-top
-		var fontSize = ((width / 2) | 0) + 1;
+	var winH = $(window).height();
+	var winW = $(window).width();
+	
+	var bigSide = Math.max(settings.column, settings.row);
+	var smallSide = Math.min(settings.column, settings.row);
+	
+	var stageW = width *  ((winH > winW) ? smallSide : bigSide);
+	var stageH = width *  ((winH > winW) ? bigSide : smallSide);
+	
+	var cellW = 100/((winH > winW) ? smallSide : bigSide) + "%";
+	var cellH = 100/((winH > winW) ? bigSide : smallSide) + "%";
+	
+	var $pg = $("#playGround").width(stageW).height(stageH);
+	
+	// set fontsize and padding-top
+	var fontSize = ((width / 2) | 0) + 1;
 
-		var $cells = $(CELL_CSS).css({fontSize: fontSize, lineHeight: width - 2});
-		if (width < 64)	{
-			$cells.removeClass("stretch-image");
-		} else {
-			$cells.addClass("stretch-image");
-		}
+	var $cells = $(CELL_CSS).css({fontSize: fontSize, lineHeight: width - 2, width: cellW, height: cellH});
+	if (width < 64)	{
+		$cells.addClass("stretch-image");
+	} else {
+		$cells.removeClass("stretch-image");
 	}
 	
-	var $pg = $("#playGround").width(width * settings.column).height(width * settings.row);
+	var $top = $("#topbar");
+	var topH = $top.height();
 	
-	var topH = $("#topbar").height();
-	var bottomH = $("#bottomPart").height();
-	var nowH = $(window).height() - topH - bottomH - $pg.height();
+	var $bottom = $("#bottomPart");
+	var bottomH = $bottom.height();
+	var nowH = winH - topH - bottomH - $pg.height();
+	var p0 = (nowH / 2) | 0
 	var p1 = (nowH / 3) | 0
 	var p2 = p1;
 	var p3 = nowH - p1 - p2;
-	$pg.css({'margin-top': p1, 'margin-bottom': p2});
-	$("#bottomPart").css({'margin-bottom': p3});
+	//$pg.css({'margin-top': p1, 'margin-bottom': p2});
+	
+	if (bottomH > 0) {
+		$top.css({'margin-bottom': p1});
+		$bottom.css({'margin-top': p2, 'margin-bottom': p3});
+	} else {
+		$top.css({'margin-bottom': p0});
+	}
 	
 	return $pg;
 }
@@ -590,15 +602,19 @@ function resizePlayGround(initial) {
 // assume cell must be square
 function calcCellSize() {
 	var w = $(window).width() - 40;
-	var x = (w / settings.column) | 0;
 	
 	var topH = $("#topbar").height();
-	var bottomH = $("#bottomPart").height();
+	var h = $(window).height() - topH - 40; // 10 for some padding
 	
-	var h = $(window).height() - topH - bottomH - 40; // 10 for some padding
-	var y = (h / settings.row) | 0;
+	
+	var x = (Math.max(w, h) / Math.max(settings.column, settings.row)) | 0;
+	var y = (Math.min(w, h) / Math.min(settings.column, settings.row)) | 0;
 	
 	cellSize = Math.min(x, y, maxSize);
+	
+	//if (cellSize === x) {
+		$("#bottomPart").hide();
+	//}
 	
 	return cellSize;
 }
@@ -618,12 +634,14 @@ function makeFullScreen(element) {
 
 function animateStartGame() {
 	$(CELL_CSS).each(function(index, item) {
+		$(item).css({opacity:0});
 		window.setTimeout(function() {
+			$(item).css({opacity:null});
 			$(item).addClass("bounceInDown").one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
 			function(e) {
 				$(this).removeClass("bounceInDown");
 			});
-		}, 200 + rand(500));
+		}, 100 + rand(900));
 	});
 }
 
@@ -638,6 +656,32 @@ function celebrateWin() {
 function celebrateEnd() {
 	$(CELL_CSS).removeClass("swing");
 }
+
+var Pages = {
+	history: [$("#splash")],
+	toggle: function(pageID, replace) {
+		var $m = $(pageID);
+		if ($m.css('display') === 'none') {
+			if (Pages.history && Pages.history.length > 0) {
+				Pages.history[Pages.history.length - 1].removeClass("bounceIn").css({display: "none"});
+				if (replace === true) {
+					Pages.history.pop();
+				}
+			}
+			Pages.history.push($m);
+			$m.css({display: $m.data("display") || "block"}).addClass("bounceIn");
+		} else {
+			Pages.history.pop();
+			$m.removeClass("bounceIn").css({display: "none"});
+			if (Pages.history && Pages.history.length > 0) {
+				Pages.history[Pages.history.length - 1].css({display: $m.data("display") || "block"}).addClass("bounceIn");
+			}
+		}
+	},
+	back: function() {
+		Pages.toggle(Pages.history[Pages.history.length - 1]);
+	}
+};
 
 (function($,sr){
 

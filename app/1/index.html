@@ -9,7 +9,7 @@
 	<link rel="apple-touch-icon-precomposed" href="img/apple_icon.png" />
 	<link rel='icon' href='img/icon.png' type='/image/png' />
 	<meta property="fb:admins" content="100000049454443" />
-	<title>Nhớ rồi Lật</title>
+	<title>Đúng rồi!</title>
 	<link href="css/animate.css" rel="stylesheet">
 	<link href="css/app.css" rel="stylesheet">
 </head>
@@ -21,16 +21,19 @@
 			<div id="progress">
 				<div id="indicator"></div>
 			</div>
-			<div id="startGame" class="btn hide">Bắt đầu</div>
+			<div id="splashButtons" class="button-row hide">
+				<div id="startGame" class="btn">Bắt đầu</div>
+				<div data-page-toggle="#settings" class="btn btn-modest">Chọn</div>
+			</div>
 		</div>
 		<div id="mangcut"></div>
 	</div>
 	
-	<div class="page" id="main">
-		<div id="topbar">
+	<div class="page hide" id="main">
+		<div id="topbar" data-page-toggle="#pausing">
 			<div class="app-icon pull-right" id="showMenu" class="btn"><b>&Xi;</b></div>
-			<div class="app-title pull-left">LẬT</div>
-			<div id="counter" class="app-info pull-right">nnn</div>
+			<div class="app-title pull-left">Đúng rồi!</div>
+			<div id="counter" class="app-info pull-right">&nbsp;&nbsp;&nbsp;</div>
 		</div>
 		
 		<div id="content">
@@ -38,21 +41,21 @@
 		</div>
 		
 		<div id="bottomPart">
-			<div id="restart" class="btn">Chơi lại</div>
+			<div data-action="start" class="btn">Chơi lại</div>
 		</div>
 	</div>
 	
-	<div id="settings" class="page animated">
+	<div id="settings" class="page animated hide">
 		<div class="page-header">
-			<div class="app-icon pull-right" data-role="close" class="btn"><b>&times;</b></div><div class="app-title">CHỌN</div>
+			<div class="app-icon pull-right" data-page-role="close" class="btn"><b>&times;</b></div><div class="app-title">Chọn</div>
 		</div>
 		
 		<div class="section">
 			<div class="section-heading">Kích thước</div>
 			<table id="tableSize" class="tile-menu radio">
 				<tr>
-					<td data-row="4" data-column="4">4 x 4</td>
-					<td data-row="5" data-column="4">4 x 5</td>
+					<td data-row="4" data-column="4">Nhỏ</td>
+					<td data-row="5" data-column="4">Vừa</td>
 				</tr>
 				<!--tr>
 					<td data-row="6" data-column="5">5 x 6</td>
@@ -85,12 +88,20 @@
 			<table id="tableSound" class="tile-menu">
 				<tr>
 					<td data-settings="music">Nhạc nền</td>
-					<td data-settings="sound">Hiệu ứng</td>
+					<td data-settings="sound">Âm thanh</td>
 				</tr>
 			</table>
 		</div>
 		<div class="bottom-buttons">
-			<div data-role="close" class="btn">OK</div>
+			<div data-page-role="close" class="btn">OK</div>
+		</div>
+	</div>
+
+	<div class="page hide" id="pausing" data-display="table">
+		<div class="button-row vertical-center">
+			<div  data-page-role="back" class="btn btn-cyan">Chơi tiếp</div>
+			<div data-page-role="back" data-action="start" class="btn">Chơi lại</div>
+			<div  data-page-replace="#settings" class="btn btn-purple">Chọn</div>
 		</div>
 	</div>
 	
