@@ -135,14 +135,9 @@ table td {
 }
 
 .bottom-buttons {
-	margin-top: 50px;
+	margin-top: 2em;
 	margin-bottom: 10px;
 }
-
-.button-row .btn {
-	margin-bottom: 10px;
-}
-
 
 .btn {
 	background-color: HSL(105, 75%, 40%);
@@ -173,23 +168,39 @@ table td {
 	background-color: HSL(180, 75%, 40%);
 }
 
+.button-row .btn {
+	margin-bottom: 10px;
+}
+
+.button-row-large .btn {
+	margin-bottom: 20px;
+	padding: 5px 15px;
+	font-size: 1em;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
 #main {
 	background-image: url('../mode/default/img/groundback.png');
 }
 
 #settings {
+	/*
 	position: fixed;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
 	top: 0;
 	left: 0;
 	z-index: 9999;
+	*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	padding: 0 20px;
 	/*border-radius: 8px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);*/
 	overflow-x: hidden;
 	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 
 .page-header {
@@ -250,11 +261,7 @@ table.tile-menu td.disabled {
 }
 
 table.tile-menu tr {
-	height: 2em;
-}
-
-table.tile-menu.large tr {
-	height: 60px;
+	height: 2.4em;
 }
 
 .tile-arrow {

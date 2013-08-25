@@ -84,19 +84,21 @@ var sounds = {
 		sounds.config.match = settings.sound;
 		sounds.config.win = settings.sound;
 	},
-	refresh: function() {
-		if (!createjs.Sound.isReady()) {
+	refresh: function(initial) {
+		if (!createjs.Sound.initializeDefaultPlugins()) {
 			sounds.disableAll();
 		} else if (createjs.Sound.activePlugin.toString() !== "[WebAudioPlugin]") {
-			(!!$.os.phone || !!os.tablet) ? sounds.disableAll() : sounds.disableAdvanced();
+			(!!$.os.phone || !!$.os.tablet) ? sounds.disableAll() : sounds.disableAdvanced();
 		} else {
 			sounds.enableAll();
 		}
-		if (!settings.music) {
-			createjs.Sound.stop();
-		}
-		if (!createjs.Sound.instances || createjs.Sound.instances.length === 0) {
-			sounds.playMusic();
+		
+		if (!initial) {
+			if (!settings.music) {
+				createjs.Sound.stop();
+			} else if (!createjs.Sound.instances || createjs.Sound.instances.length === 0) {
+				sounds.playMusic();
+			}
 		}
 	},
 	configMusic: function(value) {
@@ -169,7 +171,7 @@ var cardBackColor = "#fff";
 
 
 var cellSize = 64;
-var maxSize = 80;
+var maxSize = 96;
 
 var cellDecor = {
 	setColor: function($item) {
@@ -278,7 +280,7 @@ $(document).ready(function () {
 	
 	$("#tableSound td").tap(function(){
 		settings[$(this).data("settings")] = $(this).hasClass("active");
-		sounds.refresh();
+		sounds.refresh(false);
 	});
 	
 	$("[data-page-role='back']").tap(function(){
@@ -365,10 +367,6 @@ $(document).ready(function () {
 });
 
 function preload() {
-	createjs.Sound.initializeDefaultPlugins();
-	//createjs.Sound.registerPlugins([createjs.HTMLAudioPlugin]);
-	sounds.refresh();
-	
 	var queue = new createjs.LoadQueue(!_LOCAL, "mode/");
 	queue.installPlugin(createjs.Sound);
 	queue.addEventListener("complete", function() {
@@ -376,6 +374,8 @@ function preload() {
 		$("#progress").hide();
 		$("#splashButtons").show();
 		$("#startGame").click(function() {
+			sounds.refresh(true);
+			
 			makeFullScreen(document.documentElement);
 			//$("#splash").remove();
 			//$("#main").show();
@@ -570,7 +570,7 @@ function resizePlayGround(initial) {
 	// set fontsize and padding-top
 	var fontSize = ((width / 2) | 0) + 1;
 
-	var $cells = $(CELL_CSS).css({fontSize: fontSize, lineHeight: width - 2, width: cellW, height: cellH});
+	var $cells = $(CELL_CSS).css({fontSize: fontSize, lineHeight: (width - 2) + "px", width: cellW, height: cellH});
 	if (width < 64)	{
 		$cells.addClass("stretch-image");
 	} else {
