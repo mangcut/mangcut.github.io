@@ -1,3 +1,4 @@
+window.onerror=function(m,u,l){alert(m+"\n"+u+":"+l);};
 var _SUPPORT_MOUSE = true;
 var _LOCAL = (location.protocol === "file:");
 var CELL_CSS = "#playGround span";
@@ -84,7 +85,8 @@ var sounds = {
 		sounds.config.match = settings.sound;
 		sounds.config.win = settings.sound;
 	},
-	refresh: function(initial) {
+	readyForPlaying: false,
+	refresh: function() {
 		if (!createjs.Sound.initializeDefaultPlugins()) {
 			sounds.disableAll();
 		} else if (createjs.Sound.activePlugin.toString() !== "[WebAudioPlugin]") {
@@ -93,7 +95,7 @@ var sounds = {
 			sounds.enableAll();
 		}
 		
-		if (!initial) {
+		if (sounds.readyForPlaying) {
 			if (!settings.music) {
 				createjs.Sound.stop();
 			} else if (!createjs.Sound.instances || createjs.Sound.instances.length === 0) {
@@ -279,8 +281,11 @@ $(document).ready(function () {
 	});
 	
 	$("#tableSound td").tap(function(){
-		settings[$(this).data("settings")] = $(this).hasClass("active");
-		sounds.refresh(false);
+		var settingName = $(this).data("settings");
+		settings[settingName] = $(this).hasClass("active");
+		if (settingName === "music") {
+			sounds.refresh();
+		}
 	});
 	
 	$("[data-page-role='back']").tap(function(){
@@ -307,9 +312,11 @@ $(document).ready(function () {
 		settings.save();
 		Pages.back();
 		
-		buildPlayGround();
-		
-		start();
+		if (Pages.current().attr("id") === "main") {
+			// TODO: determine what change and does it need restart
+			buildPlayGround();
+			start();
+		}
 	});
 	
 	// setup buttons
@@ -337,7 +344,7 @@ $(document).ready(function () {
 					if ($(CELL_CSS + ".fixed").length === cells.length) {
 						clearInterval(secondCounter);
 						secondCounter = null;
-						$("body").css({'background-color': winningColor});
+						//$("body").css({'background-color': winningColor});
 						celebrateWin();
 						sounds.play("win", cellID);
 					} else {
@@ -374,7 +381,8 @@ function preload() {
 		$("#progress").hide();
 		$("#splashButtons").show();
 		$("#startGame").click(function() {
-			sounds.refresh(true);
+			sounds.refresh();
+			sounds.readyForPlaying = true;
 			
 			makeFullScreen(document.documentElement);
 			//$("#splash").remove();
@@ -677,9 +685,14 @@ var Pages = {
 				Pages.history[Pages.history.length - 1].css({display: $m.data("display") || "block"}).addClass("bounceIn");
 			}
 		}
+		
+		return $m;
 	},
 	back: function() {
-		Pages.toggle(Pages.history[Pages.history.length - 1]);
+		return Pages.toggle(Pages.history[Pages.history.length - 1]);
+	},
+	current: function() {
+		return Pages.history[Pages.history.length - 1];
 	}
 };
 

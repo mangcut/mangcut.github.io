@@ -198,7 +198,9 @@ table td {
 	padding: 0 20px;
 	/*border-radius: 8px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);*/
-	overflow-x: hidden;
+}
+
+#settings .page-content {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
