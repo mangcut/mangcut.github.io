@@ -404,7 +404,7 @@ function preload() {
 		});
 	});
 	queue.addEventListener("error", function(e) {
-		console.log("Could not preload " + e.item.type + ": " + e.item.src);
+		alert("Could not preload " + e.item.type + ": " + e.item.src);
 	});
 	
 	var manifest = new Array();
@@ -437,7 +437,7 @@ function preload() {
 		$("#indicator").width(pc);
 	});
 	
-	queue.setMaxConnections(5);
+	queue.setMaxConnections(3);
 	queue.loadManifest(manifest);
 }
 
