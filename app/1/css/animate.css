@@ -2,8 +2,8 @@
 	-webkit-animation-duration:0.8s;-moz-animation-duration:0.8s;-ms-animation-duration:0.8s;-o-animation-duration:0.8s;animation-duration:0.8s;
 	-webkit-transform:translate3d(0,0,0);}
 .animated.bounceIn {-webkit-animation-duration:0.3s;-moz-animation-duration:0.3s;-ms-animation-duration:0.3s;-o-animation-duration:0.3s;animation-duration:0.3s;}
-.animated.hinge, .animated.swing {-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;}
-.animated.swing {-webkit-animation-iteration-count: infinite;-moz-animation-iteration-count: infinite;-ms-animation-iteration-count: infinite;-o-animation-iteration-count: infinite;animation-iteration-count: infinite;}
+.animated.swing {-webkit-animation-iteration-count: infinite;-moz-animation-iteration-count: infinite;-ms-animation-iteration-count: infinite;-o-animation-iteration-count: infinite;animation-iteration-count: infinite;-webkit-animation-duration:2s;-moz-animation-duration:2s;-ms-animation-duration:2s;-o-animation-duration:2s;animation-duration:2s;animation-direction:alternate;
+-webkit-animation-direction:alternate;}
 @-webkit-keyframes bounceIn {
 	0% {
 		opacity: 0;
@@ -86,44 +86,6 @@
 	-o-animation-name: bounceIn;
 	animation-name: bounceIn;
 }
-@-webkit-keyframes hinge {
-	0% { -webkit-transform: rotate(0); -webkit-transform-origin: top left; -webkit-animation-timing-function: ease-in-out; }	
-	20%, 60% { -webkit-transform: rotate(80deg); -webkit-transform-origin: top left; -webkit-animation-timing-function: ease-in-out; }	
-	40% { -webkit-transform: rotate(60deg); -webkit-transform-origin: top left; -webkit-animation-timing-function: ease-in-out; }	
-	80% { -webkit-transform: rotate(60deg) translateY(0); opacity: 1; -webkit-transform-origin: top left; -webkit-animation-timing-function: ease-in-out; }	
-	100% { -webkit-transform: translateY(700px); opacity: 0; }
-}
-
-@-moz-keyframes hinge {
-	0% { -moz-transform: rotate(0); -moz-transform-origin: top left; -moz-animation-timing-function: ease-in-out; }	
-	20%, 60% { -moz-transform: rotate(80deg); -moz-transform-origin: top left; -moz-animation-timing-function: ease-in-out; }	
-	40% { -moz-transform: rotate(60deg); -moz-transform-origin: top left; -moz-animation-timing-function: ease-in-out; }	
-	80% { -moz-transform: rotate(60deg) translateY(0); opacity: 1; -moz-transform-origin: top left; -moz-animation-timing-function: ease-in-out; }	
-	100% { -moz-transform: translateY(700px); opacity: 0; }
-}
-
-@-o-keyframes hinge {
-	0% { -o-transform: rotate(0); -o-transform-origin: top left; -o-animation-timing-function: ease-in-out; }	
-	20%, 60% { -o-transform: rotate(80deg); -o-transform-origin: top left; -o-animation-timing-function: ease-in-out; }	
-	40% { -o-transform: rotate(60deg); -o-transform-origin: top left; -o-animation-timing-function: ease-in-out; }	
-	80% { -o-transform: rotate(60deg) translateY(0); opacity: 1; -o-transform-origin: top left; -o-animation-timing-function: ease-in-out; }	
-	100% { -o-transform: translateY(700px); opacity: 0; }
-}
-
-@keyframes hinge {
-	0% { transform: rotate(0); transform-origin: top left; animation-timing-function: ease-in-out; }	
-	20%, 60% { transform: rotate(80deg); transform-origin: top left; animation-timing-function: ease-in-out; }	
-	40% { transform: rotate(60deg); transform-origin: top left; animation-timing-function: ease-in-out; }	
-	80% { transform: rotate(60deg) translateY(0); opacity: 1; transform-origin: top left; animation-timing-function: ease-in-out; }	
-	100% { transform: translateY(700px); opacity: 0; }
-}
-
-.hinge {
-	-webkit-animation-name: hinge;
-	-moz-animation-name: hinge;
-	-o-animation-name: hinge;
-	animation-name: hinge;
-}
 
 @-webkit-keyframes swing {
 	20%, 40%, 60%, 80%, 100% { -webkit-transform-origin: center center; }
@@ -159,10 +121,6 @@
 }
 
 .swing {
-	-webkit-transform-origin: center center;
-	-moz-transform-origin: center center;
-	-o-transform-origin: center center;
-	transform-origin: center center;
 	-webkit-animation-name: swing;
 	-moz-animation-name: swing;
 	-o-animation-name: swing;
@@ -254,4 +212,14 @@
 	-moz-animation-name: bounceInDown;
 	-o-animation-name: bounceInDown;
 	animation-name: bounceInDown;
+}
+
+@keyframes flash {
+	from {background-color:RGBA(0,0,0,0);}
+	to {background-color:RGBA(255,255,255,0.6);}
+}
+
+@-webkit-keyframes flash {
+	from {background-color:RGBA(0,0,0,0);}
+	to {background-color:RGBA(255,255,255,0.6);}
 }

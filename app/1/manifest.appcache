@@ -1,13 +1,12 @@
 CACHE MANIFEST
 
-# verion 11h24
+# verion 12h37
 
 css/app.css
 css/animate.css
 
 js/app.js
 js/zepto.min.js
-js/touch.js
 js/preloadjs-0.3.1.min.js
 js/soundjs-0.4.1.min.js
 

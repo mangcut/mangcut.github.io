@@ -23,7 +23,7 @@
 			</div>
 			<div id="splashButtons" class="button-row hide">
 				<div id="startGame" class="btn">Bắt đầu</div>
-				<div data-page-toggle="#settings" class="btn btn-modest">Chọn</div>
+				<div data-page-toggle="#settings" class="btn btn-modest">Tùy chọn</div>
 			</div>
 		</div>
 		<div id="mangcut"></div>
@@ -32,12 +32,13 @@
 	<div class="page hide" id="main">
 		<div id="topbar" data-page-toggle="#pausing">
 			<div class="app-icon pull-right" id="showMenu" class="btn"><b>&Xi;</b></div>
-			<div class="app-title pull-left">Đúng rồi!</div>
-			<div id="counter" class="app-info pull-right">&nbsp;&nbsp;&nbsp;</div>
+			<!--div class="app-title pull-left">Đúng rồi!</div-->
+			<div class="app-title pull-left">Điểm: <span class="score" id="score">0</span></div>
+			<div class="app-info pull-right">Kỉ lục: <span class="high-score" id="highScore">0</span></div>
 		</div>
 		
 		<div id="content">
-			<div id="playGround" class="animated"></div>
+			<div id="playGround"></div>
 		</div>
 		
 		<div id="bottomPart">
@@ -47,21 +48,42 @@
 	
 	<div id="settings" class="page animated hide">
 		<div class="page-header">
-			<div class="app-icon pull-right" data-page-role="close" class="btn">&#x2714;</div><div class="app-title">Chọn</div>
+			<div class="app-icon pull-right" data-page-role="close" class="btn">OK</div><div class="app-title">Tùy chọn</div>
 		</div>
 		<div class="page-content">
-			<div class="section">
+			<!--div class="section hide">
 				<div class="section-heading">Kích thước</div>
 				<table id="tableSize" class="tile-menu radio">
 					<tr>
 						<td data-row="4" data-column="4">Nhỏ</td>
 						<td data-row="5" data-column="4">Vừa</td>
 					</tr>
-					<!--tr>
+					<tr>
 						<td data-row="6" data-column="5">5 x 6</td>
 						<td data-row="6" data-column="6">6 x 6</td>
-					</tr-->
+					</tr>
 				</table>
+			</div-->
+
+			<div class="section clearfix">
+				<div class="section-heading pull-left" style="width:48%;min-width:120px">Nhạc nền&nbsp;&nbsp;&nbsp;
+					<div class="onoffswitch">
+						<input type="checkbox" class="onoffswitch-checkbox" id="music" checked>
+						<label class="onoffswitch-label" for="music">
+							<div class="onoffswitch-inner"></div>
+							<div class="onoffswitch-switch"></div>
+						</label>
+					</div>
+				</div>
+				<div class="section-heading pull-left">Âm thanh&nbsp;&nbsp;&nbsp;
+					<div class="onoffswitch">
+						<input type="checkbox" class="onoffswitch-checkbox" id="sound" checked>
+						<label class="onoffswitch-label" for="sound">
+							<div class="onoffswitch-inner"></div>
+							<div class="onoffswitch-switch"></div>
+						</label>
+					</div>
+				</div>
 			</div>
 			
 			<div class="section">
@@ -82,19 +104,10 @@
 					<span>1</span><span>2</span>
 				</div>
 			</div>
-			
-			<div class="section">
-				<div class="section-heading">Âm thanh</div>
-				<table id="tableSound" class="tile-menu">
-					<tr>
-						<td data-settings="music">Nhạc nền</td>
-						<td data-settings="sound">Âm thanh</td>
-					</tr>
-				</table>
-			</div>
-			<div class="bottom-buttons">
+
+			<!--div class="bottom-buttons">
 				<div data-page-role="close" class="btn">OK</div>
-			</div>
+			</div-->
 		</div>
 	</div>
 
@@ -102,12 +115,26 @@
 		<div class="button-row-large vertical-center">
 			<div  data-page-role="back" class="btn btn-cyan">Chơi tiếp</div>
 			<div data-page-role="back" data-action="start" class="btn">Chơi lại</div>
-			<div  data-page-replace="#settings" class="btn btn-purple">Chọn</div>
+			<div  data-page-replace="#settings" class="btn btn-purple">Tùy chọn</div>
+		</div>
+	</div>
+	
+	<div class="page hide animated" id="message" data-display="table">
+		<div class="vertical-center">
+			<div style="font-size:1.4em;font-weight:bold;margin-bottom: 24px;">Yeahhhhhhhhhh!</div>
+			<div><span class="score" style="font-size:2em;font-weight:bold;font-family:monospace;color:#990000">1234</span> điểm</div>
+			<div style="font-size:0.75em;font-weight:300;margin-top: 15px;">Kỉ lục đang là <span class="high-score">1235</span> điểm.</div>
+			
+			<br>
+			<div data-page-role="back" data-action="start" class="btn">Chơi lại</div>
+			<br>
+			<div  data-page-role="back" class="btn btn-modest">Quay lại</div>
+			<div  data-page-replace="#settings" class="btn btn-modest">Tùy chọn</div>
 		</div>
 	</div>
 	
     <script src="js/zepto.min.js"></script>
-	<script src="js/touch.js"></script>
+	<!--script src="js/touch.js"></script-->
 	<script src="js/preloadjs-0.3.1.min.js"></script>
 	<script src="js/soundjs-0.4.1.min.js"></script>
 	<script src="js/app.js"></script>

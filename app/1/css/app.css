@@ -40,10 +40,20 @@ table td {
 
 #topbar {
 	border: 0;
-	background-color: HSL(105, 75%, 85%);
-	font-size: 1em;
+	background-color: HSLA(105, 75%, 85%, 0.8);
+	font-size: 1.2em;
+	font-family: monospace;
 	overflow: hidden;
 	box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+#score, #highScore {
+	font-size: 1.5em;
+	vertical-align: middle;
+}
+
+#showMenu {
+	font-family: sans-serif;
 }
 
 .pull-left {
@@ -87,7 +97,7 @@ table td {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
-	/*background-color: gray;*/
+	background-color: #fff;
 	background-clip: padding-box;
 	border: 1px solid transparent;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -112,17 +122,61 @@ table td {
 	vertical-align: middle;
 	
 	/*background-image: url('../mode/default/img/cardback.png');*/
+	background-repeat:no-repeat;
+	background-position:center;
 	
 	opacity: 0.6;
 }
 
 #playGround span.open {
 	cursor: default;
-	
+	opacity: 1;
 	color: white;
-	background-repeat:no-repeat;
-	background-position:center;
+	-webkit-animation-name: swing;
+	-moz-animation-name: swing;
+	-o-animation-name: swing;
+	animation-name: swing;
 }
+
+#playGround.mode-image span.open {
+	background-color: rgba(0,0,0,0.2);
+}
+
+#playGround.mode-image span.expecting {
+/*
+	-webkit-animation-iteration-count: infinite;-moz-animation-iteration-count: infinite;-ms-animation-iteration-count: infinite;-o-animation-iteration-count: infinite;animation-iteration-count: infinite;
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+	*/
+}
+
+#playGround.mode-image span.fixed {
+	background-color: transparent;
+	/*
+	-webkit-transition: 1s ease;
+	-moz-transition: 1s ease;
+	-o-transition: 1s ease;
+	transition: 1s ease;
+	-webkit-transition-property: background-color;
+	-moz-transition-property: background-color;
+	-o-transition-property: background-color;
+	transition-property: background-color;
+	
+	background-color: rgba(73,155,234,0.6);
+	background-image: -moz-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+	background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(73,155,234,1)), color-stop(100%,rgba(32,124,229,1)));
+	background-image: -webkit-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%);
+	background-image: -o-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%);
+	background-image: -ms-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%);
+	background-image: radial-gradient(ellipse at center, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%);
+	*/
+	-webkit-animation: flash 0.4s;
+	-moz-animation: flash 0.4s;
+	-o-animation: flash 0.4s;
+	animation: flash 0.4s;
+	-webkit-animation-fill-mode:none;-moz-animation-fill-mode:none;-ms-animation-fill-mode:none;-o-animation-fill-mode:none;animation-fill-mode:none;
+}
+
 
 #playGround span.open.stretch-image {
 	-webkit-background-size: cover;
@@ -206,7 +260,7 @@ table td {
 }
 
 .page-header {
-	margin: 0 -20px 20px;
+	margin: 0 -20px;
 	clear: both;
 	background-color: HSL(105, 75%, 85%);
 	overflow: hidden;
@@ -215,7 +269,7 @@ table td {
 }
 
 .section {
-	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .section-heading {
@@ -288,28 +342,31 @@ table.tile-menu tr {
 }
 
 .theme-sample:after {
+	display: table;
+	content: "";
+	line-height: 0;
 	clear: both;
 }
 
 .theme-sample span {
-	width: 36px;
-	height: 36px;
+	width: 70px;
+	height: 70px;
 	margin: 0 1px;
 	border: 0;
-	line-height: 36px;
-	font-size: 18px;
+	line-height: 70px;
+	font-size: 35px;
 	
 	cursor: default;
 	
 	color: white;
 	background-repeat:no-repeat;
 	background-position:center;
-
+/*
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
+*/	
 	opacity: 1;
 
 	float: right;
@@ -377,4 +434,79 @@ table.tile-menu tr {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
+}
+
+.onoffswitch {
+    position: relative; width: 72px;
+    vertical-align: middle;
+	/*display: inline-block;*/
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFFFF; border-radius: 14px;
+}
+
+.onoffswitch-inner {
+    width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    float: left; width: 50%; 
+	height: 24px; 
+	padding: 0; 
+	line-height: 26px;
+    font-size: 12px;
+	color: white; 
+	font-weight: normal;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "BẬT";
+    padding-left: 10px;
+    background-color: #207FDF; color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+    content: "TẮT";
+    padding-right: 10px;
+    background-color: #CCCCCC; color: #333333;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    width: 12px; margin: 6px;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF; border-radius: 14px;
+    position: absolute; top: 0; bottom: 0; right: 44px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
 }

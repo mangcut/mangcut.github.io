@@ -1,5 +1,6 @@
 window.onerror=function(m,u,l){alert(m+"\n"+u+":"+l);};
 var _SUPPORT_MOUSE = true;
+var _TOUCH_EVENT = "touchstart"; // touchend, tap, click
 var _LOCAL = (location.protocol === "file:");
 var CELL_CSS = "#playGround span";
 
@@ -12,7 +13,7 @@ var settings = {
 	vibrate: true,
 	load: function() {
 		settings.column = parseInt(localStorage["flip.settings.column"]) || 4;
-		settings.row = parseInt(localStorage["flip.settings.row"]) || 4;
+		settings.row = parseInt(localStorage["flip.settings.row"]) || 5;
 		settings.theme = parseInt(localStorage["flip.settings.theme"]);
 		if (isNaN(settings.theme)) settings.theme = 3;
 		settings.music = localStorage["flip.settings.music"] !== "false";
@@ -32,8 +33,8 @@ var settings = {
 			}
 		});
 		
-		$("#tableSound td").each(function() {
-			settings[$(this).data("settings")] && $(this).addClass("active");
+		$("#settings .onoffswitch-checkbox").each(function() {
+			$(this).prop("checked", settings[$(this).attr("id")]);
 		});
 		
 		return settings;
@@ -178,35 +179,27 @@ var maxSize = 96;
 var cellDecor = {
 	setColor: function($item) {
 		var cellID = $item.data("cell");
-		$item.css({"background-color": currentMode.data[cellID], "background-image": "none", "opacity":1});
+		$item.css({"background-color": currentMode.data[cellID]});
 		
 		return $item;
 	},
 	setNumber: function($item) {
-		var cellID = $item.data("cell");
-		$item.css({"background-color": currentMode.data[cellID], "background-image": "none", "opacity":1});
-		$item.text((cellID + 1) + "");
-		
-		return $item;
+		return cellDecor.setColor($item).text(($item.data("cell") + 1) + "");
 	},
 	setAlpha: function($item) {
-		var cellID = $item.data("cell");
-		$item.css({"background-color": currentMode.data[cellID], "background-image": "none", "opacity":1});
-		$item.text(String.fromCharCode(cellID + 65));
-		
-		return $item;
+		return cellDecor.setColor($item).text(String.fromCharCode($item.data("cell") + 65));
 	},
 	setImage: function($item) {
 		var cellID = $item.data("cell");
-		return $item.css({"background-color": currentMode.wall, "opacity":1, "background-image": "url('mode/" + currentMode.name + "/img/" + currentMode.data[cellID] + ".png')"});
+		return $item.css({"background-image": "url('mode/" + currentMode.name + "/img/" + currentMode.data[cellID] + ".png')"});
 	},
 	reset: function($item) {
-		return $item.removeClass("open fixed").css({"background-color": cardBackColor, "background-image": null, "opacity":null}).text("");
+		return $item.removeClass("open expecting fixed").addClass("closed").css({"background-image": null}).text("");
 	},
 	makeImageMode: function(name, max, wallColor) {
 		return {
 			name: name,
-			wall: wallColor,
+			image: true,
 			data: makeData(max),
 			set: cellDecor.setImage,
 			reset: cellDecor.reset
@@ -233,31 +226,31 @@ var modes = [
 		set: cellDecor.setAlpha,
 		reset: cellDecor.reset
 	},
-	cellDecor.makeImageMode("fruit", 12, "rgba(0,0,0,0.1)"),
-	cellDecor.makeImageMode("monster", 28, "rgba(0,0,0,0.1)"),
-	cellDecor.makeImageMode("moon", 32, "rgba(0,0,0,0.1)")
+	cellDecor.makeImageMode("fruit", 12),
+	cellDecor.makeImageMode("monster", 28),
+	cellDecor.makeImageMode("moon", 32)
 ];
 
 var currentMode = modes[settings.theme];
 
-var startTime;
+//var startTime;
 var lonelyCell;
-var secondCounter;
+//var secondCounter;
 
 var cells;
  
 $(document).ready(function () {
 	if (_SUPPORT_MOUSE === true) {
-		if (!('ontouchend' in window)) {
+		if (!('ontouchstart' in window)) {
 			console.log("Non-touch devices detected.");
 			$(document).delegate('body', 'click', function(e) {
-				$(e.target).trigger('tap');
+				$(e.target).trigger(_TOUCH_EVENT);
 			});
 		}
 	}
 
 	// setup menu
-	$(".tile-menu td").tap(function() {
+	$(".tile-menu td").on(_TOUCH_EVENT, function() {
 		var $parentTable = $(this).closest(".tile-menu");
 		if ($parentTable.hasClass("radio")) {
 			$parentTable.find("td.active").removeClass("active");
@@ -267,7 +260,7 @@ $(document).ready(function () {
 		}
 	});
 	
-	$("#tableTheme td").tap(function(){
+	$("#tableTheme td").on(_TOUCH_EVENT, function(){
 		var $c = $(this);
 		$(".theme-sample span").each(function(index) {
 			$(this).removeClass().addClass("theme-" + $c.data("theme") + "-" + index);
@@ -280,39 +273,44 @@ $(document).ready(function () {
 		});
 	});
 	
-	$("#tableSound td").tap(function(){
-		var settingName = $(this).data("settings");
-		settings[settingName] = $(this).hasClass("active");
+	$("#settings .onoffswitch-checkbox").on(_TOUCH_EVENT, function(){
+		var settingName = $(this).attr("id");
+		settings[settingName] = $(this).prop("checked");
 		if (settingName === "music") {
 			sounds.refresh();
 		}
 	});
 	
-	$("[data-page-role='back']").tap(function(){
+	$("[data-page-role='back']").on(_TOUCH_EVENT, function(){
 		Pages.back();
 	});
 	
-	$("[data-page-toggle]").tap(function(){
+	$("[data-page-toggle]").on(_TOUCH_EVENT, function(){
 		Pages.toggle($(this).data("page-toggle"));
 	});
 	
-	$("[data-page-replace]").tap(function(){
+	$("[data-page-replace]").on(_TOUCH_EVENT, function(){
 		Pages.toggle($(this).data("page-replace"), true);
 	});
 	
-	$("#settings [data-page-role='close']").tap(function(){
+	$("#settings [data-page-role='close']").on(_TOUCH_EVENT, function(){
+		/*
 		var $sizeCell = $("#tableSize td.active");
-		settings.column = $sizeCell.data("column");
-		settings.row = $sizeCell.data("row");
+		if ($sizeCell.length === 1) {
+			settings.column = $sizeCell.data("column");
+			settings.row = $sizeCell.data("row");
+		}
+		*/
 		
 		var $themeCell = $("#tableTheme td.active");
+		var oldTheme = settings.theme;
 		settings.theme = $themeCell.data("theme");
 		currentMode = modes[settings.theme];
 		
 		settings.save();
 		Pages.back();
 		
-		if (Pages.current().attr("id") === "main") {
+		if (Pages.current().attr("id") === "main" && oldTheme !== settings.theme) {
 			// TODO: determine what change and does it need restart
 			buildPlayGround();
 			start();
@@ -320,33 +318,37 @@ $(document).ready(function () {
 	});
 	
 	// setup buttons
-	$("[data-action]").tap(function() {
+	$("[data-action]").on(_TOUCH_EVENT, function() {
 		window[$(this).data("action")].apply();
 	});
 	
 	// setup cells
 	// cache the cells
-	$("#playGround").on("tap", CELL_CSS, function() {
+	$("#playGround").on("touchstart", CELL_CSS, function() {
 		var $t = $(this);
 		if ($t.hasClass("open") === false) {
-			$t.addClass("open");
+			$t.toggleClass("closed open");
 			var cellID = $t.data("cell");
 			currentMode.set($t);
 			
 			if (lonelyCell) {
 				if (cellID == lonelyCell.data("cell")) {
 					// match
-					$t.addClass("fixed");
-					lonelyCell.addClass("fixed");
+					$t.toggleClass("fixed");
+					lonelyCell.toggleClass("expecting fixed");
 					lonelyCell = null;
+					
+					Points.match();
 					
 					// if win
 					if ($(CELL_CSS + ".fixed").length === cells.length) {
-						clearInterval(secondCounter);
-						secondCounter = null;
+						//clearInterval(secondCounter);
+						//secondCounter = null;
 						//$("body").css({'background-color': winningColor});
+						Points.saveHighScore();
 						celebrateWin();
 						sounds.play("win", cellID);
+						Pages.toggle("#message");
 					} else {
 						sounds.play("match", cellID);
 					}
@@ -359,9 +361,11 @@ $(document).ready(function () {
 						currentMode.reset(lonelyPhamtom);
 						currentMode.reset($t);
 					}, 500);
+					
+					Points.fail();
 				}
 			} else {
-				lonelyCell = $t;
+				lonelyCell = $t.addClass("expecting");
 				sounds.play("reveal", cellID);
 				// close all open unfixed one (don't wait the timer)
 				//currentMode.reset($(CELL_CSS + ".open").not(".fixed"));
@@ -439,8 +443,8 @@ function preload() {
 
 function start() {
 	lonelyCell = null;
-	clearInterval(secondCounter);
-	secondCounter = null;
+	//clearInterval(secondCounter);
+	//secondCounter = null;
 	
 	cells = shuffle(makeCells());
 	
@@ -456,15 +460,16 @@ function start() {
 	});
 	
 	animateStartGame();
+	Points.reset();
 	
-	$("#counter").text("000");
+	///$("#counter").text("000");
 	//$("body").css({'background-color': defaultBackColor});
 	
-	startTime = new Date();
-	startTime.setSeconds(startTime.getSeconds() + 1);
-	secondCounter = window.setInterval(function() {
-		$("#counter").text(secondPassed());
-	}, 1000);
+	//startTime = new Date();
+	//startTime.setSeconds(startTime.getSeconds() + 1);
+	//secondCounter = window.setInterval(function() {
+	//	$("#counter").text(secondPassed());
+	//}, 1000);
 	
 	// play the sound
 	sounds.play("start");
@@ -487,6 +492,7 @@ function shuffle(array) {
     return array;
 }
 
+/*
 function secondPassed() {
 	var endTime = new Date();
 	if (endTime <= startTime) return "000";
@@ -500,8 +506,8 @@ function secondPassed() {
 	} else {
 		return "" + passedSeconds;
 	}
-	
 }
+*/
 
 function rand(max) {
 	return (Math.random() * max) | 0;
@@ -551,10 +557,10 @@ function buildPlayGround() {
 	
 	var html = "";
 	for (var i = 0, n = settings.row * settings.column; i < n; i++) {
-		html += "<span class='animated'></span>";
+		html += "<span class='closed animated'></span>";
 	}
 	
-	$("#playGround").html(html);
+	$("#playGround").removeClass().addClass("animated " + (currentMode.image?"mode-image":"mode-text") + " mode-" + currentMode.name).html(html);
 	resizePlayGround(true);
 }
 
@@ -727,3 +733,44 @@ var Pages = {
 $(window).smartresize(function(){
 	resizePlayGround(false);
 });
+
+// so lan sai truoc do: lastFailedCount
+// so cell open con lai: guessRoomSize
+// guessRoomSize * (10 - lastFailedCount)
+
+var Points = {
+	lastFailedCount: 0,
+	value: 0,
+	highScore: parseInt(localStorage["flip.score.high"]) || 0,
+	reset: function() {
+		Points.lastFailedCount = 0;
+		Points.value = 0;
+		Points.display();
+		//Points.highScore = Points.highScore || parseInt(localStorage["flip.score.high"]) || 0;
+		$(".high-score").text(Points.highScore + "");
+	},
+	fail: function() {
+		Points.lastFailedCount++;
+	},
+	match: function() {
+		var guessRoomSize = $(CELL_CSS).not(".fixed").length + 2;
+		Points.value += guessRoomSize + Math.max(guessRoomSize * (10 - Points.lastFailedCount*2), 0);
+		Points.lastFailedCount = 0;
+		
+		Points.display();
+	},
+	display: function() {
+		$(".score").text(Points.value + "");
+	},
+	saveHighScore: function() {
+		if (Points.value > Points.highScore) {
+			Points.highScore = Points.value;
+			localStorage["flip.score.high"] = Points.highScore;
+			$(".high-score").text(Points.highScore + "");
+			
+			return true;
+		}
+		
+		return false;
+	}
+}
