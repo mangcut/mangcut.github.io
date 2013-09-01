@@ -194,7 +194,7 @@ var cellDecor = {
 		return $item.css({"background-image": "url('mode/" + currentMode.name + "/img/" + currentMode.data[cellID] + ".png')"});
 	},
 	reset: function($item) {
-		return $item.removeClass("open expecting fixed").addClass("closed").css({"background-image": null}).text("");
+		return $item.removeClass("open expecting fixed").addClass("closed").css({"background-image": null, "background-color": null}).text("");
 	},
 	makeImageMode: function(name, max, wallColor) {
 		return {
