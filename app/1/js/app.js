@@ -378,7 +378,7 @@ $(document).ready(function () {
 });
 
 function preload() {
-	var queue = new createjs.LoadQueue(!_LOCAL, "mode/");
+	var queue = new createjs.LoadQueue(!_LOCAL);
 	queue.installPlugin(createjs.Sound);
 	queue.addEventListener("complete", function() {
 		
@@ -413,7 +413,7 @@ function preload() {
 	for (var i = 1; i < modes.length; i ++) {
 		if (!modes[i].color) {
 			for (var j = 0; j < modes[i].data.length; j++) {
-				var fileName = modes[i].name + "/img/" + modes[i].data[j] + ".png";
+				var fileName = "mode/" + modes[i].name + "/img/" + modes[i].data[j] + ".png";
 				manifest.push(fileName);
 			}
 		}
@@ -421,7 +421,7 @@ function preload() {
 	
 	var cacheSound = function(mf, id) {
 		//if (sounds.config[id]) {
-			mf.push( {id: sounds.theme + "_" + id, src: "default/snd/" + soundThemes[sounds.theme][id]});
+			mf.push( {id: sounds.theme + "_" + id, src: "mode/default/snd/" + soundThemes[sounds.theme][id]});
 		//}
 	}
 	
