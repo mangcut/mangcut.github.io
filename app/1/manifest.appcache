@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# verion 11h34
+# verion 11h42
 
 css/app.css
 css/animate.css
@@ -9,25 +9,19 @@ js/app.js
 js/zepto.min.js
 js/preloadjs-0.3.1.min.js
 js/soundjs-0.4.1.min.js
-#js/HTMLAudioPlugin.js
-#js/WebAudioPlugin.js
-#js/Sound.js
-#js/IndexOf.js
-#js/Proxy.js
-#js/Events.js
-#js/EventDispatcher.js
 
 img/apple_icon.png
 img/icon.png
 img/mangcut.png
 
 mode/default/img/groundback.png
+#mode/default/img/cardback.png
 
-#mode/default/snd/music.mp3
-#mode/default/snd/start.mp3
-#mode/default/snd/reveal.mp3
-#mode/default/snd/match.mp3
-#mode/default/snd/win.mp3
+mode/default/snd/music.mp3
+mode/default/snd/start.mp3
+mode/default/snd/reveal.mp3
+mode/default/snd/match.mp3
+mode/default/snd/win.mp3
 
 mode/fruit/img/1.png
 mode/fruit/img/2.png
