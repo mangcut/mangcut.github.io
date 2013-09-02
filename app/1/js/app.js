@@ -250,7 +250,7 @@ $(document).ready(function () {
 	}
 
 	// setup menu
-	$(".tile-menu td").on(_TOUCH_EVENT, function() {
+	$(".tile-menu td").on("click", function() {
 		var $parentTable = $(this).closest(".tile-menu");
 		if ($parentTable.hasClass("radio")) {
 			$parentTable.find("td.active").removeClass("active");
@@ -260,7 +260,7 @@ $(document).ready(function () {
 		}
 	});
 	
-	$("#tableTheme td").on(_TOUCH_EVENT, function(){
+	$("#tableTheme td").on("click", function(){
 		var $c = $(this);
 		$(".theme-sample span").each(function(index) {
 			$(this).removeClass().addClass("theme-" + $c.data("theme") + "-" + index);
@@ -273,7 +273,7 @@ $(document).ready(function () {
 		});
 	});
 	
-	$("#settings .onoffswitch-checkbox").on(_TOUCH_EVENT, function(){
+	$("#settings .onoffswitch-checkbox").on("click", function(){
 		var settingName = $(this).attr("id");
 		settings[settingName] = $(this).prop("checked");
 		sounds.refresh();
