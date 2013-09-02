@@ -276,9 +276,7 @@ $(document).ready(function () {
 	$("#settings .onoffswitch-checkbox").on(_TOUCH_EVENT, function(){
 		var settingName = $(this).attr("id");
 		settings[settingName] = $(this).prop("checked");
-		if (settingName === "music") {
-			sounds.refresh();
-		}
+		sounds.refresh();
 	});
 	
 	$("[data-page-role='back']").on(_TOUCH_EVENT, function(){
