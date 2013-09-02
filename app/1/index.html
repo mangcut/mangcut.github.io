@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="manifest.appcache">
+<html manifest="cache.manifest">
 <head>
 	<meta charset="utf-8" />
 	<meta name="HandheldFriendly" content="True" />
@@ -31,7 +31,7 @@
 	
 	<div class="page hide" id="main">
 		<div id="topbar" data-page-toggle="#pausing">
-			<div class="app-icon pull-right" id="showMenu" class="btn"><b>&Xi;</b></div>
+			<div class="app-icon pull-right" id="showMenu" class="btn"><b>&#9776;</b></div>
 			<!--div class="app-title pull-left">Đúng rồi!</div-->
 			<div class="app-title pull-left">Điểm: <span class="score" id="score">0</span></div>
 			<div class="app-info pull-right">Kỉ lục: <span class="high-score" id="highScore">0</span></div>
@@ -41,9 +41,9 @@
 			<div id="playGround"></div>
 		</div>
 		
-		<div id="bottomPart">
+		<!--div id="bottomPart">
 			<div data-action="start" class="btn">Chơi lại</div>
-		</div>
+		</div-->
 	</div>
 	
 	<div id="settings" class="page animated hide">
@@ -123,6 +123,7 @@
 		<div class="vertical-center">
 			<div style="font-size:1.4em;font-weight:bold;margin-bottom: 24px;">Yeahhhhhhhhhh!</div>
 			<div><span class="score" style="font-size:2em;font-weight:bold;font-family:monospace;color:#990000">1234</span> điểm</div>
+			<div id="scoreRank" style="color:gold;font-size:1.2em;text-shadow:  0 0 1px #BA0;"></div>
 			<div style="font-size:0.75em;font-weight:300;margin-top: 15px;">Kỉ lục đang là <span class="high-score">1235</span> điểm.</div>
 			
 			<br>

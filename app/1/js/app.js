@@ -12,13 +12,13 @@ var settings = {
 	music: true,
 	vibrate: true,
 	load: function() {
-		settings.column = parseInt(localStorage["flip.settings.column"]) || 4;
-		settings.row = parseInt(localStorage["flip.settings.row"]) || 5;
+		settings.column = 4; //parseInt(localStorage["flip.settings.column"]) || 4;
+		settings.row = 5;//parseInt(localStorage["flip.settings.row"]) || 5;
 		settings.theme = parseInt(localStorage["flip.settings.theme"]);
 		if (isNaN(settings.theme)) settings.theme = 3;
 		settings.music = localStorage["flip.settings.music"] !== "false";
 		settings.sound = localStorage["flip.settings.sound"] !== "false";
-		settings.vibrate = localStorage["flip.settings.vibrate"] !== "false";
+		settings.vibrate = false;//localStorage["flip.settings.vibrate"] !== "false";
 		
 		$("#tableSize td[data-row='" + settings.row + "']").addClass("active");
 		
@@ -40,12 +40,12 @@ var settings = {
 		return settings;
 	},
 	save: function() {
-		localStorage["flip.settings.column"] = settings.column;
-		localStorage["flip.settings.row"] = settings.row;
+		//localStorage["flip.settings.column"] = settings.column;
+		//localStorage["flip.settings.row"] = settings.row;
 		localStorage["flip.settings.theme"] = settings.theme;
 		localStorage["flip.settings.music"] = settings.music;
 		localStorage["flip.settings.sound"] = settings.sound;
-		localStorage["flip.settings.vibrate"] = settings.vibrate;
+		//localStorage["flip.settings.vibrate"] = settings.vibrate;
 		
 		return settings;
 	}
@@ -194,7 +194,7 @@ var cellDecor = {
 		return $item.css({"background-image": "url('mode/" + currentMode.name + "/img/" + currentMode.data[cellID] + ".png')"});
 	},
 	reset: function($item) {
-		return $item.removeClass("open expecting fixed").addClass("closed").css({"background-image": null, "background-color": null}).text("");
+		return $item.removeClass().addClass("closed animated").css({"background-image": null, "background-color": null}).text("");
 	},
 	makeImageMode: function(name, max, wallColor) {
 		return {
@@ -308,7 +308,7 @@ $(document).ready(function () {
 		settings.save();
 		Pages.back();
 		
-		if (Pages.current().attr("id") === "main" && oldTheme !== settings.theme) {
+		if (Pages.isCurrentMain() && oldTheme !== settings.theme) {
 			// TODO: determine what change and does it need restart
 			buildPlayGround();
 			start();
@@ -344,6 +344,7 @@ $(document).ready(function () {
 						//secondCounter = null;
 						//$("body").css({'background-color': winningColor});
 						Points.saveHighScore();
+						Points.setRank();
 						celebrateWin();
 						sounds.play("win", cellID);
 						Pages.toggle("#message");
@@ -435,7 +436,7 @@ function preload() {
 		$("#indicator").width(pc);
 	});
 	
-	queue.setMaxConnections(3);
+	queue.setMaxConnections(5);
 	queue.loadManifest(manifest);
 }
 
@@ -559,10 +560,12 @@ function buildPlayGround() {
 	}
 	
 	$("#playGround").removeClass().addClass("animated " + (currentMode.image?"mode-image":"mode-text") + " mode-" + currentMode.name).html(html);
-	resizePlayGround(true);
+	resizePlayGround();
 }
 
-function resizePlayGround(initial) {
+function resizePlayGround() {
+	if (!Pages.isCurrentMain() || $(CELL_CSS).length === 0) return;
+
 	var width = calcCellSize();
 	
 	var winH = $(window).height();
@@ -689,7 +692,7 @@ var Pages = {
 				Pages.history[Pages.history.length - 1].css({display: $m.data("display") || "block"}).addClass("bounceIn");
 			}
 		}
-		
+		resizePlayGround();
 		return $m;
 	},
 	back: function() {
@@ -697,6 +700,9 @@ var Pages = {
 	},
 	current: function() {
 		return Pages.history[Pages.history.length - 1];
+	},
+	isCurrentMain: function() {
+		return Pages.current().attr("id") === "main";
 	}
 };
 
@@ -729,12 +735,8 @@ var Pages = {
 })(Zepto,'smartresize');
 
 $(window).smartresize(function(){
-	resizePlayGround(false);
+	resizePlayGround();
 });
-
-// so lan sai truoc do: lastFailedCount
-// so cell open con lai: guessRoomSize
-// guessRoomSize * (10 - lastFailedCount)
 
 var Points = {
 	lastFailedCount: 0,
@@ -770,5 +772,21 @@ var Points = {
 		}
 		
 		return false;
+	},
+	rank: function() {
+		if (Points.value > 1100) {
+			return 5;
+		} else if (Points.value > 1000) {
+			return 4;
+		} else if (Points.value > 900) {
+			return 3;
+		} else if (Points.value > 750) {
+			return 2;
+		} else {
+			return 1;
+		}
+	},
+	setRank: function() {
+		$("#scoreRank").html(Array(Points.rank() + 1).join("&#9733;"));
 	}
 }
