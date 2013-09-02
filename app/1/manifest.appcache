@@ -17,11 +17,11 @@ img/mangcut.png
 mode/default/img/groundback.png
 #mode/default/img/cardback.png
 
-mode/default/snd/music.mp3
-mode/default/snd/start.mp3
-mode/default/snd/reveal.mp3
-mode/default/snd/match.mp3
-mode/default/snd/win.mp3
+#mode/default/snd/music.mp3
+#mode/default/snd/start.mp3
+#mode/default/snd/reveal.mp3
+#mode/default/snd/match.mp3
+#mode/default/snd/win.mp3
 
 mode/fruit/img/1.png
 mode/fruit/img/2.png
