@@ -442,18 +442,18 @@ html.site-home  section.article-list article:first-child, section.article-list a
 		padding-left: 8px;
 		padding-right: 8px;
 	}
+	#aboutText {
+		display: none;
+	}
+	#aboutIcon {
+		display: block;
+	}
 }
 
 @media (max-width: 359px) {
 	.navbar .nav>li>a {
 		padding-left: 6px;
 		padding-right: 6px;
-	}
-	#aboutText {
-		display: none;
-	}
-	#aboutIcon {
-		display: block;
 	}
 }
 
