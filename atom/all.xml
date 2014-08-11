@@ -4,7 +4,7 @@
 	<title>Măng cụt - Thiền và công việc lập trình</title>
 	<subtitle>Góc nhìn của Trương Hồng Thi về công nghệ và con người.</subtitle>
 	<link href="http://mangcut.vn/"/>
-	<updated>2013-05-05T12:00:00Z</updated>
+	<updated>2014-08-11T23:29:30Z</updated>
 	<author>
 		<name>Trương Hồng Thi</name>
 		<uri>http://mangcut.vn/about.html</uri>
@@ -12,6 +12,15 @@
 	<id>tag:mangcut.vn,2013-05-01:index</id>
 	<rights>Copyright (c) 2013, Trương Hồng Thi</rights>
 
+	<entry>
+		<title>Ebola là gì và lây nhiễm như thế nào</title>
+		<link href="http://mangcut.vn/blog/2014-08-11-ebola-la-gi-va-lay-nhiem-nhu-the-nao"/>
+		<id>tag:mangcut.vn,2013-05-14:blog/2014-08-11-ebola-la-gi-va-lay-nhiem-nhu-the-nao</id>
+		<category>Sức khỏe</category>
+		<updated>2014-08-11T23:29:30Z</updated>
+		<summary>Cả thế giới đang lo lằng vì Ebola. Vậy Ebola là gì và nó lây nhiễm qua hình thức nào?</summary>
+	</entry>
+	
 	<entry>
 		<title>Tất tần tật về chiếc kính thông minh của Google</title>
 		<link href="http://mangcut.vn/blog/2013-05-14-tat-tan-tat-ve-chiec-kinh-thong-minh-cua-google.html"/>
