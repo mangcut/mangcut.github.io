@@ -2,7 +2,7 @@ name: Măng cụt
 title: Thiền và công việc lập trình
 description: Góc nhìn của Trương Hồng Thi về công nghệ và con người.
 permalink: /:categories/:year-:month-:day-:title.html
-url: http://mangcut.vn
+url: http://www.mangcut.vn
 author: Trương Hồng Thi
 pygments: false
 markdown: kramdown

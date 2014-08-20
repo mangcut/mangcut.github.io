@@ -12,6 +12,8 @@
 <title>{{site.name}} - {{page.title}}</title>
 {% if page.site_home %}
 <link rel="canonical" href="{{site.url}}"/>
+{% else %}
+<link rel="canonical" href="{{site.url}}{{page.url}}"/>
 {% endif %}
 <link href="http://feeds.feedburner.com/mangcut" type="application/atom+xml" rel="alternate" title="All articles's ATOM Feed">
 {% if site.open_sans %}
