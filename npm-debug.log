@@ -1,0 +1,38 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   '-g',
+1 verbose cli   'install',
+1 verbose cli   'git+https://github.com/LeaVerou/prism.git#gh-pages' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose cache add [ 'git+https://github.com/LeaVerou/prism.git#gh-pages', null ]
+6 verbose cache add name=undefined spec="git+https://github.com/LeaVerou/prism.git#gh-pages" args=["git+https://github.com/LeaVerou/prism.git#gh-pages",null]
+7 verbose parsed url { protocol: 'git+https:',
+7 verbose parsed url   slashes: true,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: 'github.com',
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: 'github.com',
+7 verbose parsed url   hash: '#gh-pages',
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '/LeaVerou/prism.git',
+7 verbose parsed url   path: '/LeaVerou/prism.git',
+7 verbose parsed url   href: 'git+https://github.com/LeaVerou/prism.git#gh-pages' }
+8 silly lockFile 75bb15cb--com-LeaVerou-prism-git-gh-pages git+https://github.com/LeaVerou/prism.git#gh-pages
+9 verbose lock git+https://github.com/LeaVerou/prism.git#gh-pages C:\Users\thith\AppData\Roaming\npm-cache\75bb15cb--com-LeaVerou-prism-git-gh-pages.lock
+10 verbose addRemoteGit [ 'https://github.com/LeaVerou/prism.git', 'gh-pages' ]
+11 silly lockFile edc3c376-ps-github-com-LeaVerou-prism-git https://github.com/LeaVerou/prism.git
+12 error not found: git
+13 error Failed using git.
+13 error This is most likely not a problem with npm itself.
+13 error Please check if you have git installed and in your PATH.
+14 error System Windows_NT 6.2.9200
+15 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "-g" "install" "git+https://github.com/LeaVerou/prism.git#gh-pages"
+16 error cwd C:\Users\thith\Documents\GitHub\thith.github.io
+17 error node -v v0.10.24
+18 error npm -v 1.3.21
+19 error code ENOGIT
+20 verbose exit [ 1, true ]

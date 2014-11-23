@@ -11,6 +11,6 @@ kramdown:
   coderay:
     coderay_css: class
 syntax:
-  hilight: false;
-  css: prettify
-  js: http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js
+  hilight: false
+  css: prism
+  js: /js/prism.js

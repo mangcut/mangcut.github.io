@@ -4,6 +4,25 @@ html, body {
 	height: 100%;
 }
 
+h1 {
+	font-size: 2em;
+	margin-top: 0.6em;
+	margin-bottom: 0.9em;
+}
+
+h1.post-title {
+}
+
+h2 {
+	margin-top: 1.3em;
+	margin-bottom: 0.8em;
+}
+
+h2.index-title {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 #wrapper {
     min-height: 100%;
     height: auto !important;
@@ -34,10 +53,6 @@ html, body {
 
 .container-first{
 	padding-top: 41px;
-}
-
-.post-title {
-	margin-top: 2px;
 }
 
 .index-title {

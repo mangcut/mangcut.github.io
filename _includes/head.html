@@ -1,6 +1,6 @@
 <meta charset="utf-8" />
 <meta name="HandheldFriendly" content="True" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta property="fb:admins" content="100000049454443" />
@@ -9,7 +9,7 @@
 {% if page.image %}
 <meta property="og:image" content="{{page.image}}" />
 {% endif %}
-<title>{{site.name}} - {{page.title}}</title>
+<title>{% if page.language != 'en' %}{{site.name}} - {% endif %}{{page.title}}</title>
 {% if page.site_home %}
 <link rel="canonical" href="{{site.url}}"/>
 {% else %}
