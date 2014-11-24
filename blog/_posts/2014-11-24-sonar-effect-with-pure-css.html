@@ -4,12 +4,12 @@ language: en
 hilight: true
 title: Sonar Effect with Pure CSS
 description: How to make the sonar animation effect with pure CSS
-topic: HTML5
+topic: Front-end
 disqus_id: blog/2014-11-24-sonar-effect-with-pure-css
 excerpt: How to make the sonar animation effect with pure CSS.
 ---
 
-<p class="lead">Recently, I played the BrainWars game and liked the <i>sonar</i> effect on its <i>Start</i> button. So I decided to apply this effect to <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mangcut.memory">my little HTML-based</a> Android game.</p>
+<p class="lead">Recently, I played the BrainWars game and liked the <i>sonar</i> effect on its <i>Start</i> button. So I decided to apply this effect to <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mangcut.memory">my little HTML-based Android game</a>.</p>
 
 <p>After a few hours playing around on CodePen, I came up with this (OK, the actual effect used in my game is a little more complex, more about that later).</p>
 
@@ -17,7 +17,7 @@ excerpt: How to make the sonar animation effect with pure CSS.
  
 <h2>1. How I made it</h2>
 
-<p>The idea is quite simple. Make a circle. Then pulsating another semi-tranparent circle behind the first one to simulate the spreading waves. And that's pretty easy with CSS.</p>
+<p>The idea is quite simple. Make a circle. Then pulsating another semi-tranparent circle behind the it to simulate the spreading waves. And that's pretty easy with CSS.</p>
 
 <p>First, create a simple element:</p>
 <pre><code class="language-markup">&lt;div class=&quot;sonar-wrapper&quot;&gt;
@@ -25,7 +25,7 @@ excerpt: How to make the sonar animation effect with pure CSS.
 &lt;/div&gt;
 </code></pre>
 
-<p>Then, turn it into a red circle:</p>
+<p>Next, turn it into a red circle:</p>
 <pre><code class="language-css">.sonar-btn {
   position: relative;
   width: 10rem;
@@ -37,13 +37,13 @@ excerpt: How to make the sonar animation effect with pure CSS.
 }
 </code></pre>
 
-<p>Note that I apply <code>position: relative</code> to make it easy for the second circle (about it later) to position itself based on the first one. The <code>border-radius</code> is set to <code>50%</code> to turn the element into the circle.</p>
+<p>Note that I applied <code>position: relative</code> to make it easy for the second circle (about it later) to position itself based on the first one. The <code>border-radius</code> is set to <code>50%</code> to turn the element into the circle.</p>
 
 <p>This is what we have:</p>
 
 <p><div style="width:10rem;height:10rem;border-radius:5rem;background-color:red;cursor:pointer"></div></p>
 
-<p>Now, let's create a second circle. It should have the same shape, size, position, and color as the first one. I could certainly create a new HTML element, but to keep it simple, I'll use the <code>::after</code> pseudo element.</p>
+<p>Now, let's create a second circle. It should have the same shape, size, position, and color as the first one. It could certainly be a regular HTML element. However, to keep it simple, we'll use the <code>::after</code> pseudo element.</p>
 <pre><code class="language-css">.sonar-btn::after {
   position: absolute;
   top: 0;
@@ -84,7 +84,7 @@ excerpt: How to make the sonar animation effect with pure CSS.
 <p>
 <ul>
 <li>Desktop: Chrome, FireFox, IE10+, Safari 6.1+ (not tested)</li>
-<li>Mobile: Stock Android Browser 4.4+, iOS Safari 7+</li>
+<li>Mobile: Chrome, FireFox,  iOS Safari 7+, Stock Android Browser 4.4+</li>
 </ul>
 </p>
 <p>It does not work on older browers due to their lack of <a target="_blank" href="http://css-tricks.com/transitions-and-animations-on-css-generated-content/">support for animation on pseudo elements</a>.</p>
