@@ -1,0 +1,83 @@
+---
+layout: englishPost
+language: en
+hilight: true
+title: Sonar Effect with CSS
+description: How to make the sonar effect using CSS animation.
+topic: Front-end
+disqus_id: blog/2014-11-24-sonar-effect-with-css
+excerpt: How to make the sonar effect using CSS animation.
+---
+
+<p class="lead">Recently, I played the BrainWars game and liked the <i>sonar</i> effect on its <i>Start</i> button. So I decided to apply that effect to <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mangcut.memory">my little HTML-based Android game</a>, using just CSS and regular <code>&lt;div&gt;</code> tags.</p>
+
+<p>After a few hours playing around on CodePen, I came up with this.</p>
+
+<iframe style="height:300px;width:100%;" src="http://codepen.io/thith/embed/vEOObL"></iframe>
+ 
+<h2>1. How I made it</h2>
+
+<p>The idea is quite simple. Make a circle. Then pulsating another semi-tranparent circle behind it to simulate the spreading waves. And that's pretty easy with CSS.</p>
+
+<p>First, create 2 tags for the emitter and the wave:</p>
+<pre><code class="language-markup">&lt;div class=&quot;sonar-emitter&quot;&gt;
+ &lt;div class=&quot;sonar-wave&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>To get things position correctly, I let <code>.sonar-wave</code> be the child tag of <code>.sonar-emitter</code>, then would applied <code>position: relative</code> to the parent and <code>position: absolute</code> to the child.</p>
+
+<p>Next, decorate the emitter:</p>
+<pre><code class="language-css">.sonar-emitter {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+  background-color: HSL(45,100%,50%);
+}
+</code></pre>
+
+<p>The <code>border-radius</code> is set to <code>9999px</code> to turn the element into the circle (<a target="_blank" href="http://lea.verou.me/2010/10/the-curious-case-of-border-radius50/">it works!</a>). It's OK to set it to <code>50%</code> but that won't work on the stock browser of Android 2.3.x. Another way is setting it to half of the width (that is, <code>80px</code>) - the catch is that you'll have to update it each time you decide to change the width.</p>
+
+<p>This is what we have:</p>
+
+<p><div style="width:10rem;height:10rem;border-radius:5rem;background-color:HSL(45,100%,50%)"></div></p>
+
+<p>Now, it's time for the second circle.</p>
+<pre><code class="language-css">.sonar-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: HSL(45,100%,50%);
+  z-index: -1;
+  pointer-events: none;
+}
+</code></pre>
+
+<p>The shape, size, displaying position, and color are the same as the first circle. Note that I set <code>z-index</code> to <code>-1</code> to make sure it lies underneath its parent.</p>
+
+<p class="alert alert-info">It is tempted to use the <code>::after</code> pseudo element as the second circle. However, I prefered a regular element as not all browsers <a target="_blank" href="http://css-tricks.com/transitions-and-animations-on-css-generated-content/"><u>support animation on pseudo elements</u></a>. Notably, the stock browsers (and apps that rely on WebView) on Android prior to Kitkat do not. If you still want the <code>::after</code> guy, check out <a target="_blank" href="http://codepen.io/thith/pen/WbbqXa"><u>my version on CodePen</u></a>.</p>
+
+<p>OK, let's go to fun part: make things animate! I wanted it to go from 40% semi-transparent to completely transparent while spreading to the scale of 3 times. So here is how I designed the animation keyframe:</p>
+<pre><code class="language-css">@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+</code></pre>
+<p>Finally, just assign the keyframe to the second circle:</p>
+<pre><code class="language-css">.sonar-wave {
+  animation: sonarWave 2s linear infinite
+}
+</code></pre>
+
+<p>Note that I left out the browser prefixes thingy for the sake of brevity. You could <a target="_blank" href="http://css-tricks.com/snippets/css/keyframe-animation-syntax/">add it manually</a>, use a <a target="_blank" href="https://github.com/postcss/autoprefixer">prefixer</a>, or <a href="http://bourbon.io/docs/">mixins</a>.</p>
+
+<p>That's all. It works on all browsers except IE9 which does not support CSS animation at all. Enjoy!</p>
