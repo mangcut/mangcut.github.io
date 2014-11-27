@@ -19,13 +19,13 @@ excerpt: How to make the sonar effect using CSS animation.
 
 <p>The idea is quite simple. Make a circle. Then pulsating another semi-tranparent circle behind it to simulate the spreading waves. And that's pretty easy with CSS.</p>
 
-<p>First, create 2 tags for the emitter and the wave:</p>
+<p>First, let's create 2 tags for the emitter and the wave:</p>
 <pre><code class="language-markup">&lt;div class=&quot;sonar-emitter&quot;&gt;
  &lt;div class=&quot;sonar-wave&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<p>To get things position correctly, I let <code>.sonar-wave</code> be the child tag of <code>.sonar-emitter</code>, then would applied <code>position: relative</code> to the parent and <code>position: absolute</code> to the child.</p>
+<p>To get things position correctly, I let <code>.sonar-wave</code> be the child tag of <code>.sonar-emitter</code>, then applied <code>position: relative</code> to the parent and <code>position: absolute</code> to the child.</p>
 
 <p>Next, decorate the emitter:</p>
 <pre><code class="language-css">.sonar-emitter {
@@ -37,7 +37,7 @@ excerpt: How to make the sonar effect using CSS animation.
 }
 </code></pre>
 
-<p>The <code>border-radius</code> is set to <code>9999px</code> to turn the element into the circle (<a target="_blank" href="http://lea.verou.me/2010/10/the-curious-case-of-border-radius50/">it works!</a>). It's OK to set it to <code>50%</code> but that won't work on the stock browser of Android 2.3.x. Another way is setting it to half of the width (that is, <code>80px</code>) - the catch is that you'll have to update it each time you decide to change the width.</p>
+<p>The <code>border-radius</code> is set to <code>9999px</code> to turn the element into a circle (<a target="_blank" href="http://lea.verou.me/2010/10/the-curious-case-of-border-radius50/">it works!</a>). It's OK to set it to <code>50%</code> but that won't work on the stock browser of Android 2.3.x. Another way is setting it to half of the width (that is, <code>80px</code>) - the catch is that you'll have to update it each time you decide to change the width.</p>
 
 <p>This is what we have:</p>
 
@@ -84,7 +84,7 @@ excerpt: How to make the sonar effect using CSS animation.
 
 <p>It should already work. However, I decided to add one requirement: our sonar would emit each wave in a different color. That seems hard to achieve with CSS only, so I added some JavaScript.</p>
 
-<p> First, we need a function to generate a random color. I decided to keep the saturation and lightness constant, just randomize the hue.</p>
+<p>First, we need a function to generate a random color. I decided to keep the saturation and lightness constant, just randomize the hue.</p>
 
 <pre><code class="language-javascript">function colorize() {
   var hue = Math.random() * 360;
@@ -92,13 +92,13 @@ excerpt: How to make the sonar effect using CSS animation.
 }
 </code></pre>
 
-<p>Then, register an event to update the wave's color after every animation iteration.</p>
+<p>Then, register an event which updates the wave's color after every animation iteration.</p>
 
 <pre><code class="language-javascript">$(".sonar-wave").on("webkitAnimationIteration oanimationiteration animationiteration", function(){
   $(this).css("background-color", colorize());
 })
 </code></pre>
 
-<p>FireFox and IE use the unprefixed <code>animationiteration</code> already while others at this time still need prefixes.</p>
+<p>FireFox and IE use the unprefixed <code>animationiteration</code> event name already while others at this time still need prefixes.</p>
 
 <p>That's all. It works on all browsers except IE9 which does not support CSS animation at all. Enjoy!</p>
