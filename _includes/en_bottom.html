@@ -5,7 +5,18 @@
 <script type="text/javascript">
 	var disqus_identifier = "{% if page.disqus_id %}{{page.disqus_id}}{% else %}{{page.url}}{% endif %}";
 	var disqus_url = "{{site.url}}{{page.url}}";
-	var disqus_title = "{{site.name}} - {{page.title}}";
+	var disqus_title = "mangcut.vn - {{page.title}}";
 </script>
 <script src="/js/disqus.js"></script>
 {% endif %}
+<script type="text/javascript">
+/* Google Analytics */
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8597504-3', 'mangcut.vn');
+  ga('send', 'pageview');
+/* End Goolge Analytics */
+</script>
