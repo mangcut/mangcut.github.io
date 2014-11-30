@@ -1,7 +1,7 @@
 <div id="footer">
   <div class="container-fluid text-center">
 	<p class="muted">{{site.name}} - {{site.title}}<br>
-	&copy; 2014 - <a rel="author" href="/about.html">{{ site.author }}</a>
+	&copy; 2014 - {% if page.about != true %}<a rel="author" href="/about.html">{{ site.author }}</a>{% else %}<a rel="me" href="https://www.google.com/+TruongHongThi">{{ site.author }}</a>{% endif %}
 	</p>
   </div>
 </div>
