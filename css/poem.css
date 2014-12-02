@@ -194,7 +194,19 @@ html.site-home  section.article-list article:first-child, section.article-list a
 	content: '\2014 \00A0';
 }
 
-.note{padding:8px 35px 8px 14px;margin-bottom:20px;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#eeeeee;border:1px solid #a0a0a0;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.note{
+	padding: 8px 35px 8px 14px;
+	margin-bottom:20px;
+	text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color:#eeeeee;
+	border:1px solid #a0a0a0;
+}
+
+.note-modest {
+	background-color: transparent;
+	padding: 8px 35px 8px 14px;
+	font-size: 0.9em;
+}
 
 .sitemap {
 	position: fixed;
@@ -436,6 +448,12 @@ html.site-home  section.article-list article:first-child, section.article-list a
 
 .clear-both {
 	clear: both;
+}
+
+.codepen {
+	height:300px;
+	width:100%;
+	border:0
 }
 
 @media (max-width: 449px) {

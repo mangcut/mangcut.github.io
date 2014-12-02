@@ -16,7 +16,7 @@ excerpt: How to make the sonar effect using CSS animation.
 
 <p>After a few hours playing around on CodePen, I came up with this.</p>
 
-<iframe style="height:300px;width:100%;border:0" src="http://codepen.io/thith/embed/vEOObL"></iframe>
+<iframe class="codepen" src="http://codepen.io/thith/embed/vEOObL"></iframe>
  
 <h2>1. How I made it</h2>
 
@@ -62,7 +62,7 @@ excerpt: How to make the sonar effect using CSS animation.
 
 <p>The shape, size, displaying position, and color are the same as the first circle. Note that I set <code>z-index</code> to <code>-1</code> to make sure it lies underneath its parent.</p>
 
-<p class="alert alert-info">It is tempted to use the <code>::after</code> pseudo element as the second circle. However, I prefered a regular element as not all browsers <a target="_blank" href="http://css-tricks.com/transitions-and-animations-on-css-generated-content/"><u>support animation on pseudo elements</u></a>. Notably, the stock browsers (and apps that rely on WebView) on Android prior to KitKat do not. If you still want the <code>::after</code> guy, check out <a target="_blank" href="http://codepen.io/thith/pen/WbbqXa"><u>my version on CodePen</u></a>.</p>
+<p class="note-modest"><b>Note</b> It is tempted to use the <code>::after</code> pseudo element as the second circle. However, I prefered a regular element as not all browsers <a target="_blank" href="http://css-tricks.com/transitions-and-animations-on-css-generated-content/"><u>support animation on pseudo elements</u></a>. Notably, the stock browsers (and apps that rely on WebView) on Android prior to KitKat do not. If you still want the <code>::after</code> guy, check out <a target="_blank" href="http://codepen.io/thith/pen/WbbqXa"><u>my version on CodePen</u></a>.</p>
 
 <p>OK, let's go to fun part: make things animate! I wanted it to go from 40% semi-transparent to completely transparent while spreading to the scale of 3 times. So here is how I designed the animation keyframe:</p>
 <pre><code class="language-css">@keyframes sonarWave {
