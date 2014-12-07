@@ -4,20 +4,32 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta property="fb:admins" content="100000049454443" />
-<meta name="description" content="{{page.description}}">
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<title>{% if page.language != 'en' %}{{site.name}} - {% endif %}{{page.title}}</title>
 <meta property="og:title" content="{{page.title}}" />
+<meta name="twitter:title" content="{{page.title}}" />
+<meta name="description" content="{{page.description}}">
+<meta name="og:description" content="{{page.description}}" />
+<meta name="twitter:description" content="{{page.description}}" />
 {% if page.image %}
 <meta property="og:image" content="{{page.image}}" />
+<meta name="twitter:image" content="{{page.image}}" />
 {% endif %}
-<title>{% if page.language != 'en' %}{{site.name}} - {% endif %}{{page.title}}</title>
 {% if page.site_home %}
 {% if page.language == "en" %}
 <link rel="canonical" href="{{site.url}}/en/"/>
+<meta property="og:url" content="{{site.url}}/en/" />
+<meta name="twitter:url" content="{{site.url}}/en/" />
 {% else %}
 <link rel="canonical" href="{{site.url}}"/>
+<meta property="og:url" content="{{site.url}}" />
+<meta name="twitter:url" content="{{site.url}}" />
 {% endif %}
 {% else %}
 <link rel="canonical" href="{{site.url}}{{page.url}}"/>
+<meta property="og:url" content="{{site.url}}{{page.url}}" />
+<meta name="twitter:url" content="{{site.url}}{{page.url}}" />
 {% endif %}
 <link href="http://feeds.feedburner.com/mangcut" type="application/atom+xml" rel="alternate" title="All articles's ATOM Feed">
 {% if site.open_sans %}
