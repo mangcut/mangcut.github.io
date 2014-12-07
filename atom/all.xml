@@ -1,60 +1,23 @@
+---
+---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
-	<title>Măng cụt - Thiền và công việc lập trình</title>
-	<subtitle>Góc nhìn của Trương Hồng Thi về công nghệ và con người.</subtitle>
-	<link href="http://www.mangcut.vn/"/>
-	<updated>2014-11-26T23:29:30Z</updated>
+	<title>{{site.name}} - {{site.title}}</title>
+	<subtitle>{{site.description}}</subtitle>
+	<link href="{{ site.url }}/atom/all.xml" rel="self" />
+	<link href="{{site.url}}"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<author>
-		<name>Trương Hồng Thi</name>
-		<uri>http://www.mangcut.vn/about.html</uri>
+		<name>{{ site.author }}</name>
+		<uri>{{site.url}}/about.html</uri>
 	</author>
-	<id>tag:mangcut.vn,2013-05-01:index</id>
-	<rights>Copyright (c) 2014, Trương Hồng Thi</rights>
-	
+	<id>{{ site.baseurl }}</id>
+	<rights>Copyright (c) 2014, {{ site.author }}</rights>{% for post in site.posts limit %}
 	<entry>
-		<title>Sonar Effect with CSS</title>
-		<link href="http://www.mangcut.vn/blog/2014-11-26-sonar-effect-with-css.html"/>
-		<id>tag:mangcut.vn,2014-11-26:blog/2014-11-26-sonar-effect-with-css</id>
-		<category>CSS</category>
-		<updated>2014-11-26T23:29:30Z</updated>
-		<summary>How to make the sonar effect with CSS and regular div tags.</summary>
-	</entry>
-	
-	<entry>
-		<title>Ebola là gì và lây nhiễm như thế nào</title>
-		<link href="http://www.mangcut.vn/blog/2014-08-11-ebola-la-gi-va-lay-nhiem-nhu-the-nao"/>
-		<id>tag:mangcut.vn,2014-08-11:blog/2014-08-11-ebola-la-gi-va-lay-nhiem-nhu-the-nao</id>
-		<category>Sức khỏe</category>
-		<updated>2014-08-11T23:29:30Z</updated>
-		<summary>Cả thế giới đang lo lằng vì Ebola. Vậy Ebola là gì và nó lây nhiễm qua hình thức nào?</summary>
-	</entry>
-	
-	<entry>
-		<title>Tất tần tật về chiếc kính thông minh của Google</title>
-		<link href="http://www.mangcut.vn/blog/2013-05-14-tat-tan-tat-ve-chiec-kinh-thong-minh-cua-google.html"/>
-		<id>tag:mangcut.vn,2013-05-14:blog/2013-05-14-tat-tan-tat-ve-chiec-kinh-thong-minh-cua-google</id>
-		<category>Công nghệ</category>
-		<updated>2013-05-14T19:20:30Z</updated>
-		<summary>Google Glass, chiếc kính thông minh của Google, đang là sản phẩm được chờ đợi sẽ tạo nên sự đột phá nhất hiện nay. Trên các trang công nghệ nước ngoài, các bài viết về kính Google xuất hiện liên tục. Vậy chiếc kính này như thế nào, và liệu nó có làm nên chuyện như Apple đã làm được với iPod, iPhone và iPad?</summary>
-	</entry>
-	
-	<entry>
-		<title>Lan man nghĩ từ phi trường Tokyo...</title>
-		<link href="http://www.mangcut.vn/blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo.html"/>
-		<id>tag:mangcut.vn,2013-05-02:blog/2013-05-02-lan-man-nghi-tu-phi-truong-tokyo</id>
-		<category>Văn hóa</category>
-		<updated>2013-05-02T6:20:30Z</updated>
-		<summary>Từ câu chuyện lỡ chuyến bay, đến những vấn đề văn hóa, con người Nhật và Việt.</summary>
-	</entry>
-	
-	<entry>
-		<title>Bài thơ viết trong lòng đất</title>
-		<link href="http://www.mangcut.vn/blog/2013-05-01-bai-tho-viet-trong-long-dat.html"/>
-		<id>tag:mangcut.vn,2013-05-01:blog/2013-05-01-bai-tho-viet-trong-long-dat</id>
-		<category>Thơ</category>
-		<updated>2013-05-01T6:30:10Z</updated>
-		<summary type="html">Khi tôi tìm đến những pho tượng&lt;br&gt;1, 2, 3, 4, 5... một hàng dài không đếm xuể&lt;br&gt;Những hòn đá vô tri bị đục đẽo&lt;br&gt;Sống nhờ linh hồn rừng cây phía sau&lt;br&gt;</summary>
-	</entry>
-
+		<id>{{ site.url }}{{ post.id }}</id>
+		<title>{{ post.title }}</title>
+		<link href="{{ site.url }}{{ post.url }}" />
+		<published>{{ post.date | date_to_xmlschema }}</published>
+		<summary type="html">{{ post.excerpt | xml_escape }}</summary>
+	</entry>{% endfor %}
 </feed>

@@ -1,0 +1,23 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>mangcut.vn - Zen and Programming</title>
+	<subtitle>Truong Hong Thi on Programming and Life</subtitle>
+	<link href="{{ site.url }}/atom/en.xml" rel="self" />
+	<link href="{{site.url}}"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<author>
+		<name>Truong Hong Thi</name>
+		<uri>https://twitter.com/thith</uri>
+	</author>
+	<id>{{ site.baseurl }}</id>
+	<rights>Copyright (c) 2014, Truong Hong Thi</rights>{% for post in site.posts limit %}{%if post.language == "en" %}
+	<entry>
+		<id>{{ site.url }}{{ post.id }}</id>
+		<title>{{ post.title }}</title>
+		<link href="{{ site.url }}{{ post.url }}" />
+		<published>{{ post.date | date_to_xmlschema }}</published>
+		<summary type="html">{{ post.excerpt | xml_escape }}</summary>
+	</entry>{% endif %}{% endfor %}
+</feed>
