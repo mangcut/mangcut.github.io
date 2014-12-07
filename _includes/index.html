@@ -1,3 +1,4 @@
+<div id="enPageAsk" class="hide"><br><p class="alert alert-info font-xxsmall">Read English only? <a href="/en/"><u>View English page</a></u>.</p></div>
 {% for post in site.posts %}
 <article {% if forloop.first %}class="first-child"{% endif %}>
 	{% if post.language == "en" %}
@@ -22,3 +23,22 @@
 	<a href='{{ post.url }}'>[Đọc bài...]</a>
 </article>
 {% endfor %}
+<script type="text/javascript">
+(function() {
+	function ok(txt) {
+		return (txt && txt.indexOf("vi") >= 0);
+	}
+	function okAny(arr) {
+		if (!arr || !arr.length) return false;
+		for (var i = 0; i < arr.length; i ++) {
+			if (ok(arr[i])) return true;
+		}
+		return false;
+	}
+	
+	var hasVI = ok(navigator.userLanguage) || ok(navigator.language) || okAny(navigator.languages);
+	
+	!hasVI && document.getElementById("enPageAsk").removeAttribute("class");
+	
+})();
+</script>
