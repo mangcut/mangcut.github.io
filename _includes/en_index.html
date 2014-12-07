@@ -1,0 +1,20 @@
+<p><i>Welcome!</i></p>
+
+<div style="maring-bottom: 2em;border-bottom: 1px dashed gray">
+<h3>Blog</h3>
+{% for post in site.posts %}
+	{% if post.language == "en" %}
+	<p>{{ post.date | date: "%-d %b %Y" }} [{{ post.topic }}] <a href="{{ post.url }}">{{ post.title }}</a></p>
+	{% endif %}
+{% endfor %}
+</div>
+
+<div style="maring-bottom: 2em;border-bottom: 1px dashed gray">
+<h3>Product</h3>
+<p><a href="https://play.google.com/store/apps/details?id=com.mangcut.memory">Mimo</a> - A Memory Game for Kids</p>
+</div>
+
+<div style="maring-bottom: 2em;border-bottom: 1px dashed gray">
+<h3>About</h3>
+<p>Author: <a rel="me" href="https://www.google.com/+TruongHongThi">Truong Hong Thi</a></p>
+</div>

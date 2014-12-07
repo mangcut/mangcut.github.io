@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta property="fb:admins" content="100000049454443" />
+	<meta name="twitter:card" content="summary" />
+	<title>{{page.title}}</title>
+	<meta property="og:title" content="{{page.title}}" />
+	<meta name="twitter:title" content="{{page.title}}" />
+	<meta name="description" content="{{page.description}}">
+	<meta name="twitter:description" content="{{page.description}}" />
+	{% if page.image %}
+	<meta property="og:image" content="{{page.image}}" />
+	<meta name="twitter:image" content="{{page.image}}" />
+	{% endif %}
+	<link rel="canonical" href="{{site.url}}/en/"/>
+	<meta name="twitter:url" content="{{site.url}}/en/" />
+  </head>
+  <body>
+	{{ content }}
+	{% include en_bottom.html %}
+  </body>
+</html>

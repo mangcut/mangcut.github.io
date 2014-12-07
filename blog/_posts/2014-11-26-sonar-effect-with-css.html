@@ -4,7 +4,7 @@ language: en
 hilight: true
 title: Sonar Effect with CSS
 description: How to make the sonar effect using CSS animation.
-topic: css
+topic: CSS
 vn_topic: Lập trình
 disqus_id: blog/2014-11-26-sonar-effect-with-css
 excerpt: How to make the sonar effect using CSS animation.
@@ -95,7 +95,7 @@ excerpt: How to make the sonar effect using CSS animation.
 }
 </code></pre>
 
-<p>Then, register an event which updates the wave's color after every animation iteration.</p>
+<p>Then, register an event which updates the wave's color after each pulse.</p>
 
 <pre><code class="language-javascript">$(".sonar-wave").on("webkitAnimationIteration oanimationiteration animationiteration", function(){
   $(this).css("background-color", colorize());

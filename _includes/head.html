@@ -11,7 +11,11 @@
 {% endif %}
 <title>{% if page.language != 'en' %}{{site.name}} - {% endif %}{{page.title}}</title>
 {% if page.site_home %}
+{% if page.language == "en" %}
+<link rel="canonical" href="{{site.url}}/en/"/>
+{% else %}
 <link rel="canonical" href="{{site.url}}"/>
+{% endif %}
 {% else %}
 <link rel="canonical" href="{{site.url}}{{page.url}}"/>
 {% endif %}
