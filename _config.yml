@@ -14,5 +14,3 @@ syntax:
   hilight: false
   css: prism
   js: /js/prism.js
-gems:
-  - jekyll-redirect-from
