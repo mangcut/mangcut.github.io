@@ -12,7 +12,7 @@
 		<uri>https://twitter.com/thith</uri>
 	</author>
 	<id>{{ site.baseurl }}</id>
-	<rights>Copyright (c) 2014, Truong Hong Thi</rights>{% for post in site.posts limit %}{%if post.language == "en" %}
+	<rights>Copyright (c) 2015, Truong Hong Thi</rights>{% for post in site.posts limit %}{%if post.language == "en" %}
 	<entry>
 		<id>{{ site.url }}{{ post.id }}</id>
 		<title>{{ post.title }}</title>

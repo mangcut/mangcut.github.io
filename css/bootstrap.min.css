@@ -62,10 +62,11 @@ a.muted:hover,a.muted:focus{color:#808080;}
 .text-left{text-align:left;}
 .text-right{text-align:right;}
 .text-center{text-align:center;}
-h1,h2,h3,h4,h5,h6{margin:10px 0;font-family:inherit;font-weight:bold;line-height:normal;color:inherit;text-rendering:optimizelegibility;}
-h1{font-size:1.6em;}
-h2{font-size:1.25em;}
-h3,h4,h5,h6{font-size:1em;}
+h1,h2,h3,h4,h5,h6{margin:15px 0 10px;font-family:inherit;font-weight:bold;line-height:normal;color:inherit;text-rendering:optimizelegibility;}
+h1{font-size:2em;}
+h2{font-size:1.6em;}
+h3{font-size:1.25em;}
+h4,h5,h6{font-size:1em;}
 .page-header{padding-bottom:9px;margin:20px 0 30px;}
 ul,ol{padding:0;margin:0 0 10px 25px;}
 ul ul,ul ol,ol ol,ol ul{margin-bottom:0;}
