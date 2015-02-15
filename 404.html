@@ -1,18 +1,19 @@
 ---
 layout: default
 title: Trang không tồn tại
-description: Có thể địa chỉ bị sai, hoặc trang đã thay đổi địa chỉ.
+description: Có thể địa chỉ chưa đúng hoặc trang đã bị dời đi.
 comment: false
 site_home: true
 ---
+<script type="text/javascript">
+if (document.location.href.indexOf("2015-02-14-atomicity-interlocked-memory-operation-optimizations-csharp") >= 0) {
+	document.location.href = "/blog/2015-02-14-atomicity-interlocked-memory-operation-optimizations-csharp.html";
+}
+</script>
 <section style="margin-top:20px;padding-top:8px;" class="alert alert-block">
 <h2>Không có trang nào ở địa chỉ này! (404)</h2>
-<p id="referrer"></p>
 <p>Có thể địa chỉ chưa đúng hoặc trang đã bị dời đi. Bạn có thể đọc các bài khác ở dưới đây.</p>
 </section>
-<script type="text/javascript">
-$("#referrer").text(document.referrer);
-</script>
 <section>
 {% include index.html %}
 </section>
