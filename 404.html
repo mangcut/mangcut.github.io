@@ -6,11 +6,15 @@ comment: false
 site_home: true
 ---
 <script type="text/javascript">
-if (document.location.href.indexOf("2015-02-14-atomicity-interlocked-memory-operation-optimizations-csharp") >= 0) {
-	document.location.href = "/blog/2015-02-14-atomicity-interlocked-memory-operation-optimizations-csharp.html";
-}
+(function(){
+	if (document.location.pathname == "/blog/") {
+		document.location.href = "/en/";
+	} else if (document.location.href.indexOf("2015-02-14-atomicity-interlocked-memory-operation-optimizations-csharp") >= 0) {
+		document.location.href = "/blog/2015-02-14-atomicity-interlocked-memory-operation-optimizations-csharp.html";
+	}
+})();
 </script>
-<section style="margin-top:20px;padding-top:8px;" class="alert alert-block">
+<section style="margin-top:20px;padding-top:0;" class="alert alert-block">
 <h2>Không có trang nào ở địa chỉ này! (404)</h2>
 <p>Có thể địa chỉ chưa đúng hoặc trang đã bị dời đi. Bạn có thể đọc các bài khác ở dưới đây.</p>
 </section>
