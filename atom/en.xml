@@ -5,11 +5,11 @@
 	<title>mangcut.vn - Zen and Programming</title>
 	<subtitle>Truong Hong Thi on Programming and Life</subtitle>
 	<link href="{{ site.url }}/atom/en.xml" rel="self" />
-	<link href="{{site.url}}"/>
+	<link href="{{site.url}}/en/"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<author>
 		<name>Truong Hong Thi</name>
-		<uri>https://twitter.com/thith</uri>
+		<uri>https://twitter.com/mangcut_vn</uri>
 	</author>
 	<id>{{ site.baseurl }}</id>
 	<rights>Copyright (c) 2015, Truong Hong Thi</rights>{% for post in site.posts limit %}{%if post.language == "en" %}
