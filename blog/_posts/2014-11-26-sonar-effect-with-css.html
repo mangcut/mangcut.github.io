@@ -97,7 +97,7 @@ excerpt: How to make the sonar effect using CSS animation.
 
 <p>Then, register an event which updates the wave's color after each pulse.</p>
 
-<pre><code class="language-javascript">$(".sonar-wave").on("webkitAnimationIteration oanimationiteration animationiteration", function(){
+<pre class="wrap"><code class="language-javascript">$(".sonar-wave").on("webkitAnimationIteration oanimationiteration animationiteration", function(){
   $(this).css("background-color", colorize());
 })
 </code></pre>
