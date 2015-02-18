@@ -48,7 +48,7 @@ Interlocked.Exchange(ref ready, true);
 <!-- Begin Examples -->
 <div class="example-frame" style="border:1px dashed #aaa;padding:10px;margin-top:20px;margin-bottom:20px;">
 
-<p>Here is an optimization example and how it breaks a multi-threaded program.</p>
+<p>Here is an example of optimization and how it breaks a multi-threaded program.</p>
 
 <pre class="line-numbers" data-line="6,10,11,15,16"><code class="language-csharp">int data;
 bool ready;
@@ -76,7 +76,7 @@ void OptimizeMe()
 
 <p>However, when taking possible optimizations into account, anything can happen.</p>
 <ol>
-<li>The JIT compiler might attempt <a target="_blank" href="http://en.wikipedia.org/wiki/Loop-invariant_code_motion">hoisting</a> the read of <code>ready</code> out of the while loop at line 16. In other words, it decides to read <code>ready</code> just once instead of repeatedly reading it. This optimization causes update from <code>thread2</code> is ignored, and the program hangs.</li>
+<li>The JIT compiler might attempt <a target="_blank" href="http://en.wikipedia.org/wiki/Loop-invariant_code_motion">hoisting</a> the read of <code>ready</code> out of the while loop at line 16. In other words, it decides to read <code>ready</code> just once and saves for subsequent iteration instead of repeatedly reading it. This optimization causes update from <code>thread2</code> is ignored, and the program hangs.</li>
 <li>On a multiprocessor machine, each thread might run on a different processor. For performance reason, each processor has its own private cache. To keep caches consistent between processors, caches have to talk not only to main memory but also to caches on other processors. That takes time and cause the CPUs to wait. To reduce CPU's wait time and utilize bus traffic, modern multiprocessor systems might buffer or queue tasks for processing later when more resources are available. This makes operations executed in a specific order by one processor are visible to other processors in a different order. Back to our example, let's consider 2 scenarios:
 <ul>
 <li>On <code>thread2</code>'s CPU, <i>write 1</i> is buffered and <i>write 2</i> is completed. Main thread running on a different CPU then observes that <code>ready</code> is <code>true</code> while <code>data</code> is <code>0</code> (default value), and it prints <code>0</code>.</li>
@@ -114,7 +114,7 @@ Console.Write(data); // read 3</code></pre>
 
 <p class="note-modest"><b>Note:</b> if you declare <code>ready</code> as <i>volatile</i>, the program will never print <code>0</code>. However, it is still possible that <i>thread2</i> already set <code>ready</code> to <code>true</code> but main thread keep using the stale cached value of <code>ready</code> (in other words, <i>write 2</i> get reordered with some calls of <i>read 2</i>). This does not break our specific program as main thread repeatedly polling for <code>ready</code> which should becomes <code>true</code> eventually (hardware buffers and queues should get processed sooner or later). However, it might be a problem in a more complicated application. That is why you should be very careful and better avoid memory barriers and volatile fields altogether unless you are a real expert in that field.</p>
 
-<p>The <code>lock</code> statement and other <a target="_blank" href="http://msdn.microsoft.com/en-us/library/dd460718(v=vs.110).aspx">higher-level concurrency primitives</a> provided by .NET framework uses memory barriers and/or <code>Interlocked</code> operations internally when necessary. Therefore, you don't need to worry about memory operation optimizations when using them correctly.</p>
+<p>The <code>lock</code> statement and other <a target="_blank" href="http://msdn.microsoft.com/en-us/library/dd460718(v=vs.110).aspx">higher-level concurrency primitives</a> provided by .NET framework use memory barriers and/or <code>Interlocked</code> operations internally when necessary. Therefore, you don't need to worry about memory operation optimizations when using them correctly.</p>
 
 <h2>4. Recap</h2>
 <p>The article is getting quite long, so to summarize the main points:</p>
