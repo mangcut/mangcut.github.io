@@ -1,0 +1,141 @@
+---
+layout: englishPost
+language: en
+hilight: true
+title: this in JavaScript
+description: this in JavaScript.
+topic: JavaScript
+vn_topic: Lập trình
+disqus_id: blog/2015-02-24-this-in-javascript
+excerpt: this in JavaScript.
+---
+
+<p class="lead">JavaScript's <code>this</code> is confusing for people coming from other languages. But it is easy to understand once you know the points.</p>
+
+<p>First, unlike in Java or C# where you could refer to <code>this</code> only inside an instance method or constructor, in JavaScript you could refer to <code>this</code> just anywhere.</p>
+<pre><code class="language-javascript">// Outside function
+alert(this);
+function doGlobal() {
+  // In global function
+  alert(this);
+  function doChild() {
+    // In inner function
+    alert(this);
+    setTimeout(function() {
+	  // In callback function
+      alert(this);
+    }, 0);
+  }
+}
+var o = {
+  doObject: function() {
+    // In object's function
+    alert(this);
+  }
+}
+</code></pre>
+<p>If <code>counter</code> might be accessed concurrently from another thread, the lock is necessary. This is because even a simple operation like increment is not <i>atomic</i>. It includes several steps: load the value into a register, increment it, save the value back to memory. The lock is there to ensure no other thread accesses <code>counter</code> in the meantime.</p>
+<p>There is an alternative to make simple operations like increment atomic: using the <code>Interlocked</code> class. This class provides methods to do various operations atomically. These operations includes increment, decrement, adding/subtracting value, exchanging values, conditionally exchanging values, etc.. Hence, the snippet could be rewritten as:</p>
+<pre><code class="language-csharp">Interlocked.Increment(ref counter);</code></pre>
+
+<p>Using <code>Interlocked</code> is simpler, and, in most cases, yields better performance. However, as the <code>lock</code> is often used to guard a block of several statements, you should replace <code>lock</code> with <code>Interlocked</code> only if <i>every access</i> to <code>counter</code> is done within a <code>lock</code> block which contains just a <i>single</i> replaceable operation. If that complicates your source code, stay with <code>lock</code>.</p>
+
+<p>Check out <a target="_blank" href="https://msdn.microsoft.com/en-us/library/System.Threading.Interlocked(v=vs.110).aspx">Interlocked's documentation</a> for details about what operations it supports.</p>
+
+<h2>2. Optimizations</h2>
+
+<p>According to section I.12.6.6 of the <a href="http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf" target="_blank">CLI Standard</a>, read or write of a size no larger than the native word size is atomic. That means read or write of a <code>byte</code>, <code>bool</code>, <code>char</code>, <code>int</code>, <code>float</code> or reference-type value is always atomic. If so, are the two following snippets equivalent?</p>
+
+<pre><code class="language-csharp">// Snippet 1
+ready = true; // atomic operation
+</code></pre>
+<pre><code class="language-csharp">// Snippet 2
+Interlocked.Exchange(ref ready, true);
+</code></pre>
+
+<p>The answer is <i>no</i>.</p>
+
+<p>It turns out that atomicity alone is often not enough. This is because, for <i>performance</i> reason, the CLI Standard allows memory operation (read/write) <i>optimizations</i>, provided that they do not break the program if it is a single-threaded one. However, such optimizations could break a multi-threaded program if a second thread accesses the same memory locations concurrently.</p>
+
+<p class="note-modest"><b>Note:</b> These optimizations might happen at software level (C# compiler, CLR's just-in-time compiler, CLR's native image generator) and/or hardware level (CPU and memory system). In practice, not all permitted optimizations are utilized. Still, you should always stick to the CLI Standard rather than relying on implementation details, otherwise your code might not run correctly on future software and hardware.</p>
+
+<!-- Begin Examples -->
+<div class="example-frame" style="border:1px dashed #aaa;padding:10px;margin-top:20px;margin-bottom:20px;">
+
+<p>Here is an example of optimization and how it breaks a multi-threaded program.</p>
+
+<pre class="line-numbers" data-line="6,10,11,15,16"><code class="language-csharp">int data;
+bool ready;
+void OptimizeMe()
+{
+  // read data for some purpose
+  var tmp = data // read 1
+
+  var thread2 = new Thread(() =>
+  {
+    data = 1; // write 1
+    ready = true; // write 2
+  });
+  thread2.Start();
+
+  while (!ready); // read 2
+  Console.Write(data); // read 3
+}</code></pre>
+
+<p>If no optimization is applied, one would say:</p>
+<ol>
+<li>The <i>while</i> loop at line 16 never makes the program hang, since <code>thread2</code> will execute <i>write 2</i> sooner or later.</li>
+<li>The program never prints <code>0</code>.</li>
+</ol>
+
+<p>However, when taking possible optimizations into account, anything can happen.</p>
+<ol>
+<li>The JIT compiler might attempt <a target="_blank" href="http://en.wikipedia.org/wiki/Loop-invariant_code_motion">hoisting</a> the read of <code>ready</code> out of the while loop at line 16. In other words, it decides to read <code>ready</code> just once and saves for subsequent iteration instead of repeatedly reading it. This optimization causes update from <code>thread2</code> is ignored, and the program hangs.</li>
+<li>On a multiprocessor machine, each thread might run on a different processor. For performance reason, each processor has its own private cache. To keep caches consistent between processors, caches have to talk not only to main memory but also to caches on other processors. That takes time and cause the CPUs to wait. To reduce CPU's wait time and utilize bus traffic, modern multiprocessor systems might buffer or queue tasks for processing later when more resources are available. This makes operations executed in a specific order by one processor are visible to other processors in a different order. Back to our example, let's consider 2 scenarios:
+<ul>
+<li>On <code>thread2</code>'s CPU, <i>write 1</i> is buffered and <i>write 2</i> is completed. Main thread running on a different CPU then observes that <code>ready</code> is <code>true</code> while <code>data</code> is <code>0</code> (default value), and it prints <code>0</code>.</li>
+<li>Both <i>write 1</i> and <i>write 2</i> are completed. Main thread then fetches the fresh value of <code>ready</code> but use the stale value of <code>data</code> from its cache (this cached copy was stored by <i>read 1</i>). Thus, it prints the stale value, <code>0</code>.</li>
+</ul>
+</li>
+</ol>
+
+</div>
+<!-- End of Examples -->
+
+<h2>3. Back to Safety</h2>
+<p>Fortunately, memory operation optimizations could be disabled when needed.</p>
+
+<p>Memory barriers (also called memory fences) are the lowest-level primitives designed to control memory operation reordering. A full memory barrier guarantees memory operations issued prior to the barrier are executed before the operations issued after it. On a multiprocessor system, a full memory barrier causes the processor executing it to complete all buffered writes and discard or refresh all stale cached values before going on to execute the next operation. C# supports 2 types of barrier: full barrier (via <a target="_blank" href="https://msdn.microsoft.com/en-us/library/system.threading.interlocked.memorybarrier(v=vs.110).aspx">Interlocked.MemoryBarrier</a>) and half barrier (via <code><a target="_blank" href="https://msdn.microsoft.com/en-us/library/aa645755%28v=vs.71%29.aspx">volatile</a></code> keyword and <a target="_blank" href="https://msdn.microsoft.com/en-us/library/system.threading.volatile%28v=vs.110%29.aspx">Volatile</a> class). However, as memory barriers are very tricky and hard to use correctly (especially the "half" one), we mere mortals should generally stay away from them. If you like to dig deeper into memory barriers, there are some detailed articles on the Internet, like <a target="_blank" href="https://www.kernel.org/doc/Documentation/memory-barriers.txt">this one</a>.</p>
+
+<p class="note-modest"><b>Note:</b> Traditionally, some common patterns are often implemented using <code>volatile</code> fields, such as <i>lazy initialization patterns</i> and <i>polling for cancellation flag</i>. Since .NET Framework 4.0, you could use <a target="_blank" href="https://msdn.microsoft.com/en-us/library/dd642331(v=vs.110).aspx">Lazy&lt;T&gt;</a>, <a target="_blank" href="https://msdn.microsoft.com/en-us/library/system.threading.lazyinitializer(v=vs.110).aspx">LazyInitializer</a>, and <a target="_blank" href="http://msdn.microsoft.com/en-us/library/ee191559.aspx">CancellationToken</a> instead.</p>
+
+<p>Every <code>Interlocked</code> operation, in addition to being atomic, also has the effect of a full memory barrier. The broken example above could be fixed using <code>Interlocked</code> as following:<p>
+<pre><code class="language-csharp">var thread2 = new Thread(() =>
+{
+  data = 1; // write 1
+  Interlocked.Exchange(ref ready, true); // write 2
+});
+thread2.Start();
+
+bool b;
+do
+{
+  Interlocked.Exchange(ref b, ready); // read 2
+} while (!b)
+Console.Write(data); // read 3</code></pre>
+
+<p>The <code>Interlocked</code> operations guarantee <i>write 1</i> completes before <i>write 2</i>, and <i>read 2</i> completes before <i>read 3</i>, thus, the program never prints <code>0</code>. It also guarantees that <i>read 2</i> will obtain the fresh value of <code>ready</code> immediately whenever <i>thread2</i> set it to <code>true</code>. As a result, the problem is fixed.</p>
+
+<p class="note-modest"><b>Note:</b> if you declare <code>ready</code> as <i>volatile</i>, the program will never print <code>0</code>. However, it is still possible that <i>thread2</i> already set <code>ready</code> to <code>true</code> but main thread keep using the stale cached value of <code>ready</code> (in other words, <i>write 2</i> get reordered with some calls of <i>read 2</i>). This does not break our specific program as main thread repeatedly polling for <code>ready</code> which should becomes <code>true</code> eventually (hardware buffers and queues should get processed sooner or later). However, it might be a problem in a more complicated application. That is why you should be very careful and better avoid memory barriers and volatile fields altogether unless you are a real expert in that field.</p>
+
+<p>The <code>lock</code> statement and other <a target="_blank" href="http://msdn.microsoft.com/en-us/library/dd460718(v=vs.110).aspx">higher-level concurrency primitives</a> provided by .NET framework use memory barriers and/or <code>Interlocked</code> operations internally when necessary. Therefore, you don't need to worry about memory operation optimizations when using them correctly.</p>
+
+<h2>4. Recap</h2>
+<p>The article is getting quite long, so to summarize the main points:</p>
+<ul>
+<li>When it comes to memory access, atomicity is not enough because of the effect of software and hardware's memory operation optimization.</li>
+<li>The <code>Interlocked</code> class's operations are both atomic and optimization-free. You could use it instead of a <code>lock</code> block which contains just a single simple operation. Avoid <code>Interlocked</code> in more complex circumstances.</li>
+<li>Don't use memory barriers (including <i>volatile</i> fields) at all unless you are a real expert in that field. Instead, use <code>lock</code> and other high-level concurrency primitives.</li>
+<li>Finally, just to remind, you don't need to worry about the issues discussed in this article unless your program is multi-threaded and two threads access a shared memory location concurrently.</li>
+</ul>
+<p>Happy coding!</p>
