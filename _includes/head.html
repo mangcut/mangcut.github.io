@@ -13,8 +13,8 @@
 <meta name="og:description" content="{{page.description}}" />
 <meta name="twitter:description" content="{{page.description}}" />
 {% if page.image %}
-<meta property="og:image" content="{{page.image}}" />
-<meta name="twitter:image" content="{{page.image}}" />
+<meta property="og:image" content="{{site.url}}{{page.image}}" />
+<meta name="twitter:image" content="{{site.url}}{{page.image}}" />
 {% endif %}
 {% if page.site_home %}
 {% if page.language == "en" %}
