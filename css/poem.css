@@ -9,7 +9,8 @@ h1 {
 	margin-bottom: 0.9em;
 }
 
-h1.post-title {
+.post-title {
+	margin-top: 0.3em;
 }
 
 h2 {

@@ -10,7 +10,7 @@
 	<div id="sitemapContent" class="sitemap-content">
 		<ul class="nav nav-list">
 			{% for post in site.posts %}
-			  <li {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span style="color:#bbb">{{ post.date | date: "%d/%m" }}</span>&nbsp;{{ post.title }}</a></li>
+			  <li {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span style="color:#bbb">{{ post.date | date: "%d/%m" }}</span>&nbsp;{% if post.subtitle %}{{ post.subtitle }}{% else %}{{ post.title }}{% endif %}</a></li>
 			{% endfor %}
 			{% include share_home.html %}
 		</ul>
