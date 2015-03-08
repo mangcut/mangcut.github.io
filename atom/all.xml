@@ -15,7 +15,7 @@
 	<rights>Copyright (c) 2015, {{ site.author }}</rights>{% for post in site.posts limit %}
 	<entry>
 		<id>{{ site.url }}{{ post.id }}</id>
-		<title>{{ post.title }}</title>
+		<title>{% if post.subtitle %}{{ post.title }} - {{ post.subtitle }}{% else %}{{ post.title }}{% endif %}</title>
 		<link href="{{ site.url }}{{ post.url }}" />
 		<published>{{ post.date | date_to_xmlschema }}</published>
 		<summary type="html">{{ post.excerpt | xml_escape }}</summary>
