@@ -7,8 +7,8 @@
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <title>{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</title>
-<meta property="og:title" content="{{page.title}}" />
-<meta name="twitter:title" content="{{page.title}}" />
+<meta property="og:title" content="{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}" />
+<meta name="twitter:title" content="{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}" />
 <meta name="description" content="{{page.description}}">
 <meta name="og:description" content="{{page.description}}" />
 <meta name="twitter:description" content="{{page.description}}" />
