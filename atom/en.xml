@@ -2,7 +2,7 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>mangcut.vn - Zen and Programming</title>
+	<title>{{site.en_name}} - Zen and Programming</title>
 	<subtitle>Truong Hong Thi on Programming and Life</subtitle>
 	<link href="{{ site.url }}/atom/en.xml" rel="self" />
 	<link href="{{site.url}}/en/"/>

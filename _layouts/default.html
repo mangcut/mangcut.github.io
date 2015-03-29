@@ -11,12 +11,18 @@
           {{ content }}
 		  {% if page.shareline != false %}
 		    {% if page.site_home %}
-		      {% include share_home.html %}
+		      {% include share_page2.html %}
 			{% else %}
-			  {% include shareline.html %}
+			  {% if page.is_page != true %}
+			    {% include shareline.html %}
+			    {% include recommend.html %}
+			  {% endif %}
+			  {% include share_page2.html %}
+			  {% if page.is_page != true %}
+			    {% include post_footer.html %}
+			  {% endif %}
 			{% endif %}
           {% endif %}
-          {% include post_footer.html %}
         </section>
 
         <p class="push-down"></p>

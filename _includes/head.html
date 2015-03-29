@@ -6,7 +6,11 @@
 <meta property="fb:admins" content="100000049454443" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
+{% if page.site_home %}
+<title>{{ site.name }} - {{ page.title }}</title>
+{% else %}
 <title>{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</title>
+{% endif %}
 <meta property="og:title" content="{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}" />
 <meta name="twitter:title" content="{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}" />
 <meta name="description" content="{{page.description}}">
@@ -31,7 +35,7 @@
 <meta property="og:url" content="{{site.url}}{{page.url}}" />
 <meta name="twitter:url" content="{{site.url}}{{page.url}}" />
 {% endif %}
-<link href="{{site.url}}/atom/all.xml" type="application/atom+xml" rel="alternate" title="Măng cụt - Thiền và công việc lập trình">
+<link href="{{site.url}}/atom/all.xml" type="application/atom+xml" rel="alternate" title="{{site.name}} - {{site.title}}">
 {% if site.open_sans %}
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
 {% endif %}

@@ -6,6 +6,7 @@ excerpt: Khi tôi tìm đến những pho tượng<br>1, 2, 3, 4, 5 một hàng 
 image: /media/moai.jpg
 image_origin: flyadvisor.blogspot.com
 topic: Thơ
+recommend: true
 disqus_id: blog/2013-05-01-bai-tho-viet-trong-long-dat
 content_class: poem
 ---

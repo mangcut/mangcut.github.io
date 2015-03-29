@@ -1,10 +1,11 @@
 name: Măng cụt
-title: Thiền và công việc lập trình
+en_name: Mangcut
+title: Nằm nhà tưởng tượng chuyện thế giới
 description: Góc nhìn của Trương Hồng Thi về công nghệ và con người.
 permalink: /:categories/:year-:month-:day-:title.html
 url: http://www.mangcut.vn
 author: Trương Hồng Thi
-pygments: false
+highlighter:
 markdown: kramdown
 kramdown:
   use_coderay: false
@@ -14,3 +15,10 @@ syntax:
   hilight: false
   css: prism
   js: /js/prism.js
+defaults:
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: pages   # limit to pages
+    values:
+      is_page: true # automatically set is_post=true for all posts

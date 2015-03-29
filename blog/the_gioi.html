@@ -1,0 +1,35 @@
+---
+layout: default
+categories: series
+title: Thế giới như tôi hình dung
+description: Khi tôi ngồi hình dung về thế giới, những liên tưởng ám ảnh trỗi dậy. Khi tôi đặt bút viết xong, tôi không còn nghĩ gì nữa.
+image: /media/observe.jpg
+---
+<div>
+
+<h4 style="margin-top: 20px">LOẠT BÀI:</h4>
+<h2 style="margin-top: 0">Thế giới như tôi hình dung</h2>
+
+<p class="lead">Khi tôi ngồi hình dung về thế giới, những liên tưởng ám ảnh trỗi dậy. Khi tôi đặt bút viết xong, tôi không còn nghĩ gì nữa.</p>
+
+<ul>
+{% for post in site.posts reversed %}
+ {% if post.series_id == 'the_gioi' %}
+  {% if page.url == post.url %}
+    <li>{{post.subtitle}} (bài này)</li>
+  {% else %}
+    <li><a href="{{post.url}}">{{ post.subtitle }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
+  {% endif %}
+ {% endif %}
+{% endfor %}
+	<li>Phần 4: Mối họa mang tên Trí Tuệ Nhân Tạo (sắp xuất bản)</li>
+</ul>
+
+<figure>
+  <div class="img-container" data-origin="cinemachaat.com">
+	<img src="/media/observe.jpg" alt="Thế giới như tôi hình dung"></img>
+  </div>
+  <figcaption>"Họ" đang quan sát chúng ta?</figcaption>
+</figure>
+
+</div>

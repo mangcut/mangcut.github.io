@@ -1,0 +1,28 @@
+<section>
+<div class="spacy-line"></div>
+<p><b>Loạt bài <i>Thế giới như tôi hình dung</i>:</b></p>
+<ul>
+{% for post in site.posts reversed %}
+ {% if post.series_id == 'the_gioi' %}
+  {% if page.url == post.url %}
+    <li>{{post.subtitle}} (bài này)</li>
+  {% else %}
+    <li><a href="{{post.url}}">{{ post.subtitle }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
+  {% endif %}
+ {% endif %}
+{% endfor %}
+	<li>Phần 4: Mối họa mang tên Trí Tuệ Nhân Tạo (sắp xuất bản)</li>
+</ul>
+
+<br>
+<p><b>Có thể bạn cũng thích:</b></p>
+<ul>
+{% for post in site.posts %}
+ {% if post.recommend %}
+  {% if page.url != post.url %}
+    <li><a href="{{post.url}}">{{ post.title }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
+  {% endif %}
+ {% endif %}
+{% endfor %}
+</ul>
+</section>

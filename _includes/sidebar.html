@@ -2,17 +2,18 @@
 	<div class="sitemap-heading" data-action="trigger" data-target="#overlay" data-options="click">
 		<table class="table-layout">
 			<tr>
-			<td class="sitemap-text heading-text bold font-xxlarge">Bài gần đây</td>
+			<td class="sitemap-text heading-text bold font-xxlarge">Menu</td>
 			<td align="right"><button type="button" class="close" aria-hidden="true">&times;</button></td>
 			</tr>
 		</table>
 	</div>
 	<div id="sitemapContent" class="sitemap-content">
 		<ul class="nav nav-list">
+			<p class="font-large"><strong>Bài gần đây</strong></p>
 			{% for post in site.posts %}
-			  <li {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span style="color:#bbb">{{ post.date | date: "%d/%m" }}</span>&nbsp;{% if post.subtitle %}{{ post.subtitle }}{% else %}{{ post.title }}{% endif %}</a></li>
+			  <li style="border-top: 1px solid #bbf" {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span class="muted font-xsmall">{{ post.date | date: "%d/%m" }}&nbsp;</span>{% if post.subtitle %}{{ post.subtitle }}{% else %}{{ post.title }}{% endif %}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
 			{% endfor %}
-			{% include share_home.html %}
+			{% include share_page1.html %}
 		</ul>
 	</div>
 </div>
