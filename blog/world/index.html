@@ -8,7 +8,11 @@ image: /media/observe.jpg
 ---
 <h4 style="margin-top: 20px">LOẠT BÀI:</h4>
 <h2 style="margin-top: 0">Thế giới như tôi hình dung</h2>
-<p class="lead">{{page.description}}</p>
+<div>
+	<img class="pull-right" style="width:25%;min-width:160px;margin-top: 0.5em;margin-left:6px;margin-bottom:6px;" src="/media/observe.jpg"/>
+	<p class="lead">{{page.description}}</p>
+	<div style="clear:both"></div>
+</div>
 {% for post in site.posts reversed %}
  {% if post.series_id == page.series_id %}
  <div class="spacy-line"></div>
