@@ -3,7 +3,7 @@
 <p><b>Loạt bài <i>Thế giới như tôi hình dung</i>:</b></p>
 <ul>
 {% for post in site.posts reversed %}
- {% if post.series_id == 'the_gioi' %}
+ {% if post.series_id == site.recommended_series_id %}
   {% if page.url == post.url %}
     <li>{{post.subtitle}} (bài này)</li>
   {% else %}

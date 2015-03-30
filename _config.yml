@@ -6,6 +6,7 @@ permalink: /:categories/:year-:month-:day-:title.html
 url: http://www.mangcut.vn
 author: Trương Hồng Thi
 highlighter: pygments
+recommended_series_id: world
 markdown: kramdown
 kramdown:
   use_coderay: false
