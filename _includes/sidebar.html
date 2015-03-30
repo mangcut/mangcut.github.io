@@ -2,18 +2,23 @@
 	<div class="sitemap-heading" data-action="trigger" data-target="#overlay" data-options="click">
 		<table class="table-layout">
 			<tr>
-			<td class="sitemap-text heading-text bold font-xxlarge">Menu</td>
+			<td class="sitemap-text heading-text bold font-xxlarge"><img height="30px" src="/img/mangcut_text.png" alt="MĂNG CỤT"></td>
 			<td align="right"><button type="button" class="close" aria-hidden="true">&times;</button></td>
 			</tr>
 		</table>
 	</div>
 	<div id="sitemapContent" class="sitemap-content">
+		<h3>Nổi bật</h3>
+		<div><a href="/blog/world" title="Loạt bài: Thế giới như tôi hình dung"><img  style="max-width:100%" src="/img/world.jpg" alt="Loạt bài: Thế giới như tôi hình dung"></a></div>
+		
+		<h3 style="margin-top:30px">Bài gần đây</h3>
 		<ul class="nav nav-list">
-			<p class="font-large"><strong>Bài gần đây</strong></p>
 			{% for post in site.posts %}
-			  <li style="border-top: 1px solid #bbf" {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span class="muted font-xsmall">{{ post.date | date: "%d/%m" }}&nbsp;</span>{% if post.subtitle %}{{ post.subtitle }}{% else %}{{ post.title }}{% endif %}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
+			  <li style="border-top: 1px solid #dde" {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span class="muted font-xsmall" style="display:inline-block;width:35px">{{ post.date | date: "%d/%m" }}</span>{% if post.short_title %}{{ post.short_title }}{% else %}{{ post.title }}{% endif %}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
 			{% endfor %}
-			{% include share_page1.html %}
 		</ul>
+		
+		{% include share_page1.html %}
+		<br>
 	</div>
 </div>

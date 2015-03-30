@@ -1,6 +1,6 @@
 <section>
 <div class="spacy-line"></div>
-<p><b>Loạt bài <i>Thế giới như tôi hình dung</i>:</b></p>
+<h4>Loạt bài <i>Thế giới như tôi hình dung</i>:</h4>
 <ul>
 {% for post in site.posts reversed %}
  {% if post.series_id == site.recommended_series_id %}
@@ -14,8 +14,7 @@
 	<li>Phần 4: Mối họa mang tên Trí Tuệ Nhân Tạo (sắp xuất bản)</li>
 </ul>
 
-<br>
-<p><b>Có thể bạn cũng thích:</b></p>
+<h4 style="margin-top: 25px">Có thể bạn cũng thích:</h4>
 <ul>
 {% for post in site.posts %}
  {% if post.recommend %}

@@ -256,7 +256,7 @@ html.site-home  section.article-list article:first-child, section.article-list a
 }
 
 .sitemap .sitemap-heading {
-	padding: 9px 8px 8px 14px;
+	padding: 8px 10px 5px 14px;
 	background-color: #eeeeee;
 	border-radius: 0px;
 	margin: 0;
@@ -265,7 +265,15 @@ html.site-home  section.article-list article:first-child, section.article-list a
 }
 
 .sitemap .sitemap-content {
-	padding-top: 9px;
+}
+
+.sitemap .sitemap-content div,
+.sitemap .sitemap-content p,
+.sitemap .sitemap-content h3,
+.sitemap .sitemap-content h4
+{
+	padding-left: 15px;
+	padding-right: 20px;
 }
 
 #overlay {
