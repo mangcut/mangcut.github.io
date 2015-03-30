@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% if page.lang %}{{page.lang}}{% else %}vi{% endif %}" class="no-js{% if page.site_home %} site-home{% endif %}">
+<html lang="{% if page.lang %}{{page.lang}}{% else %}vi{% endif %}" class="no-js{% if page.site_home or page.categories == 'series' %} site-home{% endif %}">
   <head>
     {% include head.html %}
   </head>

@@ -3,7 +3,7 @@
 <div class="spacy-line"></div>
 {% endif %}
 <p style="margin-bottom:0">
-	<iframe width="200px" height="20px" src="//upload.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.mangcut.vn{% unless page.site_home %}{{ page.url | cgi_escape }}{% endunless %}&amp;locale=vi_VN&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
+	<iframe width="200px" height="20px" src="//upload.facebook.com/plugins/like.php?href={{ site.url | cgi_escape }}{{ canonical | cgi_escape }}&amp;locale=vi_VN&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
 </p>
 <p class="muted font-xxsmall">(thích/chia sẻ bài viết này)</p>
 </section>

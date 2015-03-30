@@ -3,34 +3,24 @@ layout: default
 categories: series
 series_id: world
 title: Thế giới như tôi hình dung
-description: Khi tôi ngồi hình dung về thế giới, những liên tưởng ám ảnh trỗi dậy. Khi tôi đặt bút viết xong, tôi không còn nghĩ gì nữa.
+description: Khi ngồi hình dung về thế giới, tôi luôn cảm thấy những ánh mắt đang nhìn từ các thế giới khác, và những mối liên hệ không thể diễn đạt với thế giới này. Mỗi khi đặt bút viết xong, tôi không còn nghĩ gì nữa. Đó là lý do vì sao tôi viết.
 image: /media/observe.jpg
 ---
-<div>
-
 <h4 style="margin-top: 20px">LOẠT BÀI:</h4>
 <h2 style="margin-top: 0">Thế giới như tôi hình dung</h2>
-
-<p class="lead">Khi tôi ngồi hình dung về thế giới, những liên tưởng ám ảnh trỗi dậy. Khi tôi đặt bút viết xong, tôi không còn nghĩ gì nữa.</p>
-
-<ul>
+<p class="lead">{{page.description}}</p>
 {% for post in site.posts reversed %}
  {% if post.series_id == page.series_id %}
-  {% if page.url == post.url %}
-    <li>{{post.subtitle}} (bài này)</li>
-  {% else %}
-    <li><a href="{{post.url}}">{{ post.subtitle }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
-  {% endif %}
+ <div class="spacy-line"></div>
+ <div>
+	<h3><a href="{{ post.url }}">{{ post.subtitle }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></h3>
+	<p>{{ post.excerpt }}</p>
+</div>
  {% endif %}
 {% endfor %}
-	<li>Phần 4: Mối họa mang tên Trí Tuệ Nhân Tạo (sắp xuất bản)</li>
-</ul>
 
-<figure>
-  <div class="img-container" data-origin="cinemachaat.com">
-	<img src="/media/observe.jpg" alt="Thế giới như tôi hình dung"></img>
-  </div>
-  <figcaption>"Họ" đang quan sát chúng ta?</figcaption>
-</figure>
-
+<div class="spacy-line"></div>
+<div>
+	<h3 class="index-title">Phần 4: Mối họa mang tên Trí Tuệ Nhân Tạo (sắp xuất bản)</h3>
+	<p>Không phải ngẫu nhiên mà nhà khoa học hàng đầu Stephen Hawking hay nhiều người nổi tiếng như Bill Gates, Elon Husk và nhiều người khác gần đây cùng lên tiếng cảnh báo về các nguy cơ mà sự phát triển Trí Tuệ Nhân Tạo có để gây ra đối với sự tồn vong của nhân loại. Bài viết này hy vọng sẽ góp phần làm sáng rõ vấn đề đáng quan tâm này.</p>
 </div>
