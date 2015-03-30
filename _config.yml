@@ -5,7 +5,7 @@ description: Góc nhìn của Trương Hồng Thi về công nghệ và con ngư
 permalink: /:categories/:year-:month-:day-:title.html
 url: http://www.mangcut.vn
 author: Trương Hồng Thi
-highlighter:
+highlighter: pygments
 markdown: kramdown
 kramdown:
   use_coderay: false
