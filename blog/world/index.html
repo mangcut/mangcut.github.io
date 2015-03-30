@@ -1,6 +1,7 @@
 ---
 layout: default
 categories: series
+series: world
 title: Thế giới như tôi hình dung
 description: Khi tôi ngồi hình dung về thế giới, những liên tưởng ám ảnh trỗi dậy. Khi tôi đặt bút viết xong, tôi không còn nghĩ gì nữa.
 image: /media/observe.jpg
@@ -14,7 +15,7 @@ image: /media/observe.jpg
 
 <ul>
 {% for post in site.posts reversed %}
- {% if post.series_id == 'the_gioi' %}
+ {% if post.series_id == page.series %}
   {% if page.url == post.url %}
     <li>{{post.subtitle}} (bài này)</li>
   {% else %}
