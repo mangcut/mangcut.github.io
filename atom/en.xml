@@ -2,17 +2,17 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{site.en_name}} - Zen and Programming</title>
-	<subtitle>Truong Hong Thi on Programming and Life</subtitle>
+	<title>{{site.en_name}} - {{site.en_title}}</title>
+	<subtitle>{{site.en_description}}</subtitle>
 	<link href="{{ site.url }}/atom/en.xml" rel="self" />
 	<link href="{{site.url}}/en/"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<author>
-		<name>Truong Hong Thi</name>
-		<uri>https://twitter.com/mangcut_vn</uri>
+		<name>{{site.en_author}}</name>
+		<uri>https://twitter.com/thith</uri>
 	</author>
-	<id>{{ site.baseurl }}</id>
-	<rights>Copyright (c) 2015, Truong Hong Thi</rights>{% for post in site.posts limit %}{%if post.language == "en" %}
+	<id>{{ site.url }}</id>
+	<rights>Copyright (c) {{ 'now' | date: "%Y" }}, {{site.en_author}}</rights>{% for post in site.posts limit %}{%if post.language == "en" %}
 	<entry>
 		<id>{{ site.url }}{{ post.id }}</id>
 		<title>{{ post.title }}</title>

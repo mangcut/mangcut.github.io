@@ -1,10 +1,13 @@
 name: Măng cụt
 en_name: Mangcut
-title: Nằm nhà tưởng tượng chuyện thế giới
+title: Trang cá nhân của Trương Hồng Thi
+en_title: Truong Hong Thi's Personal Page
 description: Góc nhìn của Trương Hồng Thi về công nghệ và con người.
+en_description: Truong Hong Thi on Programming and Life
 permalink: /:categories/:year-:month-:day-:title.html
 url: http://www.mangcut.vn
 author: Trương Hồng Thi
+en_author: Truong Hong Thi
 highlighter: pygments
 recommended_series_id: world
 markdown: kramdown

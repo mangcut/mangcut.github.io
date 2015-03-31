@@ -7,12 +7,12 @@
 	<meta property="fb:admins" content="100000049454443" />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary" />
-	<title>{{ site.en_name }} - {{ page.title }}</title>
-	<meta property="og:title" content="{{page.title}}" />
-	<meta name="twitter:title" content="{{page.title}}" />
-	<meta name="description" content="{{page.description}}">
-	<meta name="og:description" content="{{page.description}}" />
-	<meta name="twitter:description" content="{{page.description}}" />
+	<title>{{ site.en_name }} - {{ site.en_title }}</title>
+	<meta property="og:title" content="{{site.en_title}}" />
+	<meta name="twitter:title" content="{{site.en_title}}" />
+	<meta name="description" content="{{site.en_description}}">
+	<meta name="og:description" content="{{site.en_description}}" />
+	<meta name="twitter:description" content="{{site.en_description}}" />
 	{% if page.image %}
 	<meta property="og:image" content="{{page.image}}" />
 	<meta name="twitter:image" content="{{page.image}}" />
@@ -20,7 +20,7 @@
 	<link rel="canonical" href="{{site.url}}/en/"/>
 	<meta property="og:url" content="{{site.url}}/en/" />
 	<meta name="twitter:url" content="{{site.url}}/en/" />
-	<link href="{{site.url}}/atom/en.xml" type="application/atom+xml" rel="alternate" title="mangcut.vn - Zen and Programming">
+	<link href="{{site.url}}/atom/en.xml" type="application/atom+xml" rel="alternate" title="{{ site.en_name }} - {{ site.en_title }}">
   </head>
   <body>
 	{{ content }}
