@@ -12,7 +12,7 @@
 		<uri>{{site.url}}/about.html</uri>
 	</author>
 	<id>{{ site.baseurl }}</id>
-	<rights>Copyright (c) 2015, {{ site.author }}</rights>{% for post in site.posts limit %}
+	<rights>Copyright (c) {{ 'now' | date: "%Y" }}, {{ site.author }}</rights>{% for post in site.posts limit %}
 	<entry>
 		<id>{{ site.url }}{{ post.id }}</id>
 		<title>{% if post.subtitle %}{{ post.title }} - {{ post.subtitle }}{% else %}{{ post.title }}{% endif %}</title>
