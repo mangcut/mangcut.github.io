@@ -215,6 +215,28 @@ html.site-home  section.article-list article:first-child, section.article-list a
 	border: 1px solid #a0a0a0;
 }
 
+.pullquote {
+	display: block;
+	float: right;
+	padding: 0 0 0 10px;
+	margin: 10px 0 10px 10px;
+	width: 200px;
+	font-weight: bold;
+	color: #666;
+	border-left: 3px solid #ccc;
+}
+
+.share-hint {
+	display: block;
+	float: right;
+	padding: 10px 0 10px 10px;
+	margin: 10px;
+	width: 100px;
+	font-size: 0.8em;
+	color: #666;
+	border: 1px dashed #ccc;
+}
+
 .sitemap {
 	position: fixed;
 	text-align: left;
