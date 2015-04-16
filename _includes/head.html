@@ -11,8 +11,8 @@
 {% else %}
 <title>{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</title>
 {% endif %}
-<meta property="og:title" content="{% if post.short_title %}{{ post.short_title }}{% else %}{{ post.title }}{% endif %}" />
-<meta name="twitter:title" content="{% if post.short_title %}{{ post.short_title }}{% else %}{{ post.title }}{% endif %}" />
+<meta property="og:title" content="{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}" />
+<meta name="twitter:title" content="{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}" />
 <meta name="description" content="{{page.description}}">
 <meta name="og:description" content="{{page.description}}" />
 <meta name="twitter:description" content="{{page.description}}" />
