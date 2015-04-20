@@ -233,8 +233,8 @@ html.site-home  section.article-list article:first-child, section.article-list a
 	margin: 10px;
 	width: 120px;
 	font-size: 0.8em;
-	color: #666;
-	border: 1px dashed #ccc;
+	color: #333;
+	border: 1px dashed #999;
 }
 
 .sitemap {
