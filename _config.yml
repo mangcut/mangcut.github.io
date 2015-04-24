@@ -25,4 +25,10 @@ defaults:
       path: ""      # empty string for all files
       type: pages   # limit to pages
     values:
-      is_page: true # automatically set is_post=true for all posts
+      is_page: true # automatically set is_page=true for all posts
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
