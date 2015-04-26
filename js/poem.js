@@ -14,11 +14,24 @@ $(document).ready(function () {
 		}
 	});
 
+	/*
 	$(".btn-share").click(function(e) {
 		var sharer = "https://upload.facebook.com/sharer/sharer.php?u=";
 		var url = $P.getData($(this), "href", location.href);
 		window.open(sharer + url, 'sharer', 'width=626,height=436');
 		e.preventDefault();
+	});
+	*/
+	$(".avatar-photo").each(function(){
+		var $t = $(this);
+		var photoUrl = $t.attr("src");
+		var parts = photoUrl.split("=");
+		var rate = window.devicePixelRatio || 0;
+		if (rate > 1) {
+			if (rate < 1.5) rate = 1.5;
+			var size = (parts[1] * rate) | 0;
+			$t.attr("src", parts[0] + "=" + size);
+		}
 	});
 	
 	// auto switch
