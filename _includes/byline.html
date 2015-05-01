@@ -4,4 +4,7 @@
 <a rel="author" href="/about.html"><i>{% if page.author %}{{ page.author }}{% else %}Trương Hồng Thi{% endif %}</i></a>
 <div class="font-xsmall" style="padding-top:3px">{{ page.date | date: "%-d/%-m/%Y" }} - dài {{ page.content | strip_html | number_of_words | divided_by:301 | plus:1}} phút</div>
 </div>
+<div style="float:right;margin-top:20px">
+	<iframe width="90px" height="20px" src="//upload.facebook.com/plugins/like.php?href={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}&amp;locale=en_US&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;share=false&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:20px;" allowTransparency="true"></iframe>
+</div>
 </div>
