@@ -89,7 +89,7 @@ fanpage: false
 <input id="btn_check" type="submit" value="Check">
 </div>
 <div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Sample RSS:</b> <a href="#" data-url="http://www.mangcut.vn/atom/all.xml">Măng cụt</a>, <a href="#" data-url="http://vnexpress.net/rss/tin-moi-nhat.rss">VnExpress</a>, <a href="#" data-url="http://rss.cnn.com/rss/edition.rss">CNN</a>, <a href="#" data-url="http://www.buzzfeed.com/index.xml">BuzzFeed</a>, <a href="#" data-url="http://feeds.mashable.com/Mashable">Mashable</a>, <a href="#" data-url="http://feeds.feedburner.com/upworthy">Upworthy</a></div>
-<div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Sample Pages:</b> <a href="#" data-url="facebook.com/mangcut.vn">Măng cụt FB Page</a>, <a href="#" data-url="http://www.nytimes.com/2015/04/12/opinion/sunday/david-brooks-the-moral-bucket-list.html">A hot NYT's post</a>, <a href="#" data-url="http://www.webtretho.com/forum/f26/19-khu-pho-am-thuc-noi-tieng-tai-tp-hcm-2043493/">A webtretho's post</a></div>
+<div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Sample Pages:</b> <a href="#" data-url="facebook.com/mangcut.vn">Măng cụt FB Page</a>, <a href="#" data-url="nytimes.com/2015/04/12/opinion/sunday/david-brooks-the-moral-bucket-list.html">A hot NYT's post</a>, <a href="#" data-url="webtretho.com/forum/f26/19-khu-pho-am-thuc-noi-tieng-tai-tp-hcm-2043493">A webtretho's post</a></div>
 </form>
 <img class="loading hide" alt="Loading..." src="/img/loading.gif">
 <br>
@@ -133,7 +133,7 @@ function truncate(text, len) {
 }
 
 // Get FB data
-function loadData(params, titles) {
+function loadData(params, titles, url) {
 	$.getJSON('http://api.facebook.com/restserver.php', params)
 		.always(function(data) {
 			if (data.status != 200) {
@@ -184,6 +184,7 @@ function loadData(params, titles) {
 				$("#lbl_error").text("Please input a valid web page or feed URL.").show();
 			} else {
 				$(".result").show();
+				window.localStorage["lastUrl"] = url;
 			}
 		});
 }
@@ -215,7 +216,7 @@ function doWork(url) {
 			method: "links.getStats",
 			urls: postUrls
 		};	
-		loadData(params, postTitles);
+		loadData(params, postTitles, url);
 	});
 }
 
@@ -235,6 +236,8 @@ $("#btn_check").click(function(e){
 		doWork(text);
 	}
 });
+
+$("#txt_url").val(window.localStorage["lastUrl"] || "").focus();
 
 })();
 </script>
