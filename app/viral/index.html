@@ -1,0 +1,226 @@
+---
+layout: default
+categories: work
+title: Đánh giá mức độ phổ biến trên Facebook
+description: Kiểm tra số lần share, like, comment và đánh giá độ phổ biến trên Facebook.
+comment: false
+fanpage: false
+---
+<style>
+#main_table {
+  border-collapse: collapse;
+  text-align: left;
+  border-spacing: 0;
+  width: auto;
+  border: 1px solid #bbb;
+}
+#main_table .hilight{
+	white-space: nowrap;
+}
+#main_table th {
+  font-weight: bold;
+  border: 1px solid #bbb;
+  padding: 5px 10px;
+  background-color: whitesmoke;
+}
+#main_table td .hilight-wrap{
+  position: relative;
+  width: 100px;
+  border: #ccc 1px solid;
+}
+#main_table td .hilight-bar{
+  padding: 0
+  margin: 0;
+  border: 0;
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+}
+#main_table td .hilight-num{
+  padding: 3px 5px;
+  margin: 0;
+  border: 0;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: transparent;
+  text-align: right;
+  font-size: 0.8em;
+  color: black;
+}
+#main_table td .hilight-icons{
+  margin: 5px 0 0;
+  border: 0;
+  font-size: 0.7em;
+  color: black;
+  white-space: nowrap;
+}
+
+#main_table td .hilight-icons i{
+  vertical-align: top;
+}
+  
+#main_table td {
+  border: 1px solid #bbb;
+  padding: 5px 10px
+}
+
+#main_table td.hilight {
+  padding: 10px
+}
+.t_short, .t_mini {display:none}
+.t_long {display:inline}
+@media only screen 
+  and (max-width: 479px){
+  .t_short {display:inline}
+  .t_mini, .t_long {display:none}
+}
+@media only screen 
+  and (max-width: 359px){
+  .t_mini {display:inline}
+  .t_short, .t_long {display:none}
+}
+</style>
+<h3 style="padding-top:13px;padding-bottom: 10px">Facebook Popularity Check</a></h3>
+
+<form>
+<div id="lbl_error" class="alert alert-error hide"></div>
+<label for="txt_url" style="font-size:0.8em">Enter Webpage or Feed URL:</label><br>
+<input id="txt_url" name="txt_url" type="text" placeholder="example.com" autofocus required>&nbsp;
+<input id="btn_check" type="submit" value="Check">
+<div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Sample RSS:</b> <a href="#" data-url="http://www.mangcut.vn/atom/all.xml">Măng cụt</a>, <a href="#" data-url="http://vnexpress.net/rss/tin-moi-nhat.rss">VnExpress</a>, <a href="#" data-url="http://rss.cnn.com/rss/edition.rss">CNN</a>, <a href="#" data-url="http://www.buzzfeed.com/index.xml">BuzzFeed</a>, <a href="#" data-url="http://feeds.mashable.com/Mashable">Mashable</a>, <a href="#" data-url="http://feeds.feedburner.com/upworthy">Upworthy</a></div>
+<div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Sample Pages:</b> <a href="#" data-url="http://www.mangcut.vn">Măng cụt</a>, <a href="#" data-url="http://vnexpress.net">VnExpress</a>, <a href="#" data-url="http://linkhay.com">LinkHay</a>, <a href="#" data-url="https://google.com">Google</a>, <a href="#" data-url="https://facebook.com">Facebook</a></div>
+</form>
+<p>
+<table id="main_table" class="hide">
+<thead>
+	<th style="width:1em;text-align:center">#</th>
+	<th>Page</th>
+	<th class="hilight">Popularity</th>
+</thead>
+<tbody id="main_body"></tbody>
+</table>
+</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+(function(){
+
+google.load("feeds", "1");
+
+// Format Number functions
+function formatNumber(yourNumber) {
+    //Seperates the components of the number
+    var components = yourNumber.toString().split(".");
+    //Comma-fies the first part
+    components[0] = components[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    //Combines the two sections
+    return components.join(".");
+}
+
+function truncate(text, len) {
+	var n = len || 64;
+	return text.length>n ? text.substr(0,n-1)+'&hellip;' : text;
+}
+
+// Get FB data
+function loadData(params, titles) {
+	$.getJSON('http://api.facebook.com/restserver.php', params)
+		.always(function(data) {
+			if (data.status != 200) {
+				$("#lbl_error").text("Please input a valid web page or feed URL.").show();
+				return;
+			}
+			var items = $(data.responseText);
+			console.log(data.responseText);
+			$("#main_body").empty();
+			items.find("link_stat").each(function(index){
+				var $t = $(this);
+				var item = {
+					normalized_url: parseInt($t.find("normalized_url").text()),
+					share_count: parseInt($t.find("share_count").text()),
+					like_count: parseInt($t.find("like_count").text()),
+					comment_count: parseInt($t.find("comment_count").text()),
+					total_count: parseInt($t.find("total_count").text())
+				}
+				var virality = Math.sqrt((item.share_count * 100 + item.comment_count * 20 + item.like_count) / 10);
+				var level = Math.max(Math.floor(Math.sqrt(virality)) - 1, 0);
+
+				var safeLevel = Math.min(level,10);
+				var levelText = "MAX";
+				if (level <= 10) levelText = level + "/10";
+				;
+				var color = "rgb(" + Math.floor(safeLevel * 25.5) + ", " + (255 - safeLevel * 20) + ", 0)";
+				
+				var row = "<tr>" +
+					"<td style='text-align:center'>" + (index + 1) + "</td>" +
+					"<td><a class='t_mini' target='_blank' href='" + item.normalized_url + "'>" + truncate(titles[index], 32) + "</a>" + 
+						"<a class='t_short' target='_blank' href='" + item.normalized_url + "'>" + truncate(titles[index], 64) + "</a>" +
+						"<a class='t_long' target='_blank' href='" + item.normalized_url + "'>" + titles[index] + "</a>" +
+					"</td>" +
+					"<td class='hilight'>" +
+						"<div class='hilight-wrap'>&nbsp;" +
+							"<div class='hilight-bar' style='width:" + safeLevel*10 + "px;background-color:" + color + "'>&nbsp;</div>" +
+							"<div class='hilight-num'>" + levelText /*formatNumber(item.total_count)*/ + "</div>" +
+						"</div>" + 
+						"<div class='hilight-icons'><i class='icon-thumbs-up'></i>&nbsp;" + formatNumber(item.like_count) + "&nbsp;&nbsp;<i class='icon-comment'></i>&nbsp;" + formatNumber(item.comment_count) + "&nbsp;&nbsp;<i class='icon-share'></i>&nbsp;" + formatNumber(item.share_count) + "</div>" +
+					"</td>" +
+					"</tr>";
+				$("#main_body").append(row);
+			});
+			
+			if ($("#main_body tr").length === 0) {
+				$("#main_table").hide();
+				$("#lbl_error").text("Please input a valid web page or feed URL.").show();
+			} else {
+				$("#main_table").show();
+			}
+		});
+}
+
+function doWork(url) {
+	var feed = new google.feeds.Feed(url);
+	feed.setNumEntries(10)
+	feed.load(function(result){
+		var postUrls = [];
+		var postTitles = [];
+		if (!result.error) {
+			for (var i = 0; i < result.feed.entries.length; i++) {
+				var entry = result.feed.entries[i];
+				postUrls.push(entry.link);
+				postTitles.push(entry.title);
+			}
+		} else {
+			postUrls.push(url);
+			var t = $.trim(url);
+			if(t.substr(t.length - 1) == '/') {
+				t = t.substr(0, str.length - 1);
+			}
+			postTitles.push(t.substr(t.lastIndexOf('/') + 1));
+		}
+		
+		var params = {
+			method: "links.getStats",
+			urls: postUrls
+		};	
+		loadData(params, postTitles);
+	});
+}
+
+$(".link_sample a").click(function(){
+	$("#txt_url").val($(this).data("url"));
+	$("#btn_check").click();
+});
+
+$("#btn_check").click(function(e){
+	e.preventDefault();
+	$("#lbl_error").text("").hide();
+	var text = $.trim($("#txt_url").val());
+	if (text.length === 0) {
+		$("#lbl_error").text("Please input a valid web page or feed URL.").show();
+	} else {
+		doWork(text);
+	}
+});
+
+})();
+</script>

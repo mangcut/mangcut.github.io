@@ -11,11 +11,11 @@
 		<name>{{ site.author }}</name>
 		<uri>{{site.url}}/about.html</uri>
 	</author>
-	<id>{{ site.baseurl }}</id>
+	<id>{{ site.url }}</id>
 	<rights>Copyright (c) {{ 'now' | date: "%Y" }}, {{ site.author }}</rights>{% for post in site.posts limit %}
 	<entry>
 		<id>{{ site.url }}{{ post.id }}</id>
-		<title>{% if post.subtitle %}{{ post.title }} - {{ post.subtitle }}{% else %}{{ post.title }}{% endif %}</title>
+		<title>{% if post.short_title %}{{ post.short_title | escape }}{% else %}{{ post.title }}{% endif %}</title>
 		<link href="{{ site.url }}{{ post.url }}" />
 		<published>{{ post.date | date_to_xmlschema }}</published>
 		<summary type="html">{{ post.excerpt | xml_escape }}</summary>

@@ -5,7 +5,7 @@
 {% for post in site.posts reversed %}
  {% if post.series_id == site.recommended_series_id %}
   {% if page.url == post.url %}
-    <li>{{post.subtitle}} (bài này)</li>
+    <li>{{post.subtitle}}</li>
   {% else %}
     <li><a href="{{post.url}}">{{ post.subtitle }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
   {% endif %}
