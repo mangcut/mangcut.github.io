@@ -237,7 +237,9 @@ $("#btn_check").click(function(e){
 	}
 });
 
-$("#txt_url").val(window.localStorage["lastUrl"] || "").focus();
+$(document).ready(function() {
+	$("#txt_url").val(window.localStorage["lastUrl"] || "").focus();
+});
 
 })();
 </script>
