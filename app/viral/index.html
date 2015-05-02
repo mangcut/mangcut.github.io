@@ -91,8 +91,11 @@ fanpage: false
 <div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Sample RSS:</b> <a href="#" data-url="http://www.mangcut.vn/atom/all.xml">Măng cụt</a>, <a href="#" data-url="http://vnexpress.net/rss/tin-moi-nhat.rss">VnExpress</a>, <a href="#" data-url="http://rss.cnn.com/rss/edition.rss">CNN</a>, <a href="#" data-url="http://www.buzzfeed.com/index.xml">BuzzFeed</a>, <a href="#" data-url="http://feeds.mashable.com/Mashable">Mashable</a>, <a href="#" data-url="http://feeds.feedburner.com/upworthy">Upworthy</a></div>
 <div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Sample Pages:</b> <a href="#" data-url="facebook.com/mangcut.vn">Măng cụt FB Page</a>, <a href="#" data-url="http://www.nytimes.com/2015/04/12/opinion/sunday/david-brooks-the-moral-bucket-list.html">A hot NYT's post</a>, <a href="#" data-url="http://www.webtretho.com/forum/f26/19-khu-pho-am-thuc-noi-tieng-tai-tp-hcm-2043493/">A webtretho's post</a></div>
 </form>
+<img class="loading hide" alt="Loading..." src="/img/loading.gif">
+<br>
+<h4 class="result hide">Results (MAX: 10 items)</h4>
 <p>
-<table id="main_table" class="hide">
+<table id="main_table" class="result hide">
 <thead>
 	<th style="width:1em;text-align:center">#</th>
 	<th>Page</th>
@@ -100,6 +103,11 @@ fanpage: false
 </thead>
 <tbody id="main_body"></tbody>
 </table>
+</p>
+
+<div class="spacy-line"></div>
+<p>
+<iframe width="200px" height="20px" src="//upload.facebook.com/plugins/like.php?href={{ site.url | cgi_escape }}{{ page.url |remove:'index.html' | cgi_escape }}&amp;locale=vi_VN&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
 </p>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -170,11 +178,12 @@ function loadData(params, titles) {
 				$("#main_body").append(row);
 			});
 			
+			$(".loading").hide();
 			if ($("#main_body tr").length === 0) {
-				$("#main_table").hide();
+				$(".result").hide();
 				$("#lbl_error").text("Please input a valid web page or feed URL.").show();
 			} else {
-				$("#main_table").show();
+				$(".result").show();
 			}
 		});
 }
@@ -222,6 +231,7 @@ $("#btn_check").click(function(e){
 	if (text.length === 0) {
 		$("#lbl_error").text("Please input a valid web page or feed URL.").show();
 	} else {
+		$(".loading").show();
 		doWork(text);
 	}
 });
