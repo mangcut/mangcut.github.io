@@ -43,7 +43,8 @@ fanpage: false
   top: 0; left: 0; right: 0; bottom: 0;
   background-color: transparent;
   text-align: right;
-  font-size: 0.8em;
+  font-size: 0.7em;
+  line-height: 18px;
   color: black;
 }
 #main_table td .hilight-icons{
@@ -66,7 +67,14 @@ fanpage: false
 #main_table td.hilight {
   padding: 10px
 }
-.red {color: red}
+.red {color: #f66}
+.announce {
+  font-size:0.8em;
+  margin:20px 0 10px;
+  border:1px solid #beb;
+  padding: 5px 10px;
+  background-color:#cfc;
+}
 .t_short, .t_mini {display:none}
 .t_long {display:inline}
 @media only screen 
@@ -80,23 +88,43 @@ fanpage: false
   .t_short, .t_long {display:none}
 }
 </style>
+
 <h3 style="padding-top:13px;padding-bottom: 10px">Đánh giá sự phổ biến trên Facebook.</a></h3>
-<div style="font-size:0.8em;margin-bottom:10px;border:1px solid #ccc;padding: 5px;background-color:#f9f9f9">Đánh giá sự phổ biến của web site trên facebook. Có các cấp độ: <b>0~10, <span class="red">STAR</span>, <span class="red">VIRAL</span>, và <span class="red">SUPER VIRAL</span>.</b></div>
+
 <form>
+
 <div id="lbl_error" class="alert alert-error hide"></div>
+
 <label for="txt_url" style="font-size:0.8em">Địa chỉ trang web hoặc RSS:</label><br>
-<div>
 <input id="txt_url" name="txt_url" type="text" style="width:67%;min-width:200px;" placeholder="example.com" autofocus required>
-<input id="btn_check" type="submit" value="Đánh giá">
-</div>
+<input id="btn_check" type="submit" value="GO">
+
 <div style="margin-top:6px;font-size:0.8em;color:#b50">Cần ý tưởng? Click thử vài ví dụ sau:</div>
-<div class="link_sample" style="margin-top:3px;font-size:0.8em"><b>RSS mẫu:</b> <a href="#" title="Just click!" data-url="http://rss.cnn.com/rss/edition.rss">CNN</a>, <a href="#" title="Just click!" data-url="http://www.buzzfeed.com/index.xml">BuzzFeed</a>, <a href="#" title="Just click!" data-url="http://feeds.mashable.com/Mashable">Mashable</a>, <a href="#" title="Just click!" data-url="http://feeds.feedburner.com/upworthy">Upworthy</a>, <a href="#" title="Just click!" data-url="http://www.mangcut.vn/atom/all.xml">Măng cụt</a></div>
-<div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Trang mẫu:</b> <a href="#" title="Just click!" data-url="how-old.net">how-old.net</a>, <a href="#" title="Just click!" data-url="nytimes.com/2015/04/12/opinion/sunday/david-brooks-the-moral-bucket-list.html">Bài của NY Times</a>, <a href="#" title="Just click!" data-url="webtretho.com/forum/f26/19-khu-pho-am-thuc-noi-tieng-tai-tp-hcm-2043493">Bài của webtretho</a>, <a href="#" title="Just click!" data-url="facebook.com/mangcut.vn">Măng cụt FB Page</a></div>
+
+<div class="link_sample" style="margin-top:3px;font-size:0.8em">
+<b>RSS mẫu:</b>
+ <a href="#" title="Just click!" data-url="http://rss.cnn.com/rss/edition.rss">CNN</a>,
+ <a href="#" title="Just click!" data-url="http://www.buzzfeed.com/index.xml">BuzzFeed</a>,
+ <a href="#" title="Just click!" data-url="http://feeds.mashable.com/Mashable">Mashable</a>,
+ <a href="#" title="Just click!" data-url="http://feeds.feedburner.com/upworthy">Upworthy</a>,
+ <a href="#" title="Just click!" data-url="http://www.mangcut.vn/atom/all.xml">Măng cụt</a>
+</div>
+<div class="link_sample" style="margin-top:6px;font-size:0.8em">
+<b>Trang mẫu:</b>
+ <a href="#" title="Just click!" data-url="how-old.net">how-old.net</a>,
+ <a href="#" title="Just click!" data-url="nytimes.com/2015/04/12/opinion/sunday/david-brooks-the-moral-bucket-list.html" data-title="The Moral Bucket List - NYTimes.com">Bài của NY Times</a>,
+ <a href="#" title="Just click!" data-url="webtretho.com/forum/f26/19-khu-pho-am-thuc-noi-tieng-tai-tp-hcm-2043493" data-title="19 khu phố ẩm thực nổi tiếng tại TP HCM - webtretho.com">Bài của webtretho</a>,
+ <a href="#" title="Just click!" data-url="facebook.com/mangcut.vn">Măng cụt FB Page</a>
+</div>
+
 </form>
+
 <img class="loading hide" alt="Loading..." src="/img/loading.gif">
+
 <br>
 <h4 class="result hide">Kết quả (hiện 10 mục đầu):</h4>
-<p>
+
+<div>
 <table id="main_table" class="result hide">
 <thead>
 	<th style="width:1em;text-align:center">#</th>
@@ -105,12 +133,20 @@ fanpage: false
 </thead>
 <tbody id="main_body"></tbody>
 </table>
-</p>
+</div>
+
+<div class="announce result hide">Các cấp độ phổ biến: <b>0~10, <span class="red">STAR</span>, <span class="red">VIRAL</span>, và <span class="red">SUPER VIRAL</span>.</b></div>
 
 <div class="spacy-line"></div>
 <p>
 <iframe width="200px" height="20px" src="//upload.facebook.com/plugins/like.php?href={{ site.url | cgi_escape }}{{ page.url |remove:'index.html' | cgi_escape }}&amp;locale=vi_VN&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
 </p>
+
+<div class="spacy-line"></div>
+<h4>Thử đọc blog của chúng tôi.</h4>
+<ul>
+<li><a href="/blog/world/">Loạt bài: Thế giới như tôi hình dung <img src="/img/hot.gif" alt="[hot]"></li>
+</ul>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -178,7 +214,7 @@ function loadData(params, titles, url) {
 					"<td class='hilight'>" +
 						"<div class='hilight-wrap'>&nbsp;" +
 							"<div class='hilight-bar' style='width:" + safeLevel*10 + "px;background-color:" + color + "'>&nbsp;</div>" +
-							"<div class='hilight-num'>" + levelText /*formatNumber(item.total_count)*/ + 
+							"<div class='hilight-num'>" + levelText + 
 							((level > 15)?"&nbsp;<i class='icon-fire'></i>":"") + "</div>" +
 						    "</div>" +
 						"<div class='hilight-icons'><i class='icon-thumbs-up'></i>&nbsp;" + formatNumber(item.like_count) + "&nbsp;&nbsp;<i class='icon-comment'></i>&nbsp;" + formatNumber(item.comment_count) + "&nbsp;&nbsp;<i class='icon-share'></i>&nbsp;" + formatNumber(item.share_count) + "</div>" +
@@ -212,12 +248,15 @@ function doWork(url) {
 			}
 		} else {
 			postUrls.push(url);
-			var t = $.trim(url);
-			if(t.substr(t.length - 1) == '/') {
-				t = t.substr(0, t.length - 1);
+			var t = $("#txt_url").data("title");
+			if (!t || t.length === 0) {
+				t = $.trim(url);
+				if(t.substr(t.length - 1) == '/') {
+					t = t.substr(0, t.length - 1);
+				}
+				t = t.replace("http://","").replace("https://","");
+				if (t.length > 32) t = t.substr(t.lastIndexOf('/') + 1);
 			}
-			t = t.replace("http://","").replace("https://","");
-			if (t.length > 32) t = t.substr(t.lastIndexOf('/') + 1);
 			postTitles.push(t);
 		}
 		
@@ -230,7 +269,7 @@ function doWork(url) {
 }
 
 $(".link_sample a").click(function(){
-	$("#txt_url").val($(this).data("url"));
+	$("#txt_url").val($(this).data("url")).removeData("title").data("title", $(this).data("title"));
 	$("#btn_check").click();
 });
 

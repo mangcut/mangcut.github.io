@@ -3,7 +3,7 @@ layout: default
 categories: series
 series_id: world
 title: Thế giới như tôi hình dung
-description: Khi ngồi hình dung về thế giới, tôi luôn cảm thấy những ánh mắt đang nhìn từ các thế giới khác, với những mối liên hệ không thể diễn đạt với thế giới này. Mỗi khi đặt bút viết xong, tôi không còn nghĩ gì nữa. Đó là lý do vì sao tôi viết.
+description: Đã bao giờ bạn đặt câu hỏi về sự tồn tại của mình? Về sự sống? Về vũ trụ, không gian thời gian? Về sự tồn vong của loài người? Loạt bài viết này hy vọng sẽ mở ra những cánh cửa mới, và cả những câu hỏi mới. Hãy chia sẻ nếu bạn thấy có ý nghĩa.
 image: /media/observe.jpg
 ---
 <h4 style="margin-top: 20px">LOẠT BÀI:</h4>
@@ -11,6 +11,9 @@ image: /media/observe.jpg
 <div>
 	<img class="pull-right" style="width:25%;min-width:160px;margin-top: 0.5em;margin-left:6px;margin-bottom:6px;" src="/media/observe.jpg"/>
 	<p class="lead">{{page.description}}</p>
+	<p>
+	<iframe width="200px" height="20px" src="//upload.facebook.com/plugins/like.php?href={{ site.url | cgi_escape }}{{ page.url |remove:'index.html' | cgi_escape }}&amp;locale=vi_VN&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
+	</p>
 	<div style="clear:both"></div>
 </div>
 {% for post in site.posts reversed %}
