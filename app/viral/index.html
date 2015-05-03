@@ -66,6 +66,7 @@ fanpage: false
 #main_table td.hilight {
   padding: 10px
 }
+.red {color: red}
 .t_short, .t_mini {display:none}
 .t_long {display:inline}
 @media only screen 
@@ -79,28 +80,28 @@ fanpage: false
   .t_short, .t_long {display:none}
 }
 </style>
-<h3 style="padding-top:13px;padding-bottom: 10px">Facebook Popularity Check</a></h3>
-
+<h3 style="padding-top:13px;padding-bottom: 10px">Đánh giá sự phổ biến trên Facebook.</a></h3>
+<div style="font-size:0.8em;margin-bottom:10px;border:1px solid #ccc;padding: 5px;background-color:#f9f9f9">Đánh giá sự phổ biến của web site trên facebook. Có các cấp độ: <b>0~10, <span class="red">STAR</span>, <span class="red">VIRAL</span>, và <span class="red">SUPER VIRAL</span>.</b></div>
 <form>
 <div id="lbl_error" class="alert alert-error hide"></div>
-<label for="txt_url" style="font-size:0.8em">Enter Webpage or Feed URL:</label><br>
+<label for="txt_url" style="font-size:0.8em">Địa chỉ trang web hoặc RSS:</label><br>
 <div>
-<input id="txt_url" name="txt_url" type="text" style="width:75%;min-width:220px;" placeholder="example.com" autofocus required>
-<input id="btn_check" type="submit" value="Check">
+<input id="txt_url" name="txt_url" type="text" style="width:67%;min-width:200px;" placeholder="example.com" autofocus required>
+<input id="btn_check" type="submit" value="Đánh giá">
 </div>
-<div style="margin-top:6px;font-size:0.8em;color:#b50">Need ideas? Try click a sample!</div>
-<div class="link_sample" style="margin-top:3px;font-size:0.8em"><b>Sample RSS:</b> <a href="#" title="Just click!" data-url="http://www.mangcut.vn/atom/all.xml">Măng cụt</a>, <a href="#" title="Just click!" data-url="http://rss.cnn.com/rss/edition.rss">CNN</a>, <a href="#" title="Just click!" data-url="http://www.buzzfeed.com/index.xml">BuzzFeed</a>, <a href="#" title="Just click!" data-url="http://feeds.mashable.com/Mashable">Mashable</a>, <a href="#" title="Just click!" data-url="http://feeds.feedburner.com/upworthy">Upworthy</a></div>
-<div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Sample Pages:</b> <a href="#" title="Just click!" data-url="facebook.com/mangcut.vn">Măng cụt FB Page</a>, <a href="#" title="Just click!" data-url="nytimes.com/2015/04/12/opinion/sunday/david-brooks-the-moral-bucket-list.html">A hot NYT's post</a>, <a href="#" title="Just click!" data-url="webtretho.com/forum/f26/19-khu-pho-am-thuc-noi-tieng-tai-tp-hcm-2043493">A webtretho's post</a></div>
+<div style="margin-top:6px;font-size:0.8em;color:#b50">Cần ý tưởng? Thử vài ví dụ sau:</div>
+<div class="link_sample" style="margin-top:3px;font-size:0.8em"><b>RSS mẫu:</b> <a href="#" title="Just click!" data-url="http://rss.cnn.com/rss/edition.rss">CNN</a>, <a href="#" title="Just click!" data-url="http://www.buzzfeed.com/index.xml">BuzzFeed</a>, <a href="#" title="Just click!" data-url="http://feeds.mashable.com/Mashable">Mashable</a>, <a href="#" title="Just click!" data-url="http://feeds.feedburner.com/upworthy">Upworthy</a>, <a href="#" title="Just click!" data-url="http://www.mangcut.vn/atom/all.xml">Măng cụt</a></div>
+<div class="link_sample" style="margin-top:6px;font-size:0.8em"><b>Trang mẫu:</b> <a href="#" title="Just click!" data-url="nytimes.com/2015/04/12/opinion/sunday/david-brooks-the-moral-bucket-list.html">A hot NYT's post</a>, <a href="#" title="Just click!" data-url="webtretho.com/forum/f26/19-khu-pho-am-thuc-noi-tieng-tai-tp-hcm-2043493">A webtretho's post</a>, <a href="#" title="Just click!" data-url="facebook.com/mangcut.vn">Măng cụt FB Page</a></div>
 </form>
 <img class="loading hide" alt="Loading..." src="/img/loading.gif">
 <br>
-<h4 class="result hide">Results (MAX: 10 items)</h4>
+<h4 class="result hide">Kết quả (tối đa 10 mục)</h4>
 <p>
 <table id="main_table" class="result hide">
 <thead>
 	<th style="width:1em;text-align:center">#</th>
-	<th>Page</th>
-	<th class="hilight">Popularity</th>
+	<th>Trang</th>
+	<th class="hilight">Độ phổ biến</th>
 </thead>
 <tbody id="main_body"></tbody>
 </table>
@@ -156,9 +157,16 @@ function loadData(params, titles, url) {
 				var level = Math.max(Math.floor(Math.sqrt(virality)) - 1, 0);
 
 				var safeLevel = Math.min(level,10);
-				var levelText = "POPULAR!";
-				if (level <= 10) levelText = level + "/10";
-				if (level > 15) levelText = "VIRAL!!!";
+				var levelText = level + "/10";
+				if (level > 50 ) {
+					levelText = "GOD?";
+				} else if (level > 25) {
+					levelText = "SUPER VIRAL!";
+				} else if (level > 15) {
+					levelText = "VIRAL!!!";
+				} else if (level > 10) {
+					levelText = "STAR";
+				}
 				var color = "rgb(" + Math.floor(safeLevel * 25.5) + ", " + (255 - safeLevel * 20) + ", 0)";
 				
 				var row = "<tr>" +
