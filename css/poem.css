@@ -176,7 +176,7 @@ html.site-home section.article-list article {
 	border-top: solid 1px #e5e5e5;
 }
 		
-html.site-home  section.article-list article:first-child, section.article-list article.first-child {
+html.site-home  section.article-list article:first-child, html.site-home  section.article-list article.first-child {
 	border-top: 0;
 }
 
