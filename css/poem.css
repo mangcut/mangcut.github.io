@@ -10,15 +10,15 @@ h1 {
 }
 
 .lead:before {
-	display: inline-block;
+	display: inline;
 	content: "măngcụt";
 	background-color: #a02c2c;
 	color: white;
 	font-weight: bold;
 	font-size: 0.7em;
-	padding: 1px 6px;
+	padding: 3px 6px;
 	margin: 0 5px 0 0;
-	vertical-align: text-top;
+	vertical-align: middle;
 }
 
 .post-title {
