@@ -21,6 +21,10 @@
 <meta name="description" content="{{page.description}}">
 <meta name="og:description" content="{{page.description}}" />
 <meta name="twitter:description" content="{{page.description}}" />
+{% if page.external_image %}
+<meta property="og:image" content="{{page.external_image}}" />
+<meta name="twitter:image" content="{{page.external_image}}" />
+{% endif %}
 {% if page.image %}
 <meta property="og:image" content="{{site.url}}{{page.image}}" />
 <meta name="twitter:image" content="{{site.url}}{{page.image}}" />
