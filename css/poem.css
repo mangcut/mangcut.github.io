@@ -9,8 +9,8 @@ h1 {
 	margin-bottom: 0.4em;
 }
 
-.lead:before {
-	display: inline;
+html[lang="vi"] .lead:before {
+	display: inline-block;
 	content: "măngcụt";
 	background-color: #a02c2c;
 	color: white;
@@ -231,7 +231,7 @@ html.site-home  section.article-list article:first-child, html.site-home  sectio
 	display: block;
 	float: right;
 	padding: 0 0 0 10px;
-	margin: 10px 0 10px 10px;
+	margin: 10px -15px 10px 10px;
 	width: 200px;
 	font-weight: bold;
 	color: #666;
@@ -242,7 +242,7 @@ html.site-home  section.article-list article:first-child, html.site-home  sectio
 	display: block;
 	float: right;
 	padding: 10px 0 10px 10px;
-	margin: 10px;
+	margin: 10px -5px 10px 10px;
 	width: 120px;
 	font-size: 0.8em;
 	color: #333;
@@ -527,6 +527,28 @@ html.site-home  section.article-list article:first-child, html.site-home  sectio
 @media (max-width: 400px) {
 	.sitemap {
 		width: 100%;
+	}
+	.img-container, .video-container {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+}
+
+@media (max-width: 360px) {
+	.container-fluid {
+	  padding-right: 5.5%;
+	  padding-left: 5.5%;
+	}
+	.img-container, .video-container {
+		margin-left: -6.18%;
+		margin-right: -6.18%;
+	}
+	.pullquote {
+		display: block;
+		float: none;
+		width: 94.5%;
+		padding: 0 0 0 10px;
+		margin: 0 0 10px 0;
 	}
 }
 

@@ -225,7 +225,7 @@ function loadData(params, titles, url) {
 				$("#lbl_error").text("Please input a valid web page or feed URL.").show();
 			} else {
 				$(".result").show();
-				window.localStorage["lastUrl"] = url;
+				Modernizr.localstorage && (window.localStorage["lastUrl"] = url);
 			}
 		});
 }
@@ -282,7 +282,7 @@ $("#btn_check").click(function(e){
 });
 
 $(document).ready(function() {
-	$("#txt_url").val(window.localStorage["lastUrl"] || "").focus();
+	if (Modernizr.localstorage) $("#txt_url").val(window.localStorage["lastUrl"] || "").focus();
 });
 
 })();

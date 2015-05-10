@@ -33,7 +33,12 @@
 	{% else %}
 	<h2 class="index-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	{% endif %}
-	<p class="font-small muted">{{ post.date | date: "%-d/%-m/%Y" }} - <a href="/about.html">{% if post.author %}{{ post.author }}{% else %}Trương Hồng Thi{% endif %}</a> - dài {{ post.content | strip_html | number_of_words | divided_by:301 | plus:1}} phút</p>
+	{% if post.language == "en" %}
+	  {% assign mc_readspead = 276 %}
+	{% else %}
+	  {% assign mc_readspead = 351 %}
+	{% endif %}
+	<p class="font-small muted">{{ post.date | date: "%-d/%-m/%Y" }} - <a href="/about.html">{% if post.author %}{{ post.author }}{% else %}Trương Hồng Thi{% endif %}</a> - dài {{ post.content | strip_html | number_of_words | divided_by:mc_readspead | plus:1}} phút</p>
 	{% if post.image %}
 	<figure>
 	  <div class="img-container" {% if post.image_origin %}data-origin="{{post.image_origin}}{% endif %}">
