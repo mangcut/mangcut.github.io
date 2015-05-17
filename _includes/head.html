@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 <meta name="format-detection" content="telephone=no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="{{site.name}}" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta property="fb:admins" content="100000049454443" />
 <meta property="og:site_name" content="{{site.name}}" />
@@ -17,10 +18,14 @@
 {% else %}
 <title>{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</title>
 {% endif %}
+<meta property="og:title" content="{{ page.fb_title }}" />
+{% if page.fb_title %}
+{% else %}
 <meta property="og:title" content="{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}" />
+{% endif %}
 <meta name="twitter:title" content="{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}" />
 <meta name="description" content="{{page.description}}">
-<meta name="og:description" content="{{page.description}}" />
+<meta name="og:description" content="{{page.fb_description}}" />
 <meta name="twitter:description" content="{{page.description}}" />
 {% if page.external_image %}
 <meta property="og:image" content="{{page.external_image}}" />
