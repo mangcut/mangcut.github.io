@@ -25,7 +25,7 @@
 {% endif %}
 <meta name="twitter:title" content="{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}" />
 <meta name="description" content="{{page.description}}">
-<meta property="og:description" content="{% if page.fb_description %}{{page.fb_description}}{% else %}{{page.fb_description}}{% endif %}" />
+<meta property="og:description" content="{% if page.fb_description %}{{page.fb_description}}{% else %}{{page.description}}{% endif %}" />
 <meta name="twitter:description" content="{{page.description}}" />
 {% if page.external_image %}
 <meta property="og:image" content="{{page.external_image}}" />
