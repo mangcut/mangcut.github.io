@@ -18,8 +18,8 @@
 {% else %}
 <title>{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</title>
 {% endif %}
-<meta property="og:title" content="{{ page.fb_title }}" />
 {% if page.fb_title %}
+<meta property="og:title" content="{{ page.fb_title }}" />
 {% else %}
 <meta property="og:title" content="{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}" />
 {% endif %}
