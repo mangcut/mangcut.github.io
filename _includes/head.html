@@ -7,6 +7,9 @@
 <meta name="apple-mobile-web-app-title" content="{% if page.mobile_app_title %}page.mobile_app_title{% else %}{{site.name}}{% endif %}" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 {% endif %}
+{% if page.site_root %}
+<meta name="alexaVerifyID" content="EwADzQsA6qZc6CjRJWpj8HduC9s"/>
+{% endif %}
 <meta property="fb:admins" content="100000049454443" />
 <meta property="og:site_name" content="{{site.name}}" />
 <meta property="og:type" content="{% if page.is_post %}article{% else %}website{% endif %}" />
