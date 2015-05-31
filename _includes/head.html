@@ -18,19 +18,20 @@
 {% endif %}
 <meta name="twitter:card" content="summary" />
 {% if page.site_home %}
-<title>{{ site.name }} - {{ page.title }}</title>
+<title>{{ site.name }} - {{ page.page_title }}</title>
+<meta name="twitter:title" content="{{ site.name }} - {{ page.title }}" />
 {% else %}
-<title>{% if page.subtitle %}{{ page.title }} - {{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</title>
+<title>{{ page.page_title }}</title>
+<meta name="twitter:title" content="{{ page.title }}" />
 {% endif %}
 {% if page.fb_title %}
 <meta property="og:title" content="{{ page.fb_title }}" />
-{% else %}
-<meta property="og:title" content="{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}" />
 {% endif %}
-<meta name="twitter:title" content="{% if page.short_title %}{{ page.short_title }}{% else %}{{ page.title }}{% endif %}" />
 <meta name="description" content="{{page.description}}">
-<meta property="og:description" content="{% if page.fb_description %}{{page.fb_description}}{% else %}{{page.description}}{% endif %}" />
-<meta name="twitter:description" content="{{page.description}}" />
+<meta name="twitter:description" content="{% if page.subtitle %}{{page.description}}{% else %}{{page.description}}{% endif %}" />
+{% if page.fb_description %}
+<meta property="og:description" content="{{page.fb_description}}" />
+{% endif %}
 {% if page.external_image %}
 <meta property="og:image" content="{{page.external_image}}" />
 <meta name="twitter:image" content="{{page.external_image}}" />

@@ -14,7 +14,7 @@
 		<h3 style="margin-top:30px">Bài gần đây</h3>
 		<ul class="nav nav-list">
 			{% for post in site.posts %}
-			  <li style="border-top: 1px solid #dde" {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span class="muted font-xsmall" style="display:inline-block;width:35px">{{ post.date | date: "%d/%m" }}</span>{% if post.short_title %}{{ post.short_title }}{% else %}{{ post.title }}{% endif %}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
+			  <li style="border-top: 1px solid #dde" {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><span class="muted font-xsmall" style="display:inline-block;width:35px">{{ post.date | date: "%d/%m" }}</span>{{ post.title }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></li>
 			{% endfor %}
 		</ul>
 		

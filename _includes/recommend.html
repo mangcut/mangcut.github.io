@@ -1,17 +1,17 @@
 <section>
 <div class="spacy-line"></div>
 <h4>Loạt bài <a href="/blog/world/">Thế giới như tôi hình dung</a>:</h4>
-<ul>
+<ol>
 {% for post in site.posts reversed %}
  {% if post.series_id == site.recommended_series_id %}
   {% if page.url == post.url %}
-    <li>{{post.subtitle}}</li>
+    <li>{{post.title}}</li>
   {% else %}
-    <li><a href="{{post.url}}">{{ post.subtitle }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}{% if post.new %}&nbsp;<img src="/img/new.gif" alt="[new]">{% endif %}</a></li>
+    <li><a href="{{post.url}}">{{ post.title }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}{% if post.new %}&nbsp;<img src="/img/new.gif" alt="[new]">{% endif %}</a></li>
   {% endif %}
  {% endif %}
 {% endfor %}
-</ul>
+</ol>
 
 <h4 style="margin-top: 25px">Có thể bạn cũng thích:</h4>
 <ul>
