@@ -5,6 +5,6 @@
 <p style="margin-bottom:0">
 	<iframe width="200px" height="20px" src="//upload.facebook.com/plugins/like.php?href={{ site.url | cgi_escape }}{{ canonical | cgi_escape }}&amp;locale=vi_VN&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
 </p>
-<p class="font-xxsmall" style="color:#1ca01c"><b>{% if page.mind == 'change' %}Wow! Có share không nhỉ?{% else %}Thấy hay? Thật tuyệt nếu bạn bè cũng đọc!{% endif %}</b></p>
+<p class="font-xxsmall" style="color:#1ca01c"><b>{% if page.mind == 'change' %}Wow! share thôi...{% else %}Thấy hay? Thật tuyệt nếu bạn bè cũng đọc!{% endif %}</b></p>
 <p class="font-xsmall">Bình luận? <a href="#comment_disqus" data-action='[{"action": "show", "target": "#disqusZone"}, {"action": "scrollBy", "options": [0, 250]}]'>Disqus</a>{% if page.fb_post_id %} - <a href="https://www.facebook.com/mangcut.vn/posts/{{page.fb_post_id}}">Facebook</a>{% endif %}{% if page.lh_post_id %} - <a href="http://linkhay.com/{{page.lh_post_id}}">LinkHay</a>{% endif %}.</p>
 </section>
