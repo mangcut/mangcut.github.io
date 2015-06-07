@@ -115,7 +115,7 @@ h2.index-title {
 /* Components: sitemap, menu, etc. */
 
 figure {
-	margin: 0 0 10px;
+	margin: 10px 0 20px;
 }
 
 div[data-origin].img-container:hover {
