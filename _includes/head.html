@@ -37,7 +37,7 @@
 <meta name="twitter:image" content="{{page.external_image}}" />
 {% endif %}
 {% if page.image %}
-<meta property="og:image" content="{{site.url}}{{page.image}}" />
+<meta property="og:image" content="{{site.url}}{% if page.fb_image %}{{page.fb_image}}{% else %}{{page.image}}{% endif %}" />
 <meta name="twitter:image" content="{{site.url}}{{page.image}}" />
 {% endif %}
 {% if page.url contains "blog/page" %}
