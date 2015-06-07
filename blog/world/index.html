@@ -22,7 +22,7 @@ image: /media/world.jpg
  {% if post.series_id == page.series_id %}
  <div class="spacy-line"></div>
  <div>
-	<h3><a href="{{ post.url }}">{{ post.title }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></h3>
+	<h3><a href="{{ post.url }}">{{ post.series_part }}. {{ post.title }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}</a></h3>
 	<p>{{ post.excerpt }}</p>
 </div>
  {% endif %}
