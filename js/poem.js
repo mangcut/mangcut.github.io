@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	// prevent page-load on <a href='#'>Something</a>
+	/*
 	$(document).on("click", "a", function(e) {
 		var theHref = $(this).attr("href");
 		var theTarget = $(this).attr("target");
@@ -12,8 +13,20 @@ $(document).ready(function () {
 				location.href = theHref;
 			}
 		}
-	});
+	}); */
 
+	if (("standalone" in window.navigator) && window.navigator.standalone) {
+		$(document).on("click", "a", function(e) {
+			var theHref = $(this).attr("href");
+			var theTarget = $(this).attr("target");
+			if ( theHref !== "" && theHref.indexOf("#") !== 0 && theHref.toLowerCase().indexOf("http") !== 0 && 
+				($P.nullOrEmpty(theTarget) || theTarget === "_self")) {
+				e.preventDefault();
+				location.href = theHref;
+			}
+		});
+	}
+	
 	/*
 	$(".btn-share").click(function(e) {
 		var sharer = "https://upload.facebook.com/sharer/sharer.php?u=";
