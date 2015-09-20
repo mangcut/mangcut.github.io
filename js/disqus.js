@@ -5,7 +5,8 @@ var disqus_shortname = 'mangcut'; // required: replace example with your forum s
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
 	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	// Force https since http (our mangcut protocol) make disqus sick
+	dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
 	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 })();
 
