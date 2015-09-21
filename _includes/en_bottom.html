@@ -6,6 +6,9 @@
 	var disqus_identifier = "{% if page.disqus_id %}{{page.disqus_id}}{% else %}{{page.url}}{% endif %}";
 	var disqus_url = "{{site.url}}{{page.url}}";
 	var disqus_title = "mangcut.vn - {{page.title}}";
+	var disqus_config = function () { 
+		this.language = "en";
+	};
 </script>
 <script src="/js/disqus.js"></script>
 {% endif %}
