@@ -6,23 +6,10 @@
 <span class="topic topic-lang">Nổi bật</span><br><br>
 <div><a href="/blog/world/" title="Loạt bài: Thế giới như tôi hình dung"><img  style="max-width:100%" src="/img/world.jpg" alt="Loạt bài: Thế giới như tôi hình dung"></a></div>
 <br>
-<p>Chúng ta là ai, từ đâu tới, và sẽ đi về đâu? Những gì đang chờ đợi chúng ta trong 100 năm tới (gợi ý: rất nhiều bước ngoặt). <a href="/blog/world/" title="Loạt bài: Thế giới như tôi hình dung">Xem tiếp...</a></p>
-<!--p>
-<ol>
-{% for post in site.posts reversed %}
- {% if post.series_id == site.recommended_series_id %}
-  {% if page.url == post.url %}
-    <li>{{post.title}}</li>
-  {% else %}
-    <li><a href="{{post.url}}">{{ post.title }}{% if post.hot %}&nbsp;<img src="/img/hot.gif" alt="[hot]">{% endif %}{% if post.new %}&nbsp;<img src="/img/new.gif" alt="[new]">{% endif %}</a></li>
-  {% endif %}
- {% endif %}
-{% endfor %}
-</ol>
-</p-->
+<p>Chúng ta là ai, từ đâu tới, và sẽ đi về đâu? Những gì đang chờ đợi chúng ta trong 100 năm tới (gợi ý: rất nhiều bước ngoặt!). <a href="/blog/world/" title="Loạt bài: Thế giới như tôi hình dung">Xem tiếp...</a></p>
 </div>
 
-{% for post in site.posts %}
+{% for post in site.posts limit:10 %}
 <article {% if forloop.first %}class="first-child"{% endif %}>
 	{% if post.language == "en" %}
 	<span class="topic topic-lang">Tiếng Anh</span>
@@ -54,6 +41,14 @@
 	<a href='{{ post.url }}'>[Đọc bài...]</a>
 </article>
 {% endfor %}
+
+<div class="spacy-line"></div>
+<h3>Bài cũ hơn</h3>
+<ul>
+{% for post in site.posts offset:10 %}
+<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
 <script type="text/javascript">
 (function() {
 	function ok(txt) {
