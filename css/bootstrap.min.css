@@ -106,11 +106,12 @@ a.badge:hover,a.badge:focus{color:#ffffff;text-decoration:none;cursor:pointer;}
 .topic{display:inline-block;padding:0 10px;font-size:10px;font-weight:bold;height:20px;line-height:20px;color:#888888;white-space:nowrap;background-color:#eeeeee;text-transform:uppercase;border:1px solid #dddddd;vertical-align:middle}
 .topic-lang{background-color:limegreen;border:1px solid limegreen;color:white}
 .topic:empty{display:none;}
-.tag{display:inline-block;font-size:12px;margin-left:0;padding:0 4px;white-space:nowrap;color:white}
-.tag-new{background-color:red}
-.tag-hot{background-color:brown}
-.tag-thorough{background-color:green}
-.tag-deep{background-color:blue}
+.tag{display:inline-block;font-size:11px;height:16px;line-height:16px;padding:0 4px;white-space:nowrap;color:white;text-shadow:none}
+.tag:empty{display:none;}
+.tag-new{background-color:#f30}
+.tag-hot{background-color:#b33}
+.tag-thorough{background-color:#3b3}
+.tag-deep{background-color:#06b}
 [class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url("../img/glyphicons-halflings.png");background-position:14px 14px;background-repeat:no-repeat;margin-top:1px;}
 .icon-white,.nav-pills>.active>a>[class^="icon-"],.nav-pills>.active>a>[class*=" icon-"],.nav-list>.active>a>[class^="icon-"],.nav-list>.active>a>[class*=" icon-"],.navbar-inverse .nav>.active>a>[class^="icon-"],.navbar-inverse .nav>.active>a>[class*=" icon-"],.dropdown-menu>li>a:hover>[class^="icon-"],.dropdown-menu>li>a:focus>[class^="icon-"],.dropdown-menu>li>a:hover>[class*=" icon-"],.dropdown-menu>li>a:focus>[class*=" icon-"],.dropdown-menu>.active>a>[class^="icon-"],.dropdown-menu>.active>a>[class*=" icon-"],.dropdown-submenu:hover>a>[class^="icon-"],.dropdown-submenu:focus>a>[class^="icon-"],.dropdown-submenu:hover>a>[class*=" icon-"],.dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url("../img/glyphicons-halflings-white.png");}
 .icon-glass{background-position:0 0;}

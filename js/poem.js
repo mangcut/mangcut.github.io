@@ -188,7 +188,12 @@ $(document).ready(function () {
 			if (args.timing === "now") {
 				internalPerform();
 			} else {
-				$(selfTag).on(args.timing, internalPerform);
+				$(selfTag).on(args.timing, function(event) {
+					internalPerform();
+					if (this.nodeName === "A") {
+						event.preventDefault();
+					}
+				});
 			}
 		});
 		};

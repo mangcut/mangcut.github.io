@@ -1,19 +1,27 @@
 <section>
 <div class="spacy-line"></div>
 <h4>Loạt bài <a href="/blog/world/">Thế giới như tôi hình dung</a>:</h4>
-<ol>
+<table class="table-u-bottom">
 {% for post in site.posts reversed %}
  {% if post.series_id == site.recommended_series_id %}
+ <tr>
   {% if page.url == post.url %}
-    <li>{{post.title}}</li>
+	<td width="16px">{{forloop.index | minus:6}}</td>
+    <td colspan="2">{{post.title}}</td>
   {% else %}
-    <li><a href="{{post.url}}">{{ post.title }}</a>
-	{% if post.feel %}<span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span>{% endif %}
-	</li>
+    {% if post.feel %}
+	<td width="16px">{{forloop.index | minus:6}}</td>
+    <td><a href="{{post.url}}">{{ post.title }}</td>
+	<td align="right"><span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span></td>
+	{% else %}
+	<td width="16px">{{forloop.index | minus:6}}</td>
+	<td colspan="2"><a href="{{post.url}}">{{ post.title }}</td>
+	{% endif %}
   {% endif %}
  {% endif %}
 {% endfor %}
-</ol>
+<tr>
+</table>
 
 <h4 style="margin-top: 25px">Có thể bạn cũng thích:</h4>
 <ul>
