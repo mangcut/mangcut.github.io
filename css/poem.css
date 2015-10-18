@@ -154,6 +154,19 @@ figure figcaption.inside {
 	position: relative;
 }
 
+.img-post-cover {
+	display: block;
+}
+
+.auto-left {
+	margin-left: auto;
+}
+
+.auto-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .video-container {
 	position: relative;
 	padding-bottom: 56.25%;

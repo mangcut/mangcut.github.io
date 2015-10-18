@@ -29,8 +29,8 @@
 	<p class="font-small muted">{{ post.date | date: "%-d/%-m/%Y" }} - <a href="/about.html">{% if post.author %}{{ post.author }}{% else %}Trương Hồng Thi{% endif %}</a> - dài {{ post.content | strip_html | number_of_words | divided_by:mc_readspead | plus:1}} phút</p>
 	{% if post.image %}
 	<figure>
-	  <div class="img-container" {% if post.image_origin %}data-origin="{{post.image_origin}}{% endif %}">
-		<a href="{{ post.url }}"><img src="{{ post.image }}" {% if post.image_caption %}alt="{{ post.image_caption }}" title="{{ post.image_caption }}"{% endif %}></img></a>
+	  <div class="img-container" {% if post.image_origin %}data-origin="{{post.image_origin}}"{% endif %}{% if post.image_back %} style="background-color:{{post.image_back}}"{% endif %}>
+		<a href="{{ post.url }}"><img class="img-post-cover{% if post.image_align %} auto-{{post.image_align}}{% endif %}" src="{{ post.image }}" {% if post.image_caption %}alt="{{ post.image_caption }}" title="{{ post.image_caption }}"{% endif %}></img></a>
 	  </div>
 	  {% if post.image_caption %}
 	  <figcaption>{{ post.image_caption }}</figcaption>
