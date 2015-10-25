@@ -2,23 +2,29 @@
 	<div class="sitemap-heading" data-action="trigger" data-target="#overlay" data-options="click">
 		<table class="table-layout">
 			<tr>
-			<td class="sitemap-text heading-text bold font-xxlarge"><img height="30px" src="/img/mangcut_text.png" alt="MĂNG CỤT"></td>
+			<td class="sitemap-text heading-text bold font-xxlarge"><img height="30px" src="/img/mangcut_text.svg" onerror="this.src='/img/mangcut_text.png';this.onerror=null;" alt="MĂNG CỤT"></td>
 			<td align="right"><button type="button" class="close" aria-hidden="true">&times;</button></td>
 			</tr>
 		</table>
 	</div>
 	<div id="sitemapContent" class="sitemap-content">
-		<h3>Nổi bật</h3>
-		<div><a href="/blog/world" title="Loạt bài: Thế giới như tôi hình dung"><img  style="max-width:100%" src="/img/world.jpg" alt="Loạt bài: Thế giới như tôi hình dung"></a></div>
+		<h3>Bài tiêu biểu</h3>
+		<!--div><a href="/blog/world" title="Loạt bài: Thế giới như tôi hình dung"><img  style="max-width:100%" src="/img/world.jpg" alt="Loạt bài: Thế giới như tôi hình dung"></a></div-->
+		<ul class="nav nav-list">
+			<li style="border-top: 1px solid #dde"><a href="/blog/world/">Loạt bài: Thế giới như tôi hình dung</a></li>
+			{% for post in site.posts %}
+			  {% if post.recommend %}<li style="border-top: 1px solid #dde"><a href="{{ post.url }}">{{ post.title }}</a></li>{% endif %}
+			{% endfor %}
+		</ul>
 		
 		<h3 style="margin-top:30px">Bài gần đây</h3>
 		<ul class="nav nav-list">
 			{% for post in site.posts %}
-			  <li style="border-top: 1px solid #dde" {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}"><!--span class="muted font-xsmall" style="display:inline-block;width:35px">{{ post.date | date: "%d/%m" }}</span-->{{ post.title }}&nbsp;<span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span></a></li>
+			  <li style="border-top: 1px solid #dde" {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}">{{ post.title }}&nbsp;<span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span></a></li>
 			{% endfor %}
 		</ul>
 		
-		{% include share_page1.html %}
+		<!-- include share_page1.html -->
 		<br>
 	</div>
 </div>
