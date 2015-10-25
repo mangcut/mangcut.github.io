@@ -640,7 +640,7 @@ html.touch hidden-touch {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
   opacity: .5;
 }
-.no-touch .cd-top:hover {
+.no-touch .cd-top:hover, .cd-bottom {
   background-color: #a02c2c;
   opacity: 1;
 }

@@ -268,7 +268,7 @@ jQuery(document).ready(function($){
 			var t = $w.scrollTop();
 			var fade = false;
 			
-			( t > offset ) ? $b.addClass('cd-is-visible') : $b.removeClass('cd-is-visible cd-fade-out');
+			( t > offset ) ? $b.addClass('cd-is-visible') : $b.removeClass('cd-is-visible cd-fade-out cd-bottom');
 			if( t > offset_opacity ) { 
 				fade = true;
 			}
@@ -277,7 +277,9 @@ jQuery(document).ready(function($){
 				var nearBottom = t + $w.height() > $(document).height() - 100;
 				if (nearBottom) {
 					fade = false;
-					$b.removeClass('cd-fade-out');
+					$b.removeClass('cd-fade-out').addClass('cd-bottom');
+				} else {
+					$b.removeClass('cd-bottom');
 				}
 			}
 			
