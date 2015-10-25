@@ -258,20 +258,52 @@ jQuery(document).ready(function($){
 		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
 		offset_opacity = 1200,
 		//duration of the top scrolling animation (in ms)
-		scroll_top_duration = 700,
+		scroll_top_duration = 200,
 		//grab the "back to top" link
-		$back_to_top = $('.cd-top');
-
+		$b = $('.cd-top'),
+		wait = false,
+		called = false,
+		$w = $(window),
+		updateStatus = function() {
+			var t = $w.scrollTop();
+			var fade = false;
+			
+			( t > offset ) ? $b.addClass('cd-is-visible') : $b.removeClass('cd-is-visible cd-fade-out');
+			if( t > offset_opacity ) { 
+				fade = true;
+			}
+			
+			if (t > offset) {
+				var nearBottom = t + $w.height() > $(document).height() - 100;
+				if (nearBottom) {
+					fade = false;
+					$b.removeClass('cd-fade-out');
+				}
+			}
+			
+			if (fade) $b.addClass('cd-fade-out');
+		};
 	//hide or show the "back to top" link
 	$(window).scroll(function(){
-		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-		if( $(this).scrollTop() > offset_opacity ) { 
-			$back_to_top.addClass('cd-fade-out');
+		//updateStatus();
+
+		called = true;
+		if (!wait) {
+			updateStatus();
+			wait = true;
+			called = false;
+			setTimeout(function () {
+				wait = false;
+				if (!!called) {
+					updateStatus();
+					called = false;
+				}
+			}, 100);
 		}
 	});
 
 	//smooth scroll to top
-	$back_to_top.on('click', function(event){
+	$b.on('click', function(event){
 		event.preventDefault();
 		$('body,html').animate({
 			scrollTop: 0 ,
