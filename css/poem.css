@@ -609,10 +609,10 @@ html.touch hidden-touch {
 .cd-top {
   display: inline-block;
   height: 40px;
-  width: 40px;
+  width: 20px;
   position: fixed;
-  bottom: 40px;
-  right: 10px;
+  bottom: 0;
+  right: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   /* image replacement properties */
   overflow: hidden;
@@ -643,17 +643,16 @@ html.touch hidden-touch {
   background-color: #a02c2c;
   opacity: 1;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 880px) {
   .cd-top {
-    right: 20px;
-    bottom: 20px;
+	width: 40px;
   }
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 920px) {
   .cd-top {
-    height: 60px;
-    width: 60px;
-    right: 30px;
-    bottom: 30px;
+    height: 40px;
+    width: 40px;
+    right: 20px;
+    bottom: 20px;
   }
 }

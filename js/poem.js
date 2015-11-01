@@ -255,7 +255,7 @@ $(document).ready(function () {
 if (Modernizr.touch && !(/iPad|iPhone|iPod/.test(navigator.platform))) {
 	jQuery(document).ready(function($){
 		// browser window scroll (in pixels) after which the "back to top" link is shown
-		var offset = 1200,
+		var offset = 1000,
 			//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
 			offset_opacity = 1500,
 			//duration of the top scrolling animation (in ms)
