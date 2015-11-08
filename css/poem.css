@@ -523,12 +523,6 @@ html.site-home  section.article-list article:first-child, html.site-home  sectio
 	border:0
 }
 
-@media (max-width: 239px) {
-	.navbar .brand {
-		display: none;
-	}
-}
-
 @media (max-width: 319px) {
 	.hidden-phone-v {
 		display: none;
@@ -655,4 +649,20 @@ html.touch hidden-touch {
     right: 20px;
     bottom: 20px;
   }
+}
+
+.btn-share {
+   display: inline-block;
+   padding: 0 15px 0 10px;
+   border:none;
+   background-color: #ececec;
+   text-decoration: none;
+   font-size: 12px;
+   line-height: 24px;
+   color: #FFF;
+   background-color: #3b5998;
+}
+a.btn-share:hover, a.btn-share:focus {
+   color: #efefef;
+   text-decoration: none;
 }

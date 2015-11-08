@@ -2,9 +2,6 @@
 {% if page.is_page %}
 <div class="spacy-line"></div>
 {% endif %}
-<p style="margin-bottom:0">
-	<iframe width="200px" height="20px" src="//upload.facebook.com/plugins/like.php?href={{ site.url | cgi_escape }}{{ canonical | cgi_escape }}&amp;locale=vi_VN&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=true&amp;share=true&amp;colorscheme=light&amp;{% if site.facebook_action %}action={{site.facebook_action}}&amp;{% endif %}height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:20px;" allowTransparency="true"></iframe>
-</p>
-<p class="font-xxsmall">{% if page.share_text %}{{page.share_text}}{% else %}Cảm ơn bạn đã đọc bài.{% endif %}</p>
-<!--p class="font-xsmall">Bình luận? <a href="#comment_disqus" data-action='[{"action": "show", "target": "#disqusZone"}, {"action": "scrollBy", "options": [0, 250]}]'>Disqus</a>{% if page.fb_post_id %} - <a href="https://www.facebook.com/mangcut.vn/posts/{{page.fb_post_id}}">Facebook</a>{% endif %}{% if page.lh_post_id %} - <a href="http://linkhay.com/{{page.lh_post_id}}">LinkHay</a>{% endif %}.</p-->
+<div class="font-xxsmall">{% if page.share_text %}{{page.share_text}}{% else %}Chia sẻ bài viết cùng bạn bè:{% endif %}</div>
+<p><a target="blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn-share" title="Chia sẻ bài này lên Facebook"><img alt="" src="/img/fb2.svg">&nbsp;Chia sẻ</a></p>
 </section>

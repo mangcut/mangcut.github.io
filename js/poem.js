@@ -1,54 +1,23 @@
-$(document).ready(function () {
-	// prevent page-load on <a href='#'>Something</a>
-	/*
-	$(document).on("click", "a", function(e) {
-		var theHref = $(this).attr("href");
-		var theTarget = $(this).attr("target");
-		if (theHref === "#" || theHref === "") {
-			e.preventDefault();
-		} else if (("standalone" in window.navigator) && window.navigator.standalone) {
-			if ( theHref.indexOf("#") !== 0 && theHref.toLowerCase().indexOf("http") !== 0 && 
-				($P.nullOrEmpty(theTarget) || theTarget === "_self")) {
-				e.preventDefault();
-				location.href = theHref;
-			}
-		}
-	}); */
-
-	if (("standalone" in window.navigator) && window.navigator.standalone) {
-		$(document).on("click", "a", function(e) {
-			var theHref = $(this).attr("href");
-			var theTarget = $(this).attr("target");
-			if ( theHref !== "" && theHref.indexOf("#") !== 0 && theHref.toLowerCase().indexOf("http") !== 0 && 
-				($P.nullOrEmpty(theTarget) || theTarget === "_self")) {
-				e.preventDefault();
-				location.href = theHref;
-			}
-		});
-	}
-	
-	/*
-	$(".btn-share").click(function(e) {
+$(window).on("load", function () {
+	/*$(".btn-share").click(function(e) {
 		var sharer = "https://upload.facebook.com/sharer/sharer.php?u=";
 		var url = $P.getData($(this), "href", location.href);
-		window.open(sharer + url, 'sharer', 'width=626,height=436');
+		window.open(sharer + url, 'fb-sharer', 'width=626,height=436');
 		e.preventDefault();
-	});
-	*/
+	});*/
+
 	$(".avatar-photo").each(function(){
 		var $t = $(this);
-		var photoUrl = $t.attr("src");
+		var photoUrl = $t.attr("data-src");
 		var parts = photoUrl.split("=");
 		var rate = window.devicePixelRatio || 0;
 		if (rate > 1) {
 			if (rate < 1.5) rate = 1.5;
 			var size = (parts[1] * rate) | 0;
-			$t.attr("src", parts[0] + "=" + size);
+			photoUrl = parts[0] + "=" + size;
 		}
+		$t.attr("src", photoUrl);
 	});
-	
-	// auto switch
-	//$(".switch").flipswitch();
 	
 	// make code pretty
 	window.prettyPrint && prettyPrint();
@@ -253,7 +222,7 @@ $(document).ready(function () {
 })( this );
 
 if (Modernizr.touch && !(/iPad|iPhone|iPod/.test(navigator.platform))) {
-	jQuery(document).ready(function($){
+	$(window).on("load", function($){
 		// browser window scroll (in pixels) after which the "back to top" link is shown
 		var offset = 1000,
 			//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
