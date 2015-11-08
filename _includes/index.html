@@ -1,8 +1,10 @@
-<!--div id="enPageAsk" class="hide"><br><p class="alert alert-info font-xxsmall" style="margin-bottom:-10px;">Read English only? <a href="/en/"><u>View English page</a></u>.</p></div-->
-
-<!--div><br><p class="alert alert-success">Bài mới: {% for post in site.posts limit:1 %}<a href="{{post.url}}">{{(post.title}}</a>.{% endfor %}</p></div-->
-
-<div class="example-frame" style="border:1px dashed #aaa;padding:10px;margin-top:20px;margin-bottom:20px;">
+<div style="margin:0 -20px;padding:5px 0;text-align:center;font-size:0.9em;background-color:#cfc">
+chào bạn - đây là trang blog măng cụt
+</div>
+{% for post in site.posts limit:10 %}
+<article {% if forloop.first %}class="first-child"{% endif %}>
+{% if forloop.index0 == 1 %}
+<!--div class="example-frame" style="border:1px dashed #aaa;padding:10px;margin-top:20px;margin-bottom:20px;">
 	<p class="index-byline font-small muted"><span class="tag tag-inspire">nổi bật</span> - loạt bài</p>
 	<h2 class="index-title"><a href="/blog/world/">Thế giới như tôi hình dung</a></h2>
 	<figure>
@@ -11,11 +13,9 @@
 	  </div>
 	</figure>
 	<p>Chúng ta là ai, từ đâu tới, và sẽ đi về đâu? Những gì đang chờ đợi chúng ta trong 100 năm tới (gợi ý: rất nhiều bước ngoặt!). <a href="/blog/world/" title="Loạt bài: Thế giới như tôi hình dung">Xem tiếp...</a></p>
-</div>
+</div-->
+{% endif %}
 
-
-{% for post in site.posts limit:10 %}
-<article {% if forloop.first %}class="first-child"{% endif %}>
 	{% if post.language == "en" %}
 	  {% assign mc_readspead = 276 %}
 	{% else %}
@@ -26,7 +26,7 @@
 	{% if post.image %}
 	<figure>
 	  <div class="img-container" {% if post.image_origin %}data-origin="{{post.image_origin}}"{% endif %}{% if post.image_back %} style="background-color:{{post.image_back}}"{% endif %}>
-		<a href="{{ post.url }}"><img class="img-post-cover{% if post.image_align %} auto-{{post.image_align}}{% endif %}" src="{{ post.image }}" {% if post.image_caption %}alt="{{ post.image_caption }}" title="{{ post.image_caption }}"{% endif %}></img></a>
+		<a href="{{ post.url }}"><img class="img-post-cover{% if post.image_align %} auto-{{post.image_align}}{% endif %}" {% if forloop.index0 < 2 %}src="{{ post.image }}"{% else %}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP49R8AAvYB+rJuaHAAAAAASUVORK5CYII=" data-src="{{ post.image }}"{% endif %} {% if post.image_caption %}alt="{{ post.image_caption }}" title="{{ post.image_caption }}"{% endif %}></img></a>
 	  </div>
 	  {% if post.image_caption %}
 	  <figcaption>{{ post.image_caption }}</figcaption>
