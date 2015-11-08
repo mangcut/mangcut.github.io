@@ -1,3 +1,12 @@
+$(document).ready(function() {
+	var svgOk = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
+	if (!svgOk) {
+		$("img[src$='.svg']").each(function(){
+			$(this).attr("src", $(this).attr("src").replace(".svg", ".png"));
+		});
+	}
+});
+	
 $(window).on("load", function () {
 	$(".avatar-photo").each(function(){
 		var $t = $(this);
