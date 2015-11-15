@@ -3,7 +3,7 @@ font_family: "Arial,sans-serif"
 body:
   font_size: 14px
   line_height: 20px
-  footer_height: 160px
+  footer_height: 160
 article:
   font_size: 16px
   line_height: 1.5
@@ -440,7 +440,7 @@ h2.index-title {
     height: auto !important;
     height: 100%;
     /* Negative indent footer by it's height */
-    margin: 0 auto -{{page.body.footer_height}};
+    margin: 0 auto -{{page.body.footer_height|plus:20}}px;
 }
 
 .type-post #wrapper {
@@ -448,7 +448,7 @@ h2.index-title {
 }
 
 #footer {
-	height: {{page.body.footer_height}};
+	height: {{page.body.footer_height}}px;
 	padding: 9px 0px;
 	background-color: #eee;
 	color: #333;
@@ -456,7 +456,7 @@ h2.index-title {
 }
 
 .push-down {
-	height: {{page.body.footer_height}};
+	height: {{page.body.footer_height|plus:20}}px;
 }
 
 .container-first{
@@ -1067,17 +1067,17 @@ a.btn-share:hover, a.btn-share:focus {
    text-decoration: none;
 }
 
-input[type="email"] {
-	width: 190px;
-    width: calc(100% - 100px);
-    max-width: 190px;
+input[type="email"],input[type="text"] {
     font-size: 12px;
     padding: 6px 3px;
     border: 1px solid #a02c2c;
 	outline: 0;
 }
 
-input[type="email"]:focus, input[type="email"]:active {
+input[type="email"],input[type="text"] {
+	width: 190px;
+    width: calc(100% - 100px);
+    max-width: 190px;
 }
 
 input[type="submit"] {
