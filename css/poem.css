@@ -1099,3 +1099,11 @@ input[type="submit"] {
     background-color: #a02c2c;
     content: "";
 }
+.welcome {
+	margin:0 -20px 10px;
+	padding:5px 0;
+	text-align:center;
+	font-size:0.9em;
+	background-color:#C65454;
+	color:#f5f5f5;
+}

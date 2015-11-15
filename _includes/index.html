@@ -1,21 +1,6 @@
-<div style="margin:0 -20px 10px;padding:5px 0;text-align:center;font-size:0.9em;background-color:#C65454;color:#f5f5f5;">
-chào bạn - đây là trang blog măng cụt
-</div>
+<div class="welcome">chào bạn - đây là trang blog măng cụt</div>
 {% for post in site.posts limit:10 %}
 <article {% if forloop.first %}class="first-child"{% endif %}>
-{% if forloop.index0 == 1 %}
-<!--div class="example-frame" style="border:1px dashed #aaa;padding:10px;margin-top:20px;margin-bottom:20px;">
-	<p class="index-byline font-small muted"><span class="tag tag-inspire">nổi bật</span> - loạt bài</p>
-	<h2 class="index-title"><a href="/blog/world/">Thế giới như tôi hình dung</a></h2>
-	<figure>
-	  <div data-origin="NASA" style="background-color:black">
-		<a href="/blog/world/"><img class="img-post-cover auto-center" style="padding:20px 0 30px 20px" src="/media/earthrise_small.jpg"></img></a>
-	  </div>
-	</figure>
-	<p>Chúng ta là ai, từ đâu tới, và sẽ đi về đâu? Những gì đang chờ đợi chúng ta trong 100 năm tới (gợi ý: rất nhiều bước ngoặt!). <a href="/blog/world/" title="Loạt bài: Thế giới như tôi hình dung">Xem tiếp...</a></p>
-</div-->
-{% endif %}
-
 	{% if post.language == "en" %}
 	  {% assign mc_readspead = 276 %}
 	{% else %}
@@ -45,22 +30,3 @@ chào bạn - đây là trang blog măng cụt
 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
-<!--script type="text/javascript">
-(function() {
-	function ok(txt) {
-		return (txt && txt.indexOf("vi") >= 0);
-	}
-	function okAny(arr) {
-		if (!arr || !arr.length) return false;
-		for (var i = 0; i < arr.length; i ++) {
-			if (ok(arr[i])) return true;
-		}
-		return false;
-	}
-	
-	var hasVI = ok(navigator.userLanguage) || ok(navigator.language) || okAny(navigator.languages);
-	
-	!hasVI && document.getElementById("enPageAsk").removeAttribute("class");
-	
-})();
-</script-->
