@@ -9,20 +9,11 @@
 	  <div class="container-fluid container-first">
         <section class="article-list">
           {{ content }}
-		  {% if page.shareline != false %}
-		    {% if page.site_home %}
-		      {% include share_page2.html %}
-			{% else %}
-			  {% if page.is_page != true %}
-			    {% include shareline.html %}
-			    {% include recommend.html %}
-			  {% endif %}
-			  {% include share_page2.html %}
-			  {% if page.is_page != true %}
-			    {% include post_footer.html %}
-			  {% endif %}
-			{% endif %}
-          {% endif %}
+		  {% if page.is_post %}
+			{% include shareline.html %}
+			{% include recommend.html %}
+			{% include post_footer.html %}
+		  {% endif %}
         </section>
 
         <p class="push-down"></p>
