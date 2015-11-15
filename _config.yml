@@ -1,8 +1,8 @@
-name: Măng cụt
-en_name: Mangcut
-title: Viết để thay đổi nhận thức
+name: Blog Măng Cụt
+en_name: Blog Măng Cụt
+title: Viết để thay đổi
 en_title: Truong Hong Thi's Personal Page
-description: Mở những ô cửa mới để cùng nhìn thế giới.
+description: Mở những ô cửa mới để cùng quan sát thế giới.
 en_description: Truong Hong Thi on Programming and Life
 permalink: /:categories/:year-:month-:day-:title.html
 url: http://www.mangcut.vn

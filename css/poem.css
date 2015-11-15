@@ -1091,3 +1091,11 @@ input[type="submit"] {
     color: white;
     letter-spacing: 1px;
 }
+.tombstone:after {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 3px;
+    background-color: #a02c2c;
+    content: "";
+}
