@@ -2,13 +2,15 @@
 layout: default
 ---
 <article class="article">
+<div class="article-header">
 <div class="post-title">
-{% if page.series_name %}
-<!--h4>{{ page.series_name }}</h4-->
-{% endif %}
 <h1>{{ page.title }}</h1>
+{% if page.subtitle %}
+<p style="font-weight:normal;font-size:1.3em">{{ page.subtitle }}</p>
+{% endif %}
 </div>
 {% include byline.html %}
+</div>
 <div class="{{ page.content_class}} article-content">
 {{ content }}
 </div>

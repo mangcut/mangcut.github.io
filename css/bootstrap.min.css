@@ -54,7 +54,7 @@ a:hover,a:focus{color:#005580;text-decoration:underline;}
 .container-fluid{padding-right:20px;padding-left:20px;*zoom:1;}.container-fluid:before,.container-fluid:after{display:table;content:"";line-height:0;}
 .container-fluid:after{clear:both;}
 p{margin:0 0 10px;}
-.lead{margin-bottom:20px;font-weight:bold}
+.lead{margin-bottom:20px;font-weight:normal;font-style:italic}
 small{font-size:85%;}
 strong{font-weight:bold;}
 em{font-style:italic;}
@@ -651,17 +651,32 @@ figure figcaption.inside {
 	margin-bottom: 20px;
 }
 
-section.article-list article {
-	padding-top: 20px;
-}
-
 html.site-home section.article-list article {
 	padding-bottom: 20px;
+	padding-top: 20px;
 	border-top: solid 1px #e5e5e5;
 }
 		
 html.site-home  section.article-list article:first-child, html.site-home  section.article-list article.first-child {
 	border-top: 0;
+}
+
+.article-header {
+	margin: 0 -20px 0;
+	padding: 20px;
+	background-color: #C65454;
+	color: #f5f5f5;
+}
+
+.article-byline, .article-byline a {
+	color:#ddd;
+}
+.article-header a:hover, .article-header:active, .article-header:visited {
+	color: #f5f5f5;
+}
+
+a.article-byline {
+	padding:0 20px 10px;margin:15px -20px 0;
 }
 
 .article-content {
@@ -715,7 +730,7 @@ html.site-home  section.article-list article:first-child, html.site-home  sectio
 	float: right;
 	padding: 10px 0 10px 10px;
 	margin: 10px -5px 10px 10px;
-	width: 120px;
+	width: 90px;
 	font-size: 0.8em;
 	color: #333;
 	border: 1px dashed #999;
