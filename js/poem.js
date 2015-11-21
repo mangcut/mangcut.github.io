@@ -21,9 +21,10 @@ $(window).on("load", function () {
 		}
 	});
 	
-	$(".swap-photo, .img-container img[data-src]").each(function(){
-		var $t = $(this);
-		$t.attr("src", $t.attr("data-src"))
+	$(".swap-photo[data-src], .img-container[data-src]").each(function(){
+		var $t= $(this);
+		$('<img />').attr("src", $t.data("src"))
+			.attr("alt", $t.data("alt")).attr("class", $t.data("class")).appendTo($t);
 	});
 	
 	// make code pretty

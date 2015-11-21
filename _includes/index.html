@@ -10,9 +10,15 @@
 	<h2 class="index-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	{% if post.image %}
 	<figure>
+	  {% if forloop.index0 < 2 %}
 	  <div class="img-container" {% if post.image_origin %}data-origin="{{post.image_origin}}"{% endif %}{% if post.image_back %} style="background-color:{{post.image_back}}"{% endif %}>
-		<a href="{{ post.url }}"><img class="img-post-cover{% if post.image_align %} auto-{{post.image_align}}{% endif %}" {% if forloop.index0 < 2 %}src="{{ post.image }}"{% else %}src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP49R8AAvYB+rJuaHAAAAAASUVORK5CYII=" data-src="{{ post.image }}"{% endif %} {% if post.image_caption %}alt="{{ post.image_caption }}" title="{{ post.image_caption }}"{% endif %}></img></a>
+		<a href="{{ post.url }}"><img class="img-post-cover{% if post.image_align %} auto-{{post.image_align}}{% endif %}" src="{{ post.image }}" {% if post.image_alt %}alt="{{ post.image_alt }}"{% endif %}></img></a>
 	  </div>
+	  {% else %}
+	  <div class="img-container" {% if post.image_origin %}data-origin="{{post.image_origin}}"{% endif %}{% if post.image_back %} style="background-color:{{post.image_back}}"{% endif %}>
+		<a class="swap-photo" href="{{ post.url }}" data-src="{{post.image}}"{% if post.image_alt %} data-alt="{{if post.image_alt}}"{% endif %} data-class="img-post-cover{% if post.image_align %} auto-{{post.image_align}}{% endif %}"><noscript><img class="img-post-cover{% if post.image_align %} auto-{{post.image_align}}{% endif %}" src="{{ post.image }}" {% if post.image_alt %}alt="{{ post.image_alt }}"{% endif %}></img></noscript></a>
+	  </div>
+	  {% endif %}
 	  {% if post.image_caption %}
 	  <figcaption>{{ post.image_caption }}</figcaption>
 	  {% endif %}
