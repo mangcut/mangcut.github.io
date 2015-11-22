@@ -57,15 +57,18 @@ $(window).on("load", function () {
 			if (args.advanced === ":overlay") {
 				var $overlay = $('#overlay');
 				if ($overlay.length === 0) {
-					$("<div id='overlay'></div>").appendTo($("body").addClass("noscroll")).show().click(function() {
-						$(args.self).trigger(args.timing);
-						$(this).fadeOut();
-						$("body").removeClass("noscroll")
-					});
-				} else {
-					$("body").addClass("noscroll");
-					$overlay.show();
+					$overlay = $("<div id='overlay'></div>")
+						.appendTo($("body"))
+						.show().
+						click(function() {
+							$(args.self).trigger(args.timing);
+							$(this).fadeOut();
+							$("body").removeClass("noscroll")
+						});
 				}
+				
+				Modernizr.touch && $("body").addClass("noscroll");
+				$overlay.show();
 			}
 		//}
 		
