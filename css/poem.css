@@ -1066,9 +1066,7 @@ input[type="email"],input[type="text"] {
     padding: 6px 3px;
     border: 1px solid #a02c2c;
 	outline: 0;
-}
-
-input[type="email"],input[type="text"] {
+	border-radius: 0;
 	width: 190px;
     width: calc(100% - 100px);
     max-width: 190px;
@@ -1084,6 +1082,7 @@ input[type="submit"] {
     padding: 0 15px;
     color: white;
     letter-spacing: 1px;
+	border-radius: 0;
 }
 .tombstone:after {
     display: inline-block;
