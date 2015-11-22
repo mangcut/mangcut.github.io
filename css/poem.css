@@ -435,7 +435,6 @@ h2.index-title {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-	overflow: auto;
     /* Negative indent footer by it's height */
     margin: 0 auto -{{page.body.footer_height|plus:20}}px;
 }
@@ -476,7 +475,7 @@ h2.index-title {
 }
 
 .navbar .navbar-button {
-	margin: 9px 0 0 0;
+	margin: 9px -20px 0 0;
 	padding: 0 0 0 4px;
 	display: block;
 }
@@ -737,6 +736,10 @@ a.article-byline {
 
 .nowrap {
   white-space: nowrap;
+}
+
+.noscroll {
+	overflow:hidden;
 }
 
 .scroll-x {

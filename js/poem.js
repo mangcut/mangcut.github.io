@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	// auto action
+	$("[data-action]").perform();
+	
 	var svgOk = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
 	if (!svgOk) {
 		$("img[src$='.svg']").each(function(){
@@ -29,9 +32,6 @@ $(window).on("load", function () {
 	
 	// make code pretty
 	window.prettyPrint && prettyPrint();
-	
-	// auto action
-	$("[data-action]").perform();
 });
 
 (function( $ ){
@@ -57,11 +57,13 @@ $(window).on("load", function () {
 			if (args.advanced === ":overlay") {
 				var $overlay = $('#overlay');
 				if ($overlay.length === 0) {
-					$("<div id='overlay'></div>").appendTo($("body")).show().click(function() {
+					$("<div id='overlay'></div>").appendTo($("body").addClass("noscroll")).show().click(function() {
 						$(args.self).trigger(args.timing);
 						$(this).fadeOut();
+						$("body").removeClass("noscroll")
 					});
 				} else {
+					$("body").addClass("noscroll");
 					$overlay.show();
 				}
 			}
