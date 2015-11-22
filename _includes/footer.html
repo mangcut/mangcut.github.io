@@ -1,7 +1,7 @@
 <div id="footer">
   <div class="container-fluid">
     {% include share_page2.html %}<br>
-	<p class="muted" style="margin-bottom:3px">&copy; {{ 'now' | date: "%Y" }} - {% if page.about != true %}<a rel="author" href="/about.html">{{ site.author }}</a>{% else %}<a rel="me" href="https://www.google.com/+TruongHongThi">{{ site.author }}</a>{% endif %}</p>
+	<div class="muted" style="margin-bottom:3px">&copy; {{ 'now' | date: "%Y" }} - <address>{% if page.about != true %}<a rel="author" href="/about.html">{{ site.author }}</a>{% else %}<a rel="me" href="https://www.google.com/+TruongHongThi">{{ site.author }}</a>{% endif %}</address></div>
 	<p class="muted">Dẫn nguồn & link tới bài gốc khi đăng lại</p>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="article-byline font-small">
 	<div style="margin-top:40px;position:relative">
-		<div><a rel="author" href="/about.html"><i>{% if page.author %}{{ page.author }}{% else %}Trương Hồng Thi{% endif %}</i></a></div>
-		<div class="font-xsmall" style="padding-top:3px">{{ page.date | date: "%-d/%-m/%Y" }} - dài {{ page.content | strip_html | number_of_words | divided_by:351 | plus:1}} phút</div>
+		<div><address><a rel="author" href="/about.html"><i>{% if page.author %}{{ page.author }}{% else %}Trương Hồng Thi{% endif %}</i></a><address></div>
+		<div class="font-xsmall" style="padding-top:3px"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d/%-m/%Y" }}<time> - dài {{ page.content | strip_html | number_of_words | divided_by:351 | plus:1}} phút</div>
 		<div style="position:absolute;right:0;bottom:5px">
 			<a style="padding:4px 13px;background-color:#f5f5f5;border-radius:50%" target="blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn-share" title="Chia sẻ bài này lên Facebook"><img alt="" src="/img/fb.svg"></a>
 		</div>
