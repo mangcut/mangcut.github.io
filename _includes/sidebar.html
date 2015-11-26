@@ -1,12 +1,12 @@
 <div id="sitemap" class="sitemap shadow">
 	<div class="sitemap-heading" data-action="trigger" data-target="#overlay" data-options="click">
-		<span style="margin-top:2px;display:inline-block">BÀI GẦN ĐÂY</span>
-		<button type="button" class="close" aria-hidden="true" style="font-size:36px;line-height:40px;display:inline">&times;</button>
+		<span>BÀI GẦN ĐÂY</span>
+		<button type="button" style="display:block;border:1px solid red;font-size:30px;line-height:30px;height:40px;box-sizing:border-box" class="close">&times;</button>
 	</div>
 	<div id="sitemapContent" class="sitemap-content">
 		<ul class="nav nav-list">
 			{% for post in site.posts %}
-			  <li style="border-bottom: 1px solid #dde" {% if page.url == post.url %} class="active"{% endif %}><a href="{{ post.url }}">{{ post.title }}&nbsp;<span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span></a></li>
+			  <li class="bottom-line{% if page.url == post.url %} active{% endif %}"><a href="{{ post.url }}">{{ post.title }}&nbsp;<span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span></a></li>
 			{% endfor %}
 		</ul>
 	</div>
