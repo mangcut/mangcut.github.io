@@ -666,7 +666,7 @@ a.article-byline {
 	float: right;
 	padding: 10px 0 10px 10px;
 	margin: 10px -5px 10px 10px;
-	width: 90px;
+	width: 97px;
 	font-size: 0.8em;
 	color: #333;
 	border: 1px dashed #999;
@@ -1070,7 +1070,8 @@ input[type="email"],input[type="text"] {
 
 input[type="submit"] {
     font-size: 12px;
-    line-height: 28px;
+    line-height: 12px;
+	height:28px;
     padding: 1px 0;
     background-color: #a02c2c;
     border: 0;
