@@ -91,7 +91,7 @@ blockquote.pull-right{float:right;padding-right:15px;padding-left:0;border-right
 blockquote.pull-right small:before{content:'';}
 blockquote.pull-right small:after{content:'\00A0 \2014';}
 q:before,q:after,blockquote:before,blockquote:after{content:"";}
-address{display:inline;}
+address{display:inline;font-style:normal}
 pre{padding:0 3px 2px;font-family:Consolas,Monaco,Menlo,"Courier New",monospace;color:#333333;}
 code{padding:0 4px 2px;background-color:#f7f7f9;white-space:nowrap;font-family:Consolas,Monaco,Menlo,"Courier New",monospace;border-radius:3px}
 pre{display:block;padding:9.5px;margin:0 0 10px;font-size:12px;line-height:20px;word-break:break-all;word-wrap:break-word;white-space:pre;white-space:pre-wrap;background-color:#f5f5f5;background: url(https://developer.cdn.mozilla.net/media/redesign/img/blueprint-dark.png) top center #fafbfc;}
@@ -512,10 +512,10 @@ figure {
 	margin: 10px 0 20px;
 }
 
-div[data-origin].img-container:hover {
+div[data-origin]:hover {
 }
 
-div[data-origin].img-container:hover:after {
+div[data-origin]:hover:after {
 	font-size: 85%;
 	line-height: 20px;
 	background: rgba(255, 255, 255, 0.8);
@@ -1060,12 +1060,17 @@ a.btn-share:hover, a.btn-share:focus {
 input[type="email"],input[type="text"] {
     font-size: 12px;
     padding: 6px 3px;
-    border: 1px solid #a02c2c;
+    border: 1px solid #bbb;
 	outline: 0;
 	border-radius: 0;
 	width: 190px;
     width: calc(100% - 100px);
     max-width: 190px;
+}
+
+input[type="email"]:focus,input[type="text"]:focus,
+input[type="email"]:hover,input[type="text"]:hover {
+    border-color: #a02c2c;
 }
 
 input[type="submit"] {
@@ -1081,6 +1086,15 @@ input[type="submit"] {
     letter-spacing: 1px;
 	border-radius: 0;
 }
+
+input[type="submit"].button {
+	background-color:#bbb;
+}
+
+input[type="submit"].button:hover, input[type="submit"].button:focus {
+	background-color:#a02c2c;
+}
+
 .tombstone:after {
     display: inline-block;
     width: 12px;
