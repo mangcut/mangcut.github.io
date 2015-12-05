@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% if page.lang %}{{page.lang}}{% else %}vi{% endif %}" class="no-js{% if page.is_post %} type-post{% else %} type-page{% endif %}{% if page.site_home %} site-home{% endif %}">
+<html lang="{% if page.lang %}{{page.lang}}{% else %}vi{% endif %}" class="no-js{% if page.is_post %} type-post{% else %} type-page{% endif %}{% if page.site_home %} site-home{% endif %}{% if page.header_image %} header-image{% endif %}{% if page.extra_class %} {{page.extra_class}}{% endif %}">
   <head>
     {% include head.html %}
   </head>
