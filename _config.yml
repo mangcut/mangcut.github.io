@@ -10,6 +10,7 @@ author: Trương Hồng Thi
 en_author: Truong Hong Thi
 highlighter: pygments
 recommended_series_id: world
+exclude: [temp,tmp,misc]
 markdown: kramdown
 kramdown:
   enable_coderay: false
