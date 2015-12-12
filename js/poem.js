@@ -26,8 +26,12 @@ $(window).on("load", function () {
 	
 	$(".swap-photo[data-src], .img-container[data-src]").each(function(){
 		var $t= $(this);
-		$('<img />').attr("src", $t.data("src"))
-			.attr("alt", $t.data("alt")).attr("class", $t.data("class")).appendTo($t);
+		$('<img />')
+			.attr("src", $t.data("src"))
+			.attr("alt", $t.data("alt"))
+			.attr("srcset", $t.data("srcset"))
+			.attr("title", $t.data("title"))
+			.attr("class", $t.data("class")).appendTo($t);
 	});
 	
 	// make code pretty
@@ -234,7 +238,7 @@ $(window).on("load", function () {
 
 })( this );
 
-if (Modernizr.touch && !(/iPad|iPhone|iPod/.test(navigator.platform))) {
+if (/*Modernizr.touch && */ !(/iPad|iPhone|iPod/.test(navigator.platform))) {
 	$(window).on("load", function(){
 		// browser window scroll (in pixels) after which the "back to top" link is shown
 		var offset = 1000,

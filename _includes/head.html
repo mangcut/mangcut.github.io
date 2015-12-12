@@ -36,6 +36,8 @@
 <meta property="article:author" content="https://www.facebook.com/mangcut.vn" />
 <meta property="article:publisher" content="https://www.facebook.com/mangcut.vn" />
 {% endif %}
+{% if page.see_also1 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also1}}" />{% endif %}
+{% if page.see_also2 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also2}}" />{% endif %}
 <meta name="twitter:card" content="summary" />
 {% if page.site_home %}
 <title>{{ site.name }} - {{ page.page_title }}</title>
