@@ -612,8 +612,10 @@ html.site-home  section.article-list article:first-child, html.site-home  sectio
 }
 
 .article-header {
-	margin: 0 -20px 0;
-	padding: 20px;
+	margin-top: 0;
+	margin-bottom:0;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	background-color: #C65454;
 	color: #f5f5f5;
 }
@@ -668,6 +670,15 @@ a.article-byline {
 	background-color: rgb(217,230,240);
 	padding: 8px 14px;
 	font-size: 0.9em;
+}
+
+.box-sepia {
+	border-top:1px dashed #333;
+	border-bottom:1px dashed #333;
+	margin-top:15px;
+	margin-bottom:16px;
+	background-color:#FBF0D9;
+	color:#5F4B32
 }
 
 .pullquote {
@@ -964,6 +975,14 @@ a.article-byline {
 	}
 }
 
+.over-margin {
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.over-padding {
+	padding-left: 20px;
+	padding-right: 20px;
+}
 @media (max-width: 400px) {
 	.sitemap {
 		width: 100%;
@@ -979,9 +998,13 @@ a.article-byline {
 	  padding-right: 5.5%;
 	  padding-left: 5.5%;
 	}
-	.img-container, .video-container {
+	.img-container, .video-container, .over-margin {
 		margin-left: -6.18%;
 		margin-right: -6.18%;
+	}
+	.over-padding {
+		padding-left: -6.18%;
+		padding-right: -6.18%;
 	}
 	.pullquote {
 		display: block;
@@ -1023,7 +1046,7 @@ html.touch hidden-touch {
   text-indent: 100%;
   white-space: nowrap;
   background: rgba(160, 44, 44, 0.7) url(../img/cd-top-arrow.svg) no-repeat center 50%;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  /*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";*/
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
@@ -1138,7 +1161,8 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
     content: "";
 }
 .welcome {
-	margin:0 -20px 10px;
+	margin-top:0;
+	margin-bottom:10px;
 	padding:8px 20px;
 	text-align:center;
 	font-size:0.9em;
@@ -1158,8 +1182,10 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 	color: #fff;
 }
 .header-image .post-title {
-    padding: 10px 20px;
-    margin: 320px -20px 0;
+    padding-top: 10px;
+	padding-bottom: 20px;
+    margin-top: 320px; 
+	margin-bottom: 0;
     background-image: linear-gradient( transparent, rgba(0,0,0,0.9) );
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e6000000',GradientType=0 );
 }
