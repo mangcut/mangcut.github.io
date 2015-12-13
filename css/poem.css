@@ -1109,6 +1109,9 @@ html.touch hidden-touch {
    color: #FFF;
    background-color: #3b5998;
 }
+.header-image .article a.btn-share {
+    color: #fff;
+}	
 a.btn-share:hover, a.btn-share:focus {
    color: #efefef;
    text-decoration: none;
