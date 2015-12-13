@@ -7,6 +7,7 @@ $(document).ready(function() {
 		$("img[src$='.svg']").each(function(){
 			$(this).attr("src", $(this).attr("src").replace(".svg", ".png"));
 		});
+		$("html").addClass("no-svg");
 	}
 });
 	
@@ -295,7 +296,7 @@ if (/*Modernizr.touch && */ !(/iPad|iPhone|iPod/.test(navigator.platform))) {
 		$b.on('click', function(event){
 			event.preventDefault();
 			$('body,html').animate({
-				scrollTop: 0 ,
+				scrollTop: 0
 				}, scroll_top_duration
 			);
 		});
