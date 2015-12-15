@@ -46,6 +46,7 @@ html.touch .article-content {font-size:1.1em}
 html.no-touch .article-content {font-family:Verdana,{{page.font_family}}}
 a{color:#0088cc;text-decoration:none;}
 .header-image .article a, a.modest-link{color:#005580}
+.header-image .article a.proud-link{color:#0088cc}
 a:hover,a:focus{color:#005580;text-decoration:underline;}
 .img-rounded{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
 .img-polaroid{padding:3px;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0, 0, 0, 0.2);-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.1);-moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.1);box-shadow:0 1px 3px rgba(0, 0, 0, 0.1);}
@@ -881,34 +882,6 @@ a.article-byline {
 	vertical-align: bottom;
 }
 
-.no-padding {
-	padding: 0;
-}
-
-.no-padding-x {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.no-padding-y {
-	padding-top: 0;
-	padding-bottom: 0;
-}
-
-.no-margin {
-	margin: 0;
-}
-
-.no-margin-x {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.no-margin-y {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
 .unselectable {
 	-moz-user-select: none;
 	-webkit-user-select: none;
@@ -1215,4 +1188,33 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 	content: "»";
 	margin-right: 3px;
 	font-size: 1.1em;
+}
+
+
+.no-padding {
+	padding: 0;
+}
+
+.no-padding-x {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.no-padding-y {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.no-margin-x {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.no-margin-y {
+	margin-top: 0;
+	margin-bottom: 0;
 }
