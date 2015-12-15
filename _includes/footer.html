@@ -1,6 +1,6 @@
 <div id="footer">
   <div class="container-fluid">
-    {% include share_page2.html %}<br>
+    {% if page.footer_no_subscribe != true %}{% include share_page2.html %}<br>{% endif %}
 	<div class="muted" style="margin-bottom:3px">&copy; {{ 'now' | date: "%Y" }} - <address>{% if page.about != true %}<a rel="author" href="/about.html" class="modest-link">{{ site.author }}</a>{% else %}<a rel="me" href="https://www.google.com/+TruongHongThi" class="modest-link">{{ site.author }}</a>{% endif %}</address></div>
 	<p class="muted" style="text-overflow:ellipsis;overflow:hidden;white-space:nowrap" title="Dẫn nguồn & link tới bài gốc khi đăng lại">Dẫn nguồn & link tới bài gốc khi đăng lại</p>
   </div>

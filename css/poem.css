@@ -1102,17 +1102,27 @@ html.touch hidden-touch {
    display: inline-block;
    padding: 0 15px 0 10px;
    border:none;
-   background-color: #ececec;
    text-decoration: none;
    font-size: 12px;
    line-height: 24px;
    color: #FFF;
    background-color: #3b5998;
 }
-.header-image .article a.btn-share {
+.btn-subscribe {
+   display: inline-block;
+   padding: 0 10px 0 10px;
+   border:none;
+   background-color: #eb7b1d;
+   text-decoration: none;
+   font-size: 12px;
+   line-height: 24px;
+   color: #FFF;
+   margin-top: 8px;
+}
+.header-image .article a.btn-share, .header-image .article a.btn-subscribe {
     color: #fff;
 }	
-a.btn-share:hover, a.btn-share:focus {
+a.btn-share:hover, a.btn-share:focus, a.btn-subscribe:hover, a.btn-subscribe:focus {
    color: #efefef;
    text-decoration: none;
 }
