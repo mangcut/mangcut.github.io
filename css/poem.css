@@ -976,8 +976,8 @@ a.article-byline {
 		margin-right: -6.18%;
 	}
 	.over-padding {
-		padding-left: -6.18%;
-		padding-right: -6.18%;
+		padding-left: 6.18%;
+		padding-right: 6.18%;
 	}
 	.pullquote {
 		display: block;
@@ -1160,7 +1160,7 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 	font-size:1.1em;
 }
 .header-image .article-header {
-    padding: 20px 20px 0;
+    padding-bottom:0;
 	background-color: transparent;
 	background-image: url('/media/trolltunga.jpg');
 	background-position: center;
