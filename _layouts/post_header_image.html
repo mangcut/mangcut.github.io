@@ -4,6 +4,7 @@ layout: default
 <article class="article">
 <div class="article-header over-margin" style="background-image:url('{{page.header_image}}');">
 <div class="post-title over-padding">
+{% if page.feel == 'story' %}<span class="tag tag-{{page.feel}}" title="{{page.feel_text}}">{{page.feel_text}}</span>{% endif %}
 <h1>{{ page.header_image_title }}</h1>
 {% if page.subtitle %}
 <p class="subtitle">{{ page.subtitle }}</p>

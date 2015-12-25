@@ -111,6 +111,7 @@ a.badge:hover,a.badge:focus{color:#ffffff;text-decoration:none;cursor:pointer;}
 .topic-lang{background-color:limegreen;border:1px solid limegreen;color:white}
 .topic:empty{display:none;}
 .tag{font-size:11px;padding:2px 4px;white-space:nowrap;color:white;text-shadow:none;}
+.post-title .tag {font-size:1em;padding:4px 8px}
 .tag:empty{display:none;}
 .tag-new, .tag-story{background-color:#e3532c}
 .tag-hot{background-color:#a02c2c}
