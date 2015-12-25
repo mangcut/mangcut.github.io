@@ -17,6 +17,9 @@
 <url>
   <loc>{{site.url}}/app/viral/</loc>
 </url>
+<url>
+  <loc>{{site.url}}/app/tcvn/</loc>
+</url>
 {% for post in site.posts %}<url>
   <loc>{{site.url}}{{post.url}}</loc>
 </url>{% endfor %}

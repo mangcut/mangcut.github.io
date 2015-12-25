@@ -1,0 +1,147 @@
+---
+layout: default
+page_title: Công cụ chuyển đổi bảng mã giữa TCVN và Unicode
+description: "Chuyển đổi văn bản từ bảng mã giữa TCVN (.VnTime) và Unicode."
+comment: false
+image: /media/moai.jpg
+mobile_app: true
+mobile_app_title: tcvn2unicode
+fanpage: false
+---
+<style>
+textarea{width:100%;font-size:1.2em}
+#txt_old{height:6em}
+.ftcvn{font-family:'.VnTime'}
+.funi{font-family:'Times New Roman'}
+#txt_new{height:10em;background-color:whitesmoke}
+h3{padding-top:13px;padding-bottom:10px}
+select{height:28px}
+.controls{margin:15px 0}
+</style>
+
+<h3>Chuyển mã giữa TCVN và Unicode</a></h3>
+
+<div id="lbl_error" class="alert alert-error hide"></div>
+
+<div>
+	<p><label for="txt_old">Văn bản nguồn:</label></p>
+	<textarea id="txt_old" required></textarea>
+</div>
+
+<div class="controls">
+	<select id="convertWay">
+		<option selected>(Tự động)</option>
+		<option>TCVN &rarr; Unicode</option>
+		<option>Unicode &rarr; TCVN</option>
+	</select>
+	<input id="btn_convert" type="submit" value="Chuyển mã">
+</div>
+
+<div class="result hide">
+	<p><label for="txt_new">Văn bản đích:</label> <b id="theType"></b></p>
+	<textarea id="txt_new" readonly></textarea>
+	
+	<div class="spacy-line"></div>
+	<h4>Thử đọc blog của chúng tôi</h4>
+	<ul>
+	<li><a href="/con-nguoi.html">Con người: Nhìn từ cấu trúc bộ não</a></li>
+	</ul>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+(function(){
+
+$("#btn_convert").click(function(e){
+	e.preventDefault();
+	$("#lbl_error").text("").hide();
+	var text = $.trim($("#txt_old").val());
+	if (text.length === 0) {
+		$("#lbl_error").text("Bạn phải điền văn bản nguồn vào.").show();
+	} else {
+		doWork(text);
+		$(".result").show();
+	}
+});
+
+var uni =  "áãàảạăắẵằẳặâấẫầẩậđĐéẽèẻẹêếễềểệíĩìỉịóõòỏọôốỗồổộúũùủụưứữừửựýỹỳỷỵơớỡờởợ",
+	tcvn = "¸·µ¶¹¨¾½»¼Æ©ÊÉÇÈË®§ÐÏÌÎÑªÕÔÒÓÖÝÜ×ØÞãâßáä«èçåæéóòïñô­ø÷õöùýüúûþ¬íìêëî",
+	tcvnSpecials = "¸·µ¶¹¨¾½»¼Æ©ÇË®§ÏÌÎÑªÖÜ×ØÞßä«çåæïñ­ø÷öüûþ¬ëî";
+		
+function doWork(text) {
+		var pattern1 = tcvn,
+		pattern2 = uni,
+		index = document.getElementById("convertWay").selectedIndex;
+	if (index === 0) {
+		if (indexOfAny(text, tcvnSpecials) >= 0) {
+			index = 1;
+		} else {
+			index = 2;
+		}
+	}
+	if (index === 1) { // TCVN to Unicode
+		$("#txt_old").removeClass("funi").addClass("ftcvn");
+		$("#txt_new").removeClass("ftcvn").addClass("funi");
+		$("#theType").html("TCVN &rarr; Unicode");
+	} else { // Unicode to TCVN
+		pattern1 = uni;
+		pattern2 = tcvn;
+		$("#txt_old").removeClass("ftcvn").addClass("funi");
+		$("#txt_new").removeClass("funi").addClass("ftcvn");
+		$("#theType").html("Unicode &rarr; TCVN");
+	}
+	var newArray = jQuery.map(text.split(''), function(c) {
+		var n = pattern1.indexOf(c)
+		if (n >= 0) {
+			return pattern2.charAt(n);
+		} else {
+			return c;
+		}
+	});
+	$("#txt_new").val(newArray.join(""))
+}
+
+function indexOfAny(source /*String*/ , anyOf /*String*/ ) {
+	for(var i = 0; i <= anyOf.length; i++) {
+        if (source.indexOf(anyOf[i] ) > -1)
+        {
+            return i ;
+        }
+    }
+    return -1 ;
+}
+
+$('#txt_old').on('input propertychange', function() { 
+	var index = document.getElementById("convertWay").selectedIndex;
+	if (index != 0) return;
+	
+	var text = $("#txt_old").val();
+	if (indexOfAny(text, tcvnSpecials) >= 0) {
+		$("#txt_old").removeClass("funi").addClass("ftcvn");
+	} else if (indexOfAny(text, uni) >= 0) {
+		$("#txt_old").removeClass("ftcvn").addClass("funi");
+	}  
+});
+
+$('#convertWay').on('change', function() { 
+	var text = $("#txt_old").val();
+	var index = document.getElementById("convertWay").selectedIndex;
+	if (index === 0) {
+		if (indexOfAny(text, tcvnSpecials) >= 0) {
+			index = 1;
+		} else {
+			index = 2;
+		}
+	}
+	if (index === 1) { // TCVN to Unicode
+		$("#txt_old").removeClass("funi").addClass("ftcvn");
+		$("#txt_new").removeClass("ftcvn").addClass("funi");
+	} else { // Unicode to TCVN
+		$("#txt_old").removeClass("ftcvn").addClass("funi");
+		$("#txt_new").removeClass("funi").addClass("ftcvn");
+	} 
+});
+
+})();
+</script>
