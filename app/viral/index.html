@@ -284,9 +284,22 @@ $("#btn_check").click(function(e){
 	}
 });
 
-//$(document).ready(function() {
-//	if (Modernizr.localstorage) $("#txt_url").val(window.localStorage["lastUrl"] || "");
-//});
+function getQuery(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+$(document).ready(function() {
+	var url = getQuery("txt_url");// || (Modernizr.localstorage && window.localStorage["lastUrl"]);
+	if (url) {
+		$("#txt_url").val(url);
+		$("#btn_check").click();
+	} else if (Modernizr.localstorage) {
+		$("#txt_url").val(window.localStorage["lastUrl"]);
+	}
+});
 
 })();
 </script>
