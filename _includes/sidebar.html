@@ -18,7 +18,7 @@
 	<div class="sitemap-content-tab tab-popular hide">
 		<ul class="nav nav-list" style="padding-left:0;padding-right:0">
 			{% for post in site.data.popular.list %}
-			  <li class="bottom-line{% if page.url == post.url %} active{% endif %}"><a href="{{ post.url }}">{{ post.title }}&nbsp;<span class="tag tag-view" title="{{post.feel_text}}">{{post.views}}</span></a></li>
+			  <li class="bottom-line{% if page.url == post.url %} active{% endif %}"><a href="{{ post.url }}">{{ post.title }}&nbsp;<span class="tag tag-view" title="Số lượt xem bài">{{post.views}}</span></a></li>
 			{% endfor %}
 		</ul>
 		
