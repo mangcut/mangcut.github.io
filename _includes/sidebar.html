@@ -8,15 +8,18 @@
 	<div id="sitemapContent" class="sitemap-content">
 	<div class="sitemap-content-tab tab-recent">
 		<ul class="nav nav-list" style="padding-left:0;padding-right:0">
-			{% for post in site.posts %}
-			  <li class="bottom-line{% if page.url == post.url %} active{% endif %}{% if forloop.rindex0 < 6 %} hide{% endif %}"><a href="{{ post.url 
-}}">{{ post.title }}&nbsp;<span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span></a></li>
-			{% endfor %}
+			
 		</ul>
 		<br><a href="#" title="Hiện tiếp các bài còn lại" data-action='[{"action": "show", "target": "#sitemapContent .hide"}, {"action": "$(this).hide"}]'><span style="font-size:1.2em">&raquo;</span> Bài cũ hơn</a>
 	</div>
 	<div class="sitemap-content-tab tab-popular hide">
+		<ul class="nav nav-list" style="padding-left:0;padding-right:0">
+			{% for post in site.data.popular.list %}
+			  <li class="bottom-line{% if page.url == post.url %} active{% endif %}"><a href="{{ post.url }}">{{ post.title }}&nbsp;<span class="tag tag-view" title="Số lượt xem bài">{{post.views}}</span></a></li>
+			{% endfor %}
+		</ul>
 		
+		<p class="muted font-xsmall" style="margin-top:15px;margin-bottom:15px;padding-left:0;padding-right:0">Lượt xem cập nhật ngày {{site.data.popular.update_date}}.</p>
 	</div>
 	</div>
 </div>
