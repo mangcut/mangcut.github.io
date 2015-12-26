@@ -1165,9 +1165,17 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
     padding-bottom:0;
 	background-color: transparent;
 	background-position: center;
-	background-size: 840px auto;
+	/*background-size: 840px auto;*/
 	color: #fff;
 }
+
+@media (-webkit-min-device-pixel-ratio: 1.1),
+       (min-resolution: 1.1dppx) {
+	.header-image .article-header {
+		background-size: cover;
+	}
+}
+
 .header-image .post-title {
     padding-top: 10px;
 	padding-bottom: 20px;
