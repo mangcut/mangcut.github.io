@@ -120,6 +120,7 @@ a.badge:hover,a.badge:focus{color:#ffffff;text-decoration:none;cursor:pointer;}
 .tag-bizarre{background-color:#7b2ca0}
 .tag-inspire{background-color:#3fa02c}
 .index-byline .tag {display:inline-block;width:80px;text-align:center;font-size: 1em;line-height:1.4em;padding:0 4px;}
+.tag-view{background-color:#aaa;border-radius:5px;padding:2px 6px}
 .tag-section {display:inline-block;width:80px;text-align:center;font-size: 1em;line-height:1.6em;padding:0 6px;background-color:#3fa02c;color:white;font-weight:200}
 [class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url("../img/glyphicons-halflings.png");background-position:14px 14px;background-repeat:no-repeat;margin-top:1px;}
 .icon-white,.nav-pills>.active>a>[class^="icon-"],.nav-pills>.active>a>[class*=" icon-"],.nav-list>.active>a>[class^="icon-"],.nav-list>.active>a>[class*=" icon-"],.navbar-inverse .nav>.active>a>[class^="icon-"],.navbar-inverse .nav>.active>a>[class*=" icon-"],.dropdown-menu>li>a:hover>[class^="icon-"],.dropdown-menu>li>a:focus>[class^="icon-"],.dropdown-menu>li>a:hover>[class*=" icon-"],.dropdown-menu>li>a:focus>[class*=" icon-"],.dropdown-menu>.active>a>[class^="icon-"],.dropdown-menu>.active>a>[class*=" icon-"],.dropdown-submenu:hover>a>[class^="icon-"],.dropdown-submenu:focus>a>[class^="icon-"],.dropdown-submenu:hover>a>[class*=" icon-"],.dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url("../img/glyphicons-halflings-white.png");}
@@ -732,12 +733,24 @@ a.article-byline {
 .sitemap .sitemap-heading {
 	padding: 0 10px 0 14px;
 	background-color: transparent;
-	color: #a02c2c;
-	font-weight:bold;
 	border-bottom: 1px solid #a02c2c;
 	line-height: 40px;
 	height:40px;
 	box-sizing:border-box;
+}
+
+.sitemap .sitemap-heading .sitemap-tab {
+	line-height:40px;
+	display:inline-block;
+	cursor: pointer;
+	font-size:0.85em;
+}
+
+.sitemap .sitemap-heading .sitemap-tab.active {
+	color: #a02c2c;
+	font-weight:bold;
+	cursor: auto;
+	font-size:1.1em;
 }
 
 .sitemap .sitemap-content {
