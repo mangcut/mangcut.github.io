@@ -1,4 +1,18 @@
-<div class="welcome over-margin">chào bạn - đây là trang blog măng cụt</div>
+<!--div class="welcome over-margin">chào bạn - đây là trang blog măng cụt</div-->
+<div class="over-margin over-padding" style="padding-top:10px;padding-bottom:10px;border-bottom:1px dashed #a02c2c;margin-bottom:16px;background-color:cornsilk">
+<figure>
+	  <div class="img-container">
+		<img class="img-post-cover" src="/media/new_year.svg"</img>
+	  </div>
+</figure>
+<p>Năm 2015 của bạn thế nào?</p>
+<p>2015 là một năm tuyệt vời đối với <b style="color:#a02c2c">Blog Măng Cụt</b>. Chúng tôi không viết nhiều, nhưng mỗi bài viết đều rất tâm huyết. Hãy cùng nhìn lại những bài viết nổi bật và nhiều lượt xem nhất năm qua!</p>
+<p><span class="bold">Chia sẻ nhiều nhất:</span></span><br><a href="/con-nguoi.html">Con người: Nhìn từ cấu trúc bộ não</a></p>
+<p><span class="bold">Lượt xem nhiều nhất:</span><br><a href="/blog/2015-03-23-bao-gio-loai-nguoi-diet-vong.html">Bao giờ loài người diệt vong?</a></p>
+<p><span class="bold">Lượt xem nhiều nhất trong 1 ngày:</span><br><a href="/blog/2015-03-09-di-tim-nguoi-ngoai-hanh-tinh.html">Người ngoài hành tinh ở đâu?</a></p>
+<p>Chúc bạn một năm 2016 như ý, và đừng quên ghé Blog Măng Cụt thường xuyên :)</p>
+</div>
+
 {% for post in site.posts limit:10 %}
 <article {% if forloop.first %}class="first-child"{% endif %}>
 	{% if post.language == "en" %}
