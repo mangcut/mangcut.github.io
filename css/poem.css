@@ -272,7 +272,7 @@ a.badge:hover,a.badge:focus{color:#ffffff;text-decoration:none;cursor:pointer;}
 .nav-header{display:block;padding:3px 15px;font-size:11px;font-weight:bold;line-height:20px;color:#999999;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);text-transform:uppercase;}
 .nav li+.nav-header{margin-top:9px;}
 .nav-list{padding-left:15px;padding-right:15px;margin-bottom:0;}
-.nav-list>li>a,.nav-list .nav-header{margin-left:-15px;margin-right:-15px;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);}
+.nav-list>li>a,.nav-list .nav-header{text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);}
 .nav-list>li>a{padding:7px 15px;}
 .nav-list>.active>a,.nav-list>.active>a:hover,.nav-list>.active>a:focus{color:#ffffff;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.2);background-color:#3bf;}
 .nav-list [class^="icon-"],.nav-list [class*=" icon-"]{margin-right:2px;}
@@ -757,6 +757,7 @@ a.article-byline {
 	padding-top: 10px;
 }
 
+/*
 .sitemap .sitemap-content div,
 .sitemap .sitemap-content p,
 .sitemap .sitemap-content h3,
@@ -765,13 +766,14 @@ a.article-byline {
 	padding-left: 15px;
 	padding-right: 20px;
 }
+*/
 
 #overlay {
 	z-index: 900;
 	background-color: black;
 	zoom: 1; /* hack for IE opacity to work */
-	filter: alpha(opacity=30);
-	opacity: 0.3;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
 	position: fixed;
 	left: 0; right: 0; bottom: 0; top: 0;
 }
@@ -1115,7 +1117,7 @@ a.btn-share:hover, a.btn-share:focus, a.btn-subscribe:hover, a.btn-subscribe:foc
    text-decoration: none;
 }
 
-input[type="email"],input[type="text"] {
+input[type="email"],input[type="url"] {
     font-size: 12px;
     padding: 6px 3px;
     border: 1px solid #bbb;
@@ -1126,8 +1128,8 @@ input[type="email"],input[type="text"] {
     max-width: 190px;
 }
 
-input[type="email"]:focus,input[type="text"]:focus,
-input[type="email"]:hover,input[type="text"]:hover {
+input[type="email"]:focus,input[type="url"]:focus,
+input[type="email"]:hover,input[type="url"]:hover {
     border-color: #a02c2c;
 }
 
@@ -1147,6 +1149,11 @@ input[type="submit"] {
 
 input[type="submit"].button {
 	background-color:#bbb;
+}
+
+input[type="email"]:hover+input[type="submit"].button,
+input[type="email"]:focus+input[type="submit"].button {
+	background-color: #a02c2c;
 }
 
 input[type="submit"].button:hover, input[type="submit"].button:focus {

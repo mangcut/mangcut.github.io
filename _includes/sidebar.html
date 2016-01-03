@@ -3,7 +3,7 @@
 		<span class="sitemap-tab tab-head-recent active" data-action='[{"action": "addClass", "target": ".tab-head-recent", "options": "active"},{"action": "show", "target": ".tab-recent"},{"action": "hide", "target": ".tab-popular"},{"action": "removeClass", "target": ".tab-head-popular", "options": "active"}]'>GẦN ĐÂY</span>
 		&nbsp;/&nbsp; 
 		<span class="sitemap-tab tab-head-popular" data-action='[{"action": "addClass", "target": ".tab-head-popular", "options": "active"},{"action": "show", "target": ".tab-popular"},{"action": "hide", "target": ".tab-recent"},{"action": "removeClass", "target": ".tab-head-recent", "options": "active"}]'>XEM NHIỀU</span>
-		<a href="#" style="font-size:30px;font-weight:normal;line-height:40px;" data-action="trigger" data-target="#overlay" data-options="click" class="close">&times;</a>
+		<a href="#" style="font-size:30px;font-weight:normal;line-height:40px;" data-action="trigger" data-target="#overlay" data-options="click" class="close">&nbsp;&times;</a>
 	</div>
 	<div id="sitemapContent" class="sitemap-content">
 	<div class="sitemap-content-tab tab-recent">
@@ -12,7 +12,7 @@
 			  <li class="bottom-line{% if page.url == post.url %} active{% endif %}{% if forloop.rindex0 < 6 %} hide{% endif %}"><a href="{{post.url}}">{{post.title}}&nbsp;<span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span></a></li>
 			{% endfor %}
 		</ul>
-		<br><a href="#" title="Hiện tiếp các bài còn lại" data-action='[{"action": "show", "target": "#sitemapContent .hide"}, {"action": "$(this).hide"}]'><span style="font-size:1.2em">&raquo;</span> Bài cũ hơn</a>
+		<br><a style="margin-left:15px" href="#" title="Hiện tiếp các bài còn lại" data-action='[{"action": "show", "target": "#sitemapContent .hide"}, {"action": "$(this).hide"}]'><span style="font-size:1.2em">&raquo;</span> Bài cũ hơn</a>
 	</div>
 	<div class="sitemap-content-tab tab-popular hide">
 		<ul class="nav nav-list" style="padding-left:0;padding-right:0">
@@ -21,7 +21,7 @@
 			{% endfor %}
 		</ul>
 		
-		<p class="muted font-xsmall" style="margin-top:15px;margin-bottom:15px;padding-left:0;padding-right:0">Cập nhật lúc {{site.data.popular.update_date}}.</p>
+		<p class="muted font-xsmall" style="margin-top:15px;margin-bottom:15px;padding-left:15px;padding-right:0">Cập nhật lúc {{site.data.popular.update_date}}.</p>
 	</div>
 	</div>
 </div>
