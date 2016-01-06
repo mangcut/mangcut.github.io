@@ -113,7 +113,8 @@ a.badge:hover,a.badge:focus{color:#ffffff;text-decoration:none;cursor:pointer;}
 .tag{font-size:11px;padding:2px 4px;white-space:nowrap;color:white;text-shadow:none;}
 .post-title .tag {font-size:1em;padding:4px 8px}
 .tag:empty{display:none;}
-.tag-new, .tag-story{background-color:#e3532c}
+.tag-new{background-color:#e3532c}
+.tag-story{background-color:#c32c53}
 .tag-hot{background-color:#a02c2c}
 .tag-thorough{background-color:#2ca085}
 .tag-deep{background-color:#2c66a0}
@@ -1205,7 +1206,6 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e6000000',GradientType=0 );
 }
 .header-image .article-header h1 {
-	text-transform: uppercase;
 	font-family: "Times New Roman", serif;
 	font-size: 2.4em;
 }
