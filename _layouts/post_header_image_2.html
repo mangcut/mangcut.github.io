@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="article">
+<div>
+	<div class="over-margin">
+		<img src="{{page.header_image_2}}"></img>
+	</div>
+	<div class="post-title">
+		<h1>{{ page.title }}</h1>
+	</div>
+	{% include byline_black.html %}
+</div>
+<div class="{{ page.content_class}} article-content">
+{{ content }}
+</div>
+</article>
