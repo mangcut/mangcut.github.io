@@ -5,10 +5,20 @@ page_title: Măng Cụt Media Watch - Page Views
 <p>{{page.page_title}}</p>
 <p><b><a href="pageview.html">PAGE VIEWS</a></b> / <a href="facebook.html">Facebook</a> / <a href="linkhay.html">Linkhay</a></p>
 
+<h4>TOP</h6>
 <ol>
 {% for post in site.data.popular.list %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> - <span>{{post.views}}</span></li>
+  <li><a href="{{ post.url }}">{{ post.title }}</a> - {{post.views}}</li>
 {% endfor %}
 </ol>
 
-<p>Cập nhật lúc {{site.data.popular.update_date}}.</p>
+<p><small>Cập nhật lúc {{site.data.popular.update_date}}.</small></p>
+
+<h4>OTHERS</h6>
+<ol>
+{% for post in site.data.unpopular.list %}
+  <li>{{ post.title }} - {{post.views}}</li>
+{% endfor %}
+</ol>
+
+<p><small>Cập nhật lúc {{site.data.unpopular.update_date}}.</small></p>
