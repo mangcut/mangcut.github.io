@@ -19,6 +19,11 @@
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-8597504-3', 'mangcut.vn');
+  ga('require', 'linkid');
   ga('send', 'pageview');
 /* End Goolge Analytics */
+
+{% if page.customJS %}
+{% include customJS/{{page.customJS}}.js %}
+{% endif %}
 </script>
