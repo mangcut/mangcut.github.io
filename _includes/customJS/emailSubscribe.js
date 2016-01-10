@@ -30,7 +30,6 @@ $("#mc-embedded-subscribe-form").on("submit", function(ev) {
 
 function validateEmailForm(email)
 {
-	return true;
 	var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 	
 	return !!re.test(email);
