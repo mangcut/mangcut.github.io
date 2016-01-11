@@ -5,7 +5,7 @@ $("#mc-embedded-subscribe-form").on("submit", function(ev) {
 	$("#mce-error-response").hide();
 	
 	var email = $.trim($("#mce-EMAIL").val());
-	if (validateEmailForm(email)) {
+	if ($P.validateEmail(email)) {
 		$("#mce-success-response").text("Đang xử lý...").show();
 		$.ajax({
 			url: $(this).attr("action").replace("/post?", "/post-json?"),
@@ -28,21 +28,7 @@ $("#mc-embedded-subscribe-form").on("submit", function(ev) {
 	}
 });
 
-function validateEmailForm(email)
-{
-	var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-	
-	return !!re.test(email);
-}
-
-function getQuery(name) {
-	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-		results = regex.exec(location.search);
-	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-var email = $.trim(getQuery("e"));
+var email = $.trim($P.getQuery("e"));
 if (email) {
 	$("#mce-EMAIL").val(email);
 	$("#mc-embedded-subscribe-form").submit();

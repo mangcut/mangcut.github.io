@@ -218,18 +218,36 @@ $(window).on("load", function () {
     return {
 		// getData with default. Please note the passed-in object must be a jQuery object
 		getData: function(jObject, dataName, defaultValue) {
-				var value = jObject.data(dataName);
-				if (this.nullOrEmpty(value)) {
-					value = defaultValue;
-				}
-				
-				return value;
+			var value = jObject.data(dataName);
+			if (this.nullOrEmpty(value)) {
+				value = defaultValue;
+			}
+			
+			return value;
+		},
+		getStorage: function(name, defaultValue) {
+			return Modernizr.localstorage ? 
+				localStorage.getItem(name) : defaultValue;
+		},
+		setStorage: function(name, value) {
+			Modernizr.localstorage && localStorage.setItem(name, value);
 		},
 		nullOrEmpty: function(something) {
 			if (typeof something === 'undefined' || something === null || something === "") {
 				return true;
 			}
 			return false;
+		},
+		getQuery: function(name) {
+			name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+			return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+		},
+		validateEmail: function(email) {
+			var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+			
+			return re.test(email);
 		}
     };
   })();

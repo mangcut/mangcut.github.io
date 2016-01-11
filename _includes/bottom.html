@@ -27,3 +27,6 @@
 {% include customJS/{{page.customJS}}.js %}
 {% endif %}
 </script>
+{% if page.auto_email %}
+{% include auto_email.html %}
+{% endif %}

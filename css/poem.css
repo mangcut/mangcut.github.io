@@ -769,7 +769,7 @@ a.article-byline {
 }
 */
 
-#overlay {
+#overlay, #overlayEmail {
 	z-index: 900;
 	background-color: black;
 	zoom: 1; /* hack for IE opacity to work */
