@@ -773,8 +773,8 @@ a.article-byline {
 	z-index: 900;
 	background-color: black;
 	zoom: 1; /* hack for IE opacity to work */
-	filter: alpha(opacity=40);
-	opacity: 0.4;
+	filter: alpha(opacity=75);
+	opacity: 0.75;
 	position: fixed;
 	left: 0; right: 0; bottom: 0; top: 0;
 }

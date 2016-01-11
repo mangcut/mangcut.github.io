@@ -27,6 +27,8 @@ defaults:
       type: pages
     values:
       is_page: true
+      comment: false
+      auto_email: false
   -
     scope:
       path: ""
@@ -34,3 +36,4 @@ defaults:
     values:
       is_post: true
       comment: false
+      auto_email: true
