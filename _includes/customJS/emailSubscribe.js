@@ -18,6 +18,7 @@ $("#mc-embedded-subscribe-form").on("submit", function(ev) {
 					$("#mce-error-response").show();
 					$("#mce-EMAIL").focus();
 				} else {
+					$P.setStorage("emailSubscribed", "true");
 					location.href = "/email/confirm.html?e=" + encodeURIComponent(email);
 				}
 			}
