@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
+<title>Test Popup</title>
+<link href="/css/poem.css" rel="stylesheet">
+<script src="/js/modernizr.js"></script>
+<style>
+body {background-color:#f5f5f5}
+.email-dialog {
+	background-color:white;
+	height: 200px;
+	width: 320px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-top:-140px;
+	margin-left:-200px;
+	z-index:902;
+	display: none;
+	padding: 30px;
+	border: 10px solid #9e9;
+}
+
+@media (max-width: 414px) {
+.email-dialog {
+    height: auto;
+    width: auto;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 30px 20px;
+    border: 5px solid #9e9;
+}
+}
+
+.email-dialog-show {
+	display:block;
+}
+
+.email-dialog h3 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+/*
+.email-dialog p {
+	margin-bottom: 15px;
+}
+*/
+
+.email-dialog .error-pane {
+	color: #f33;
+	margin-bottom:5px;
+}
+
+.email-dialog .progress-pane {
+	color: #060;
+}
+
+.email-dialog button {
+	position:absolute;
+	right:5px;
+	top:5px;
+	width:24px;
+	height:24px;
+	line-height:24px;
+	background-color:#333;
+	color:#eee;
+	border:0;
+	border-radius:50%;
+	font-weight:normal;
+	font-size:1.6em;
+	text-align:center;
+	padding:0;
+}
+
+</style>
+</head>
+<body>
+<p>Test Popup</p>
+
+<p><a id="showEmail" href="/email/subscribe.html" data-action="toggleClass" data-target=".email-dialog" data-options="email-dialog-show" data-advanced=":overlay">Email</p>
+<p><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.mangcut.vn" target="_blank">Facebook</a></p>
+
+<div class="email-dialog">
+	<div class="mail-subscribe-pane">
+		<form class="email-form" novalidate>
+			<h3>Wow, giải lao chút :D</h3>
+			<p>Nếu bạn thích các bài viết ở đây, hãy để lại email. Blog Măng Cụt sẽ liên lạc mỗi khi có bài viết mới đáng chú ý. Yên tâm, không bao giờ spam!</p>
+			
+			<div class="error-pane font-xsmall invisible">Vui lòng điền email hợp lệ và chưa đăng kí.</div>
+			<div><input type="email" name="EMAIL" placeholder="Email" style="width:95%;max-width:none"></div>
+			<div style="margin:12px 0 0 4px"><input type="submit" value="ĐĂNG KÍ" style="font-weight:bold">&nbsp;&nbsp;<span class="progress-pane font-xsmall hide">Đang xử lý...</span></div>
+			
+			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0a540965b36e2af1d641c5db3_aa6b788882" tabindex="-1" value=""></div>
+		</form>
+	</div>
+	<div class="mail-success-pane hide">
+		<h3>Vẫn còn một bước nữa...</h3>
+		<div class="alert alert-info">Blog Măng Cụt vừa gửi cho bạn một email. Vui lòng kiểm tra email để <b>xác nhận</b>.</div>
+
+		<p class="font-xsmall"><b>Không tìm thấy email?</b> Bạn hãy thử xem ở tab <i>Quảng cáo (Promotions)</i> của Gmail hoặc trong thư mục "thư rác". Một số dịch vụ email nhận nhầm chúng tôi là thư rác.</p>
+	</div>
+	
+	<button data-action="trigger" data-target="#overlay" data-options="click">&times;</button>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="/js/poem.js"></script>
+
+<script type="text/javascript">
+(function() {
+
+$(".email-form").on("submit", function(ev) {
+	ev.preventDefault();
+	
+	var $form = $(this);
+	var $email = $form.find("input[type='email']");
+	var $error = $form.find(".error-pane");//.hide();
+	var $progress = $form.find(".progress-pane").hide();
+	
+	var $inputPane = $(".mail-subscribe-pane").show();
+	var $successPane = $(".mail-success-pane").hide();
+	
+	var email = $.trim($email.val());
+	
+	if (validateEmail(email)) {
+		$progress.show();
+		$.ajax({
+			url: "//mangcut.us10.list-manage.com/subscribe/post-json?u=0a540965b36e2af1d641c5db3&amp;id=aa6b788882",
+			data: $form.serialize(),
+			dataType: 'jsonp',
+			jsonp: 'c',
+			success: function(data) {
+				if (data.result === "error") {
+					$progress.hide();
+					$error.removeClass("invisible");
+					$email.focus();
+				} else {
+					$inputPane.hide();
+					$successPane.show();
+					ga && ga("send", "event", "Email", "Subscribe", email, Math.floor((new Date().getTime()) / 1440000));
+				}
+			}
+		});
+	} else {
+		$error.removeClass("invisible");
+		$email.focus();
+	}
+});
+
+function validateEmail(email)
+{
+	var re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+	
+	return !!re.test(email);
+}
+
+window.setTimeout(function(){$("#showEmail").click();}, 3000);
+
+})();
+</script>
+
+</body>
+</html>
