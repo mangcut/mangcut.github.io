@@ -3,6 +3,7 @@ layout: post
 page_title: Bài thơ viết trong lòng đất
 title: Bài thơ viết trong lòng đất
 description: Khi tôi tìm đến những pho tượng. 1, 2, 3, 4, 5 một hàng dài không đếm xuể. Những hòn đá vô tri bị đục đẽo. Sống nhờ linh hồn rừng cây phía sau.
+fb_description: Chẳng có gì to tát cả
 excerpt: Khi tôi tìm đến những pho tượng<br>1, 2, 3, 4, 5 một hàng dài không đếm xuể<br>Những hòn đá vô tri bị đục đẽo<br>Sống nhờ linh hồn rừng cây phía sau.
 image: /media/moai.jpg
 image_origin: flyadvisor.blogspot.com
