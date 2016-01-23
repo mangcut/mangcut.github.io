@@ -1224,6 +1224,48 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 	font-size: 1.1em;
 }
 
+.cloud-tags {
+	display:block;
+	margin: 0 0 10px 0;
+}
+
+.cloud-tags li {
+  display:inline-block;
+  padding: 4px 8px;
+  background-color: transparent;
+  border: 1px solid #777;
+  border-left: 5px solid #777;
+  border-radius: 0;
+  font-family: Verdana;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.cloud-tags a {
+  text-decoration: none;
+  color: #333;
+}
+
+.cloud-tags span {
+  background-color: #777;
+  color: cornsilk;
+  padding: 0 5px;
+  border-radius: 6px;
+}
+
+.cloud-tags li:hover {
+  background-color:white;
+  border: 1px solid #a02c2c;
+  border-left: 5px solid #a02c2c;
+}
+.cloud-tags li:hover span {
+	background-color: green;
+}
+.cloud-tags li:hover a {
+	color: #a02c2c;
+}
 
 .no-padding {
 	padding: 0;
