@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="article">
+<div style="margin-top:35px">
+<div class="post-title">
+<ul class="cloud-tags">
+    <li><a href="/linhtinh/" title="Loạt ghi chép ngắn">Chuyện linh tinh <span>3</span></a></li>
+</ul>
+<h1>{{ page.title }}</h1>
+<div class="font-small muted"><address><a rel="author" href="/about.html">{% if page.author %}{{ page.author }}{% else %}Trương Hồng Thi{% endif %}</a><address> - <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%-d/%-m/%Y" }}</time></div>
+</div>
+<div class="{{ page.content_class}} article-content">
+{{ content }}
+</div>
+</article>
+<p>Xem tiếp: <a href="/linhtinh/" title="Danh sách chuyện linh tinh">Các chuyện linh tinh khác</a></p>

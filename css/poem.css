@@ -736,22 +736,22 @@ a.article-byline {
 	background-color: transparent;
 	border-bottom: 1px solid #a02c2c;
 	line-height: 40px;
-	height:40px;
-	box-sizing:border-box;
+	position:relative;
 }
 
 .sitemap .sitemap-heading .sitemap-tab {
-	line-height:40px;
+	line-height:30px;
 	display:inline-block;
 	cursor: pointer;
 	font-size:0.85em;
+	padding-left:10px;
+	padding-right:10px;
 }
 
 .sitemap .sitemap-heading .sitemap-tab.active {
-	color: #a02c2c;
-	font-weight:bold;
+	border-bottom: 5px solid #a02c2c;
+    color: #a02c2c;
 	cursor: auto;
-	font-size:1.1em;
 }
 
 .sitemap .sitemap-content {

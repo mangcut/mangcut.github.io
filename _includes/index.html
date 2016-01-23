@@ -18,7 +18,7 @@
 <span class="bold">Các loạt bài:</span><br>
   <ul class="cloud-tags">
     <li><a href="/blog/world/" title="Loạt bài">Thế giới như tôi hình dung <span>7</span></a></li>
-    <!--li><a href="#" title="Loạt ghi chép ngắn">Chuyện linh tinh <span>3</span></a></li-->
+    <li><a href="/linhtinh/" title="Loạt ghi chép ngắn">Chuyện linh tinh <span>3</span></a></li>
 </ul>
 <!--ul class="cloud-tags">
     <li><a href="#">Được tác giả đề xuất <span>2</span></a></li>
@@ -33,7 +33,7 @@
 </div>
 </div>
 
-{% for post in site.posts limit:10 %}
+{% for post in site.categories.blog limit:10 %}
 <article {% if forloop.first %}class="first-child"{% endif %}>
 	{% if post.language == "en" %}
 	  {% assign mc_readspead = 276 %}
@@ -66,7 +66,7 @@
 <div class="spacy-line"></div>
 <h3>Bài cũ hơn</h3>
 <ul>
-{% for post in site.posts offset:10 %}
+{% for post in site.categories.blog offset:10 %}
 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
