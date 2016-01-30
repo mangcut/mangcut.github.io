@@ -12,7 +12,7 @@ image: /media/Earthrise.jpg
 <h2 style="margin-top: 10px;margin-bottom:20px">Thế giới như tôi hình dung</h2>
 <div>
 	<p>{{page.description}}</p>
-	<p style="margin-bottom:15px"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn-share" title="Chia sẻ bài này lên Facebook"><img alt="" src="/img/fb2.svg" style="margin-right:8px">Chia sẻ</a> <sub><span class="font-xxlarge">&larr;</span> click<sub></p>
+	<p style="margin-bottom:15px"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn-share" title="Chia sẻ bài này lên Facebook"><img alt="" src="/img/fb2.svg" style="margin-right:8px">Chia sẻ</a> <sub><span class="font-xxlarge">&larr;</span> click</sub></p>
 </div>
 
 {% for post in site.posts reversed %}
