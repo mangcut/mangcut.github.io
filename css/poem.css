@@ -501,7 +501,7 @@ h2.index-title {
 
 #showSitemap img {
 	width: 22px;
-	height: 18px;
+	height: 17px;
 }
 
 .table-layout {
@@ -1255,8 +1255,20 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
   display: inline-block;
   padding: 0 5px;
   border-radius: 0px;
-  border: 3px solid #090;
-  margin-left: 6px;
+  border: 2px solid #090;
+  margin-left: 9px;
+  position: relative;
+}
+.cloud-tags span::after {
+	display: inline-block;
+	position: absolute;
+	height: 0;
+	width: 0;
+	border-top: 9px solid transparent;
+	border-bottom: 9px solid transparent;
+	border-right: 6px solid #f5f5f5;
+	left: -6px;
+	content: "";
 }
 
 .cloud-tags a:hover, .cloud-tags a:focus {
@@ -1265,6 +1277,9 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 
 .cloud-tags a:hover span, .cloud-tags a:focus span {
   background-color:white;
+}
+.cloud-tags a:hover span::after,.cloud-tags a:focus span::after {
+	border-right-color:white;
 }
 
 .no-padding {

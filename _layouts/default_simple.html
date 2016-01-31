@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{page.lang}}{% else %}vi{% endif %}" class="no-js{% if page.is_post %} type-post{% else %} type-page{% endif %}{% if page.site_home %} site-home{% endif %}{% if page.header_image %} header-image{% endif %}{% if page.extra_class %} {{page.extra_class}}{% endif %}">
+  <head>
+    {% include head.html %}
+	<style>
+		@media (min-width: 640px) {
+			#wrapper, .navbar, #footer {
+				width: inherit;
+				margin-left:0;
+				margin-right:0;
+			}
+			#wrapper, #footer{
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+			}
+			.navbar {
+				background-color:#a02c2c;
+			}
+			.container-first, #footer .container-fluid, .navbar-inner {
+				width: 600px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+	</style>
+  </head>
+  <body>
+    <div id="wrapper">
+      {% include header_simple.html %}
+	  <div class="container-fluid container-first">
+        <section class="article-list">
+          {{ content }}
+		  {% if page.is_post %}
+			{% include shareline.html %}
+			{% include post_footer.html %}
+		  {% endif %}
+        </section>
+
+        <p class="push-down"></p>
+      </div>
+    </div>
+
+    {% include footer.html %}
+    {% include sidebar.html %}
+	<a href="#0" class="cd-top" title="Về đầu trang">&#x25B2;</a>
+    {% include bottom.html %}
+  </body>
+</html>
