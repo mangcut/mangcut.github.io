@@ -33,6 +33,17 @@
           {{ content }}
 		  {% if page.is_post %}
 			{% include shareline.html %}
+			<section>
+				<div class="spacy-line"></div>
+				<div class="muted font-xsmall">CHUYỆN LINH TINH KHÁC</div>
+				<ul>
+					{% for post in site.categories.linhtinh %}
+						{% if page.url != post.url %}
+						  <li><a href="{{post.url}}">{{post.title}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</section>
 			{% include post_footer.html %}
 		  {% endif %}
         </section>
