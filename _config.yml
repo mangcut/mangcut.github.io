@@ -8,7 +8,7 @@ permalink: /:categories/:year-:month-:day-:title.html
 url: http://www.mangcut.vn
 author: Trương Hồng Thi
 en_author: Truong Hong Thi
-highlighter: pygments
+highlighter: rouge
 recommended_series_id: world
 exclude: [temp,tmp,misc]
 markdown: kramdown
