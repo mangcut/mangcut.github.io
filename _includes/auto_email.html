@@ -1,7 +1,7 @@
 <style type="text/css" scoped>
 .email-dialog {
 	background-color:white;
-	height: 200px;
+	height: 220px;
 	width: 320px;
 	position: fixed;
 	left: 50%;
@@ -61,6 +61,16 @@
 	text-align:center;
 	padding:0;
 }
+
+.show-gmail {
+	display:none;
+}
+.gmail .show-gmail {
+	display:inline;
+}
+.gmail .hide-gmail {
+	display:none;
+}
 </style>
 
 <div class="email-dialog">
@@ -80,7 +90,8 @@
 		<h3>Chỉ còn một bước nữa...</h3>
 		<div class="alert alert-info">Blog Măng Cụt vừa gửi cho bạn một email. Vui lòng kiểm tra email để <b>xác nhận</b>.</div>
 
-		<p class="font-xsmall"><b>Không tìm thấy email?</b> Bạn hãy thử xem ở tab <i>Quảng cáo (Promotions)</i> của Gmail hoặc trong thư mục "thư rác". Một số dịch vụ email nhận nhầm chúng tôi là thư rác.</p>
+		<p class="font-xsmall"><b>Không tìm thấy email?</b> <span class="show-gmail">Bạn hãy thử xem ở tab <i>Quảng cáo (Promotions)</i> của Gmail.</span><span class="hide-gmail">Bạn hãy thử xem trong thư mục "thư rác". Một số dịch vụ email nhận nhầm chúng tôi là thư rác.</span></p>
+		<div><input type="button" value="ĐÓNG" data-action="trigger" data-target="#overlayEmail" data-options="click"></div>
 	</div>
 	
 	<button data-action="trigger" data-target="#overlayEmail" data-options="click">&times;</button>
@@ -127,6 +138,13 @@ $(".email-form").on("submit", function(ev) {
 	var $successPane = $(".mail-success-pane").hide();
 	
 	var email = $.trim($email.val());
+	var gmailSuffix = "@gmail.com";
+	var gmail = (email.toLocaleLowerCase().substr(-gmailSuffix.length) === gmailSuffix);
+	if (gmail) {
+		$successPane.addClass("gmail");
+	} else {
+		$successPane.removeClass("gmail");
+	}
 	
 	if ($P.validateEmail(email)) {
 		$error.addClass("invisible");

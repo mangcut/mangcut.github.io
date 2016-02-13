@@ -1139,7 +1139,7 @@ input[type="email"]:hover,input[type="url"]:hover {
     border-color: #a02c2c;
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="button"] {
     font-size: 12px;
     line-height: 12px;
 	height:28px;
