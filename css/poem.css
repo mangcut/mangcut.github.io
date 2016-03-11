@@ -650,6 +650,12 @@ a.article-byline {
 	content: '\2014 \00A0';
 }
 
+.article-content h3 {
+padding-top:12px;
+padding-bottom:10px;
+color:#a02c2c;
+}
+
 .note{
 	padding: 8px 14px;
 	margin-bottom:20px;
