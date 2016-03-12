@@ -13,11 +13,11 @@ Chả là tối thứ 7, lại mới viết xong <a href="/4-buc-anh/1.html" tar
 
 Ừ mà kể có đuôi cũng vui phết nhỉ. Trừ đôi lúc giẫm lên đuôi nhau đau điếng, hay là lỡ đuôi chạm rơi vỡ cốc chén ra thì còn lại là vô số ưu điểm. Các cô gái tha hồ thời trang đuôi đỏ đuôi xanh chắc là cute ngất ngây, lúc đánh nhau thì túm đuôi nhau mà giật, mà ... cắn cho đứt luôn! Ngồi trong lớp ghẹo gái thay vì giật tóc mà giật đuôi thì phê lòi, đuôi nó gắn vào thân ở gần cái chỗ nhạy cảm nên giật chắc nhiều cảm xúc lắm. Đi xem phim hay nhà hàng với gấu, ngồi ăn nghiêm túc mà dùng đuôi thám hiểm chắc là mê ly. Còn lúc "làm chuyện ấy" mà dùng đuôi ve vuốt thì có mà... hị hị... ôi chết mất thôi... 
 
-Bật máy tính cầu cứu Google thì hóa ra cũng chẳng phải là ta hoàn toàn không có đuôi. Khi còn là trong bụng mẹ, cũng có giai đoạn ta có đuôi nhưng khi sinh ra không còn nữa, chỉ còn lại mấy mẩu xương đuôi ở tận cùng xương sống. Mà cũng chả phải đây là đặc sản của loài người đâu. Bọn vượn (ape) tinh tinh dười ươi cũng không có thì phải. Loài người tiến hóa từ vượn người lên, nên thừa hưởng cái sự không đuôi mà thôi. Chúng ta chẳng có công lao gì.
+Bật máy tính cầu cứu Google thì hóa ra cũng chẳng phải là ta hoàn toàn không có đuôi. Khi còn là trong bụng mẹ, cũng có giai đoạn ta có đuôi nhưng khi sinh ra không còn nữa, chỉ còn lại mấy mẩu xương đuôi ở tận cùng xương sống. Mà cũng chả phải đây là đặc sản của loài người đâu. Bọn vượn (ape) tinh tinh đười ươi cũng không có thì phải. Loài người tiến hóa từ vượn người lên, nên thừa hưởng cái sự không đuôi mà thôi. Chúng ta chẳng có công lao gì.
 
 Đuôi rất là hữu ích đối với loài vật. Cá dùng đuôi để bơi. Động vật dùng để giữ thăng bằng (con nào không cần đuôi giữ thăng bằng như trâu hay voi thì có thể dùng để đuổi ruồi muỗi). Bọn khỉ dùng để bám vào cành cây. Bọn chó thì dùng để vẫy vẫy nịnh chủ, ý bảo mày ơi tao vui lắm.
 
-Nhưng mà lũ chúng ta không cần đuôi để bơi. Chúng ta lại đứng thẳng và có bộ phần "tiền đình" gì đó trong não nên thăng bằng không phải vấn đề (trừ khi làm xiếc đi trên dây, không có đuôi thì cầm tạm cây sào là thăng bằng ổn). Cành cây thì cũng không cần bám (cần lắm thì bám bằng tay chắc vẫn ổn hơn đuôi). Còn thay vì vẫy đuôi chúng ta có vô số cách khác để bày tỏ tình cảm!
+Nhưng mà lũ chúng ta không cần đuôi để bơi. Chúng ta lại đứng thẳng và có bộ phận "tiền đình" gì đó trong não nên thăng bằng không phải vấn đề (trừ khi làm xiếc đi trên dây, không có đuôi thì cầm tạm cây sào là thăng bằng ổn). Cành cây thì cũng không cần bám (cần lắm thì bám bằng tay chắc vẫn ổn hơn đuôi). Còn thay vì vẫy đuôi chúng ta có vô số cách khác để bày tỏ tình cảm!
 
 Thế là cái đuôi chả cần nữa và dần dần biến mất.
 
