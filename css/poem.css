@@ -683,6 +683,13 @@ color:#a02c2c;
 	font-size: 0.9em;
 }
 
+.note ul, .note-bordered ul, .note-light-blue ul {
+	margin:0 0 0 15px;
+}
+.note-modest ul {
+	margin:0;
+}
+
 .box-sepia {
 	border-top:1px dashed #333;
 	border-bottom:1px dashed #333;
