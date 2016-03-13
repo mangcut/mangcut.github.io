@@ -33,7 +33,7 @@ Nhưng mà có biết bao nhiều cái cũng không cần thiết lắm mà sao 
 
 "À, vì con lợn nó không mặc quần áo. Con người mà có đuôi lại phải đục cái lỗ ở quần để lòi đuôi ra phiền phức!"
 
-Cứ thế vặn vẹo mãi rồi cũng thôi.
+Cứ thế vặn vẹo quanh co mãi thế rồi nó cũng thôi, chả thèm hỏi nữa.
 
 Cơ mà sau này công nghệ sinh học phát triển, nếu được chọn, tôi sẽ chọn cho mình bộ gen gì mà có đuôi ấy. Đuôi dài dài tí, và có lông dài mượt bồng ấy. Thề!
 
