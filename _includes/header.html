@@ -2,25 +2,20 @@
 	<div class="navbar-inner">
 		<div class="container-fluid">
 		  <a class="brand" href="/" title="{{ site.name }}"><img src="/img/mangcut.svg"></a>
-		  <div class="hidden-phone-v">
 			<ul class="nav" role="navigation" class="hidden-phone-v">
 				<li{% if page.categories == 'blog' %} class="active"{% endif %}><a href="/">VIẾT</a></li>
-				<li{% if page.categories == 'work' %} class="active"{% endif %}><a href="/work.html">NGHỊCH</a></li>
-				<li{% if page.categories == 'about' %} class="active"{% endif %}><a href="/about.html">?</a></li>
-			</ul>
-		   </div>
-		   <div class="hide visible-phone-v">
-		   <ul class="nav" role="navigation">
-				<li class="dropdown">
-					<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">MENU <b class="caret"></b></a>
+				<li class="hidden-phone-v{% if page.categories == 'linhtinh' %} active{% endif %}"><a href="/linhtinh/">CHÉM</a></li>
+				<li class="hidden-phone-v{% if page.categories == 'work' %} active{% endif %}"><a href="/work.html">NGHỊCH</a></li>
+				<li class="hidden-phone-v{% if page.categories == 'about' %} active{% endif %}"><a href="/about.html">?</a></li>
+				<li class="dropdown hide visible-phone-v">
+					<a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret"></b></a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-					  <li><a href="/">Viết</a></li>
-					  <li><a href="/work.html">Nghịch</a></li>
-					  <li><a href="/about.html">Ai?</a></li>
+						<li><a href="/linhtinh/">CHÉM</a></li>
+					  <li><a href="/work.html">NGHỊCH</a></li>
+					  <li><a href="/about.html">GIỚI THIỆU</a></li>
 					 </ul>
 				</li>
 			</ul>
-		  </div>
 		  <a id="showSitemap" href="/" title="Hiển thị danh sách bài viết" class="navbar-button pull-right" data-action="toggleClass" data-target="#sitemap" data-options=" sitemap-show" data-advanced=":overlay"><img src="/img/list.svg" alt="..."></a>
 		</div>
 	</div>
