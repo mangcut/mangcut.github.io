@@ -1248,11 +1248,11 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
   *display: inline;
   zoom: 1;
   padding: 0 0 0 8px;
-  background-color: #090;
+  background-color: peru;
   border-radius: 0;
-  font-family: Verdana;
-  font-size: 12px;
-  line-height: 18px;
+  /*font-family: Verdana;*/
+  font-size: 14px;
+  line-height: 28px;
   font-weight: normal;
   margin: 5px 10px 0 0;
 }
@@ -1264,14 +1264,16 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 
 .cloud-tags span {
   background-color: #f5f5f5;
-  color: #090;
+  font-family: serif;
+  color: peru;
   display: inline-block;
-  padding: 0 5px;
+  padding: 0 7px;
   border-radius: 0px;
-  border: 2px solid #090;
+  border: 1px solid peru;
   margin-left: 9px;
   position: relative;
 }
+/*
 .cloud-tags span::after {
 	display: inline-block;
 	position: absolute;
@@ -1283,7 +1285,7 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 	left: -6px;
 	content: "";
 }
-
+*/
 .cloud-tags a:hover, .cloud-tags a:focus {
 	color: white;
 }
@@ -1291,10 +1293,11 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 .cloud-tags a:hover span, .cloud-tags a:focus span {
   background-color:white;
 }
+/*
 .cloud-tags a:hover span::after,.cloud-tags a:focus span::after {
 	border-right-color:white;
 }
-
+*/
 .no-padding {
 	padding: 0;
 }
