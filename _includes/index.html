@@ -5,9 +5,9 @@
 		<img class="img-post-cover" src="/media/new_year.svg"></img>
 	  </div>
 </figure-->
-<p style="white-space: nowrap">Bạn đang ghé thăm <wbr>Blog Măng Cụt&nbsp;&nbsp;<span style="white-space:nowrap"><a title="Bài nổi bật" href="#" data-action="slideToggle" data-target=".featured"><img src="/img/featured.png"></img></a><sub data-action="slideToggle" data-target=".featured"> <span class="font-xxlarge">&larr;</span> click</sub></span></p>
+<p style="white-space: nowrap;margin-bottom:20px">Bạn đang ghé thăm <wbr>Blog Măng Cụt&nbsp;&nbsp;<span style="white-space:nowrap"><a title="Bài nổi bật" href="#" data-action="slideToggle" data-target=".featured"><img src="/img/featured.png"></img></a><sub data-action="slideToggle" data-target=".featured"> <span class="font-xxlarge">&larr;</span> click</sub></span></p>
 
-<div class="featured">
+<div class="featured over-margin over-padding" style="background-color:moccasin;padding-top:20px;padding-bottom:20px">
 
 <div>
 <p><span class="upper font-xsmall">Chia sẻ nhiều nhất:</span></span><br><a href="/con-nguoi.html">Con & Người: Nhìn từ cấu trúc bộ não</a></p>
@@ -33,10 +33,10 @@
     <li><a href="#">Lập trình <span>2</span></a></li>
   </ul-->
 </div>
+</div> <!-- featured -->
 
-<div style="margin-bottom:15px;margin-top:25px"><span class="font-xsmall">Thích Blog Măng Cụt?</span><br><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn-share" title="Chia sẻ bài này lên Facebook"><img alt="" src="/img/fb2.svg" style="margin-right:8px">Chia sẻ</a> <sub><span class="font-xxlarge">&larr;</span> click</sub></div>
+<div style="margin-bottom:15px;margin-top:20px"><span class="font-xsmall">Thích Blog Măng Cụt?</span><br><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn-share" title="Chia sẻ bài này lên Facebook"><img alt="" src="/img/fb2.svg" style="margin-right:8px">Chia sẻ</a> <sub><span class="font-xxlarge">&larr;</span> click</sub></div>
 
-</div>
 </div>
 
 {% for post in site.categories.blog limit:10 %}
