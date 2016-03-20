@@ -1298,6 +1298,16 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 	border-right-color:white;
 }
 */
+
+.featured {
+	background-color:rgba(255,255,255,0.1);
+	padding-top:20px;
+	padding-bottom:15px;
+	border-top:1px solid #ffeccc;
+	border-bottom:1px solid #ffeccc;
+	position:relative;
+}
+
 .no-padding {
 	padding: 0;
 }
