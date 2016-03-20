@@ -2,7 +2,7 @@ name: Blog Măng Cụt
 en_name: Blog Măng Cụt
 title: Trương Hồng Thi
 en_title: Truong Hong Thi's Personal Page
-description: Mở những ô cửa mới để cùng quan sát thế giới.
+description: Cùng mở những ô cửa mới.
 en_description: Truong Hong Thi on Programming and Life
 permalink: /:categories/:year-:month-:day-:title.html
 url: http://www.mangcut.vn
