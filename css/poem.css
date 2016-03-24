@@ -1273,6 +1273,8 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
   margin-left: 9px;
   position: relative;
 }
+.cloud-tags li.hot span {
+}
 /*
 .cloud-tags span::after {
 	display: inline-block;
@@ -1288,12 +1290,14 @@ input[type="submit"].button:hover, input[type="submit"].button:focus {
 */
 .cloud-tags a:hover, .cloud-tags a:focus {
 	color: white;
+	text-decoration: underline;
 }
 
+/*
 .cloud-tags a:hover span, .cloud-tags a:focus span {
   background-color:white;
 }
-/*
+
 .cloud-tags a:hover span::after,.cloud-tags a:focus span::after {
 	border-right-color:white;
 }

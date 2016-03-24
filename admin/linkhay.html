@@ -1,0 +1,68 @@
+---
+layout: post_admin
+page_title: "Linkhay Extension & Linkhay Comments"
+title: "Linkhay Extension & Linkhay Comments"
+external_image: http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=292
+---
+<p>Mấy hôm nay sếp @tanng bên Linkhay đêm nằm trằn trọc suy nghĩ về bot. Nói rộng hơn là linkhay extension. Hoặc gọi là "linkhay được tăng cường" - ăn theo cách gọi "thực tế được tăng cường (Augmented Reality)".</p>
+
+<h3>0. Nó là cái gì?</h3>
+<p>Tức là khi hiển thị 1 link, thì các thông tin bổ sung về các <i>đối tượng liên quan</i> đến link đó có thể được hiển thị thêm.</p>
+
+<h3>1. Là những đối tượng nào?</h3>
+<p>Giả sử ông @thinker viết 1 bài trên Blog Măng Cụt và được ông @cuong205a đưa lên linkhay. Như vậy có 3 loại đối tượng:</p>
+<ol>
+<li>Publisher, ở đây là Blog Măng Cụt</li>
+<li>Author (ở đây @thinker)</li>
+<li>User đăng tin (ở đây @cuong205a)</li>
+</ol>
+
+<p>Publisher/author có thể dùng thẻ <i>meta</i> trong bài viết để cung cấp thông tin thêm cho linkhay (ví dụ cung cấp thông tin về account linkhay của tác giả bài viết, v.v.).</p>
+
+<h3>2. Tích hợp vào chỗ nào?</h3>
+<p>Cái này do mấy bác thiết kế linkhay quyết định, có thể có vài lựa chọn: ngay ở dưới tít (như con bot hiện tại), ở bên hông (nếu là desktop), ở giữa hoặc cuối comment. Extension khi đăng kí sẽ chọn địa điểm của mình.</p>
+
+<h3>3. Hiển thị vào thời điểm nào</h3>
+<p>Có các lựa chọn như khi load trang, khi user click nút "Hay", v.v. Việc có hiện thị hay không có thể tùy điều kiện nào đó (ví dụ chỉ hiển thị khi link hot, chỉ hiện thị cho kênh Anh em, chỉ hiện thị cho user đã like, v.v.)</p>
+
+<h3>4. Linkhay cung cấp dịch vụ gì cho extension</h3>
+<p>Linkhay có thể cung cấp:</p>
+<ul>
+<li>Metadata về link (url, người post, số hay, v.v.)</li>
+<li>Thông tin mà bot tự động crawl được (bài liên quan, v.v.)</li>
+<li>Cho phép theo dõi publisher/author (hiện tại mới theo dõi được user gửi tin), có notification</li>
+<li>...</li>
+</ul>
+
+<h3>5. Có thể tích hợp nội dung gì</h3>
+<p>Về bản chất extension có thể tích hợp/hiển thị bất kì nội dung gì miễn là tuân thủ quy định của linkhay. Sẽ phải đăng kí extension này lên "chợ Linkhay" và được ban quản trị linkhay phê duyệt.</p>
+<p>Có thể có các extension mà linkhay cung cấp sẵn, và có các extension do người dùng cung cấp.</p>
+
+<h3>6. Ví dụ?</h3>
+<p>Đây là ví dụ về 1 extension của publisher <b>mangcut.vn</b> hiện thị sau khi user click "Hay". Đây là bản cho smartphone. Nó mời chào user theo đuôi publisher, và hiển thị các bài viết có thể user quan tâm (cung cấp bởi bot, hoặc bởi chính publisher qua web services). 
+
+<p><i>Trước</i> khi click <b>Hay</b>:</p>
+<figure>
+  <div class="img-container">
+  <img style="border:1px solid #eee;box-shadow:0 0 3px 1px #333" src="/media/lh1.png" alt="Trước ki click 'Hay'"></img>
+  </div>
+</figure>
+
+<p style="margin-top:40px"><i>Sau</i> khi click <b>Hay</b>:</p>
+<figure>
+  <div class="img-container">
+  <img style="border:1px solid #eee;box-shadow:0 0 2px 1px #333" src="/media/lh2.png" alt="Sau ki click 'Hay'"></img>
+  </div>
+</figure>
+
+<h3>7. Linkhay Comments</h3>
+<p>Lâu nay thì Blog Măng Cụt không hỗ trợ comment. Một phần thì cũng không thấy hệ thống comment nào mà:</p>
+<ul>
+<li>Có cộng đồng (chứ không đơn giản là 1 cái tool), có thể tag và notify (Disqus không thỏa mãn, lại còn bị chặn ở mốt số mạng).</li>
+<li>Cộng đồng đó thì tác giả blog phải có giao lưu ở đó (Google không thỏa mãn)</li>
+<li>Cộng đồng già trâu 1 tí (Facebook không thỏa mãn)</li>
+</ul>
+
+<p>Linkhay có vẻ là 1 cộng đồng phù hợp, nhưng lại không có <i>linkhay comments</i> để tích hợp vào blog. Hiện tại có VietID Comment có thể xài tạm, trong lúc chờ bác @dqcuong update để có thể notification lên linkhay (hoặc đồng bộ bình luận giữa blog và linkhay càng tốt). Ngoài ra cũng đã yêu cầu bác ấy thêm nút "hay" để nhúng vào cuối bài viết, ai thích có thể vote và bình luận luôn không cần trở lại linkhay. Chả biết bao giờ bác ấy code xong.</p>
+
+<p>Các bạn comment bằn VietID ở dưới nha!</p>
