@@ -25,7 +25,7 @@ customJS: linkhay_bot
 <p>Cái này do mấy bác thiết kế linkhay quyết định, có thể có vài lựa chọn: ngay ở dưới tít (như con bot hiện tại), ở bên hông (nếu là desktop), ở giữa hoặc cuối comment. Extension khi đăng kí sẽ chọn địa điểm của mình.</p>
 
 <h3>3. Hiển thị vào thời điểm nào</h3>
-<p>Có các lựa chọn như khi load trang, khi user click nút "Hay", v.v. Việc có hiện thị hay không có thể tùy điều kiện nào đó (ví dụ chỉ hiển thị khi link hot, chỉ hiện thị cho kênh Anh em, chỉ hiện thị cho user đã like, v.v.)</p>
+<p>Có các lựa chọn như khi load trang, khi user click nút "Hay", v.v. Việc có hiển thị hay không có thể tùy điều kiện nào đó (ví dụ chỉ hiển thị khi link hot, chỉ hiện thị cho kênh Anh em, chỉ hiện thị cho user đã like, v.v.)</p>
 
 <h3>4. Linkhay cung cấp dịch vụ gì cho extension</h3>
 <p>Linkhay có thể cung cấp:</p>
@@ -44,16 +44,23 @@ customJS: linkhay_bot
 <p>Đây là ví dụ về 1 extension của publisher <b>mangcut.vn</b> hiện thị sau khi user click "Hay". Đây là bản cho smartphone. Nó mời chào user theo đuôi publisher, và hiển thị các bài viết có thể user quan tâm (cung cấp bởi bot, hoặc bởi chính publisher qua web services).</p>
 
 <p><i>Trước</i> khi click <b>Hay</b>:</p>
+<style type="text/css" scoped>
+@media (max-width: 320px) {
+.is320{	margin-left: -6.18%;
+		margin-right: -6.18%;
+		box-shadow:none;}
+}
+</style>
 <figure>
-  <div>
-  <img style="border:1px solid #eee;box-shadow:0 0 3px 1px #333" src="/media/lh1.png" alt="Trước ki click 'Hay'"></img>
+  <div class="is320">
+  <img style="border-top:1px solid #eee;border-bottom:1px solid #eee;box-shadow:0 0 3px 1px #333" src="/media/lh1.png" alt="Trước ki click 'Hay'"></img>
   </div>
 </figure>
 
 <p style="margin-top:40px"><i>Sau</i> khi click <b>Hay</b>:</p>
 <figure>
-  <div>
-  <img style="border:1px solid #eee;box-shadow:0 0 2px 1px #333" src="/media/lh2.png" alt="Sau ki click 'Hay'"></img>
+  <div class="is320">
+  <img style="border-top:1px solid #eee;border-bottom:1px solid #eee;box-shadow:0 0 2px 1px #333" src="/media/lh2.png" alt="Sau ki click 'Hay'"></img>
   </div>
 </figure>
 
@@ -67,7 +74,7 @@ customJS: linkhay_bot
 
 <p>Linkhay có vẻ là 1 cộng đồng phù hợp, nhưng lại không có <i>linkhay comments</i> để tích hợp vào blog. Hiện tại có VietID Comment có thể xài tạm, trong lúc chờ bác @dqcuong update để có thể notification lên linkhay (hoặc đồng bộ bình luận giữa blog và linkhay càng tốt). Ngoài ra cũng đã yêu cầu bác ấy thêm nút "hay" để nhúng vào cuối bài viết, ai thích có thể vote và bình luận luôn không cần trở lại linkhay. Chả biết bao giờ bác ấy code xong.</p>
 
-<p>Các bạn comment bằn VietID ở dưới nha!</p>
+<p>Các bạn comment bằng VietID ở dưới nha!</p>
 
 <p style="margin-bottom:40px"><a href="/">» Về trang chủ</a></p>
 
