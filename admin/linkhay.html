@@ -9,7 +9,7 @@ customJS: linkhay_bot
 <p>Mấy hôm nay sếp @tanng bên Linkhay đêm nằm trằn trọc suy nghĩ về bot. Nói rộng hơn là linkhay extension. Hoặc gọi là "linkhay được tăng cường" - ăn theo cách gọi "thực tế được tăng cường (Augmented Reality)".</p>
 
 <h3>0. Nó là cái gì?</h3>
-<p>Tức là khi hiển thị 1 link, thì các thông tin bổ sung về các <i>đối tượng liên quan</i> đến link đó có thể được hiển thị thêm.</p>
+<p>Tức là khi hiển thị 1 link, thì các thông tin bổ sung về các <i>đối tượng liên quan</i> đến link đó có thể được hiển thị thêm. Có phép tương tác giữa extension với người dùng thông qua các dịch vụ của linkhay như notification, tin nhắn, dòng sự kiện, v.v.</p>
 
 <h3>1. Là những đối tượng nào?</h3>
 <p>Giả sử ông @thinker viết 1 bài trên Blog Măng Cụt và được ông @cuong205a đưa lên linkhay. Như vậy có 3 loại đối tượng:</p>
@@ -32,16 +32,16 @@ customJS: linkhay_bot
 <ul>
 <li>Metadata về link (url, người post, số hay, v.v.)</li>
 <li>Thông tin mà bot tự động crawl được (bài liên quan, v.v.)</li>
-<li>Cho phép theo dõi publisher/author (hiện tại mới theo dõi được user gửi tin), có notification</li>
+<li>Mở các API về dòng sự kiện, notification, tin nhắn, lưu bút, v.v. cho phép extension tương tác với người dùng. Ví dụ user có thể theo dõi publisher/author thay vì chỉ theo dõi user/kênh như hiện nay</li>
 <li>...</li>
 </ul>
 
 <h3>5. Có thể tích hợp nội dung gì</h3>
-<p>Về bản chất extension có thể tích hợp/hiển thị bất kì nội dung gì miễn là tuân thủ quy định của linkhay. Sẽ phải đăng kí extension này lên "chợ Linkhay" và được ban quản trị linkhay phê duyệt.</p>
-<p>Có thể có các extension mà linkhay cung cấp sẵn, và có các extension do người dùng cung cấp.</p>
+<p>Về bản chất extension có thể tích hợp/hiển thị/tương tác với user tùy theo sự sáng tạo của người tạo extension, miễn là tuân thủ quy định của linkhay. Sẽ phải đăng kí extension này lên "chợ Linkhay" và được ban quản trị linkhay phê duyệt.</p>
+<p>Có thể có các extension mà linkhay cung cấp sẵn (built-in), và có các extension do nhà phát triển bên ngoài cung cấp.</p>
 
 <h3>6. Ví dụ?</h3>
-<p>Đây là ví dụ về 1 extension của publisher <b>mangcut.vn</b> hiển thị sau khi user click "Hay". Đây là bản cho smartphone. Nó mời chào user theo đuôi publisher, và hiển thị các bài viết có thể user quan tâm (cung cấp bởi bot, hoặc bởi chính publisher qua web services).</p>
+<p>Đây là ví dụ về 1 extension đơn giản của publisher <b>mangcut.vn</b> hiển thị sau khi user click "Hay". Đây là bản cho smartphone. Nó mời chào user theo đuôi publisher, và hiển thị các bài viết có thể user quan tâm (cung cấp bởi bot, hoặc bởi chính publisher qua web services).</p>
 
 <p><i>Trước</i> khi click <b>Hay</b>:</p>
 <style type="text/css" scoped>
@@ -53,16 +53,18 @@ customJS: linkhay_bot
 </style>
 <figure>
   <div class="is320">
-  <img style="border-top:1px solid #eee;border-bottom:1px solid #eee;box-shadow:0 0 3px 1px #333" src="/media/lh1.png" alt="Trước ki click 'Hay'"></img>
+  <img style="border-top:1px solid #eee;border-bottom:1px solid #eee;box-shadow:0 0 3px 0 #555" src="/media/lh1.png" alt="Trước ki click 'Hay'"></img>
   </div>
 </figure>
 
 <p style="margin-top:40px"><i>Sau</i> khi click <b>Hay</b>:</p>
 <figure>
   <div class="is320">
-  <img style="border-top:1px solid #eee;border-bottom:1px solid #eee;box-shadow:0 0 2px 1px #333" src="/media/lh2.png" alt="Sau ki click 'Hay'"></img>
+  <img style="border-top:1px solid #eee;border-bottom:1px solid #eee;box-shadow:0 0 2px 0 #555" src="/media/lh2.png" alt="Sau ki click 'Hay'"></img>
   </div>
 </figure>
+
+<p>Sau khi người dùng theo đuôi thì có thể nhận được notification mỗi khi có bài từ domain <b>mangcut.vn</b> được gửi lên.</p>
 
 <h3>7. Linkhay Comments</h3>
 <p>Lâu nay thì Blog Măng Cụt không hỗ trợ comment. Một phần thì cũng không thấy hệ thống comment nào mà:</p>
@@ -72,7 +74,7 @@ customJS: linkhay_bot
 <li>Cộng đồng già trâu 1 tí (Facebook không thỏa mãn)</li>
 </ul>
 
-<p>Linkhay có vẻ là 1 cộng đồng phù hợp, nhưng lại không có <i>linkhay comments</i> để tích hợp vào blog. Hiện tại có VietID Comment có thể xài tạm, trong lúc chờ bác @dqcuong update để có thể notification lên linkhay (hoặc đồng bộ bình luận giữa blog và linkhay càng tốt). Ngoài ra cũng đã yêu cầu bác ấy thêm nút "hay" để nhúng vào cuối bài viết, ai thích có thể vote và bình luận luôn không cần trở lại linkhay. Chả biết bao giờ bác ấy code xong.</p>
+<p>Linkhay có vẻ là 1 cộng đồng phù hợp, nhưng lại không có <i>linkhay comments</i> để tích hợp vào blog. Hiện tại có VietID Comment có thể xài tạm, trong lúc chờ bác @dqcuong update để có thể notification lên linkhay (hoặc <i>đồng bộ</i> bình luận giữa blog và linkhay càng tốt). Ngoài ra cũng đã yêu cầu bác ấy thêm nút "hay" để nhúng vào cuối bài viết, ai thích có thể vote và bình luận luôn không cần trở lại linkhay. Chả biết bao giờ bác ấy code xong.</p>
 
 <p>Các bạn comment bằng VietID ở dưới nha!</p>
 
