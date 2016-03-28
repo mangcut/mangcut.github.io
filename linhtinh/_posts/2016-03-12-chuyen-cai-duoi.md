@@ -5,8 +5,8 @@ page_title: "Nếu chúng ta có đuôi như loài chó thì hay phải biết!"
 title: "Nếu chúng ta có đuôi như loài chó thì hay phải biết!"
 description: "Bên ấm trà đàm đạo chuyện cái đuôi."
 image: /media/tail.jpg
-see_also1: /linhtinh/mua-phun.html
-see_also2: /linhtinh/quan-ly.html
+see_also1: linhtinh/mua-phun.html
+see_also2: linhtinh/quan-ly.html
 ---
 
 Chả là tối thứ 7, lại mới viết xong <a href="/4-buc-anh/1.html" target="_blank">bài dài dòng trên blog</a> nên trong lòng có chút thoải con gà mái, ngồi vểnh râu uống trà xem Animal Planet cho vui cái sự đời. Nào ngờ đứa con gái lớp 1 chả để cho yên. "Bố ơi sao mấy con vật con nào cũng có đuôi mà con người lại không có hả bố?". Tiên sư bố, lần nào hỏi cũng thế!

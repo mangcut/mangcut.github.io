@@ -7,7 +7,8 @@ layout: default
 		<img src="{{page.header_image_2}}"></img>
 	</div>
 	<div class="post-title">
-		<h1>{{ page.title }}</h1>
+		{% assign title_word_count = page.title | number_of_words %}
+		<h1 style="margin-top:0.8em{% if title_word_count > 10 %};font-weight:400{% endif %}">{{ page.title }}</h1>
 	</div>
 	{% include byline_black.html %}
 </div>
