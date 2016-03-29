@@ -12,7 +12,7 @@
 			  <li class="bottom-line{% if page.url == post.url %} active{% endif %}{% if forloop.rindex0 < 6 %} hide older{% endif %}"><a href="{{post.url}}">{{post.title}}&nbsp;<span class="tag tag-{{post.feel}}" title="{{post.feel_text}}">{{post.feel_text}}</span></a></li>
 			{% endfor %}
 		</ul>
-		<br><a style="margin-left:15px" href="#" title="Hiện tiếp các bài còn lại" data-action='[{"action": "show", "target": "#sitemapContent .older"}, {"action": "$(this).hide"}]'><span style="font-size:1.2em">&raquo;</span> Bài cũ hơn</a>
+		<br><a style="margin-left:15px;margin-bottom:15px" href="#" title="Hiện tiếp các bài còn lại" data-action='[{"action": "show", "target": "#sitemapContent .older"}, {"action": "$(this).hide"}]'><span style="font-size:1.2em">&raquo;</span> Bài cũ hơn</a>
 	</div>
 	<div class="sitemap-content-tab tab-popular hide">
 		<ul class="nav nav-list" style="padding-left:0;padding-right:0">
