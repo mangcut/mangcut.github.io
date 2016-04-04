@@ -996,7 +996,7 @@ color:#a02c2c;
 	.sitemap {
 		width: 100%;
 	}
-	.img-container, .video-container {
+	.img-container, .video-container, .small-container {
 		margin-left: -20px;
 		margin-right: -20px;
 	}
@@ -1007,7 +1007,7 @@ color:#a02c2c;
 	  padding-right: 5.5%;
 	  padding-left: 5.5%;
 	}
-	.img-container, .video-container, .over-margin {
+	.img-container, .video-container, .small-container, .over-margin {
 		margin-left: -6.18%;
 		margin-right: -6.18%;
 	}
