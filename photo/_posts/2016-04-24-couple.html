@@ -68,6 +68,16 @@ image: /photo/couple/19.jpg
 <meta property="og:url" content="{{site.url}}{{canonical}}" />
 <meta name="twitter:url" content="{{site.url}}{{canonical}}" />
 <link href="{{site.url}}/atom/all.xml" type="application/atom+xml" rel="alternate" title="{{site.name}} - {{site.title}}">
+<script>
+(function() {
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+if (!isIE) {
+	document.documentElement.className = 'noIE';
+} else {
+	document.documentElement.className = 'isIE';
+}
+})();
+</script>
 <script src="/js/modernizr.js"></script>
 <link rel="stylesheet" href="/css/photoswipe.css"> 
 <link rel="stylesheet" href="/css/default-skin/default-skin.css"> 
@@ -112,7 +122,7 @@ p {
   margin-bottom: 25px;
 }
 
-.footeer {
+.footer, .footer a {
   color: #edd;
 }
 
@@ -123,54 +133,77 @@ a {
 a:hover {
   color: #fff;
 }
-
-.my-gallery {
-  max-width: 1200px;
-  margin: 0 auto 0 auto;
-  line-height: 1;
-}
-.my-gallery:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-.my-gallery img {
-  margin:0;
-  padding:0;
-  outline: 0;
-  height: 400px;
-}
-
-.my-gallery img.big {
-}
-
-.my-gallery figure {
-  display:block;
-  float:left;	
-  margin: 0 4px 1px 0;
-  padding:0;
-}
-.my-gallery figcaption {
-  display: none;
-}
 hr.line {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
-@media (max-width: 700px) {
+
 .my-gallery {
-  max-width: 100%;
-}
-.my-gallery img {
-  width: auto;
+  display: block;
+  width: 100%;
   height: auto;
-  max-width: 100%;
 }
 .my-gallery figure {
-  float:none;
-  margin: 0 0 0px;
+  width: 100%;
+  margin: 0;
 }
+
+.my-gallery img {
+  width:100%;
+}
+
+.my-gallery figcaption {
+  display: none;
+}
+
+@media (min-width: 705px) {
+
+html.noIE .my-gallery {
+	margin: 0 auto 0 auto;
+	height: 5000px;
+	width: 705px;
+	display: -ms-flexbox;
+	-ms-flex-direction: column;
+	-ms-flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.my-gallery figure {
+  width: 350px;
+}
+
+html.isIE .my-gallery {
+  width: 705px;
+  margin: 0 auto 0 auto;
+}
+html.isIE figure {
+  display: inline-block;
+}
+
+p.lead, h2 {
+  width: 705px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+}
+
+@media (min-width: 1060px) {
+
+html.isIE .my-gallery, p.lead, h2 {
+	width: 1060px;
+}
+
+html.noIE .my-gallery {
+	height: 3400px;
+	width: 1060px;
+}
+
 }
 
 </style>
@@ -181,7 +214,7 @@ hr.line {
 <h2>{{ page.title }}</h2>
 
 <section class="body">
-<p class="lead">Những tấm hình của nữ họa sỹ Philippa Rice vẽ lại những khoảnh khắc thường ngày của cô và bạn trai, sau này đã được phát hành thành sách <i><a target="_blank" href="http://www.amazon.com/Soppy-Love-Story-Philippa-Rice/dp/1449461069/">Soppy: A Love Story</a></i>. Những hình ảnh tưởng như rất riêng đó hóa ra lại rất chung. Rất nhiều bạn đọc nhận ra mình trong đó. Dưới đây là 22 hình trong tập sách - có thể bạn sẽ thấy mình trong đó - nếu không phải ở tất cả thì cũng ở một số tấm hình.</p>
+<p class="lead">Những tấm hình của nữ họa sỹ Philippa Rice vẽ lại những khoảnh khắc thường ngày của cô và bạn trai, sau này đã được phát hành thành sách <i><a target="_blank" href="http://www.amazon.com/Soppy-Love-Story-Philippa-Rice/dp/1449461069/">Soppy: A Love Story</a></i>. Những hình ảnh tưởng như rất riêng đó hóa ra lại rất chung. Rất nhiều bạn đọc đã nhận ra mình trong đó. Dưới đây là 22 hình trong tập sách - có thể bạn sẽ thấy mình trong đó - nếu không phải ở tất cả thì cũng ở một số tấm hình.</p>
 <p style="margin-bottom: 20px"><small>(có thể click vào ảnh để phóng to)</small></p>
 
   <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
@@ -389,7 +422,7 @@ hr.line {
   <p style="margin:0 25px 10px"><small><a href="#pagetop">LÊN ĐẦU TRANG</a></small></p>
   <p style="margin:0 25px 30px"><small><a href="/">VỀ TRANG CHỦ</a></small></p>
   <hr class="line">
-  <p><small>&copy; 2016 - <a href="/about.html">Trương Hồng Thi</a><br>Dẫn nguồn & link tới bài gốc khi đăng lại</small></p>
+  <p class="footer"><small>&copy; 2016 - <a href="/about.html">Trương Hồng Thi</a><br>Dẫn nguồn & link tới bài gốc khi đăng lại</small></p>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
