@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{page.lang}}{% else %}vi{% endif %}" class="no-js{% if page.is_post %} type-post{% else %} type-page{% endif %}{% if page.site_home %} site-home{% endif %}{% if page.header_image %} header-image{% endif %}{% if page.extra_class %} {{page.extra_class}}{% endif %}">
+  <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	<meta name="theme-color" content="#a02c2c">
+	<meta property="fb:app_id" content="1019502298079463" />
+	<meta property="fb:admins" content="100000049454443" />
+	<meta property="fb:profile_id" content="100000049454443" />
+	<meta property="og:site_name" content="{{site.name}}" />
+	<meta property="og:type" content="{% if page.is_post %}article{% else %}website{% endif %}" />
+	{% if page.is_post %}
+	<meta property="article:author" content="https://www.facebook.com/mangcut.vn" />
+	<meta property="article:publisher" content="https://www.facebook.com/mangcut.vn" />
+	{% endif %}
+	{% if page.see_also1 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also1}}" />{% endif %}
+	{% if page.see_also2 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also2}}" />{% endif %}
+	<meta name="twitter:card" content="summary" />
+	{% if page.site_home %}
+	<title>{{ site.name }} - {{ page.page_title }}</title>
+	<meta name="twitter:title" content="{{ site.name }} - {{ page.page_title }}" />
+	{% else %}
+	<title>{{ page.page_title }}</title>
+	<meta name="twitter:title" content="{{ page.page_title }}" />
+	{% endif %}
+	{% if page.fb_title %}
+	<meta property="og:title" content="{{ page.fb_title }}" />
+	{% endif %}
+	<meta name="description" content="{{page.description}}">
+	<meta name="twitter:description" content="{% if page.subtitle %}{{page.description}}{% else %}{{page.description}}{% endif %}" />
+	{% if page.fb_description %}
+	<meta property="og:description" content="{{page.fb_description}}" />
+	{% endif %}
+	{% if page.external_image %}
+	<meta property="og:image" content="{{page.external_image}}" />
+	<meta name="twitter:image" content="{{page.external_image}}" />
+	{% endif %}
+	{% if page.image %}
+	<meta property="og:image" content="{{site.url}}{% if page.fb_image %}{{page.fb_image}}{% else %}{{page.image}}{% endif %}" />
+	<meta name="twitter:image" content="{{site.url}}{{page.image}}" />
+	{% endif %}
+	{% if page.url contains "blog/page" %}
+	{% assign canonical = "/blog/" %}
+	{% else %}
+	{% assign canonical = page.url|remove:'index.html' %}
+	{% endif %}
+	<link rel="canonical" href="{{site.url}}{{canonical}}">
+	<meta property="og:url" content="{{site.url}}{{canonical}}" />
+	<meta name="twitter:url" content="{{site.url}}{{canonical}}" />
+	<link href="{{site.url}}/atom/all.xml" type="application/atom+xml" rel="alternate" title="{{site.name}} - {{site.title}}">
+	<link href="/css/poem.css" rel="stylesheet">
+	<!--script src="/js/modernizr.js"></script-->
+	<style>
+		@media (min-width: 640px) {
+			#wrapper, .navbar, #footer {
+				width: inherit;
+				margin-left:0;
+				margin-right:0;
+			}
+			#wrapper, #footer{
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+			}
+			.navbar {
+				background-color:#a02c2c;
+			}
+			.container-first, #footer .container-fluid, .navbar-inner {
+				width: 600px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
+	</style>
+  </head>
+  <body>
+    <div id="wrapper">
+		<div class="navbar navbar-static-top">
+			<div class="navbar-inner">
+				<a href="/" style="color:#fafafa;font-size:1.5em;line-height:40px">blog măng cụt</a>
+			</div>
+		</div>
+	  <div class="container-fluid container-first">
+        <section class="article-list">
+          {{ content }}
+		  {% if page.is_post %}
+			{% include shareline.html %}
+			<section>
+				<div class="spacy-line"></div>
+				<div class="muted font-xsmall">CHUYỆN LINH TINH KHÁC</div>
+				<ul>
+					{% for post in site.categories.linhtinh %}
+						{% if page.url != post.url %}
+						  <li><a href="{{post.url}}">{{post.title}}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</section>
+			<section>
+				<div class="spacy-line"></div>
+				<p><a href="/" title="Về trang chủ"><i class="icon icon-home"></i> Trang chủ</a></p>
+				<p><a href="#wrapper" title="Lên đầu trang"><i class="icon icon-chevron-up"></i> Lên đầu trang</a></p>
+			</section>
+		  {% endif %}
+        </section>
+
+        <p class="push-down"></p>
+      </div>
+    </div>
+
+    {% include footer.html %}
+	<script>    
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-8597504-3', 'mangcut.vn');
+		ga('require', 'linkid');
+		ga('send', 'pageview');
+		
+		{% if page.customJS %}
+		{% include customJS/{{page.customJS}}.js %}
+		{% endif %}
+	</script>
+	<script async src='//www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>
