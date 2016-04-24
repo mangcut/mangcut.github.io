@@ -1,0 +1,708 @@
+---
+layout: empty
+permalink: /photo/couple/
+title: 22 tấm hình ngộ nghĩnh này sẽ nhắc bạn nhớ lại ngày mới cưới
+page_title: 22 tấm hình ngộ nghĩnh này sẽ nhắc bạn nhớ lại ngày mới cưới
+description: Rất chi là tình củm
+image: /photo/couple/19.jpg
+---
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#a02c2c">
+<meta property="fb:app_id" content="1019502298079463" />
+<meta property="fb:admins" content="100000049454443" />
+<meta property="fb:profile_id" content="100000049454443" />
+<meta property="og:site_name" content="{{site.name}}" />
+<meta property="og:type" content="{% if page.is_post %}article{% else %}website{% endif %}" />
+<meta property="article:author" content="https://www.facebook.com/mangcut.vn" />
+<meta property="article:publisher" content="https://www.facebook.com/mangcut.vn" />
+{% if page.see_also1 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also1}}" />{% endif %}
+{% if page.see_also2 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also2}}" />{% endif %}
+<meta name="twitter:card" content="summary" />
+<title>{{ page.page_title }}</title>
+<meta name="twitter:title" content="{{ page.page_title }}" />
+{% if page.fb_title %}
+<meta property="og:title" content="{{ page.fb_title }}" />
+{% endif %}
+<meta name="description" content="{{page.description}}">
+<meta name="twitter:description" content="{% if page.subtitle %}{{page.description}}{% else %}{{page.description}}{% endif %}" />
+{% if page.fb_description %}
+<meta property="og:description" content="{{page.fb_description}}" />
+{% endif %}
+{% if page.external_image %}
+<meta property="og:image" content="{{page.external_image}}" />
+<meta name="twitter:image" content="{{page.external_image}}" />
+{% endif %}
+{% if page.image %}
+<meta property="og:image" content="{{site.url}}{% if page.fb_image %}{{page.fb_image}}{% else %}{{page.image}}{% endif %}" />
+<meta name="twitter:image" content="{{site.url}}{{page.image}}" />
+{% endif %}
+{% if page.url contains "blog/page" %}
+{% assign canonical = "/blog/" %}
+{% else %}
+{% assign canonical = page.url|remove:'index.html' %}
+{% endif %}
+<link rel="canonical" href="{{site.url}}{{canonical}}">
+<meta property="og:url" content="{{site.url}}{{canonical}}" />
+<meta name="twitter:url" content="{{site.url}}{{canonical}}" />
+<link href="{{site.url}}/atom/all.xml" type="application/atom+xml" rel="alternate" title="{{site.name}} - {{site.title}}">
+<script src="/js/modernizr.js"></script>
+<link rel="stylesheet" href="/css/photoswipe.css"> 
+<link rel="stylesheet" href="/css/default-skin/default-skin.css"> 
+<script src="/js/photoswipe.min.js"></script> 
+<script src="/js/photoswipe-ui-default.min.js"></script>
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+* { box-sizing: border-box; }
+html {
+	font-size: 16px;
+}
+body {
+  background-color: #311;
+  color: #f5f5f5;
+  font-family: arial, "san-serif";
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+h2 {
+  text-align: center;
+  font-weight: normal;
+  margin: 30px;
+  font-size: 2em;
+}
+
+p {
+  text-align: center;
+}
+
+.body p {
+  max-width: 1200px;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 30px;
+}
+
+.body p.lead {
+  margin-bottom: 25px;
+}
+
+.footeer {
+  color: #edd;
+}
+
+a {
+  color: #f5f5f5;
+  text-decoration:none;
+}
+a:hover {
+  color: #fff;
+}
+
+.my-gallery {
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  line-height: 1;
+}
+.my-gallery:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.my-gallery img {
+  margin:0;
+  padding:0;
+  outline: 0;
+  height: 400px;
+}
+
+.my-gallery img.big {
+}
+
+.my-gallery figure {
+  display:block;
+  float:left;	
+  margin: 0 4px 1px 0;
+  padding:0;
+}
+.my-gallery figcaption {
+  display: none;
+}
+hr.line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+@media (max-width: 700px) {
+.my-gallery {
+  max-width: 100%;
+}
+.my-gallery img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.my-gallery figure {
+  float:none;
+  margin: 0 0 0px;
+}
+}
+
+</style>
+</head>
+<body>
+<p id="pagetop" style="margin:16px 0 14px"><a href="/">BLOG MĂNG CỤT</a></p>
+<hr class="line">
+<h2>{{ page.title }}</h2>
+
+<section class="body">
+<p class="lead">Những tấm hình của nữ họa sỹ Philippa Rice vẽ lại những khoảnh khắc thường ngày của cô và bạn trai, sau này đã được phát hành thành sách <i><a target="_blank" href="http://www.amazon.com/Soppy-Love-Story-Philippa-Rice/dp/1449461069/">Soppy: A Love Story</a></i>. Những hình ảnh tưởng như rất riêng đó hóa ra lại rất chung. Rất nhiều bạn đọc nhận ra mình trong đó. Dưới đây là 22 hình trong tập sách - có thể bạn sẽ thấy mình trong đó - nếu không phải ở tất cả thì cũng ở một số tấm hình.</p>
+<p style="margin-bottom: 20px"><small>(có thể click vào ảnh để phóng to)</small></p>
+
+  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+  
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="25.jpg" itemprop="contentUrl" data-size="700x980">
+          <img src="25.jpg" class="big" itemprop="thumbnail" alt="Xem phim chung" />
+      </a>
+      <figcaption itemprop="caption description">Xem phim chung</figcaption>
+    </figure>
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="27.jpg" itemprop="contentUrl" data-size="700x950">
+          <img src="27.jpg" itemprop="thumbnail" alt="Tin nhắn nửa đêm" />
+      </a>
+      <figcaption itemprop="caption description">Tin nhắn nửa đêm</figcaption>
+    </figure>
+
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="15.jpg" itemprop="contentUrl" data-size="700x976">
+          <img src="15.jpg" itemprop="thumbnail" alt="Đi ăn 1" />
+      </a>
+      <figcaption itemprop="caption description">Đi ăn 1</figcaption>
+    </figure>
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="26.jpg" itemprop="contentUrl" data-size="700x800">
+          <img src="26.jpg" itemprop="thumbnail" alt="Đi ăn 2" />
+      </a>
+      <figcaption itemprop="caption description">Đi ăn 2</figcaption>
+    </figure>
+		
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="18.jpg" itemprop="contentUrl" data-size="700x646">
+          <img src="18.jpg" itemprop="thumbnail" alt="Đi chung 1" />
+      </a>
+      <figcaption itemprop="caption description">Đi chung 1</figcaption>
+    </figure>
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="10.jpg" itemprop="contentUrl" data-size="700x993">
+          <img src="10.jpg" itemprop="thumbnail" alt="Đi chung 2" />
+      </a>
+      <figcaption itemprop="caption description">Đi chung 2</figcaption>
+    </figure>
+		
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="20.jpg" itemprop="contentUrl" data-size="700x1020">
+          <img src="20.jpg"  class="big" itemprop="thumbnail" alt="Đi chung 3" />
+      </a>
+      <figcaption itemprop="caption description">Đi chung 3</figcaption>
+    </figure>
+		
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="24.jpg" itemprop="contentUrl" data-size="700x576">
+          <img src="24.jpg" itemprop="thumbnail" alt="Ngắm bình minh trên biển" />
+      </a>
+      <figcaption itemprop="caption description">Ngắm bình minh trên biển</figcaption>
+    </figure>
+		
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="23.jpg" itemprop="contentUrl" data-size="700x846">
+          <img src="23.jpg" itemprop="thumbnail" alt="Nhìn qua cửa sổ" />
+      </a>
+      <figcaption itemprop="caption description">Nhìn qua cửa sổ</figcaption>
+    </figure>
+	
+	<!--figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="1.jpg" itemprop="contentUrl" data-size="700x1003">
+          <img src="1.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 2</figcaption>
+    </figure-->
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="3.jpg" itemprop="contentUrl" data-size="700x792">
+          <img src="3.jpg" itemprop="thumbnail" alt="Ôm" />
+      </a>
+      <figcaption itemprop="caption description">Ôm</figcaption>
+    </figure>
+	
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="2.jpg" itemprop="contentUrl" data-size="700x1145">
+          <img src="2.jpg" class="big" itemprop="thumbnail" alt="Đi siêu thị" />
+      </a>
+      <figcaption itemprop="caption description">Đi siêu thị</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="4.jpg" itemprop="contentUrl" data-size="700x996">
+          <img src="4.jpg" itemprop="thumbnail" alt="Ngủ" />
+      </a>
+      <figcaption itemprop="caption description">Ngủ</figcaption>
+    </figure>
+
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="5.jpg" itemprop="contentUrl" data-size="700x1015">
+          <img src="5.jpg" itemprop="thumbnail" alt="Đánh răng sáng sớm" />
+      </a>
+      <figcaption itemprop="caption description">Đánh răng sáng sớm</figcaption>
+    </figure>
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="6.jpg" itemprop="contentUrl" data-size="700x785">
+          <img src="6.jpg" itemprop="thumbnail" alt="Pha nước" />
+      </a>
+      <figcaption itemprop="caption description">Pha nước</figcaption>
+    </figure>
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="7.jpg" itemprop="contentUrl" data-size="700x973">
+          <img src="7.jpg" itemprop="thumbnail" alt="Làm việc" />
+      </a>
+      <figcaption itemprop="caption description">Làm việc</figcaption>
+    </figure>
+	
+	<!--figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="8.jpg" itemprop="contentUrl" data-size="700x939">
+          <img src="8.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 4</figcaption>
+    </figure-->
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="9.jpg" itemprop="contentUrl" data-size="700x613">
+          <img src="9.jpg" itemprop="thumbnail" alt="Đóng đồ đạc" />
+      </a>
+      <figcaption itemprop="caption description">Đóng đồ đạc</figcaption>
+    </figure>
+	
+	<!--figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="11.jpg" itemprop="contentUrl" data-size="700x1016">
+          <img src="11.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 4</figcaption>
+    </figure-->
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="12.jpg" itemprop="contentUrl" data-size="700x609">
+          <img src="12.jpg" itemprop="thumbnail" alt="Đọc sách trên giường" />
+      </a>
+      <figcaption itemprop="caption description">Đọc sách trên giường</figcaption>
+    </figure>
+
+	<!--figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="13.jpg" itemprop="contentUrl" data-size="700x1000">
+          <img src="13.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 4</figcaption>
+    </figure-->
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="16.jpg" itemprop="contentUrl" data-size="700x1212">
+          <img src="16.jpg" class="big" itemprop="thumbnail" alt="Xem TV" />
+      </a>
+      <figcaption itemprop="caption description">Xem TV</figcaption>
+    </figure>
+	
+	<!--figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="14.jpg" itemprop="contentUrl" data-size="700x637">
+          <img src="14.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 4</figcaption>
+    </figure-->
+		
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="17.jpg" itemprop="contentUrl" data-size="700x633">
+          <img src="17.jpg" itemprop="thumbnail" alt="Nằm buôn chuyện" />
+      </a>
+      <figcaption itemprop="caption description">Nằm buôn chuyện</figcaption>
+    </figure>
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="19.jpg" itemprop="contentUrl" data-size="700x607">
+          <img src="19.jpg" itemprop="thumbnail" alt="Trên sofa" />
+      </a>
+      <figcaption itemprop="caption description">Trên sofa</figcaption>
+    </figure>
+	
+	<!--figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="21.jpg" itemprop="contentUrl" data-size="700x1026">
+          <img src="21.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="caption description">Image caption 4</figcaption>
+    </figure-->
+	
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="22.jpg" itemprop="contentUrl" data-size="700x985">
+          <img src="22.jpg" itemprop="thumbnail" alt="Giành chỗ ngủ" />
+      </a>
+      <figcaption itemprop="caption description">Giành chỗ ngủ</figcaption>
+    </figure>
+
+	<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="28.jpg" itemprop="contentUrl" data-size="700x860">
+          <img src="28.jpg" itemprop="thumbnail" alt="Đùn nhau mở cửa" />
+      </a>
+      <figcaption itemprop="caption description">Đùn nhau mở cửa</figcaption>
+    </figure>
+	
+  </div>
+</section>
+
+  <p style="margin:30px 25px 10px"><small><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}">SHARE FACEBOOK</a></small></p>
+  <p style="margin:0 25px 10px"><small><a href="#pagetop">LÊN ĐẦU TRANG</a></small></p>
+  <p style="margin:0 25px 30px"><small><a href="/">VỀ TRANG CHỦ</a></small></p>
+  <hr class="line">
+  <p><small>&copy; 2016 - <a href="/about.html">Trương Hồng Thi</a><br>Dẫn nguồn & link tới bài gốc khi đăng lại</small></p>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+</div>
+
+
+<script type="text/javascript">
+/* Google Analytics */
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8597504-3', 'mangcut.vn');
+  ga('require', 'linkid');
+  ga('send', 'pageview');
+/* End Goolge Analytics */
+
+{% if page.customJS %}
+{% include customJS/{{page.customJS}}.js %}
+{% endif %}
+</script>
+
+<script type="text/javascript">
+//(function() {
+
+/*
+var startMasonry = function() {va
+	var galleryEl = document.querySelector(".my-gallery");
+	new Masonry(galleryEl, {
+	  // options
+	  itemSelector: '.my-gallery figure',
+	  columnWidth: '.my-gallery figure'
+	});
+};
+*/
+
+var initPhotoSwipeFromDOM = function(gallerySelector) {
+    // parse slide data (url, title, size ...) from DOM elements 
+    // (children of gallerySelector)
+    var parseThumbnailElements = function(el) {
+        var thumbElements = el.childNodes,
+            numNodes = thumbElements.length,
+            items = [],
+            figureEl,
+            linkEl,
+            size,
+            item;
+
+		for(var i = 0; i < numNodes; i++) {
+
+            figureEl = thumbElements[i]; // <figure> element
+
+            // include only element nodes 
+            if(figureEl.nodeType !== 1) {
+                continue;
+            }
+
+            linkEl = figureEl.children[0]; // <a> element
+
+            size = linkEl.getAttribute('data-size').split('x');
+
+            // create slide object
+            item = {
+                src: linkEl.getAttribute('href'),
+                w: parseInt(size[0], 10),
+                h: parseInt(size[1], 10)
+            };
+
+            if(figureEl.children.length > 1) {
+                // <figcaption> content
+                item.title = figureEl.children[1].innerHTML; 
+            }
+
+            if(linkEl.children.length > 0) {
+                // <img> thumbnail element, retrieving thumbnail url
+                item.msrc = linkEl.children[0].getAttribute('src');
+            } 
+
+            item.el = figureEl; // save link to element for getThumbBoundsFn
+            items.push(item);
+        }
+
+        return items;
+    };
+
+    // find nearest parent element
+    var closest = function closest(el, fn) {
+        return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+    };
+
+    // triggers when user clicks on thumbnail
+    var onThumbnailsClick = function(e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+        var eTarget = e.target || e.srcElement;
+
+        // find root element of slide
+        var clickedListItem = closest(eTarget, function(el) {
+            return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+        });
+
+        if(!clickedListItem) {
+            return;
+        }
+
+        // find index of clicked item by looping through all child nodes
+        // alternatively, you may define index via data- attribute
+        var clickedGallery = clickedListItem.parentNode,
+            childNodes = clickedListItem.parentNode.childNodes,
+            numChildNodes = childNodes.length,
+            nodeIndex = 0,
+            index;
+
+        for (var i = 0; i < numChildNodes; i++) {
+            if(childNodes[i].nodeType !== 1) { 
+                continue; 
+            }
+
+            if(childNodes[i] === clickedListItem) {
+                index = nodeIndex;
+                break;
+            }
+            nodeIndex++;
+        }
+
+
+
+        if(index >= 0) {
+            // open PhotoSwipe if valid index found
+            openPhotoSwipe( index, clickedGallery );
+        }
+        return false;
+    };
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function() {
+        var hash = window.location.hash.substring(1),
+        params = {};
+
+        if(hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            if(!vars[i]) {
+                continue;
+            }
+            var pair = vars[i].split('=');  
+            if(pair.length < 2) {
+                continue;
+            }           
+            params[pair[0]] = pair[1];
+        }
+
+        if(params.gid) {
+            params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+    };
+
+    var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+        var pswpElement = document.querySelectorAll('.pswp')[0],
+            gallery,
+            options,
+            items;
+
+        items = parseThumbnailElements(galleryElement);
+
+        // define options (if needed)
+        options = {
+
+            // define gallery index (for URL)
+            galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+            getThumbBoundsFn: function(index) {
+                // See Options -> getThumbBoundsFn section of documentation for more info
+                var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect(); 
+
+                return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+            }
+
+        };
+
+        // PhotoSwipe opened from URL
+        if(fromURL) {
+            if(options.galleryPIDs) {
+                // parse real index when custom PIDs are used 
+                // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                for(var j = 0; j < items.length; j++) {
+                    if(items[j].pid == index) {
+                        options.index = j;
+                        break;
+                    }
+                }
+            } else {
+                // in URL indexes start from 1
+                options.index = parseInt(index, 10) - 1;
+            }
+        } else {
+            options.index = parseInt(index, 10);
+        }
+
+        // exit if index not found
+        if( isNaN(options.index) ) {
+            return;
+        }
+
+		options.mainClass = 'pswp--minimal--dark';
+		options.barsSize = {top:0,bottom:0};
+		options.captionEl = false;
+		options.fullscreenEl = true;
+		options.shareEl = false;
+		options.tapToClose = true;
+		options.tapToToggleControls = false;
+							
+        if(disableAnimation) {
+            options.showAnimationDuration = 0;
+        }
+
+        // Pass data to PhotoSwipe and initialize it
+        gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+		console.log(gallery);
+    };
+
+    // loop through all gallery elements and bind events
+    var galleryElements = document.querySelectorAll( gallerySelector );
+
+    for(var i = 0, l = galleryElements.length; i < l; i++) {
+        galleryElements[i].setAttribute('data-pswp-uid', i+1);
+        galleryElements[i].onclick = onThumbnailsClick;
+    }
+
+    // Parse URL and open gallery if it contains #&pid=3&gid=1
+    var hashData = photoswipeParseHash();
+    if(hashData.pid && hashData.gid) {
+        openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+    }
+};
+
+// execute above function
+initPhotoSwipeFromDOM('.my-gallery');
+
+//})();
+</script>
+
+</body>
+</html>
