@@ -141,7 +141,8 @@ hr.line {
 }
 .my-gallery figure {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
+  max-width:700px;
 }
 
 .my-gallery img {
@@ -166,16 +167,8 @@ html.noIE .my-gallery {
 	flex-wrap: wrap;
 }
 
-.my-gallery figure {
+html.noIE .my-gallery figure {
   width: 350px;
-}
-
-html.isIE .my-gallery {
-  width: 705px;
-  margin: 0 auto 0 auto;
-}
-html.isIE figure {
-  display: inline-block;
 }
 
 p.lead, h2 {
@@ -190,7 +183,7 @@ p.lead, h2 {
 
 @media (min-width: 1060px) {
 
-html.isIE .my-gallery, p.lead, h2 {
+p.lead, h2 {
 	width: 1060px;
 }
 
