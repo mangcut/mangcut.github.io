@@ -208,7 +208,7 @@ html.noIE .my-gallery {
 
 <section class="body">
 <p class="lead">Những tấm hình của nữ họa sỹ Philippa Rice vẽ lại những khoảnh khắc thường ngày của cô và bạn trai, sau này đã được phát hành thành sách <i><a target="_blank" href="http://www.amazon.com/Soppy-Love-Story-Philippa-Rice/dp/1449461069/">Soppy: A Love Story</a></i>. Những hình ảnh tưởng như rất riêng đó hóa ra lại rất chung. Rất nhiều bạn đọc đã nhận ra mình trong đó. Dưới đây là 22 hình trong tập sách - có thể bạn sẽ thấy mình trong đó - nếu không phải ở tất cả thì cũng ở một số tấm hình.</p>
-<p style="margin-bottom: 20px"><small>(có thể click vào ảnh để phóng to)</small></p>
+<p style="margin-bottom: 20px"><small>(có thể click vào ảnh để phóng to)<br><a href="#" onclick="window.openSlideShow();return false;"><u>Xem slideshow</u></a></small></p>
 
   <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
   
@@ -722,6 +722,10 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     if(hashData.pid && hashData.gid) {
         openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
     }
+	
+	window.openSlideShow = function() {
+		openPhotoSwipe(0, galleryElements[0]);
+	}
 };
 
 // execute above function
