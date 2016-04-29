@@ -26,17 +26,17 @@ h1, h2, h3, h4 {color:#a02c2c}
 h4 {margin-top:30px}
 </style>
 
-Vừa rồi, Bộ Tài nguyên & Môi trường ra thông báo một trong 2 nguyên nhân bị nghi ngờ gây ra việc cá chết hàng loạt ở miền trung là _thuỷ triều đỏ_. Ta hãy cùng nhau tìm hiểu về hiện tượng này.
+Vừa rồi, Bộ Tài nguyên & Môi trường ra thông báo một trong 2 nguyên nhân bị nghi ngờ gây ra việc cá chết hàng loạt ở miền trung là _thủy triều đỏ_. Ta hãy cùng nhau tìm hiểu về hiện tượng này.
 {: .lead}
 
 #### THỦY TRIỀU ĐỎ HAY TẢO NỞ HOA LÀ GÌ?
 
-Thuỷ triều đỏ là hiện tượng một hoặc một số loài tảo nào đó sinh sôi nảy nở dày đặc trong một vùng nước, đến mức làm đổi màu nước sang màu đỏ của tảo. Tên gọi "thủy triều đỏ" có lẽ bắt nguồn từ Vịnh Mexico - hiện tượng thủy triều đỏ ở đây xảy ra hầu như hàng năm, làm cá chết hàng loạt từ suốt dọc bờ biển từ Florida tới Texas, Mỹ.
+Thủy triều đỏ là hiện tượng một hoặc một số loài tảo nào đó sinh sôi nảy nở dày đặc trong một vùng nước, đến mức làm đổi màu nước sang màu đỏ của tảo. Tên gọi "thủy triều đỏ" có lẽ bắt nguồn từ Vịnh Mexico - hiện tượng thủy triều đỏ ở đây xảy ra hầu như hàng năm, làm cá chết hàng loạt từ suốt dọc bờ biển từ Florida tới Texas, Mỹ.
  
-Mặc dù cách gọi "thuỷ triều đỏ" nghe rất "kêu" và thường được báo chí sử dụng, nhưng nó được giới khoa học tránh dùng vì một số lý do:
+Mặc dù cách gọi "thủy triều đỏ" nghe rất "kêu" và thường được báo chí sử dụng, nhưng nó được giới khoa học tránh dùng vì một số lý do:
 
-- Thuỷ triều đỏ không nhất thiết có màu đỏ. Tảo có thể có đủ loại màu, thông dụng nhất là xanh và đỏ. Hơn nữa, có trường hợp tảo sinh sôi chưa đủ dày đặc nên chưa làm đổi màu nước, nhưng đã đủ để gây thiệt hại
-- Thuỷ triều đỏ không liên quan đến "thuỷ triều"
+- Thủy triều đỏ không nhất thiết có màu đỏ. Tảo có thể có đủ loại màu, thông dụng nhất là xanh và đỏ. Hơn nữa, có trường hợp tảo sinh sôi chưa đủ dày đặc nên chưa làm đổi màu nước, nhưng đã đủ để gây thiệt hại
+- Thủy triều đỏ không liên quan đến "thủy triều"
 - Từ "thủy triều đỏ" được dùng hiện nay tạo ra cảm giác là 1 hiện tượng thiên nhiên gây tàn phá. Tuy nhiên, trên thực tế, không phải tất cả hiện tượng tảo nở hoa như vậy đều đều gây hại
 
 Vì thế, ngày nay giới khoa học khuyến khích dùng từ "tảo nở hoa". Có thể coi "thủy triều đỏ" là cách gọi thông dụng của hiện tượng tảo nở hoa, tuy nhiên chỉ áp dụng trong trường hợp nước đã bị đổi màu và màu đó là nâu hoặc đỏ.
@@ -60,7 +60,7 @@ Tảo nở hoa có 2 loại: vô hại và có hại. Trong số hơn 5000 l
 
 Tảo nở hoa gây hại theo hai cách chính:
 
-1. __Tiết ra chất độc__. Chẳng hạn tảo Karenia brevis, loại tảo gây ra hiện tượng thủy triều đỏ ở Vịnh Mexico, tiết ra môt loại chất làm tê liệt thần kinh cá khiến chúng không hô hấp được và chết
+1. __Tảo sinh ra chất độc__. Các loại sinh vật khác hấp thụ phải chất độc sẽ bị nhiễm độc. Cứ thế, chất độc lan trong chuỗi thức ăn, gây ra cái chết cho các loại sinh vật biển lớn hơn như động vật phù du, các loài nhuyễn thể, cá, động vật có vú ở biển v.v.
 2. __Gây thiếu hụt ô-xy trong nước__.  Giống như cây cối trên cạn, vào ban đêm, "tập đoàn" tảo ngừng quang hợp và tiêu thụ một lượng lớn ô-xy trong nước. Ngoài ra, khi sinh sôi nhanh chóng thì số lượng tảo chết cũng rất lớn. Khi chết, xác tảo chìm xuống đáy. Tại đây, vi khuẩn sẽ phân hủy xác tảo, và quá trình này tiêu tốn nhiều ô-xy trong nước. Sự thiếu hụt ô-xy này có thể khiến cá và các loại động vật dưới nước chết hàng loạt, bao gồm cả tầng đáy và tầng trên.
 
 <figure>
@@ -84,7 +84,11 @@ Về cơ bản, mỗi loại tảo cần môi trường và chất dinh dưỡng
 
 #### ẢNH HƯỞNG ĐẾN SỨC KHỎE CON NGƯỜI
 
-Nếu cá chết do thiếu hụt ô-xy thì nhìn chung không ảnh hưởng sức khỏe con người. Tuy nhiên, chúng ta có thể bị ảnh hưởng trong trường hợp tảo có hại tiết ra chất độc. Ví dụ chất độc của tảo Karenia brevis có thể tích tụ trong các hải sản có vỏ (như hàu, sò, v.v) còn sống, và khiến người ăn bị nhiễm độc, trường hợp nặng có thể tử vong do ngạt vì tê liệt hô hấp. Nó cũng khiến người tắm biển bị kích ứng da. Chất độc còn lan ra không khí và theo gió thổi vào bờ khiến những người hít phải cảm thấy khó thở. Có những loại tảo khác gây nôn mửa, tiêu chảy, hoặc chóng mặt, mất trí nhớ. Tùy theo loại tảo nào mà các nhà khoa học sẽ có khuyến cáo khác nhau về việc có nên tắm biển và ăn cá còn sống (trước khi chế biến) không, các điểm cần chú ý là gì. Tuy nhiên, nếu hải sản đã chết dạt vào bờ thì luôn luôn không nên ăn. 
+Nếu cá chết do thiếu hụt ô-xy thì nhìn chung không ảnh hưởng sức khỏe con người. Tuy nhiên, chúng ta có thể bị ảnh hưởng trong trường hợp ăn phải hải sản đã nhiễm độc. Không chỉ ở cá đã chết, mà các loài thân mềm hai mảnh vỏ như ngao sò trai hàu có thể tích tụ chất độc mà vẫn sống. Tùy theo loại tảo độc và mức độ tích tụ của chất độc mà, khi ăn phải, tác động sẽ khác nhau, ví dụ khó thở, tiêu chảy, nôn mửa, chóng mặt, v.v., có những trường hợp đặc biệt nặng gây chết người.
+
+Chất động cũng bị tiết ra môi trường. Chẳng hạn tảo Karenia brevis khiến người tắm biển bị kích ứng da. Chất độc của loại tảo này còn lan ra không khí và theo gió thổi vào bờ khiến những người hít phải cảm thấy khó thở.
+
+Tùy theo loại tảo nào mà các nhà khoa học sẽ có khuyến cáo khác nhau về việc có nên tắm biển và ăn hải sản không, các điểm cần chú ý là gì. Tuy nhiên, nếu hải sản đã chết dạt vào bờ thì luôn luôn không nên ăn. 
 
 #### DẤU HIỆU NHẬN BIẾT
 
@@ -105,8 +109,17 @@ Hệ thống xả thải công nghiệp có thể liên quan theo 2 cách:
 
 __Hỏi__: Tảo nở hoa có thể gây chết cá tầng đáy không?
 
-__Đáp__: Nếu gây ra hiện tượng thiếu hụt ô-xy, cá tầng đáy cũng có thể bị chết
+__Đáp__: Có thể. Dù tảo sống ở tầng trên, hiện tượng thiếu hụt ô-xy vẫn xảy ra ở tầng dưới, khi xác tảo chìm xuống và bị phân hủy bởi vi khuẩn dưới đáy.
 
 __Hỏi__: Có thể nào nước biển vừa nhiễm hóa chất độc hại làm chết cá, lại vừa có tảo nở hoa không?
 
 __Đáp__: Không thể có câu trả lời nếu không biết chính xác là hóa chất gì. Vì chủng loại tảo rất phong phú, các yêu cầu về môi trường sống của tảo và cá cũng khác nhau.
+
+<div class="font-xsmall" style="margin-top:30px">
+<p><a href="#" onclick='$("#ref_list").slideToggle();$("#ref_icon").toggleClass("icon-chevron-down icon-chevron-up");return false;'>Tham khảo <i id="ref_icon" class="icon icon-chevron-down"></i></a></p>
+<ol class="hide" id="ref_list">
+<li><a href="http://www.whoi.edu/redtide/home" target="_blank">Văn phòng Quốc Gia Hoa Kỳ về tảo nở hoa có hại<a></li>
+<li><a href="http://www.beachapedia.org/Harmful_Algal_Blooms" target="_blank">Beachapedia<a></li>
+<li><a href="http://serc.carleton.edu/microbelife/topics/redtide/general.html" target="_blank">serc.carleton.edu<a></li>
+</ol>
+</div>
