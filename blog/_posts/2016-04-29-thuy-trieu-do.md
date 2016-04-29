@@ -118,8 +118,8 @@ __Đáp__: Không thể có câu trả lời nếu không biết chính xác là
 <div class="font-xsmall" style="margin-top:30px">
 <p><a href="#" onclick='$("#ref_list").slideToggle();$("#ref_icon").toggleClass("icon-chevron-down icon-chevron-up");return false;'>Tham khảo <i id="ref_icon" class="icon icon-chevron-down"></i></a></p>
 <ol class="hide" id="ref_list">
-<li><a href="http://www.whoi.edu/redtide/home" target="_blank">Văn phòng Quốc Gia Hoa Kỳ về tảo nở hoa có hại<a></li>
-<li><a href="http://www.beachapedia.org/Harmful_Algal_Blooms" target="_blank">Beachapedia<a></li>
+<li><a href="http://www.whoi.edu/redtide/home" target="_blank">U.S. National Office for Harmful Algal Blooms<a></li>
 <li><a href="http://serc.carleton.edu/microbelife/topics/redtide/general.html" target="_blank">serc.carleton.edu<a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shellfish_poisoning" target="_blank">Wikipedia: Shellfish poisoning<a></li>
 </ol>
 </div>
