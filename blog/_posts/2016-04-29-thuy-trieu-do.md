@@ -64,10 +64,10 @@ Tảo nở hoa gây hại theo hai cách chính:
 2. __Gây thiếu hụt ô-xy trong nước__.  Giống như cây cối trên cạn, vào ban đêm, "tập đoàn" tảo ngừng quang hợp và tiêu thụ một lượng lớn ô-xy trong nước. Ngoài ra, khi sinh sôi nhanh chóng thì số lượng tảo chết cũng rất lớn. Khi chết, xác tảo chìm xuống đáy. Tại đây, vi khuẩn sẽ phân hủy xác tảo, và quá trình này tiêu tốn nhiều ô-xy trong nước. Sự thiếu hụt ô-xy này có thể khiến cá và các loại động vật dưới nước chết hàng loạt, bao gồm cả tầng đáy và tầng trên.
 
 <figure>
-  <div class="img-container" data-origin="sott.net">
-  <img src="/media/dead_fish.jpg" alt="Cá chết hàng loạt"></img>
+  <div class="img-container" data-origin="whoi.edu/redtide/">
+  <img src="/media/fishkills.jpg" alt="Cá chết hàng loạt"></img>
   </div>
-  <figcaption>Cá chết hàng loạt ở Biển Đỏ</figcaption>
+  <figcaption>Bản đồ các vụ cá chết hàng loạt, 2/2016</figcaption>
 </figure>
 
 #### NGUYÊN NHÂN CỦA TẢO NỞ HOA
@@ -118,7 +118,7 @@ __Đáp__: Không thể có câu trả lời nếu không biết chính xác là
 <div class="font-xsmall" style="margin-top:30px">
 <p><a href="#" onclick='$("#ref_list").slideToggle();$("#ref_icon").toggleClass("icon-chevron-down icon-chevron-up");return false;'>Tham khảo <i id="ref_icon" class="icon icon-chevron-down"></i></a></p>
 <ol class="hide" id="ref_list">
-<li><a href="http://www.whoi.edu/redtide/home" target="_blank">U.S. National Office for Harmful Algal Blooms<a></li>
+<li><a href="http://www.whoi.edu/redtide/" target="_blank">U.S. National Office for Harmful Algal Blooms<a></li>
 <li><a href="http://serc.carleton.edu/microbelife/topics/redtide/general.html" target="_blank">serc.carleton.edu<a></li>
 <li><a href="https://en.wikipedia.org/wiki/Shellfish_poisoning" target="_blank">Wikipedia: Shellfish poisoning<a></li>
 </ol>
