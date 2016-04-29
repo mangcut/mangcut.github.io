@@ -17,7 +17,7 @@ image_origin: oceanadventures.co.za
 topic: Khoa học
 recommend: true
 header_image_2: /media/thuy_trieu_do.jpg
-fb_image: /media/thuy_trieu_do.jpg
+fb_image: /media/thuy_trieu_do_fb.jpg
 disqus_id: blog/thuy-trieu-do
 excerpt: Thủy triều đỏ hay hiện tượng tảo nở hoa là gì và nó có thể gây ra cá chết hàng loạt như thế nào?
 ---
