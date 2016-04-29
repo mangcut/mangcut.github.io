@@ -43,6 +43,7 @@ Vì thế, ngày nay giới khoa học khuyến khích dùng từ "tảo nở ho
 
 "Tảo" là 1 nhóm rất rộng, bao gồm rất nhiều loài từ đơn bào tới phức tạp như rong biển, từ độ dài một vài micro-mét tới 50 mét. Đặc điểm chung là chúng tương tự thực vật trên mặt đất - quang hợp hấp thụ khí CO<sub>2</sub> và thải ra O<sub>2</sub>. Hiện tượng tảo nở hoa thường gây ra bởi các loài tảo nhỏ bé gọi là "vi tảo" - mà đặc biệt là các loài vi tảo ở tầng gần mặt nước nơi ánh sáng mặt trời có thể xuyên tới. Các loài vi tảo đó được gọi là "thực vật phù du".
 
+Hiện tượng tảo nở hoa thường xảy ra ở ven biển, nhưng nó cũng xảy ra trong môi trường nước ngọt. Nơi sông hồ, nó thường được gây ra bởi vi khuẩn lam (trước đây hay gọi là tảo lục lam nhưng hiện tại được phân loại lại thành vi khuẩn).
 
 <figure>
   <div class="img-container" data-origin="Wikipedia">
