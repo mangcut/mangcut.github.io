@@ -86,13 +86,13 @@ Về cơ bản, mỗi loại tảo cần môi trường và chất dinh dưỡng
 
 Nếu cá chết do thiếu hụt ô-xy thì nhìn chung không ảnh hưởng sức khỏe con người. Tuy nhiên, chúng ta có thể bị ảnh hưởng trong trường hợp ăn phải hải sản đã nhiễm độc. Không chỉ ở cá đã chết, mà các loài thân mềm hai mảnh vỏ như ngao sò trai hàu có thể tích tụ chất độc mà vẫn sống. Tùy theo loại tảo độc và mức độ tích tụ của chất độc mà, khi ăn phải, tác động sẽ khác nhau, ví dụ khó thở, tiêu chảy, nôn mửa, chóng mặt, v.v., có những trường hợp đặc biệt nặng gây chết người.
 
-Chất động cũng bị tiết ra môi trường. Chẳng hạn tảo Karenia brevis khiến người tắm biển bị kích ứng da. Chất độc của loại tảo này còn lan ra không khí và theo gió thổi vào bờ khiến những người hít phải cảm thấy khó thở.
+Chất độc cũng bị tiết ra môi trường. Chẳng hạn tảo Karenia brevis khiến người tắm biển bị kích ứng da. Chất độc của loại tảo này còn lan ra không khí và theo gió thổi vào bờ khiến những người hít phải cảm thấy khó thở.
 
 Tùy theo loại tảo nào mà các nhà khoa học sẽ có khuyến cáo khác nhau về việc có nên tắm biển và ăn hải sản không, các điểm cần chú ý là gì. Tuy nhiên, nếu hải sản đã chết dạt vào bờ thì luôn luôn không nên ăn. 
 
 #### DẤU HIỆU NHẬN BIẾT
 
-Khi tảo tập hợp đủ dày sẽ thay đổi màu nước có thể quan sát được (cần chú ý là có một số loài tảo có hại khi sinh sôi đông đúc dù chưa đủ dày để đổi màu nước cũng đã gây hại). Một số loại tảo khi về đêm sẽ phát sáng. Tảo có thể theo gió gây mùi khó chịu hoặc khó thở. Tuy nhiên, mỗi loài tảo có đặc tính khác nhau, nên cần phải lấy mẫu nước để thử nghiệm mới có thể kết luận chính xác.
+Khi tảo tập hợp đủ dày sẽ thay đổi màu nước có thể quan sát được (song cũng có trường hợp không đổi màu). Một số loại tảo khi về đêm sẽ phát sáng. Tảo có thể theo gió gây mùi khó chịu hoặc khó thở. Tuy nhiên, mỗi loài tảo có đặc tính khác nhau, nên cần phải lấy mẫu nước để thử nghiệm mới có thể kết luận chính xác.
 
 #### VỤ CÁ CHẾT Ở MIỀN TRUNG CÓ LIÊN QUAN TẢO NỞ HOA KHÔNG?
 
