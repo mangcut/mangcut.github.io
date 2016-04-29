@@ -54,7 +54,7 @@ Hiện tượng tảo nở hoa không chỉ xảy ra ở biển mà còn ở 
 
 #### TẢO NỞ HOA GÂY HẠI NHƯ THẾ NÀO
 
-Thực vật phù du cực kỳ quan trọng trong hệ sinh thái. Nó tạo nên nền tảng lưới thức ăn cơ bản, làm cơ sở cho sự sống ở đại dương. Thực vật phù du được cho là sản sinh ra tới 80% lượng ô-xy trên trái đất. Chỉ khi sinh sôi một cách đột biến dày đặc tại một vùng nước, chúng mới trở thành vấn đề.
+Thực vật phù du cực kỳ quan trọng trong hệ sinh thái. Nó tạo nên nền tảng của lưới thức ăn, làm cơ sở cho sự sống ở đại dương. Thực vật phù du được cho là sản sinh ra tới 80% lượng ô-xy trên trái đất. Chỉ khi sinh sôi một cách đột biến dày đặc tại một vùng nước, chúng mới trở thành vấn đề.
 
 Tảo nở hoa có 2 loại: vô hại và có hại. Trong số hơn 5000 loài thực vật phù du được biết tới, số loài có hại chỉ chiếm khoảng 2%.
 
@@ -109,7 +109,7 @@ Hệ thống xả thải công nghiệp có thể liên quan theo 2 cách:
 
 __Hỏi__: Tảo nở hoa có thể gây chết cá tầng đáy không?
 
-__Đáp__: Có thể. Dù tảo sống ở tầng trên, hiện tượng thiếu hụt ô-xy vẫn xảy ra ở tầng dưới, khi xác tảo chìm xuống và bị phân hủy bởi vi khuẩn dưới đáy.
+__Đáp__: Có thể. Dù tảo sống ở tầng trên, hiện tượng thiếu hụt ô-xy vẫn xảy ra ở tầng dưới, do xác tảo chìm xuống và bị phân hủy bởi vi khuẩn dưới đáy.
 
 __Hỏi__: Có thể nào nước biển vừa nhiễm hóa chất độc hại làm chết cá, lại vừa có tảo nở hoa không?
 
