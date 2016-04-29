@@ -102,7 +102,7 @@ Việc này phải chờ các cơ quan nghiên cứu có trách nhiệm kết lu
 
 Hệ thống xả thải công nghiệp có thể liên quan theo 2 cách:
 
-- Xả trực tiếp chất độc ra môi trường. Chất độc này làm cá chết trực tiếp. Biển quanh các khu công nghiệp hầu hết bị ô nhiễm và hàm lượng các chất gây hại (bao gồm cả kim loại nặng) đều cao hơn ở vùng biển bình thường. Tuy nhiên, vấn đề cần xác định là nó đã đến mức gây chết _nhanh chóng_ và _hàng loạt_ cho cá hay chưa, và gây ảnh hưởng cho con người như thế nào
+- Xả trực tiếp chất độc ra môi trường. Chất độc này làm cá chết trực tiếp. Biển quanh các khu công nghiệp hầu hết bị ô nhiễm và hàm lượng các chất gây hại (bao gồm cả kim loại nặng) đều cao hơn ở vùng biển bình thường. Tuy nhiên, vấn đề cần xác định là hàm lượng đã đến mức gây chết _nhanh chóng_ và _hàng loạt_ cho cá hay chưa, nếu có thì cụ thể là hóa chất gì, và gây ảnh hưởng cho con người như thế nào.
 - Chất thải có chứa chất dinh dưỡng (nitrat, phosphat, sắt v.v.) thuận lợi cho một loại tảo có hại nào đó nở hoa
 
 #### CÂU HỎI
