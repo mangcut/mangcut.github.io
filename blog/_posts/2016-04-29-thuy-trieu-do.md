@@ -103,7 +103,7 @@ Việc này phải chờ các cơ quan nghiên cứu có trách nhiệm kết lu
 Hệ thống xả thải công nghiệp có thể liên quan theo 2 cách:
 
 - Xả trực tiếp chất độc ra môi trường. Chất độc này làm cá chết trực tiếp. Biển quanh các khu công nghiệp hầu hết bị ô nhiễm và hàm lượng các chất gây hại (bao gồm cả kim loại nặng) đều cao hơn ở vùng biển bình thường. Tuy nhiên, vấn đề cần xác định là nó đã đến mức gây chết _nhanh chóng_ và _hàng loạt_ cho cá hay chưa, và gây ảnh hưởng cho con người như thế nào
-- Chất thải có chứa chất dinh dưỡng thuận lợi cho một loại tảo có hại nào đó nở hoa
+- Chất thải có chứa chất dinh dưỡng (nitrat, phosphat, sắt v.v.) thuận lợi cho một loại tảo có hại nào đó nở hoa
 
 #### CÂU HỎI
 
@@ -113,7 +113,7 @@ __Đáp__: Có thể. Dù tảo sống ở tầng trên, hiện tượng thiếu
 
 __Hỏi__: Có thể nào nước biển vừa nhiễm hóa chất độc hại làm chết cá, lại vừa có tảo nở hoa không?
 
-__Đáp__: Các hiện tượng cá chết hàng loạt thường chỉ có một nguyên nhân chính. Về mặt lý thuyết, không thể có câu trả lời nếu không biết chính xác là hóa chất gì. Vì chủng loại tảo rất phong phú, các yêu cầu về môi trường sống của tảo và cá cũng khác nhau.
+__Đáp__: Các hiện tượng cá chết hàng loạt thường chỉ có một nguyên nhân chính. Đối với câu hỏi này, về mặt lý thuyết, không thể có câu trả lời nếu không biết chính xác là hóa chất gì. Vì chủng loại tảo rất phong phú, các yêu cầu về môi trường sống của tảo và cá cũng khác nhau.
 
 <div class="font-xsmall" style="margin-top:30px">
 <p><a href="#" onclick='$("#ref_list").slideToggle();$("#ref_icon").toggleClass("icon-chevron-down icon-chevron-up");return false;'>Tham khảo <i id="ref_icon" class="icon icon-chevron-down"></i></a></p>
