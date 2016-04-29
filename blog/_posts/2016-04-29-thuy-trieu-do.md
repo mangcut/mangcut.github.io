@@ -54,7 +54,7 @@ Hiện tượng tảo nở hoa không chỉ xảy ra ở biển mà còn ở 
 
 #### TẢO NỞ HOA GÂY HẠI NHƯ THẾ NÀO
 
-Thực vật phù du cực kỳ quan trọng trong hệ sinh thái. Nó tạo nên nền tảng của lưới thức ăn, làm cơ sở cho sự sống ở đại dương. Thực vật phù du được cho là sản sinh ra tới 80% lượng ô-xy trên trái đất. Chỉ khi sinh sôi một cách đột biến dày đặc tại một vùng nước, chúng mới trở thành vấn đề.
+Thực vật phù du vô cùng quan trọng trong hệ sinh thái. Nó tạo nên nền tảng của lưới thức ăn, làm cơ sở cho sự sống ở đại dương. Thực vật phù du được cho là sản sinh ra tới 80% lượng ô-xy trên trái đất. Chỉ khi sinh sôi một cách đột biến dày đặc tại một vùng nước, chúng mới trở thành vấn đề.
 
 Tảo nở hoa có 2 loại: vô hại và có hại. Trong số hơn 5000 loài thực vật phù du được biết tới, số loài có hại chỉ chiếm khoảng 2%.
 
@@ -76,7 +76,7 @@ Hiện giới khoa học vẫn còn tranh cãi về nguyên nhân của hi
 
 Có thể chia thành 2 nguồn gốc:
 
-__Tự nhiên__. Trên thực tế, ở nhiều nơi trên thế giới, hiện tượng tảo nở hoa lặp đi lặp lại, có khi nhiều năm một lần, khi lại chỉ vài tháng. Cứ đến một thời điểm nào đó, khi lượng dinh dưỡng cho tảo trong nước tăng lên cao, tảo lại đua nhau sinh nở và làm đổi màu nước. Sau một thời gian, hiện tượng tự hết. Các yếu tố tự nhiên như dòng hải lưu, thời tiết hay các hiện tượng như El-Nino có thể góp phần trong việc tạo ra điều kiện thuận lợi để tảo nở hoa
+__Tự nhiên__. Trên thực tế, ở nhiều nơi trên thế giới, hiện tượng tảo nở hoa lặp đi lặp lại, có khi nhiều năm một lần, khi lại chỉ vài tháng. Cứ đến một thời điểm nào đó, khi lượng dinh dưỡng cho tảo trong nước tăng lên cao, tảo lại đua nhau sinh nở và làm đổi màu nước. Sau một thời gian, hiện tượng tự hết. Các yếu tố tự nhiên như dòng hải lưu, thời tiết hay các hiện tượng như El Niño có thể góp phần trong việc tạo ra điều kiện thuận lợi để tảo nở hoa
 
 __Do tác động của con người__. Nếu ở một nơi mà chưa từng xảy ra tảo nở hoa, hoặc hiếm xảy ra nhưng giờ xảy ra nhiều hơn, nguyên nhân là do các hoạt động của con người đã tác động đến môi trường nước. Ngoài ánh sáng, tảo còn cần các chất vô cơ khác như muối phosphat, nitrat, silicat, và sắt (tương tự như cây trên mặt đất cần bón phân đạm, phân lân). Việc sử dụng tràn lan phân bón hóa học trong nông nghiệp được cho là góp phần gây ra hiện tượng này, khi lượng phân bón không không được cây trồng tiêu thụ hết thẩm thấu vào nguồn nước trôi ra biển. Nước thải sinh hoạt và của các nhà máy cũng có thể chứa hàm lượng dinh dưỡng cao cho tảo. Hiện tượng nước ấm dần lên cũng được cho là tạo điều kiện cho tảo phát triển
 
