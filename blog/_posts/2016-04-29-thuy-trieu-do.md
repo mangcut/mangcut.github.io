@@ -37,11 +37,11 @@ Mặc dù cách gọi "thủy triều đỏ" nghe rất "kêu" và thường đ�
 
 - Thủy triều đỏ không nhất thiết có màu đỏ. Tảo có thể có đủ loại màu, thông dụng nhất là xanh và đỏ. Hơn nữa, có trường hợp tảo sinh sôi chưa đủ dày đặc nên chưa làm đổi màu nước, nhưng đã đủ để gây thiệt hại
 - Thủy triều đỏ không liên quan đến "thủy triều"
-- Từ "thủy triều đỏ" được dùng hiện nay tạo ra cảm giác là 1 hiện tượng thiên nhiên gây tàn phá. Tuy nhiên, trên thực tế, không phải tất cả hiện tượng tảo nở hoa như vậy đều đều gây hại
+- Từ "thủy triều đỏ" được dùng hiện nay tạo ra cảm giác là 1 hiện tượng thiên nhiên gây tàn phá. Tuy nhiên, trên thực tế, không phải tất cả hiện tượng tảo nở hoa đều gây hại
 
 Vì thế, ngày nay giới khoa học khuyến khích dùng từ "tảo nở hoa". Có thể coi "thủy triều đỏ" là cách gọi thông dụng của hiện tượng tảo nở hoa, tuy nhiên chỉ áp dụng trong trường hợp nước đã bị đổi màu và màu đó là nâu hoặc đỏ.
 
-"Tảo" là 1 tên gọi khá rộng, bao gồm rất nhiều loài từ đơn bào tới phức tạp như rong biển, từ độ dài một vài micro-mét tới 50 mét. Đặc điểm chung là chúng tương tự thực vật trên mặt đất - quang hợp hấp thụ khí CO<sub>2</sub> và thải ra O<sub>2</sub>. Hiện tượng tảo nở hoa thường gây ra bởi các loài tảo nhỏ bé gọi là "vi tảo" - mà đặc biệt là các loài vi tảo ở tầng gần mặt nước nơi ánh sáng mặt trời có thể xuyên tới. Các loài vi tảo đó được gọi là "thực vật phù du".
+"Tảo" là 1 nhóm rất rộng, bao gồm rất nhiều loài từ đơn bào tới phức tạp như rong biển, từ độ dài một vài micro-mét tới 50 mét. Đặc điểm chung là chúng tương tự thực vật trên mặt đất - quang hợp hấp thụ khí CO<sub>2</sub> và thải ra O<sub>2</sub>. Hiện tượng tảo nở hoa thường gây ra bởi các loài tảo nhỏ bé gọi là "vi tảo" - mà đặc biệt là các loài vi tảo ở tầng gần mặt nước nơi ánh sáng mặt trời có thể xuyên tới. Các loài vi tảo đó được gọi là "thực vật phù du".
 
 Hiện tượng tảo nở hoa không chỉ xảy ra ở biển mà còn ở cả trong nước ngọt. Ở sông hồ, nó thường gây ra bởi vi khuẩn lam (trước đây hay gọi là tảo lục lam nhưng hiện tại được phân loại thành vi khuẩn thay vì tảo).
 
@@ -113,7 +113,7 @@ __Đáp__: Có thể. Dù tảo sống ở tầng trên, hiện tượng thiếu
 
 __Hỏi__: Có thể nào nước biển vừa nhiễm hóa chất độc hại làm chết cá, lại vừa có tảo nở hoa không?
 
-__Đáp__: Không thể có câu trả lời nếu không biết chính xác là hóa chất gì. Vì chủng loại tảo rất phong phú, các yêu cầu về môi trường sống của tảo và cá cũng khác nhau.
+__Đáp__: Các hiện tượng cá chết hàng loạt thường chỉ có một nguyên nhân chính. Về mặt lý thuyết, không thể có câu trả lời nếu không biết chính xác là hóa chất gì. Vì chủng loại tảo rất phong phú, các yêu cầu về môi trường sống của tảo và cá cũng khác nhau.
 
 <div class="font-xsmall" style="margin-top:30px">
 <p><a href="#" onclick='$("#ref_list").slideToggle();$("#ref_icon").toggleClass("icon-chevron-down icon-chevron-up");return false;'>Tham khảo <i id="ref_icon" class="icon icon-chevron-down"></i></a></p>
