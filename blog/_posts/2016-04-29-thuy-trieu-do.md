@@ -6,12 +6,12 @@ title: Hiểu đúng về thủy triều đỏ
 series_name: 
 subtitle: 
 fb_title: Hiểu đúng về thủy triều đỏ
-feel: 
-feel_text: 
+feel: new
+feel_text: mới ra lò
 description: Thủy triều đỏ hay hiện tượng tảo nở hoa là gì và nó có thể gây ra cá chết hàng loạt như thế nào?
 fb_description: Còn gọi là tảo nở hoa
 image: /media/thuy_trieu_do.jpg
-see_also1: 
+see_also1: blog/2015-03-23-bao-gio-loai-nguoi-diet-vong.html
 see_also2: 
 image_origin: oceanadventures.co.za
 topic: Khoa học
