@@ -67,7 +67,7 @@ Tảo nở hoa gây hại theo hai cách chính:
   <div class="img-container" data-origin="whoi.edu/redtide/">
   <img src="/media/fishkills.jpg" alt="Cá chết hàng loạt"></img>
   </div>
-  <figcaption>Bản đồ các vụ cá chết hàng loạt, 2/2016</figcaption>
+  <figcaption>Bản đồ các vụ cá chết hàng loạt cập nhật 2/2016, các vùng kém phát triển ít xảy ra hơn</figcaption>
 </figure>
 
 #### NGUYÊN NHÂN CỦA TẢO NỞ HOA
