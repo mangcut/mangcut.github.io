@@ -122,8 +122,11 @@ __Đáp__: Đã từng xuất hiện nhiều lần ở phía Nam, đặc biệt 
 <div class="font-xsmall" style="margin-top:30px">
 <p><a href="#" onclick='$("#ref_list").slideToggle();$("#ref_icon").toggleClass("icon-chevron-down icon-chevron-up");return false;'>Tham khảo <i id="ref_icon" class="icon icon-chevron-down"></i></a></p>
 <ol class="hide" id="ref_list">
-<li><a href="http://www.whoi.edu/redtide/" target="_blank">U.S. National Office for Harmful Algal Blooms<a></li>
-<li><a href="http://serc.carleton.edu/microbelife/topics/redtide/general.html" target="_blank">serc.carleton.edu<a></li>
-<li><a href="https://en.wikipedia.org/wiki/Shellfish_poisoning" target="_blank">Wikipedia: Shellfish poisoning<a></li>
+<li><a href="http://www.whoi.edu/redtide/" target="_blank">U.S. National Office for Harmful Algal Blooms</a></li>
+<li><a href="http://serc.carleton.edu/microbelife/topics/redtide/general.html" target="_blank">serc.carleton.edu</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shellfish_poisoning" target="_blank">Wikipedia: Shellfish poisoning</a></li>
 </ol>
 </div>
+
+<p class="next-post">Có thể bạn cũng thích: <a href="/blog/2015-03-23-bao-gio-loai-nguoi-diet-vong.html">Bao giờ loài người diệt vong?</a><br><span class="font-small muted">Những gì loài người đang làm với trái đất này sẽ đưa chúng ta đến kết cục gì.</span>
+</p>
