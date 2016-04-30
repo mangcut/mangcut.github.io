@@ -72,13 +72,13 @@ Tảo nở hoa gây hại theo hai cách chính:
 
 #### NGUYÊN NHÂN CỦA TẢO NỞ HOA
 
-Hiện giới khoa học vẫn còn tranh cãi về nguyên nhân của hiện tượng này. Tuy nhiên, về cơ bản, tảo cũng như các loài sinh vật khác, sinh sôi nảy nở quá mức khi điều kiện sống tốt, đặc biệt là nhiệt độ phù hợp và nguồn dinh dưỡng dồi dào.
+Hiện giới khoa học vẫn còn tranh cãi về nguyên nhân của hiện tượng này. Tuy nhiên, về cơ bản, tảo cũng như các loài sinh vật khác, sinh sôi nảy nở quá mức khi điều kiện sống tốt, đặc biệt là nhiệt độ phù hợp và nguồn dinh dưỡng dồi dào (thuật ngữ gọi là _phú dưỡng_).
 
 Có thể chia thành 2 nguồn gốc:
 
 __Tự nhiên__. Trên thực tế, ở nhiều nơi trên thế giới, hiện tượng tảo nở hoa lặp đi lặp lại, có khi nhiều năm một lần, khi lại chỉ vài tháng. Cứ đến một thời điểm nào đó, khi lượng dinh dưỡng cho tảo trong nước tăng lên cao, tảo lại đua nhau sinh nở và làm đổi màu nước. Sau một thời gian, hiện tượng tự hết. Các yếu tố tự nhiên như dòng hải lưu, thời tiết hay các hiện tượng như El Niño có thể góp phần trong việc tạo ra điều kiện thuận lợi để tảo nở hoa
 
-__Do tác động của con người__. Nếu ở một nơi mà chưa từng xảy ra tảo nở hoa, hoặc hiếm xảy ra nhưng giờ xảy ra nhiều hơn, nguyên nhân là do các hoạt động của con người đã tác động đến môi trường nước. Ngoài ánh sáng, tảo còn cần các chất vô cơ khác như phosphat, nitrat, silicat, và sắt (tương tự như cây trên mặt đất cần bón phân đạm, phân lân). Việc sử dụng tràn lan phân bón hóa học trong nông nghiệp, rồi nước thải sinh hoạt, nước thải công nghiệp khi ra biển đều có thể cung cấp nhiều dinh dưỡng cho tảo. Hiện tượng nước ấm dần lên cũng được cho là tạo điều kiện thuận lợi cho tảo phát triển.
+__Do tác động của con người__. Nếu ở một nơi mà chưa từng xảy ra tảo nở hoa, hoặc hiếm xảy ra nhưng giờ xảy ra nhiều hơn, nguyên nhân là do các hoạt động của con người đã tác động đến môi trường nước. Ngoài ánh sáng, tảo còn cần các chất vô cơ khác như phosphat, nitrat, silicat, và sắt (tương tự như cây trên mặt đất cần bón phân đạm, phân lân). Việc sử dụng tràn lan phân bón hóa học trong nông nghiệp, rồi nước thải sinh hoạt, nước thải công nghiệp khi ra biển đều có thể cung cấp nguồn dinh dưỡng phong phú cho tảo. Hiện tượng nước ấm dần lên cũng được cho là tạo điều kiện thuận lợi cho tảo phát triển.
 
 Về cơ bản, mỗi loại tảo cần môi trường và chất dinh dưỡng khác nhau. Cho đến nay, khoa học vẫn chưa xác định được điều kiện chính xác để tảo nở hoa. Cũng chưa có giải pháp nào xử lý hiệu quả hiện tượng này, thông thường chỉ đợi cho nó qua đi. Ở các nước thường xảy ra tảo nở hoa, người ta đã có thể giám sát, dự đoán và cảnh báo sớm cho người dân.
 
