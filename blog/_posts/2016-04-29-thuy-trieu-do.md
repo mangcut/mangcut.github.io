@@ -80,7 +80,7 @@ __Tự nhiên__. Trên thực tế, ở nhiều nơi trên thế giới, 
 
 __Do tác động của con người__. Nếu ở một nơi mà chưa từng xảy ra tảo nở hoa, hoặc hiếm xảy ra nhưng giờ xảy ra nhiều hơn, nguyên nhân là do các hoạt động của con người đã tác động đến môi trường nước. Ngoài ánh sáng, tảo còn cần các chất vô cơ khác như muối phosphat, nitrat, silicat, và sắt (tương tự như cây trên mặt đất cần bón phân đạm, phân lân). Việc sử dụng tràn lan phân bón hóa học trong nông nghiệp, nước thải sinh hoạt, nước thải công nghiệp khi ra biển đều có thể cung cấp nhiều dinh dưỡng cho tảo. Hiện tượng nước ấm dần lên cũng được cho là tạo điều kiện thuận lợi cho tảo phát triển.
 
-Về cơ bản, mỗi loại tảo cần môi trường và chất dinh dưỡng khác nhau. Cho đến nay, khoa học vẫn chưa xác định được điều kiện chính xác để tảo nở hoa. Cũng chưa có giải pháp nào xử lý hiệu quả hiện tượng này, thông thường chỉ đợi cho nó qua đi. Ở các nước thường xảy ra tảo nở hoa, người ta đã có thể dự đoán và cảnh báo sớm cho người dân.
+Về cơ bản, mỗi loại tảo cần môi trường và chất dinh dưỡng khác nhau. Cho đến nay, khoa học vẫn chưa xác định được điều kiện chính xác để tảo nở hoa. Cũng chưa có giải pháp nào xử lý hiệu quả hiện tượng này, thông thường chỉ đợi cho nó qua đi. Ở các nước thường xảy ra tảo nở hoa, người ta đã có thể giám sát, dự đoán và cảnh báo sớm cho người dân.
 
 #### ẢNH HƯỞNG ĐẾN SỨC KHỎE CON NGƯỜI
 
@@ -92,18 +92,18 @@ Tùy theo loại tảo nào mà các nhà khoa học sẽ có khuyến cáo khá
 
 #### DẤU HIỆU NHẬN BIẾT
 
-Khi tảo tập hợp đủ dày sẽ thay đổi màu nước có thể quan sát được (song cũng có trường hợp không đổi màu). Một số loại tảo khi về đêm sẽ phát sáng. Tảo có thể theo gió gây mùi khó chịu hoặc khó thở. Tuy nhiên, mỗi loài tảo có đặc tính khác nhau, nên cần phải lấy mẫu nước để thử nghiệm mới có thể kết luận chính xác.
+Khi tảo tập hợp đủ dày sẽ thay đổi màu nước có thể quan sát được (song cũng có trường hợp không đổi màu). Một số loại tảo khi về đêm sẽ phát sáng. Có loại tạo ra từng đám bọt trắng theo sóng vào bờ. Tảo có thể theo gió gây mùi khó chịu hoặc khó thở. Tuy nhiên, mỗi loài tảo có đặc tính khác nhau, nên cần phải lấy mẫu nước để thử nghiệm mới có thể kết luận chính xác.
 
 #### VỤ CÁ CHẾT Ở MIỀN TRUNG CÓ LIÊN QUAN TẢO NỞ HOA KHÔNG?
 
 Việc này phải chờ các cơ quan nghiên cứu có trách nhiệm kết luận.
 
-#### LIÊN QUAN CỦA HỆ THỐNG XẢ THẢI CÔNG NGHIỆP
+#### HỆ THỐNG XẢ THẢI CÔNG NGHIỆP CÓ LÀM CÁ CHẾT HÀNG LOẠT?
 
 Hệ thống xả thải công nghiệp có thể liên quan theo 2 cách:
 
-- Xả trực tiếp chất độc ra môi trường. Chất độc này làm cá chết trực tiếp. Biển quanh các khu công nghiệp hầu hết bị ô nhiễm và hàm lượng các chất gây hại (bao gồm cả kim loại nặng) đều cao hơn ở vùng biển bình thường. Tuy nhiên, vấn đề cần xác định là hàm lượng đã đến mức gây chết _nhanh chóng_ và _hàng loạt_ cho cá hay chưa, nếu có thì cụ thể là hóa chất gì, và gây ảnh hưởng cho con người như thế nào.
-- Chất thải có chứa chất dinh dưỡng (nitrat, phosphat, sắt v.v.) thuận lợi cho một loại tảo có hại nào đó nở hoa
+- __Trực tiếp__. Nhà máy sả trực tiếp chất độc ra môi trường. Chất độc này làm cá chết trực tiếp. Biển quanh các khu công nghiệp hầu hết bị ô nhiễm và hàm lượng các chất gây hại (bao gồm cả kim loại nặng) đều cao hơn ở vùng biển bình thường. Tuy nhiên, vấn đề cần xác định là hàm lượng đã đến mức gây chết _nhanh chóng_ và _hàng loạt_ cho cá hay chưa, nếu có thì cụ thể là hóa chất gì, và gây ảnh hưởng cho con người như thế nào.
+- __Gián tiếp__. Chất thải từ nhà máy có nhiều chất dinh dưỡng (nitrat, phosphat, sắt v.v.) thuận lợi cho một loại tảo có hại nào đó nở hoa
 
 #### CÂU HỎI
 
@@ -114,6 +114,10 @@ __Đáp__: Có thể. Dù tảo sống ở tầng trên, hiện tượng thiếu
 __Hỏi__: Có thể nào nước biển vừa nhiễm hóa chất độc hại làm chết cá, lại vừa có tảo nở hoa không?
 
 __Đáp__: Các hiện tượng cá chết hàng loạt thường chỉ có một nguyên nhân chính. Đối với câu hỏi này, về mặt lý thuyết, không thể có câu trả lời nếu không biết chính xác là hóa chất gì. Vì chủng loại tảo rất phong phú, các yêu cầu về môi trường sống của tảo và cá cũng khác nhau.
+
+__Hỏi__: Tảo nở hoa đã từng xuất hiện tại Việt Nam chưa?
+
+__Đáp__: Đã từng xuất hiện nhiều lần ở phía Nam, đặc biệt ở Bình Thuận gần như năm nào cũng có.
 
 <div class="font-xsmall" style="margin-top:30px">
 <p><a href="#" onclick='$("#ref_list").slideToggle();$("#ref_icon").toggleClass("icon-chevron-down icon-chevron-up");return false;'>Tham khảo <i id="ref_icon" class="icon icon-chevron-down"></i></a></p>
