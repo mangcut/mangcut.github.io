@@ -84,6 +84,7 @@ Về cơ bản, mỗi loại tảo cần môi trường và chất dinh dưỡng
 
 #### ẢNH HƯỞNG ĐẾN SỨC KHỎE CON NGƯỜI
 
+Nếu cá chết do thiếu hụt ô-xy thì nhìn chung không ảnh hưởng sức khỏe con người. Tuy nhiên, chúng ta có thể bị ảnh hưởng trong trường hợp ăn phải hải sản đã nhiễm độc. Không chỉ ở cá đã chết, mà các loài thân mềm hai mảnh vỏ như ngao sò trai hàu có thể tích tụ chất độc mà vẫn sống, người ăn vào sẽ nguy hiểm. Tùy theo loại tảo độc và mức độ tích tụ của chất độc mà, khi ăn phải, tác động sẽ khác nhau, ví dụ khó thở, tiêu chảy, nôn mửa, chóng mặt, v.v., có những trường hợp đặc biệt nặng gây chết người.
 
 Chất độc cũng bị tiết ra môi trường. Chẳng hạn tảo Karenia brevis khiến người tắm biển bị kích ứng da. Chất độc của loại tảo này còn lan ra không khí và theo gió thổi vào bờ khiến những người hít phải cảm thấy khó thở.
 
