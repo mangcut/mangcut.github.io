@@ -78,7 +78,7 @@ Có thể chia thành 2 nguồn gốc:
 
 __Tự nhiên__. Trên thực tế, ở nhiều nơi trên thế giới, hiện tượng tảo nở hoa lặp đi lặp lại, có khi nhiều năm một lần, khi lại chỉ vài tháng. Cứ đến một thời điểm nào đó, khi lượng dinh dưỡng cho tảo trong nước tăng lên cao, tảo lại đua nhau sinh nở và làm đổi màu nước. Sau một thời gian, hiện tượng tự hết. Các yếu tố tự nhiên như dòng hải lưu, thời tiết hay các hiện tượng như El Niño có thể góp phần trong việc tạo ra điều kiện thuận lợi để tảo nở hoa
 
-__Do tác động của con người__. Nếu ở một nơi mà chưa từng xảy ra tảo nở hoa, hoặc hiếm xảy ra nhưng giờ xảy ra nhiều hơn, nguyên nhân là do các hoạt động của con người đã tác động đến môi trường nước. Ngoài ánh sáng, tảo còn cần các chất vô cơ khác như muối phosphat, nitrat, silicat, và sắt (tương tự như cây trên mặt đất cần bón phân đạm, phân lân). Việc sử dụng tràn lan phân bón hóa học trong nông nghiệp, nước thải sinh hoạt, nước thải công nghiệp khi ra biển đều có thể cung cấp nhiều dinh dưỡng cho tảo. Hiện tượng nước ấm dần lên cũng được cho là tạo điều kiện thuận lợi cho tảo phát triển.
+__Do tác động của con người__. Nếu ở một nơi mà chưa từng xảy ra tảo nở hoa, hoặc hiếm xảy ra nhưng giờ xảy ra nhiều hơn, nguyên nhân là do các hoạt động của con người đã tác động đến môi trường nước. Ngoài ánh sáng, tảo còn cần các chất vô cơ khác như phosphat, nitrat, silicat, và sắt (tương tự như cây trên mặt đất cần bón phân đạm, phân lân). Việc sử dụng tràn lan phân bón hóa học trong nông nghiệp, rồi nước thải sinh hoạt, nước thải công nghiệp khi ra biển đều có thể cung cấp nhiều dinh dưỡng cho tảo. Hiện tượng nước ấm dần lên cũng được cho là tạo điều kiện thuận lợi cho tảo phát triển.
 
 Về cơ bản, mỗi loại tảo cần môi trường và chất dinh dưỡng khác nhau. Cho đến nay, khoa học vẫn chưa xác định được điều kiện chính xác để tảo nở hoa. Cũng chưa có giải pháp nào xử lý hiệu quả hiện tượng này, thông thường chỉ đợi cho nó qua đi. Ở các nước thường xảy ra tảo nở hoa, người ta đã có thể giám sát, dự đoán và cảnh báo sớm cho người dân.
 
@@ -102,7 +102,7 @@ Việc này phải chờ các cơ quan nghiên cứu có trách nhiệm kết lu
 
 Hệ thống xả thải công nghiệp có thể liên quan theo 2 cách:
 
-- __Trực tiếp__. Nhà máy sả trực tiếp chất độc ra môi trường. Chất độc này làm cá chết trực tiếp. Biển quanh các khu công nghiệp hầu hết bị ô nhiễm và hàm lượng các chất gây hại (bao gồm cả kim loại nặng) đều cao hơn ở vùng biển bình thường. Tuy nhiên, vấn đề cần xác định là hàm lượng đã đến mức gây chết _nhanh chóng_ và _hàng loạt_ cho cá hay chưa, nếu có thì cụ thể là hóa chất gì, và gây ảnh hưởng cho con người như thế nào.
+- __Trực tiếp__. Nhà máy xả trực tiếp chất độc ra môi trường. Chất độc này làm cá chết trực tiếp. Biển quanh các khu công nghiệp hầu hết bị ô nhiễm và hàm lượng các chất gây hại (bao gồm cả kim loại nặng) đều cao hơn ở vùng biển bình thường. Tuy nhiên, vấn đề cần xác định là hàm lượng đã đến mức gây chết _nhanh chóng_ và _hàng loạt_ cho cá hay chưa, nếu có thì cụ thể là hóa chất gì, và gây ảnh hưởng cho con người như thế nào.
 - __Gián tiếp__. Chất thải từ nhà máy có nhiều chất dinh dưỡng (nitrat, phosphat, sắt v.v.) thuận lợi cho một loại tảo có hại nào đó nở hoa
 
 #### CÂU HỎI
@@ -117,7 +117,7 @@ __Đáp__: Các hiện tượng cá chết hàng loạt thường chỉ có mộ
 
 __Hỏi__: Tảo nở hoa đã từng xuất hiện tại Việt Nam chưa?
 
-__Đáp__: Đã từng xuất hiện nhiều lần ở phía Nam, đặc biệt ở Bình Thuận gần như năm nào cũng có.
+__Đáp__: Đã từng xuất hiện nhiều lần ở phía Nam, đặc biệt ở Bình Thuận gần như năm nào cũng có. Tuy nhiên, chưa có đợt tảo nở hoa nào được ghi nhận gây ra cá chết trên diện rộng tương đương vụ cá chết ở miền Trung vừa rồi.
 
 <div class="font-xsmall" style="margin-top:30px">
 <p><a href="#" onclick='$("#ref_list").slideToggle();$("#ref_icon").toggleClass("icon-chevron-down icon-chevron-up");return false;'>Tham khảo <i id="ref_icon" class="icon icon-chevron-down"></i></a></p>
