@@ -261,7 +261,6 @@ var loadRealImages = function() {
 		var tag = imgTags[i];
 		var img = new Image();
 		img.onload = function() {
-			console.log(tag);
 			this.thatTag.src = this.src;
 			this.thatTag.className = "real-image";
 		}
