@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<title>Trình duyệt quá cũ</title>
+</head>
+<body>
+<h2>Trình duyệt bạn đang dùng quá cũ!</h2>
+<p><i>Blog Măng Cụt không hiển thị được trên trình duyệt này.</i></p>
+<p>Link của bài bạn định xem: <span style="background-color: #666;color:#f8f8f8;padding:2px 8px;line-height:1.5;">http://www.mangcut.vn<span id="oldLink"></span></span></p>
+<p>Nếu bạn có trình duyệt khác mới hơn, hãy mở bằng trình duyệt đó.</p>
+<p>Nếu không, tải về.<br>Link tải: <a target="_blank" href="http://browsehappy.com">BrowseHappy.com</a></p>
+<script>
+(function() {
+  var v = location.search.substring(1);
+  if (v) {
+    var l = document.getElementById("oldLink");
+	v = decodeURIComponent(v);
+	if ("textContent" in l) {
+		l.textContent = v;
+	} else {
+		l.innerText = v;
+    }
+  }
+})();
+
+/* Google Analytics */
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-8597504-3', 'mangcut.vn');
+ga('send', 'pageview');
+/* End Goolge Analytics */
+</script>
+</body>
+</html>

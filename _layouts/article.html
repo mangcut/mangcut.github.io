@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="{% if page.lead_image %}{{page.lead_image}}{% else %}{{page.image}}{% endif %}" as="image">
+<link rel="preload" href="/css/mangcut.css" as="style" >
+<script>
+(function() {
+var ok = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") 
+	&& 'querySelector' in document
+	&& 'addEventListener' in window;
+if (!ok) {
+	location.replace("/admin/browser.html?" + encodeURIComponent(location.pathname));
+} else {
+	window.addEventListener('load', function() {
+		var imgTag = document.getElementById("leadImage");
+		var img = new Image();
+		img.onload = function() {
+			imgTag.src = img.src;
+		}
+		img.src = imgTag.getAttribute("data-src");
+	}, false);
+}
+})();
+</script>
+
+<!-- page data -->
+<title>{% if page.page_title %}{{page.page_title}}{% else %}{{page.title}}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{page.excerpt}}{% endif %}">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#a02c2c">
+<link rel="canonical" href="{{site.url}}{{page.url|remove:'index.html'}}">
+
+<!-- open graph -->
+<meta property="fb:app_id" content="1019502298079463">
+<meta property="fb:admins" content="100000049454443">
+<meta property="fb:profile_id" content="100000049454443">
+<meta property="og:site_name" content="{{site.name}}">
+<meta property="article:author" content="https://www.facebook.com/mangcut.vn">
+<meta property="article:publisher" content="https://www.facebook.com/mangcut.vn">
+<meta property="og:type" content="article">
+{% if page.fb_title %}<meta property="og:title" content="{{page.fb_title}}">{% endif %}
+{% if page.fb_description %}<meta property="og:description" content="{{page.fb_description}}">{% endif %}
+<meta property="og:image" content="{{site.url}}{% if page.fb_image %}{{page.fb_image}}{% else %}{{page.image}}{% endif %}">
+<meta property="og:url" content="{{site.url}}{{page.url|remove:'index.html'}}">
+{% if page.see_also1 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also1}}">{% endif %}
+{% if page.see_also2 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also2}}">{% endif %}
+
+<style>
+html {
+font-size: 112.5%;
+}
+
+body {
+margin: 0;
+background-color: #fafafa;
+color: #333;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+line-height: 1.4;
+}
+
+@media (-webkit-max-device-pixel-ratio: 1), (max-resolution: 96dpi) {
+html {
+font-size: 100%;
+}
+body {
+font-family: Verdana, sans-serif;
+}
+}
+
+.article-body>p,.article-header>p,.body-section>p, h1, h2, figcaption {
+margin-left: 6.25%;
+margin-right: 6.25%;
+}
+
+a {
+color: #2ca02c;
+text-decoration: none;
+}
+
+.page-header a {
+text-align: left;
+color: #fff;
+font-family: Seravek, Calibri, Carlito, sans-serif;
+font-size: 20px;
+line-height: 1em;
+vertical-align: middle;
+padding: 2px 10px;
+background-color: #000;
+opacity: 0.3;
+display: table;
+}
+
+.big {
+font-size: 1.2em;
+}
+.small {
+font-size: 0.7em;
+}
+
+@media (min-width:768px) {
+.article-body>p,.article-header>p,.body-section>p, h1, h2, figcaption {
+width: 690px;
+margin-left: auto;
+margin-right: auto;
+}
+p {
+text-align: justify;
+}
+}
+
+figure {
+padding: 0;
+margin: 18px auto;
+text-align: center;
+}
+
+figure div {
+font-size: 0;
+}
+
+figure img {
+max-width: 100%;
+}
+
+#leadImage, .fake-image {
+background-color: #ddd;
+}
+
+figure figcaption {
+font-size: 80%;
+color: #666;
+padding-top: 1%;
+line-height: 1.35;
+}
+
+p {
+margin-top: 0;
+margin-bottom: 0.8em;
+padding: 0;
+}
+
+p.lead {
+font-size:1.1em;
+color:#777;
+}
+
+.dropcap::first-letter {
+float: left;
+font-size: 80px;
+line-height: .95em;
+font-family: Georgia,serif;
+margin-right: .06em;
+color: #a02c2c;
+}
+
+h1, h2 {
+color: #a02c2c;
+font-weight: normal;
+}
+
+.article-body {
+line-height: 1.6;
+}
+
+h1 {
+margin-top: 60px;
+margin-bottom: 20px;
+padding: 0;
+font-size: 32px;
+}
+
+.by-line {
+font-size: 80%;
+color: #999;
+margin-bottom: 24px;
+}
+
+h2 {
+margin-top: 1em;
+margin-bottom: 0.2em;
+padding: 0;
+font-size: 1.3em;
+}
+h2::first-letter {
+font-size: 1.3em;
+}
+
+p.standout::first-letter {
+font-size: 2em;
+line-height: 1;
+}
+
+.divider {
+text-align: center;
+padding: 0.4em 0;
+font-family: Elephant, serif;
+font-size: 1.2em;
+letter-spacing:0.3em;
+}
+</style>
+</head>
+
+<body>
+<!-- page-header -->
+<header class="page-header"><a href="/" title="Về trang chủ"><span class="big">m</span>angcut.<span class="small">vn</span></a></header>
+
+<!-- ARTICLE -->
+<article class="article">
+<header class="article-header">
+<h1>Chiến dịch Gió lốc: Cuộc tháo chạy tán loạn khỏi Sài Gòn</h1>
+<p class="by-line"><a href="/about.html">Trương Hồng Thi</a><br><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%-d/%-m/%Y" }}</time> - dài {{ page.content | strip_html | number_of_words | divided_by:351 | plus:1}} phút</p>
+</header>
+
+<section class="article-body">
+{{content}}
+</section>
+
+<footer class="article-footer">
+<section class="body-section">
+<br>
+<p class="label">Thích bài viết này?</p>
+<p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn-share" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="8"><path fill="#fff" d="M5.143 16V8.89H7.43L8 5.925H5.143V4.74c0-1.185.572-1.777 1.714-1.777H8V0H5.714c-2.1 0-3.428 1.707-3.428 4.148v1.778H0V8.89h2.286V16h2.857z"/></svg>Chia sẻ</a></p>
+</section>
+</footer>
+
+</article>
+
+<footer class="page-footer">
+<hr class="line">
+<p><a href="/">Trang chủ</a> - <a href="/linhtinh/">Linh tinh</a> - <a href="/about.html">Giới thiệu</a></p>
+<p>&copy; 2016 - Tạp chí Măng cụt<p>
+<p>Ghi tên tác giả kèm link đến bài gốc khi đăng lại</p>
+</footer>
+
+<noscript id="moreCss"><link rel="stylesheet" type="text/css" href="/css/mangcut.css"/></noscript>
+<script>
+(function() {
+var loadRealImages = function() {
+	var imgTags = document.querySelectorAll(".fake-image");
+	for (i = 0; i < imgTags.length; ++i) {
+		var tag = imgTags[i];
+		var img = new Image();
+		img.onload = function() {
+			console.log(tag);
+			this.thatTag.src = this.src;
+			this.thatTag.className = "real-image";
+		}
+		img.src = tag.getAttribute("data-src");
+		img.thatTag = tag;
+	}
+}
+
+var loadExtraCss = function() {
+	var css = document.getElementById("moreCss");
+	var tag = document.createElement("div");
+	tag.innerHTML = css.textContent;
+	document.body.appendChild(tag)
+	css.parentElement.removeChild(css);
+};
+
+var addAnalytics = function() {
+{% include analytics.js %} 
+}
+	  
+window.addEventListener('load', function() {
+	window.setTimeout(function() {
+		loadExtraCss();
+		addAnalytics();
+		loadRealImages();
+	}, 0);
+}, false);
+	
+})();
+</script>
+</body>
+</html>
