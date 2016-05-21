@@ -88,20 +88,26 @@ hr.line {
 	font-size: 90%;
 }
 
-.btn-share {
-   display: table;
-   padding: 6px 20px 5px 10px;
-   text-decoration: none;
-   font-size: 14px;
-   line-height: 14px;
-   color: #f5f5f5;
-   background-color: #3b5998;
+.btn {
+	display: table;
+	padding: 6px 20px 5px 10px;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 14px;
+	color: #f5f5f5;
 }
 
-.btn-share svg {
+.btn svg {
 	display: inline;
     vertical-align: middle;
     padding-right: 8px;
+}
+
+.btn-fb {
+	background-color: #3b5998;
+}
+.btn-email {
+	background-color: #eb7b1d;
 }
 
 .article-footer .label {
