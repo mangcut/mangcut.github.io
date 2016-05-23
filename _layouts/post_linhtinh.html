@@ -4,7 +4,7 @@ layout: default_simple
 <article class="article">
 <div>
 <div class="post-title">
-<p class="font-xsmall" style="margin:30px 0 0 0"><a href="/linhtinh/" style="color:#999">CHUYỆN LINH TINH</a></p>
+<p class="font-xsmall" style="margin:30px 0 0 0"><a href="/linhtinh/" style="color:#999">{% if page.form == "poem" %}THƠ THẨN{% else %}TÀO LAO{% endif %}</a></p>
 <h2 style="margin-top:5px">{{ page.title }}</h2>
 <div class="font-small muted"><address><a rel="author" href="/about.html">{% if page.author %}{{ page.author }}{% else %}Trương Hồng Thi{% endif %}</a><address> - <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%-d/%-m/%Y" }}</time></div>
 </div>
