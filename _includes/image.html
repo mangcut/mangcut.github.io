@@ -1,7 +1,7 @@
 <figure>
 <div {% if include.orgin %} data-origin="{{include.orgin}}"{% endif %}>
 <img class="fake-image" src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 {{include.width}} {{include.height}}'%2F%3E" width="{{include.width}}" data-src="{{include.src}}" alt="{{include.alt}}">
-<noscript><img data-src="{% if page.lead_image %}{{page.lead_image}}{% else %}{{page.image}}{% endif %}" alt="{{include.alt}}"></noscript>
+<noscript><img src="{{include.src}}" alt="{{include.alt}}"></noscript>
 </div>
 {% if include.caption %}<figcaption>{{include.caption}}</figcaption>{% endif %}
 </figure>
