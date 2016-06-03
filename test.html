@@ -17,18 +17,18 @@
 <script>
 (function() {
 var loadRealImages = function() {
+	var isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
+	alert(isOperaMini);
 	var imgTags = document.querySelectorAll(".fake-image");
 	for (i = 0; i < imgTags.length; ++i) {
 		var tag = imgTags[i];
 		var img = new Image();
 		img.onload = function() {
 			tag.src = this.src;
-			alert("Load OK: " + this.src);
 		}
-		img.onerror = function() {
-			alert("Load Error: " + this.src);
-		}
-		img.src = tag.getAttribute("data-src");
+		var realSrc = tag.getAttribute("data-src");
+		if (isOperaMini) realSrc = realSrc.replace(".svg", ".png");
+		img.src = realSrc;
 	}
 }
  
