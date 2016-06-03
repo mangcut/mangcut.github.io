@@ -47,15 +47,14 @@ a:hover {
 }
 
 .note {
-	background-color: #2ca0a0;
-    color: #f5f5f5;
-	font-size: 85%;
+	background-color: rgb(217,230,240);
+	font-size: 90%;
 	padding: 1em;
 }
 
 .highlight {
-	background-color: #a0a02c;
-    color: #f5f5f5;
+	background-color: #585;
+    color: #ddd;
     padding-top: 1.2em;
     padding-bottom: 1em;
 }
@@ -133,8 +132,8 @@ hr.line {
   position: absolute;
   content: attr(data-date);
   top: -1.5em;
-  background-color: #a02ca0;
-  border: 3px solid #a02ca0;
+  background-color: #802380;
+  border: 3px solid #802380;
   line-height:1;
   padding: 3px 12px 3px 8px;
   color: #f5f5f5;
@@ -148,7 +147,7 @@ hr.line {
   left: 28px;
   height: 100%;
   width: 10px;
-  background: #a02ca0;
+  background: #802380;
 }
 
 .cd-timeline-block {
@@ -168,8 +167,8 @@ hr.line {
   top: 0;
   left: 0;
   width: 60px;
-  border: 4px solid #a02ca0;
-  background-color: #a02ca0;
+  border: 4px solid #802380;
+  background-color: #802380;
   color: #f5f5f5;
   line-height: 1;
   text-align: center;
@@ -193,7 +192,7 @@ hr.line {
   top: -10px;
   margin-left: 80px;
   padding: 0 1.5em;
-  background-color: #2ca0a0;
+  background-color: #885;
   color: #f5f5f5;
   min-height: 3em;
 }
@@ -220,7 +219,7 @@ hr.line {
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid #2ca0a0;
+  border-right: 7px solid #885;
 }
 
 .tombstone:after {
