@@ -17,7 +17,7 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="frequent_wind_result_2.svg"
-   inkscape:export-filename="D:\ThiTH\Github\thith.github.io\media\frequent_wind_result.png"
+   inkscape:export-filename="D:\Thi\Github\thith.github.io\media\#misc\frequent_wind_result.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -48,16 +48,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0074671"
-     inkscape:cx="317.95078"
-     inkscape:cy="224.84035"
+     inkscape:zoom="0.7184354"
+     inkscape:cx="152.18854"
+     inkscape:cy="319.45195"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="746"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1440"
+     inkscape:window-height="825"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      showguides="true"
      fit-margin-top="0"
@@ -964,7 +964,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.00000381px;font-family:serif;-inkscape-font-specification:serif;fill:#2ca02c;fill-opacity:1"
          id="tspan8300">40 TÀU ĐÁP</tspan><tspan
          id="tspan8306"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20.00000381px;font-family:serif;-inkscape-font-specification:serif;fill:#2ca02c;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;font-family:serif;-inkscape-font-specification:serif;fill:#2ca02c;fill-opacity:1"
          y="835"
          x="328.34503">(chưa kể tàu &amp; máy bay yểm trợ)</tspan></text>
     <path
@@ -1023,7 +1023,7 @@
     <rdf:RDF>
       <cc:Work
          rdf:about="">
-        <dc:title></dc:title>
+        <dc:title />
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />

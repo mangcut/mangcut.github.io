@@ -16,6 +16,10 @@ if (!ok) {
 	location.replace("/admin/browser.html?" + encodeURIComponent(location.pathname));
 } else {
 	document.documentElement.className = document.documentElement.className.replace( /\bno-js\b/,'js' );
+	window.isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
+	if (window.isOperaMini) {
+		document.documentElement.className += " o-mini";
+	}
 }
 })();
 </script>
@@ -47,8 +51,8 @@ if (!ok) {
 <meta property="og:title" content="Blog Măng Cụt" />
 <meta name="description" content="Mở những ô cửa">
 <meta property="og:image" content="{{site.url}}/media/jump.jpg" />
-<link rel="canonical" href="{{site.url}}{{page.url}}">
-<meta property="og:url" content="{{site.url}}{{page.url}}" />
+<link rel="canonical" href="{{site.url}}{{page.url | remove:'index.html'}}">
+<meta property="og:url" content="{{site.url}}{{page.url | remove:'index.html'}}" />
 <link href="{{site.url}}/atom/all.xml" type="application/atom+xml" rel="alternate" title="Blog Măng Cụt - Trương Hồng Thi">
 
 <style>
@@ -160,6 +164,7 @@ line-height:1;
 	background-size: cover;
     background-position: 20% center;
     background-repeat: no-repeat;
+	text-align: center;
 }
 .leadPage::before {
 	content: "";
@@ -173,15 +178,13 @@ line-height:1;
 
 .logo {
     position: absolute;
-    left: 50%;
-    top: 47%;
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    top: 210px;
+	width: 100%;
 }
+
 .logo a {
 	font-size: 48px;
+	line-height: 1;
     font-weight: bold;
     color: #fff;
 	text-shadow: 0 0 1px rgba(0,0,0,0.7);
@@ -191,16 +194,11 @@ line-height:1;
 }
 .slogan {
 	font-size: 18px;
-    line-height: 18px;
+    line-height: 1;
     color: rgba(255,255,255,0.95);
-    margin-top: 40px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    top: 275px;
+	width: 100%;
 }
 
 .nav-bar {
@@ -328,7 +326,7 @@ hr.line {
 	<li><a href="/work.html">NGHỊCH</a></li>
 	</ul>
 </nav>
-<header>
+</header>
 
 <section class="breadscump">
 	<header class="scump-head">CÁC BÀI NGẮN</header>
