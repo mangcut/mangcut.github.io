@@ -8,6 +8,7 @@ excerpt: Khi tôi tìm đến những pho tượng<br>1, 2, 3, 4, 5 một hàng 
 image: /media/moai.jpg
 image_origin: flyadvisor.blogspot.com
 topic: Thơ
+modest: true
 disqus_id: blog/2013-05-01-bai-tho-viet-trong-long-dat
 content_class: poem
 ---
@@ -51,7 +52,7 @@ Chỉ có linh hồn bay lên
 
 <figure>
 <div class="img-container" data-origin="flyadvisor.blogspot.com">
-<img src="/media/moai.jpg" alt="Khi tôi tìm đến những pho tượng"></img>
+<img src="/media/moai.jpg" alt="Khi tôi tìm đến những pho tượng">
 </div>
 <figcaption>[Minh họa] Khi tôi tìm đến những pho tượng</figcaption>
 </figure>

@@ -1,23 +1,11 @@
-update_date: "9:30AM ngày 9/1/2016"
+update_date: "7:00PM ngày 1/6/2016"
 list:
   -
-    title: "Trang chủ"
-    views: "6,786"
+    url: /blog/2015-04-25-phat-minh-cuoi-cung-cua-con-nguoi.html
+    views: 2819
   -
-    title: "Interlocked in C#"
-    views: "2,610"
+    url: /blog/2015-06-07-thuc-te-ao.html
+    views: 2784
   -
-    title: "Mối họa trí tuệ nhân tạo (p2)"
-    views: "2,394"
-  -
-    title: "Sonar Effect with CSS"
-    views: "2,033 (thiếu)"
-  -
-    title: "Thực tế ảo"
-    views: "2,008"
-  -
-    title: "Não trái não phải"
-    views: "1,616"
-  -
-    title: "Hạ trắng (p1)"
-    views: "252"
+    url: /4-buc-anh/4-2.html
+    views: 2306

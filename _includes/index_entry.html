@@ -1,0 +1,37 @@
+{% assign mc_i_entry = post %}
+{% if include.show_page %}
+	{% for mc_i_page in site.pages %}
+		{% if mc_i_page.url == include.show_page %}
+			{% assign mc_i_entry = mc_i_page %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+<hr class="line">
+<article class="article">
+	<header class="article-header">
+		{% if mc_i_entry.label %}<span class="post-label">{{mc_i_entry.label}}</span>{% endif %}
+		<h1><a href="{{mc_i_entry.url}}">{{mc_i_entry.title}}</a></h1>
+		{% if mc_i_entry.language == "en" %}
+		  {% assign mc_readSpead = 276 %}
+		{% else %}
+		  {% assign mc_readSpead = 351 %}
+		{% endif %}
+		{% assign mc_wordCount = mc_i_entry.content | strip_html | number_of_words %}
+		{% assign mc_postLength = mc_wordCount | divided_by:mc_readSpead | plus:1 %}
+		<p class="by-line"><a href="/about.html">Trương Hồng Thi</a><br>{% if mc_i_entry.date %}<time datetime='{{ mc_i_entry.date | date: "%Y-%m-%d" }}'>{{ mc_i_entry.date | date: "%-d/%-m/%Y" }}</time> - {% endif %}dài {{ mc_postLength}} phút{% if include.show_page %} - {% include view_count.html series_id=mc_i_entry.series_id %}{% else %}{% include view_count.html url=mc_i_entry.url new_line="true" %}{% endif %}</p>
+	<header>
+
+	<section class="article-body">
+		{% if mc_i_entry.image %}
+		<figure>
+			<a href="{{ mc_i_entry.url }}"><img src="{{ mc_i_entry.image }}"></a>
+		</figure>
+		{% endif %}
+		<p>{% if mc_i_entry.excerpt %}{{mc_i_entry.excerpt}}{% else %}{{mc_i_entry.description}}{% endif %}</p>
+	<section>
+
+	<footer class="article-footer">
+		<p><a href="{{mc_i_entry.url}}">{% if include.show_page %}[Chi tiết...]{% else %}[Đọc bài...]{% endif %}</a></p>
+	</footer>
+</article>

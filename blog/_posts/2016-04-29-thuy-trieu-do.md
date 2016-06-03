@@ -15,7 +15,7 @@ see_also1: blog/2015-03-23-bao-gio-loai-nguoi-diet-vong.html
 see_also2: 
 image_origin: oceanadventures.co.za
 topic: Khoa học
-recommend: true
+modest: true
 header_image_2: /media/thuy_trieu_do.jpg
 fb_image: /media/thuy_trieu_do_fb.jpg
 disqus_id: blog/thuy-trieu-do
@@ -47,7 +47,7 @@ Hiện tượng tảo nở hoa thường xảy ra ở ven biển, nhưng nó 
 
 <figure>
   <div class="img-container" data-origin="Wikipedia">
-  <img src="/media/tao_no_hoa.jpg" alt="Tảo nở hoa"></img>
+  <img src="/media/tao_no_hoa.jpg" alt="Tảo nở hoa">
   </div>
   <figcaption>Tảo nở hoa ở Hồ Erie, 2011, gây ra bởi vi khuẩn lam</figcaption>
 </figure>
@@ -65,7 +65,7 @@ Tảo nở hoa gây hại theo hai cách chính:
 
 <figure>
   <div class="img-container" data-origin="whoi.edu/redtide/">
-  <img src="/media/fishkills.jpg" alt="Cá chết hàng loạt"></img>
+  <img src="/media/fishkills.jpg" alt="Cá chết hàng loạt">
   </div>
   <figcaption>Bản đồ các vụ cá chết hàng loạt cập nhật 2/2016, các vùng kém phát triển ít xảy ra hơn</figcaption>
 </figure>

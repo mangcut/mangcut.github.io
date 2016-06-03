@@ -4,15 +4,14 @@ title: Trương Hồng Thi
 en_title: Truong Hong Thi's Personal Page
 description: Cùng mở những ô cửa mới.
 en_description: Truong Hong Thi on Programming and Life
-permalink: /:categories/:year-:month-:day-:title.html
 url: http://www.mangcut.vn
 author: Trương Hồng Thi
 en_author: Truong Hong Thi
 highlighter: rouge
-recommended_series_id: world
 exclude: [temp,tmp,misc]
 markdown: kramdown
 kramdown:
+  auto_ids: false
   enable_coderay: false
   coderay:
     coderay_css: class
@@ -29,6 +28,7 @@ defaults:
       is_page: true
       comment: false
       auto_email: false
+      permalink: /:path/:basename:output_ext
   -
     scope:
       path: ""
@@ -37,3 +37,4 @@ defaults:
       is_post: true
       comment: false
       auto_email: true
+      permalink: /blog/:year-:month-:day-:title.html

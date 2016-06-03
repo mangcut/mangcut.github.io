@@ -5,9 +5,27 @@ page_title: Danh sách toàn bộ bài viết - Blog Măng cụt
 ---
 
 <h2>Danh sách toàn bộ bài viết trên Blog Măng cụt</h2>
-
+<style>
+span.info {
+border: 1px solid #ccc;
+padding: 0 6px;
+font-size: 80%;
+}
+span.hilight {
+color:red;
+}
+</style>
 <ol>
 {% for post in site.posts %}
-<li><a href="{{post.url}}">{{post.title}}</a> - {{post.content | strip_html | number_of_words}} từ</li>
+<li><a href="{{post.url}}">{{post.title}}</a> <span class="info">{{post.content | strip_html | number_of_words}} từ
+{% include view_count.html url=post.url simple="true" min_count=1 out="false" %}
+{% if mc_i_viewCount > 0 %} - <span  class="hilight">{{mc_i_formatedViewCount}}</span> lượt xem{% endif %}
+</span></li>
 {% endfor %}
 </ol>
+
+<p><a href="/">Về trang chủ</a></a>
+
+<script>
+{% include analytics.js %}
+</script>

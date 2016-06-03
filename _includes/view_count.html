@@ -1,0 +1,52 @@
+{% assign mc_i_minCount = 3000 %}
+{% if page.min_view_show %}
+	{% assign mc_i_minCount = page.min_view_show %}
+{% endif %}
+{% if include.min_count %}
+	{% assign mc_i_minCount = include.min_count %}
+{% endif %}
+{% assign mc_i_viewCount = 0 %}
+{% if include.series_id %}
+	{% for mc_i_post in site.posts %}
+		{% if mc_i_post.series_id == include.series_id %}
+			{% for mc_i_pop_post in site.data.popular.list %}
+				{% if mc_i_post.url == mc_i_pop_post.url %}
+					{% assign mc_i_viewCount = mc_i_viewCount | plus: mc_i_pop_post.views %}
+					{% break %}
+				{% endif %}
+			{% endfor %}
+			{% for mc_i_pop_post in site.data.unpopular.list %}
+				{% if mc_i_post.url == mc_i_pop_post.url %}
+					{% assign mc_i_viewCount = mc_i_viewCount | plus: mc_i_pop_post.views %}
+					{% break %}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+	{% endfor %}
+{% else %}
+	{% for mc_i_pop_post in site.data.popular.list %}
+		{% if mc_i_pop_post.url == include.url %}
+			{% assign mc_i_viewCount = mc_i_pop_post.views %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+	{% for mc_i_pop_post in site.data.unpopular.list %}
+		{% if mc_i_pop_post.url == include.url %}
+			{% assign mc_i_viewCount = mc_i_pop_post.views %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+{% endif %}
+	
+{% assign mc_i_viewModulo = mc_i_viewCount | modulo: 1000 %}
+{% if mc_i_viewModulo < 10 %}
+	{% assign mc_i_viewModulo = mc_i_viewModulo | prepend: '00' %}
+{% else %}
+	{% if mc_i_viewModulo < 100 %}
+		{% assign mc_i_viewModulo = mc_i_viewModulo | prepend: '0' %}
+	{% endif %}
+{% endif %}
+{% assign mc_i_formatedViewCount = mc_i_viewCount | divided_by: 1000 | append: ',' | append: mc_i_viewModulo %}
+{% if include.out != "false" %}
+{% if include.simple %}{{mc_i_formatedViewCount}}{% else %}{% if mc_i_viewCount >= mc_i_minCount %}{% if include.new_line %}<br>{% endif %}<span title="Lượt xem"><img src="/img/fire.svg" width="16" class="inline-img"> {{mc_i_formatedViewCount}}</span>{% endif %}{% endif %}
+{% endif %}
