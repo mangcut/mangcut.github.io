@@ -1,0 +1,22 @@
+{% assign mc_i_entry = post %}
+<hr class="line">
+<article class="article">
+	<section class="article-header">
+		<p class="by-line by-line-top"><span class="post-label">{% if mc_i_entry.label %}{{mc_i_entry.label}}{% else %}TÀO LAO{% endif %}</span> {% include view_count.html url=mc_i_entry.url min_count=3000 %}</p>
+		{% if mc_i_entry.image %}
+		<figure>
+			<a href="{{ mc_i_entry.url }}"><img src="{{ mc_i_entry.image }}"></a>
+		</figure>
+		{% endif %}
+		<h1><a href="{{mc_i_entry.url}}">{{mc_i_entry.title}}</a></h1>
+	</section>
+	<header class="article-body">
+		<p>{{mc_i_entry.description}}</p>
+		<p class="by-line">
+			<a href="/about.html">Trương Hồng Thi</a>
+			{% if mc_i_entry.date %}
+				- <time datetime='{{ mc_i_entry.date | date: "%Y-%m-%d" }}'>{{ mc_i_entry.date | date: "%-d/%-m/%Y" }}</time>
+			{% endif %}
+		</p>
+	</header>
+</article>

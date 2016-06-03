@@ -20,7 +20,7 @@
 		{% assign mc_wordCount = mc_i_entry.content | strip_html | number_of_words %}
 		{% assign mc_postLength = mc_wordCount | divided_by:mc_readSpead | plus:1 %}
 		<p class="by-line"><a href="/about.html">Trương Hồng Thi</a><br>{% if mc_i_entry.date %}<time datetime='{{ mc_i_entry.date | date: "%Y-%m-%d" }}'>{{ mc_i_entry.date | date: "%-d/%-m/%Y" }}</time> - {% endif %}dài {{ mc_postLength}} phút{% if include.show_page %} - {% include view_count.html series_id=mc_i_entry.series_id %}{% else %}{% include view_count.html url=mc_i_entry.url new_line="true" %}{% endif %}</p>
-	<header>
+	</header>
 
 	<section class="article-body">
 		{% if mc_i_entry.image %}
@@ -29,7 +29,7 @@
 		</figure>
 		{% endif %}
 		<p>{% if mc_i_entry.excerpt %}{{mc_i_entry.excerpt}}{% else %}{{mc_i_entry.description}}{% endif %}</p>
-	<section>
+	</section>
 
 	<footer class="article-footer">
 		<p><a href="{{mc_i_entry.url}}">{% if include.show_page %}[Chi tiết...]{% else %}[Đọc bài...]{% endif %}</a></p>
