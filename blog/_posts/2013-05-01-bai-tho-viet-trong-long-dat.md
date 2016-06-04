@@ -11,6 +11,7 @@ topic: Thơ
 modest: true
 disqus_id: blog/2013-05-01-bai-tho-viet-trong-long-dat
 content_class: poem
+categories: tho
 ---
 
 Chẳng có gì to tát cả  

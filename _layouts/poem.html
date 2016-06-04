@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<link rel="preload" href="{% if page.lead_image %}{{page.lead_image}}{% else %}{{page.image}}{% endif %}" as="image">
+<link rel="preload" href="/css/mangcut.css" as="style" >
+<script>
+(function() {
+var ok = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") 
+	&& 'querySelector' in document
+	&& 'addEventListener' in window;
+if (!ok) {
+	location.replace("/admin/browser.html?" + encodeURIComponent(location.pathname));
+} else {
+	document.documentElement.className = document.documentElement.className.replace( /\bno-js\b/,'js' );
+	window.isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
+	if (window.isOperaMini) {
+		document.documentElement.className += " o-mini";
+	}
+}
+})();
+</script>
+
+<!-- page data -->
+<title>{% if page.page_title %}{{page.page_title}}{% else %}{{page.title}}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{page.excerpt}}{% endif %}">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<meta name="theme-color" content="#a02c2c">
+<link rel="canonical" href="{{site.url}}{{page.url|remove:'index.html'}}">
+
+<!-- open graph -->
+<meta property="fb:app_id" content="1019502298079463">
+<meta property="fb:admins" content="100000049454443">
+<meta property="fb:profile_id" content="100000049454443">
+<meta property="og:site_name" content="{{site.name}}">
+<meta property="article:author" content="https://www.facebook.com/mangcut.vn">
+<meta property="article:publisher" content="https://www.facebook.com/mangcut.vn">
+<meta property="og:type" content="article">
+{% if page.fb_title %}<meta property="og:title" content="{{page.fb_title}}">{% endif %}
+{% if page.fb_description %}<meta property="og:description" content="{{page.fb_description}}">{% endif %}
+<meta property="og:image" content="{{site.url}}{% if page.fb_image %}{{page.fb_image}}{% else %}{{page.image}}{% endif %}">
+<meta property="og:url" content="{{site.url}}{{page.url|remove:'index.html'}}">
+{% if page.see_also1 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also1}}">{% endif %}
+{% if page.see_also2 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also2}}">{% endif %}
+
+<style>
+html {
+font-size: 100%;
+}
+
+body {
+margin: 0;
+background-color: #fafafa;
+color: #333;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+line-height: 1.4;
+background-image: url('/media/illustration/tribal_mother.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: 40% 0;
+}
+
+.wrapper {
+padding-bottom: 380px;
+box-sizing: border-box;
+min-height: 100vh;
+}
+
+@media (max-width:767px) {
+body {
+background-position: 60% 0;
+}
+.wrapper {
+color: black;
+padding-bottom: 18px;
+background: rgba(255, 255, 240, .8);
+background: linear-gradient(to bottom right, rgba(255, 255, 240, .7), rgba(255, 255, 240, .85));
+}
+}
+
+.article-body>p,.article-header>p, h1 {
+margin-left: 6.25%;
+margin-right: 6.25%;
+max-width: 440px;
+}
+
+a {
+color: #2ca02c;
+text-decoration: none;
+}
+a:hover{
+text-decoration:underline;
+}
+
+.page-header a {
+color: #999;
+font-family: Seravek, Calibri, Carlito, sans-serif;
+font-size: 20px;
+font-variant: small-caps;
+line-height: 1;
+vertical-align: middle;
+padding: 5px 16px 5px 12px;
+display: table;
+}
+.page-header a svg {
+fill:#999;
+}
+.page-header a:hover {
+color:#2ca02c;
+text-decoration: none;
+}
+.page-header a:hover svg {
+fill:#2ca02c;
+}
+
+p {
+margin-top: 0;
+margin-bottom: 0.8em;
+padding: 0;
+}
+
+h1 {
+color: #a02c2c;
+font-weight: normal;
+margin-top: 30px;
+margin-bottom: 20px;
+padding: 0;
+font-size: 32px;
+}
+
+.article-body {
+line-height: 1.5;
+}
+
+.by-line, .end-line, .muted {
+font-size: 80%;
+color: #999;
+}
+
+.by-line {
+margin-bottom: 24px;
+}
+.end-line:before {
+content: "- ";
+}
+
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+<!-- page-header -->
+<header class="page-header"><a href="/tho/" title="Trở về trang thơ">
+<svg style="vertical-align:middle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 100 100"><path d="M50,0C22.387,0,0,22.387,0,50c0,27.614,22.387,50,50,50c27.615,0,50-22.386,50-50C100,22.387,77.615,0,50,0z M70,74.075  L57.036,87.038L20.001,50.001l37.035-37.037L70,25.927L45.927,50.001L70,74.075z"/></svg>&nbsp;thơ</a></header>
+
+<!-- ARTICLE -->
+<article class="article">
+<header class="article-header">
+<h1>{{page.title}}</h1>
+<p class="by-line"><a href="https://www.facebook.com/profile.php?id=100010815677880" target="_blank">Thiên Anh</a><br>Hà Nội - 2008</p>
+</header>
+
+<section class="article-body">
+{{content}}
+</section>
+</article>
+
+</div>
+
+<script>
+{% include analytics.js %} 
+</script>
+</body>
+</html>

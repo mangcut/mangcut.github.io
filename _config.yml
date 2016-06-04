@@ -37,4 +37,17 @@ defaults:
       is_post: true
       comment: false
       auto_email: true
+      author_id: thith
+      permalink: /:categories/:title.html
+  -
+    scope:
+      path: "blog"
+      type: posts
+    values:
       permalink: /blog/:year-:month-:day-:title.html
+  -
+    scope:
+      path: "tho"
+      type: posts
+    values:
+      author_id: thientx
