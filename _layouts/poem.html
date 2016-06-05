@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width">
 <meta name="format-detection" content="telephone=no">
 <link rel="preload" href="{% if page.lead_image %}{{page.lead_image}}{% else %}{{page.image}}{% endif %}" as="image">
-<link rel="preload" href="/css/mangcut.css" as="style" >
 <script>
 (function() {
 var ok = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") 
@@ -20,6 +19,14 @@ if (!ok) {
 	if (window.isOperaMini) {
 		document.documentElement.className += " o-mini";
 	}
+	window.addEventListener('load', function() {
+		var imgTag = document.getElementById("leadImage");
+		var img = new Image();
+		img.onload = function() {
+			imgTag.src = img.src;
+		}
+		img.src = imgTag.getAttribute("data-src");
+	}, false);
 }
 })();
 </script>
@@ -73,28 +80,36 @@ background-color: #fafafa;
 color: #333;
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
 line-height: 1.4;
+}
+
+.wrapper {
+box-sizing: border-box;
+padding-bottom: 18px;
+}
+
+@media (min-width:768px) {
+body {
 background-image: url('/media/illustration/tribal_mother.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: 40% 0;
 }
-
 .wrapper {
 padding-bottom: 380px;
-box-sizing: border-box;
 min-height: 100vh;
 }
+.article-body>figure {
+	display: none;
+}
+}
 
-@media (max-width:767px) {
-body {
-background-position: 60% 0;
+.article-body>figure {
+	margin: 10px 0;
+	padding: 0;
 }
-.wrapper {
-color: black;
-padding-bottom: 18px;
-background: rgba(255, 255, 240, .8);
-background: linear-gradient(to bottom right, rgba(255, 255, 240, .7), rgba(255, 255, 240, .85));
-}
+.article-body>figure img {
+	max-width: 100%;
+	background-color: #ffffb0;
 }
 
 .article-body>p,.article-header>p, h1 {
@@ -122,6 +137,7 @@ padding: 5px 16px 5px 12px;
 display: table;
 }
 .page-header a svg {
+vertical-align: middle;
 fill:#999;
 }
 .page-header a:hover {
@@ -170,7 +186,7 @@ content: "- ";
 <div class="wrapper">
 <!-- page-header -->
 <header class="page-header"><a href="/tho/" title="Trở về trang thơ">
-<svg style="vertical-align:middle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 100 100"><path d="M50,0C22.387,0,0,22.387,0,50c0,27.614,22.387,50,50,50c27.615,0,50-22.386,50-50C100,22.387,77.615,0,50,0z M70,74.075  L57.036,87.038L20.001,50.001l37.035-37.037L70,25.927L45.927,50.001L70,74.075z"/></svg>&nbsp;thơ</a></header>
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 100 100"><path d="M50,0C22.387,0,0,22.387,0,50c0,27.614,22.387,50,50,50c27.615,0,50-22.386,50-50C100,22.387,77.615,0,50,0z M70,74.075  L57.036,87.038L20.001,50.001l37.035-37.037L70,25.927L45.927,50.001L70,74.075z"/></svg>&nbsp;thơ</a></header>
 
 <!-- ARTICLE -->
 <article class="article">
