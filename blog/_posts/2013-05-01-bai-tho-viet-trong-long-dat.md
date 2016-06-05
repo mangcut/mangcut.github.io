@@ -1,17 +1,13 @@
 ---
-layout: post
-page_title: Bài thơ viết trong lòng đất
+layout: poem
 title: Bài thơ viết trong lòng đất
-description: Khi tôi tìm đến những pho tượng. 1, 2, 3, 4, 5 một hàng dài không đếm xuể. Những hòn đá vô tri bị đục đẽo. Sống nhờ linh hồn rừng cây phía sau.
-fb_description: Chẳng có gì to tát cả
-excerpt: Khi tôi tìm đến những pho tượng<br>1, 2, 3, 4, 5 một hàng dài không đếm xuể<br>Những hòn đá vô tri bị đục đẽo<br>Sống nhờ linh hồn rừng cây phía sau.
+description: Chẳng có gì to tát cả
 image: /media/moai.jpg
 image_origin: flyadvisor.blogspot.com
-topic: Thơ
 modest: true
-disqus_id: blog/2013-05-01-bai-tho-viet-trong-long-dat
-content_class: poem
 categories: tho
+writing_place: Hà Nội
+writing_time: 7/2012
 ---
 
 Chẳng có gì to tát cả  
@@ -33,6 +29,8 @@ Tôi thì khác
 Mà kể ra cũng chẳng khác  
 Sự ám ảnh sinh sôi trên bề mặt rỉ nước, tối màu và ẩm ướt của hệ thần kinh
 
+{% include lead_image.html width="550" height="366" background_color="rgb(167, 201, 224)" %}
+
 Khi tôi tìm đến những pho tượng  
 1, 2, 3, 4, 5 một hàng dài không đếm xuể  
 Những hòn đá vô tri bị đục đẽo  
@@ -48,12 +46,3 @@ Mọi thứ nóng chảy nham nhở
 Tôi cố giơ ngón tay viết bài thơ  
 Nhưng không thành hình  
 Chỉ có linh hồn bay lên
-
-<small>Hà Nội - 7/2012</small>
-
-<figure>
-<div class="img-container" data-origin="flyadvisor.blogspot.com">
-<img src="/media/moai.jpg" alt="Khi tôi tìm đến những pho tượng">
-</div>
-<figcaption>[Minh họa] Khi tôi tìm đến những pho tượng</figcaption>
-</figure>
