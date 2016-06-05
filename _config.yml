@@ -51,3 +51,4 @@ defaults:
       type: posts
     values:
       author_id: thientx
+      font_size: 112.5%

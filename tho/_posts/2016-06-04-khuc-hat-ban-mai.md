@@ -3,7 +3,6 @@ layout: poem
 title: Khúc hát ban mai
 description: Khi mẹ quẩy hừng đông về trên bến sông.
 image: /media/illustration/tribal_mother.jpg
-font_size: 112.5%
 background:
   min_width: 768px
   image: /media/illustration/tribal_mother.jpg

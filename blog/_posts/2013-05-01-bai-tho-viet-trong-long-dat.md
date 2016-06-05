@@ -6,8 +6,10 @@ image: /media/moai.jpg
 image_origin: flyadvisor.blogspot.com
 modest: true
 categories: tho
-writing_place: Hà Nội
-writing_time: 7/2012
+author_id: thith
+writing:
+  place: Hà Nội
+  time: 7/2012
 ---
 
 Chẳng có gì to tát cả  
