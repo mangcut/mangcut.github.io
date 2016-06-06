@@ -1,3 +1,4 @@
+{% capture cache %}
 {% assign mc_i_entry = post %}
 {% if include.show_page %}
 	{% for mc_i_page in site.pages %}
@@ -7,11 +8,12 @@
 		{% endif %}
 	{% endfor %}
 {% endif %}
-<hr class="line">
+{% endcapture %}{% assign cache = nil %}<hr class="line">
 <article class="article">
 	<header class="article-header">
 		{% if mc_i_entry.label %}<span class="post-label">{{mc_i_entry.label}}</span>{% endif %}
 		<h1><a href="{{mc_i_entry.url}}">{{mc_i_entry.title}}</a></h1>
+		{% capture cache %}
 		{% if mc_i_entry.language == "en" %}
 		  {% assign mc_readSpead = 276 %}
 		{% else %}
@@ -19,6 +21,7 @@
 		{% endif %}
 		{% assign mc_wordCount = mc_i_entry.content | strip_html | number_of_words %}
 		{% assign mc_postLength = mc_wordCount | divided_by:mc_readSpead | plus:1 %}
+		{% endcapture %}{% assign cache = nil %}
 		<p class="by-line"><a href="/about.html">Trương Hồng Thi</a><br>{% if mc_i_entry.date %}<time datetime='{{ mc_i_entry.date | date: "%Y-%m-%d" }}'>{{ mc_i_entry.date | date: "%-d/%-m/%Y" }}</time> - {% endif %}dài {{ mc_postLength}} phút{% if include.show_page %} - {% include view_count.html series_id=mc_i_entry.series_id %}{% else %}{% include view_count.html url=mc_i_entry.url new_line="true" %}{% endif %}</p>
 	</header>
 

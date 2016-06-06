@@ -1,16 +1,13 @@
-{% assign mc_i_entry = post %}
-<article class="article">
+{% assign mc_i_entry = post %}<article class="article">
 	<header class="article-header">{% assign mc_i_author = site.data.author[mc_i_entry.author_id] %}
 		<p class="by-line by-line-top"><span class="post-label"><a target="_blank" href="{{mc_i_author.website}}">{{mc_i_author.pen_name}}</a></p>
 		<h1><a href="{{mc_i_entry.url}}">{{mc_i_entry.title}}</a></h1>
-		{% if mc_i_entry.show_image %}
-		<!figure>
+		{% if mc_i_entry.show_image %}<figure>
 			<a href="{{ mc_i_entry.url }}"><img src="{{ mc_i_entry.image }}"></a>
-		</figure>
-		{% endif %}
+		</figure>{% endif %}
 	</header>
 	<section class="article-body">
-		<p>{{mc_i_entry.excerpt}}</p>
+		<p>{{ mc_i_entry.excerpt | remove: '<p>' | remove: '</p>' | | strip_newlines}}</p>
 	</section>
 	<footer class="article-footer">
 		<p><a href="{{mc_i_entry.url}}">[Đọc tiếp...]</a></p>

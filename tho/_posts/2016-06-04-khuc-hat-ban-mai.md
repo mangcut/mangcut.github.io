@@ -23,6 +23,8 @@ Khi mẹ quẩy hừng đông về ngang bến sông
 Cơn gió ban mai trở mình thức giấc  
 Lũ hến lần đầu trong đời ca hát dưới lòng sâu
 
+<!--more-->
+
 {% include lead_image.html width="1920" height="1269" background_color="#ffffb0" %}
 
 Khi mẹ quẩy hừng đông về ngang bến sông  

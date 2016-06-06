@@ -33,7 +33,7 @@ if (!ok) {
 
 <!-- page data -->
 <title>{% if page.page_title %}{{page.page_title}}{% else %}{{page.title}}{% endif %}</title>
-<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{page.excerpt}}{% endif %}">
+<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{page.excerpt | strip_html}}{% endif %}">
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">

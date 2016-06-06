@@ -1,3 +1,4 @@
+{% capture cache %}
 {% assign mc_i_minCount = 3000 %}
 {% if page.min_view_show %}
 	{% assign mc_i_minCount = page.min_view_show %}
@@ -47,6 +48,7 @@
 	{% endif %}
 {% endif %}
 {% assign mc_i_formatedViewCount = mc_i_viewCount | divided_by: 1000 | append: ',' | append: mc_i_viewModulo %}
-{% if include.out != "false" %}
+{% endcapture %}{% assign cache = nil %}
+{% capture cache %}{% if include.out != "false" %}
 {% if include.simple %}{{mc_i_formatedViewCount}}{% else %}{% if mc_i_viewCount >= mc_i_minCount %}{% if include.new_line %}<br>{% endif %}<span title="Lượt xem"><img src="/img/fire.svg" width="16" class="inline-img"> {{mc_i_formatedViewCount}}</span>{% endif %}{% endif %}
-{% endif %}
+{% endif %}{% endcapture %}{{cache | strip_newlines}}{% assign cache = nil %}
