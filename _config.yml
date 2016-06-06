@@ -39,6 +39,7 @@ defaults:
       auto_email: true
       author_id: thith
       permalink: /:categories/:title.html
+      theme: light
   -
     scope:
       path: "blog"

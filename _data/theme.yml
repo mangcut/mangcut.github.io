@@ -1,0 +1,39 @@
+light:
+  background: "#f5f5f5"
+  text: "#333"
+  header: "#a02c2c"
+  link: "#2ca02c"
+  modest: "#777"
+  shy: "#999"
+  note:
+    background: rgb(217,230,240)
+    text: "#333"
+  hilight:
+    background: "#585"
+    text: "#ddd"
+dark:
+  background: "#333"
+  text: "#cba"
+  header: "#ed3"
+  link: "#3e3"
+  modest: "#bb9"
+  shy: "#997"
+  note:
+    background: "#553"
+    text: "#eeb"
+  hilight:
+    background:
+    text:
+sepia:
+  background: "#EFE0B9"
+  text: "#643B0F"
+  header: "#B7521E"
+  link: "#1a1"
+  modest: "#c8761e"
+  shy: "#e18d33"
+  note:
+    background: "#E4B04A"
+    text: "#2A2C05"
+  hilight:
+    background:
+    text:
