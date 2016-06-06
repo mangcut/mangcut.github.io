@@ -6,7 +6,7 @@ image: /media/moai.jpg
 image_origin: flyadvisor.blogspot.com
 modest: true
 categories: tho
-font-size: 112.5%
+font_size: 112.5%
 author_id: thith
 excerpt_separator: <!--more-->
 writing:

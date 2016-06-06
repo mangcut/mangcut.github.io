@@ -195,8 +195,8 @@ min-height: 100vh;
 <body>
 <div class="wrapper">
 <!-- page-header -->
-<header class="page-header"><a href="/tho/" title="Trở về trang thơ">
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 100 100"><path d="M50,0C22.387,0,0,22.387,0,50c0,27.614,22.387,50,50,50c27.615,0,50-22.386,50-50C100,22.387,77.615,0,50,0z M70,74.075  L57.036,87.038L20.001,50.001l37.035-37.037L70,25.927L45.927,50.001L70,74.075z"/></svg>&nbsp;thơ</a></header>
+<header class="page-header"><a href="/tho/" onclick="document.getElementById('popupMenu').style.display='block';return false;" title="Menu thơ">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 100 100"><g><path d="M7.249,18.439v51.258h30.887L50,81.561l11.863-11.863h30.888V18.439H7.249z M71.502,56.787H28.497v-5.805h43.005V56.787z M71.502,46.567H28.497v-5.805h43.005V46.567z M71.502,36.346H28.497v-5.805h43.005V36.346z"/></g></svg>&nbsp;thơ</a></header>
 
 <!-- ARTICLE -->
 <article class="article">
@@ -211,6 +211,52 @@ min-height: 100vh;
 </article>
 
 </div>
+
+<style scoped>
+#popupMenu {
+display: none;
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: rgba(255,255,255,0.95);
+color: {{site.data.theme.light.text}};
+text-align: center;
+overflow-x: hidden;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+}
+#popupMenu h1 a {
+color: {{site.data.theme.light.header}};
+text-decoration: none;
+}
+#popupMenu ul {
+list-style-type: none;
+margin:0;padding:0;
+}
+#popupMenu li {
+font-size: 1.5em;
+line-height: 1.4;
+padding: 0.5em 20px;
+font-variant: small-caps;
+}
+#popupMenu p {
+padding-left: 20px;
+padding-right: 20px;
+font-variant: small-caps;
+}
+hr.line {
+border: 0;
+height: 1px;
+background: rgba(64, 64, 64, 0.3);
+background: linear-gradient(to right, rgba(64, 64, 64, 0), rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0));
+}
+</style>
+<nav id="popupMenu">
+<h1><a href="#" onclick="document.getElementById('popupMenu').style.display='none';return false;">[&times;] CLOSE</a></h1>
+<ul>{% for post in site.categories.tho %}{% if post.url != page.url %}<li><a href="{{post.url}}">{{post.title}}</a></li>{% endif %}{% endfor %}</ul>
+<hr class="line">
+<br>
+<p><a href="/tho/">trang thơ</a>&nbsp;&nbsp;&nbsp;<a href="/">trang chủ</a>&nbsp;&nbsp;&nbsp;<a href="/linhtinh/">tào lao</a></p>
+</nav>
 
 <script>
 {% include analytics.js %} 
