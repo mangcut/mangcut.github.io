@@ -6,6 +6,7 @@ image: /media/moai.jpg
 image_origin: flyadvisor.blogspot.com
 modest: true
 categories: tho
+excerpt_separator: <!--more-->
 author_id: thith
 writing:
   place: Hà Nội
@@ -15,6 +16,8 @@ writing:
 Chẳng có gì to tát cả  
 Chỉ là mặt đất đột nhiên nóng chảy  
 Và tôi rơi tụt xuống một cái hố sâu
+
+<!--more-->
 
 Kể ra thì cũng là một cuộc phiêu lưu  
 Khi lịch sử và địa lý bị lẫn lộn  
