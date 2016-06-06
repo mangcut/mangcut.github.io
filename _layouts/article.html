@@ -19,7 +19,7 @@ if (!ok) {
 	window.isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
 	if (window.isOperaMini) {
 		document.documentElement.className += " o-mini";
-	}
+	}{% if page.lead_image %}
 	window.addEventListener('load', function() {
 		var imgTag = document.getElementById("leadImage");
 		var img = new Image();
@@ -27,7 +27,7 @@ if (!ok) {
 			imgTag.src = img.src;
 		}
 		img.src = imgTag.getAttribute("data-src");
-	}, false);
+	}, false);{% endif %}
 }
 })();
 </script>
