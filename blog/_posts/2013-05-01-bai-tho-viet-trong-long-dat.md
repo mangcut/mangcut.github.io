@@ -8,6 +8,7 @@ modest: true
 categories: tho
 font-size: 112.5%
 author_id: thith
+excerpt_separator: <!--more-->
 writing:
   place: Hà Nội
   time: 7/2012
