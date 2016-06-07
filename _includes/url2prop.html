@@ -1,0 +1,8 @@
+{% capture cache %}
+{% for mc_i_post in site.posts %}
+	{% if mc_i_post.url == include.url %}
+		{% assign mc_i_prop = mc_i_post[include.prop]}}
+		{% break %}
+	{% endif %}
+{% endfor %}
+{% endcapture %}{% assign cache = nil %}{{mc_i_prop}}

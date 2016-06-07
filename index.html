@@ -17,7 +17,8 @@ if (!ok) {
 	location.replace("/admin/browser.html?" + encodeURIComponent(location.pathname));
 } else {
 	document.documentElement.className = document.documentElement.className.replace( /\bno-js\b/,'js' );
-	if (Object.prototype.toString.call(window.operamini) === "[object OperaMini]") {
+	window.isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
+	if (window.isOperaMini) {
 		document.documentElement.className += " o-mini";
 	}
 }
@@ -152,7 +153,7 @@ font-size: 32px;
 }
 
 .by-line {
-font-size: 80%;
+font-size: 85%;
 color: #999;
 margin-bottom: 24px;
 }
@@ -241,13 +242,27 @@ hr.line {
     border: 0;
     height: 1px;
 	background: rgba(64, 64, 64, 0.3);
-    background: linear-gradient(to right, rgba(64, 64, 64, 0), rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0));
+    background: linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(64, 64, 64, 0.3), rgba(0,0,0,0) 80%);
+}
+.hint {
+background-color: #585;
+color: #f5f5f5;
+padding: 0.5em 1em;
+margin: 0 auto;
+display: table;
+font-size: 1.1em;
+}
+.hint a {
+border-bottom: 1px solid #f5f5f5;
+color:#fff
+}
+.hint a:hover {
+text-decoration:none;
+border-bottom-width: 2px;
 }
 
 .breadscump {
-	margin: 1.5em auto;
-	margin-left: 6.25%;
-    margin-right: 6.25%;
+	margin: 1.5em 6.25%;
 }
 .breadscump .scump-head {
 	font-weight: bold;
@@ -267,7 +282,7 @@ hr.line {
 
 .page-footer p{
 	text-align: center;
-	font-size: 80%;
+	font-size: 85%;
 	line-height: 1.55;
 	margin: 0;
 	padding: 0;
@@ -308,12 +323,30 @@ hr.line {
 .post-label {
     margin: 35px auto -20px;
     display: table;
-    font-size: 80%;
+    font-size: 85%;
     line-height: 1;
     padding: 3px 8px;
     color: #999;
+	font-family: constantia, serif;
     border-bottom: 1px solid #a02c2c;
+	text-transform: uppercase;
 }
+
+.fancy-font {
+font-family: constantia, corbel, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+.all-small-caps {
+text-transform: lowercase;
+font-variant: small-caps;
+}
+
+.small-caps {
+text-transform: lowercase;
+font-variant: small-caps;
+}
+
+small {font-size: 85%}
 
 </style>
 
@@ -342,6 +375,9 @@ hr.line {
 		<svg xmlns="http://www.w3.org/2000/svg" width="100" height="149" viewBox="0 0 439 560"><g transform="translate(3 3)" stroke="#000" stroke-width="5" fill="none"><path d="M118 460l1 57H99M166 460l1 57h-20M295 460l1 57h-20M343 460l1 57h-20M357 324c52-5 49 38 49 38"/><path d="M406 362l-9 32M406 362l11.5 29.5M406 362l27.5 15.5" stroke-linecap="round"/><g transform="translate(132)"><path d="M8 41V15"/><circle cx="7.5" cy="7.5" r="7.5"/></g><g transform="translate(109 3)"><path d="M8 41V15"/><circle cx="7.5" cy="7.5" r="7.5"/></g><circle cx="64" cy="63" r="5"/><path d="M3 93s12 11 40 2" stroke-linecap="round"/><path d="M119.976 65.558c-4.11 0-16.952-7.194-18.8 2.547-4.308 22.693-2.795 10.43 9.783 23.543 8.7 9.07-.686 12.88 16.607 6.807 8.106-2.846 1.49-6.17 4.046-12.445 1.233-3.03 4.792-4.29 6.474-7.056 4.743-7.803-10.283-14.485-15.448-13.396h-2.664zM89.99 131.64c1.032-1.846 1.56-4.082 3.095-5.537 2.8-2.655 6.063-4.915 9.586-6.49 21.398-9.562 10.183 22.903 11.33 27.144 2.33 8.608 14.5 12.888 7 28.51-2.44 5.08-14.66 5.907-18.33 4.733-6.55-2.096-6.48-11.432-12.488-14.78M133.647 198.62c-4.577-1.933-14.67-7.937-19.745-1.763-1.393 1.695-.696 4.56-2.116 6.233-2.268 2.67-6.803 3.148-8.468 6.232-4.823 8.94 1.504 20.852 11.864 18.935 4.954-.916.475-10.433 5.293-12.584 19.505-8.708 18.332.715 16.7-13.054l-3.528-4zM133.003 254.25c0-13.54-8.752-18.508-17.875-5.395-4.606 6.62-5.218 20.766-2.94 28.11 1.64 5.286 11.116 2.424 13.407-.472 7.218-9.122 5.91-8.628 5.175-17.758l2.233-4.484zM150.314 297.216c-7.762 0-15.772-1.948-23.286 0-14.14 3.665-.31 7.445-5.998 12.7-3.105 2.87-23.35 10.565-5.175 20.583 16.804 9.26 18.585-19.073 36.928-20.112" stroke-linejoin="round"/><path d="M91.096 365c2.132-11.162 20.81-30.323 29.754-11.098 1.97 4.236-1.117 9.695.706 13.996 2.764 6.518 24.995 24.737-.117 29.402-15.84 2.943-15.814-19.69-30.344-16.466" stroke-linecap="round" stroke-linejoin="round"/><path d="M91 423c6.22-14.47 6.42 7.487 13.252 16.404 3.44 4.488 13.692-1.698 16.686-2 1.703-.172 4.1-.08 4.94 1.41 9.34 16.608-3 8.68-5.16 19.98M166.45 397.726c-4.1 1.278-31.292 13.397-32.077 18.935-1.88 13.27 5.956 19.5 17.875 24.346.374.152 8.49.3 8.82-2.47.735-6.155-1.853-12.49-.705-18.582 2.365-12.55 27.282 5.488 18.112-16.113-1.15-2.71-4.47-3.84-6.703-5.76l-5.322-.354zM168.963 344.756c-5.68 0-11.416-.8-17.04 0-13.067 1.857-9.24 34.772 3.412 38.693 16.342 5.063 9.998-12.282 10.938-20.92.728-6.687 24.963-11.15 7.54-16.466l-4.85-1.308zM204.863 329.42c-23.586 2.627-10.884 16.19-12.924 33.636-.25 2.145-5.205 4.908-3.176 5.646l.353 4.586c15.512 5.642 34.338-15.253 29.52-30.328-1.444-4.515-6.744-6.664-10.115-9.996l-3.66-3.543zM227.762 388.544c-20.64 1.218-14.178 1.107-22.272 18.755-2.218 4.835-6.956 8.38-8.618 13.433-6.022 18.318-10.255 23.91 4.817 26.61 2.825.506 6.037 1.267 8.614 0 13.738-6.758 2.43-22.457 10.644-31.68 3.62-4.065 9.4-6.208 12.166-10.897 1.153-1.954 6.82-16.95.285-16.95l-5.638.728zM254.973 341.467c-23.186 0-16.13 6.16-8.302 25.598 5.597 13.894 4.658 20.992 25.09 16.98 11.69-2.297 3.495-21.27 2.788-26.864-2.366-18.732 3.6-20.175-14.7-17.488l-4.875 1.775zM266.336 415.334c-25.147-14.598-34.346 15.737-31.206 36.36 1.535 10.086 17.318 5.75 21.616 3.036 9.865-6.233 8.794-9.723 10.897-22.668.646-3.975.485-8.04.727-12.06l-2.034-4.668zM304.788 384.094c-10.845 9.814-43.157 26.55-14.076 40.214 3.965 1.863 8.785 2.183 13.078 1.307 17.83-3.64 29.878-39.418 5.94-42.684l-4.942 1.164zM344 457.837c-22.58-11.076 1.348-13.223 7.013-16.42 6.198-3.495.48-18.494-5.23-20.34-24.077-7.79-37.163 17.115-25.592 36.76M336.628 339.17c-13.408.29-23.74-4.305-24.667 10.897-.236 3.88-.786 8.11.874 11.624 4.656 9.856 9.474-11.495 15.983-6.827 4.033 2.892-.042 13.14 11.77 5.085 2.647-1.805 2.61-5.89 3.342-9.01.397-1.697.55-3.576 0-5.23-.48-1.435-1.938-2.324-2.906-3.487l-4.396-3.05z" stroke-linejoin="round"/><path d="M0 51l3 65 87-5 1 349 274-2-8-134H152l-3-283L0 51z"/></g></svg>
 		<small class="scump-tail">Thấu đáo và góc nhìn trung lập</small>
 	</section>
+
+<hr class="line">
+<p class="hint all-small-caps fancy-font">Lần đầu ghé Tạp chí Măng cụt? Thử đọc các <a href="#" onclick="document.getElementById('popupMenu').style.display='block';return false;"><b>BÀI CHỌN LỌC</b></a></p>
 
 {% for post in site.categories.blog %}
 {% if post.series_intro %}{% include {{post.series_intro}} %}{% endif %}
@@ -372,6 +408,53 @@ hr.line {
 <p>&copy; 2016 - Tạp chí Măng cụt<p>
 <p>Ghi tên tác giả kèm link đến bài gốc khi đăng lại</p>
 </footer>
+
+<style scoped>
+#popupMenu {
+display: none;
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: {{site.data.theme.light.background}};
+color: {{site.data.theme.light.text}};
+text-align: center;
+overflow-x: hidden;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+}
+#popupMenu h1 a {
+color: {{site.data.theme.light.header}};
+}
+#popupMenu li a:hover {
+text-decoration: none;
+border-bottom: 1px solid {{site.data.theme.light.link}};
+}
+#popupMenu ul {
+list-style-type: none;
+margin:0;padding:0;
+}
+#popupMenu li {
+font-size: 1em;
+line-height: 1.6;
+padding: 0.5em 20px;
+}
+#popupMenu li::first-letter {
+font-size: 1.1em;
+line-height: 1;
+}
+
+#popupMenu footer {
+padding-left: 1em;
+font-variant: small-caps;
+}
+#popupMenu .by-line {
+margin-bottom: 0.5em;
+}
+
+</style>
+<nav id="popupMenu">
+<h1><a href="#" onclick="document.getElementById('popupMenu').style.display='none';return false;">[&times;] CLOSE</a></h1>
+<ul>{% for item in site.data.recommend.long %}<li><a href="{{item}}">{% include url2prop.html url=item prop="title" %}</a><p class="by-line fancy-font all-small-caps">dài {% include read_time.html url=item %} phút{% include view_count.html url=item min_count=1 %}</p></li>{% endfor %}</ul>
+</nav>
 
 {% include analytics.js withTag=true %}
 

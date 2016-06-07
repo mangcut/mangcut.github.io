@@ -1,0 +1,14 @@
+{% capture cache %}
+{% assign mc_i_rtime = nil %}
+{% for mc_i_post in site.posts %}
+	{% if mc_i_post.url == include.url %}
+		{% if mc_i_post.language == "en" %}
+			{% assign mc_i_rSpead = 276 %}
+		{% else %}
+			{% assign mc_i_rSpead = 351 %}
+		{% endif %}
+		{% assign mc_i_rtime = mc_i_post.content | strip_html | number_of_words| divided_by:mc_i_rSpead | plus:1 %}
+		{% break %}
+	{% endif %}
+{% endfor %}
+{% endcapture %}{{mc_i_rtime}}

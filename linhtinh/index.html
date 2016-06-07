@@ -68,7 +68,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif
 line-height: 1.4;
 }
 
-.article-body>p,.article-header>p,.article-footer>p, ol, h1, figure, .links, .page-footer {
+.article-body>p,.article-header>p,.article-footer>p, ol, h1, figure, .links, .page-footer, .hint {
 margin-left: 6.25%;
 margin-right: 6.25%;
 }
@@ -89,11 +89,12 @@ font-size: 0.7em;
 }
 
 @media (min-width:768px) {
-.article-body>p,.article-header>p,.article-footer>p, ol, h1, figure, hr, .links, .page-footer {
+.article-body>p,.article-header>p,.article-footer>p, ol, h1, figure, .links, hr, .page-footer, .hint {
 width: 690px;
 margin-left: auto;
 margin-right: auto;
 }
+hr {width: 768px;}
 }
 
 ol.series_list {font-style:italic; font-family:Georgia, serif; font-size:1.5em;color:#999;line-height:1.4;}
@@ -142,7 +143,7 @@ font-size: 24px;
 }
 
 .by-line {
-font-size: 80%;
+font-size: 85%;
 color: #999;
 margin-bottom: 24px;
 }
@@ -237,7 +238,24 @@ hr.line {
     border: 0;
     height: 1px;
 	background: rgba(64, 64, 64, 0.3);
-    background: linear-gradient(to right, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0));
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(64, 64, 64, 0.3) 17%, rgba(0,0,0,0) 67%);
+}
+.hint {
+background-color: #585;
+color: #f5f5f5;
+padding: 0.5em 1em;
+margin-bottom:0;
+box-sizing: border-box;
+display: table;
+font-size: 1.1em;
+}
+.hint a {
+border-bottom: 1px solid #f5f5f5;
+color:#fff
+}
+.hint a:hover {
+text-decoration:none;
+border-bottom-width: 2px;
 }
 
 .breadscump {
@@ -262,7 +280,7 @@ hr.line {
 }
 
 .page-footer p{
-	font-size: 80%;
+	font-size: 85%;
 	line-height: 1.55;
 	margin: 0;
 	padding: 0;
@@ -301,11 +319,30 @@ hr.line {
 
 .post-label {
     display: table;
+    font-size: 85%;
+    line-height: 1;
     padding: 3px 8px;
     color: #999;
+	font-family: constantia, serif;
     border-bottom: 1px solid #a02c2c;
 	text-transform: uppercase;
 }
+
+.fancy-font {
+font-family: constantia, corbel, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+.all-small-caps {
+text-transform: lowercase;
+font-variant: small-caps;
+}
+
+.small-caps {
+text-transform: lowercase;
+font-variant: small-caps;
+}
+
+small {font-size: 85%}
 
 </style>
 
@@ -328,13 +365,16 @@ hr.line {
 </nav>
 </header>
 
-<section class="breadscump">
-	<header class="scump-head">CÁC BÀI NGẮN</header>
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 131.25" width="100" height="149"><path d="M102.4,9.6c-1-3.7-5.5-4.7-8.7-6.2c-0.9-0.4-1.9-0.2-2.5,0.6c-6.6,10.6-13.9,20.8-22,30.3c-5.5,6.4-11.4,13.6-18.1,19.4  c-3.9-3.6-8.2-5.7-12-5.7c-1.8,0-3.4,0.4-4.8,1.3c-5,3.1-5.7,10.9-2.4,19.2l-26.4,19c-1.6,1.1-2.6,2.8-2.9,4.8  c-0.3,1.9,0.1,3.9,1.3,5.4l0.8,1.1c1.4,1.9,3.6,3,5.9,3c1.5,0,3-0.5,4.3-1.4L41,81.6c3.7,3.3,7.8,5.1,11.4,5.1  c1.8,0,3.4-0.4,4.8-1.3c4.4-2.8,5.5-9.3,3.3-16.5c1.7-1.6,3.3-3.2,4.7-4.5c4.5-4.1,8.7-8.5,12.7-13.2c7.8-9,15.1-18.9,20.5-29.6  C99.9,18.7,103.2,13,102.4,9.6z M15.3,85l3.5-2.5v10.8l-3.5,2.5V85.7V85z M21.6,80.4l3.5-2.5v10.8l-3.5,2.5V80.4z M27.9,75.8  l3.5-2.5v10.8l-3.5,2.5V75.8z M7.6,96.7l-0.8-1.1c-0.6-0.8-0.8-1.8-0.7-2.8c0.2-1,0.7-1.8,1.5-2.4l4.8-3.4V97v0.8  C10.8,98.7,8.6,98.2,7.6,96.7z M34.3,82v-8.7c0.2,0.3,0.4,0.6,0.6,1c1.1,1.7,2.3,3.3,3.6,4.7L34.3,82z M55.3,82.4  c-0.8,0.5-1.8,0.8-2.8,0.8c-4.5,0-10.5-4.4-14.5-10.8c-5.2-8.1-5.9-17.3-1.6-20c0.8-0.5,1.8-0.8,2.8-0.8c2.8,0,6.2,1.7,9.3,4.5  c-1.8,1.4-3.7,2.8-5.6,3.9c-0.3,0.2-0.5,0.4-0.6,0.6c-0.6,0.2-1,0.8-0.9,1.6c0.5,5.5,4.3,14.6,11.5,12.1c1.6-0.6,3.2-1.6,4.8-2.8  C58.6,76.4,57.9,80.7,55.3,82.4z M92.9,24.1c-4,6.9-8.6,13.6-13.6,19.8c-4.3,5.4-9,10.5-14,15.3c-2.6,2.5-5.3,5-8.1,7.4  c-2.3,1.9-3.8,4.1-7,3.5c-3.5-0.7-4.8-3.8-5.3-7.3c10.3-6.4,19-16.9,26.8-26c8-9.3,15.2-19.3,21.7-29.7c2.6,1.1,5,2,4.9,5  C98.2,16,94.8,20.9,92.9,24.1z"/></svg>
-	<small class="scump-tail">Quan điểm, chém gió, đôi khi bựa</small>
-</section>
-
 <section class="article-list">
+	<section class="breadscump">
+		<header class="scump-head">CÁC BÀI NGẮN</header>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 131.25" width="100" height="149"><path d="M102.4,9.6c-1-3.7-5.5-4.7-8.7-6.2c-0.9-0.4-1.9-0.2-2.5,0.6c-6.6,10.6-13.9,20.8-22,30.3c-5.5,6.4-11.4,13.6-18.1,19.4  c-3.9-3.6-8.2-5.7-12-5.7c-1.8,0-3.4,0.4-4.8,1.3c-5,3.1-5.7,10.9-2.4,19.2l-26.4,19c-1.6,1.1-2.6,2.8-2.9,4.8  c-0.3,1.9,0.1,3.9,1.3,5.4l0.8,1.1c1.4,1.9,3.6,3,5.9,3c1.5,0,3-0.5,4.3-1.4L41,81.6c3.7,3.3,7.8,5.1,11.4,5.1  c1.8,0,3.4-0.4,4.8-1.3c4.4-2.8,5.5-9.3,3.3-16.5c1.7-1.6,3.3-3.2,4.7-4.5c4.5-4.1,8.7-8.5,12.7-13.2c7.8-9,15.1-18.9,20.5-29.6  C99.9,18.7,103.2,13,102.4,9.6z M15.3,85l3.5-2.5v10.8l-3.5,2.5V85.7V85z M21.6,80.4l3.5-2.5v10.8l-3.5,2.5V80.4z M27.9,75.8  l3.5-2.5v10.8l-3.5,2.5V75.8z M7.6,96.7l-0.8-1.1c-0.6-0.8-0.8-1.8-0.7-2.8c0.2-1,0.7-1.8,1.5-2.4l4.8-3.4V97v0.8  C10.8,98.7,8.6,98.2,7.6,96.7z M34.3,82v-8.7c0.2,0.3,0.4,0.6,0.6,1c1.1,1.7,2.3,3.3,3.6,4.7L34.3,82z M55.3,82.4  c-0.8,0.5-1.8,0.8-2.8,0.8c-4.5,0-10.5-4.4-14.5-10.8c-5.2-8.1-5.9-17.3-1.6-20c0.8-0.5,1.8-0.8,2.8-0.8c2.8,0,6.2,1.7,9.3,4.5  c-1.8,1.4-3.7,2.8-5.6,3.9c-0.3,0.2-0.5,0.4-0.6,0.6c-0.6,0.2-1,0.8-0.9,1.6c0.5,5.5,4.3,14.6,11.5,12.1c1.6-0.6,3.2-1.6,4.8-2.8  C58.6,76.4,57.9,80.7,55.3,82.4z M92.9,24.1c-4,6.9-8.6,13.6-13.6,19.8c-4.3,5.4-9,10.5-14,15.3c-2.6,2.5-5.3,5-8.1,7.4  c-2.3,1.9-3.8,4.1-7,3.5c-3.5-0.7-4.8-3.8-5.3-7.3c10.3-6.4,19-16.9,26.8-26c8-9.3,15.2-19.3,21.7-29.7c2.6,1.1,5,2,4.9,5  C98.2,16,94.8,20.9,92.9,24.1z"/></svg>
+		<small class="scump-tail">Quan điểm, chém gió, đôi khi bựa</small>
+	</section>
+
+	<hr class="line">
+	<p class="hint all-small-caps fancy-font">Lần đầu ghé Blog Măng cụt? Thử đọc một số <a href="#" onclick="document.getElementById('popupMenu').style.display='block';return false;"><b>BÀI TIÊU BIỂU</b></a></p>
+
 	{% for post in site.categories.linhtinh %}
 	{% if post.modest != true %}{% include index_blog.html %}{% endif %}
 	{% endfor %}
@@ -349,7 +389,7 @@ hr.line {
 <p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn btn-fb" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="8"><path fill="#f5f5f5" d="M5.143 16V8.89H7.43L8 5.925H5.143V4.74c0-1.185.572-1.777 1.714-1.777H8V0H5.714c-2.1 0-3.428 1.707-3.428 4.148v1.778H0V8.89h2.286V16h2.857z"/></svg>Chia sẻ</a></p>
 <br>
 <p class="label">Nhận thông báo khi có bài mới?</p>
-<p><a target="_blank" href="/email/subscribe.html" class="btn btn-email" title="Không bỏ lỡ bài viết mới"><svg xmlns="http://www.w3.org/2000/svg" height="12" width="18.75" viewBox="0 0 100 64"><polygon fill="#f5f5f5" points="50,45 0,10 0,64 100,64 100,10"/><polygon fill="#f5f5f5" points="100,0 0,0 50,35"/></svg>Đăng kí</a></p>
+<p><a target="_blank" href="/email/subscribe.html" class="btn btn-email" title="Hơn 1000 người đã đăng kí"><svg xmlns="http://www.w3.org/2000/svg" height="12" width="18.75" viewBox="0 0 100 64"><polygon fill="#f5f5f5" points="50,45 0,10 0,64 100,64 100,10"/><polygon fill="#f5f5f5" points="100,0 0,0 50,35"/></svg>Đăng kí</a></p>
 <br>
 <p><a href="#pageTopHeader">LÊN ĐẦU TRANG &uarr;</a></p>
 </section>
@@ -360,6 +400,57 @@ hr.line {
 <p>&copy; 2016 - Blog Măng cụt<p>
 <p>Ghi tên tác giả kèm link đến bài gốc khi đăng lại</p>
 </footer>
+
+<style scoped>
+#popupMenu {
+display: none;
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: {{site.data.theme.light.background}};
+color: {{site.data.theme.light.text}};
+text-align: center;
+overflow-x: hidden;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+}
+#popupMenu h1 {
+margin-top:30px;
+margin-bottom:20px;
+}
+#popupMenu h1 a {
+color: {{site.data.theme.light.header}};
+}
+#popupMenu li a:hover {
+text-decoration: none;
+border-bottom: 1px solid {{site.data.theme.light.link}};
+}
+#popupMenu ul {
+list-style-type: none;
+margin:0;padding:0;
+}
+#popupMenu li {
+font-size: 1em;
+line-height: 1.6;
+padding: 0.5em 20px;
+}
+#popupMenu li::first-letter {
+font-size: 1.1em;
+line-height: 1;
+}
+
+#popupMenu footer {
+padding-left: 1em;
+font-variant: small-caps;
+}
+#popupMenu .by-line {
+margin-bottom: 0.5em;
+}
+
+</style>
+<nav id="popupMenu">
+<h1><a href="#" onclick="document.getElementById('popupMenu').style.display='none';return false;">[&times;] CLOSE</a></h1>
+<ul>{% for item in site.data.recommend.short %}<li><a href="{{item}}">{% include url2prop.html url=item prop="title" %}</a><p class="by-line fancy-font all-small-caps">dài {% include read_time.html url=item %} phút{% include view_count.html url=item min_count=1 %}</p></li>{% endfor %}</ul>
+</nav>
 
 {% include analytics.js withTag=true %}
 
