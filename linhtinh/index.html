@@ -161,8 +161,10 @@ line-height:1;
 .leadPage {
 	position: relative;
     height: 480px;
-	height: -webkit-calc(100vh - 60px);
-	height: calc(100vh - 60px);
+	height: -webkit-calc(100vh - 160px);
+	height: calc(100vh - 160px);
+	-webkit-transition: height .3s;
+	transition: height .3s;
 	background-image: url('/img/home/5.jpg');
 	background-size: cover;
     background-position: 20% center;
@@ -182,8 +184,10 @@ line-height:1;
 .logo {
     position: absolute;
     top: 210px;
-	top: -webkit-calc((100vh - 120px) / 2);
-	top: calc((100vh - 120px) / 2);
+	top: -webkit-calc((100vh - 220px) / 2);
+	top: calc((100vh - 220px) / 2);
+	-webkit-transition: top .3s;
+	transition: top .3s;
 	width: 100%;
 }
 
@@ -203,8 +207,10 @@ line-height:1;
     color: rgba(255,255,255,0.95);
     position: absolute;
     top: 275px;
-	top: -webkit-calc((100vh + 10px) / 2);
-	top: calc((100vh + 10px) / 2);
+	top: -webkit-calc((100vh - 90px) / 2);
+	top: calc((100vh - 90px) / 2);
+	-webkit-transition: top .3s;
+	transition: top .3s;
 	width: 100%;
 	text-shadow: 0 0 16px #000, 1px 1px 3px #000;
 }
