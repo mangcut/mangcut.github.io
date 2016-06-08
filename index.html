@@ -166,9 +166,11 @@ line-height:1;
 .leadPage {
 	position: relative;
     height: 480px;
+	height: -webkit-calc(100vh - 60px);
+	height: calc(100vh - 60px);
 	background-image: url('/img/home/2.jpg');
 	background-size: cover;
-    background-position: center;
+    background-position: 20% center;
     background-repeat: no-repeat;
 	text-align: center;
 }
@@ -185,6 +187,8 @@ line-height:1;
 .logo {
     position: absolute;
     top: 210px;
+	top: -webkit-calc((100vh - 120px) / 2);
+	top: calc((100vh - 120px) / 2);
 	width: 100%;
 }
 
@@ -193,7 +197,7 @@ line-height:1;
 	line-height: 1;
     font-weight: bold;
     color: #fff;
-	text-shadow: 0 0 1px rgba(0,0,0,0.7);
+	text-shadow: 0 0 16px #000, 1px 1px 3px #000;
 }
 .logo a:hover {
 	text-decoration:none;
@@ -204,7 +208,10 @@ line-height:1;
     color: rgba(255,255,255,0.95);
     position: absolute;
     top: 275px;
+	top: -webkit-calc((100vh + 10px) / 2);
+	top: calc((100vh + 10px) / 2);
 	width: 100%;
+	text-shadow: 0 0 16px #000, 1px 1px 3px #000;
 }
 
 .nav-bar {
@@ -377,7 +384,7 @@ small {font-size: 85%}
 	</section>
 
 <hr class="line">
-<p class="hint all-small-caps fancy-font">Lần đầu ghé Tạp chí Măng cụt? Thử đọc các <a href="#" onclick="document.getElementById('popupMenu').style.display='block';return false;"><b>BÀI CHỌN LỌC</b></a></p>
+<p class="hint all-small-caps fancy-font">Lần đầu ghé Tạp chí Măng cụt? Thử đọc <a href="#" onclick="document.getElementById('popupMenu').style.display='block';return false;"><b>CÁC BÀI CHỌN LỌC</b></a></p>
 
 {% for post in site.categories.blog %}
 {% if post.series_intro %}{% include {{post.series_intro}} %}{% endif %}

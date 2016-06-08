@@ -142,7 +142,7 @@ font-size: 24px;
 }
 
 .by-line {
-font-size: 80%;
+font-size: 85%;
 color: #999;
 margin-bottom: 24px;
 }
@@ -160,6 +160,8 @@ line-height:1;
 .leadPage {
 	position: relative;
     height: 480px;
+	height: -webkit-calc(100vh - 60px);
+	height: calc(100vh - 60px);
 	background-image: url('/img/home/4.jpg');
 	background-size: cover;
     background-position: 40% center;
@@ -173,12 +175,14 @@ line-height:1;
     left: 0;
     right: 0;
     bottom: 0;
-	background-color: rgba(0,0,0,0.4)
+	background: rgba(0,0,0,.15);
 }
 
 .logo {
     position: absolute;
     top: 210px;
+	top: -webkit-calc((100vh - 120px) / 2);
+	top: calc((100vh - 120px) / 2);
 	width: 100%;
 }
 
@@ -187,7 +191,7 @@ line-height:1;
 	line-height: 1;
     font-weight: bold;
     color: #fff;
-	text-shadow: 0 0 1px rgba(0,0,0,0.7);
+	text-shadow: 0 0 16px #000, 1px 1px 3px #000;
 }
 .logo a:hover {
 	text-decoration:none;
@@ -198,7 +202,10 @@ line-height:1;
     color: rgba(255,255,255,0.95);
     position: absolute;
     top: 275px;
+	top: -webkit-calc((100vh + 10px) / 2);
+	top: calc((100vh + 10px) / 2);
 	width: 100%;
+	text-shadow: 0 0 16px #000, 1px 1px 3px #000;
 }
 
 .nav-bar {
@@ -262,7 +269,7 @@ hr.line {
 }
 
 .page-footer p{
-	font-size: 80%;
+	font-size: 85%;
 	line-height: 1.55;
 	margin: 0;
 	padding: 0;
@@ -301,8 +308,11 @@ hr.line {
 
 .post-label {
     display: table;
+    font-size: 85%;
+    line-height: 1;
     padding: 3px 8px;
     color: #999;
+	font-family: constantia, serif;
     border-bottom: 1px solid #a02c2c;
 	text-transform: uppercase;
 }
@@ -348,7 +358,7 @@ hr.line {
 <p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn btn-fb" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="8"><path fill="#f5f5f5" d="M5.143 16V8.89H7.43L8 5.925H5.143V4.74c0-1.185.572-1.777 1.714-1.777H8V0H5.714c-2.1 0-3.428 1.707-3.428 4.148v1.778H0V8.89h2.286V16h2.857z"/></svg>Chia sẻ</a></p>
 <br>
 <p class="label">Nhận thông báo khi có bài mới?</p>
-<p><a target="_blank" href="/email/subscribe.html" class="btn btn-email" title="Không bỏ lỡ bài viết mới"><svg xmlns="http://www.w3.org/2000/svg" height="12" width="18.75" viewBox="0 0 100 64"><polygon fill="#f5f5f5" points="50,45 0,10 0,64 100,64 100,10"/><polygon fill="#f5f5f5" points="100,0 0,0 50,35"/></svg>Đăng kí</a></p>
+<p><a target="_blank" href="/email/subscribe.html" class="btn btn-email" title="Hơn 1000 người đã đăng kí"><svg xmlns="http://www.w3.org/2000/svg" height="12" width="18.75" viewBox="0 0 100 64"><polygon fill="#f5f5f5" points="50,45 0,10 0,64 100,64 100,10"/><polygon fill="#f5f5f5" points="100,0 0,0 50,35"/></svg>Đăng kí</a></p>
 <br>
 <p><a href="#pageTopHeader">LÊN ĐẦU TRANG &uarr;</a></p>
 </section>
