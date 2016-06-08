@@ -1,12 +1,14 @@
 ---
 layout: empty
+lead_image: /img/home/4.jpg
 ---
 <!DOCTYPE html>
 <html lang="vi" class="no-js">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" href="{{page.lead_image}}" as="image">
 <script>
 (function() {
 var ok = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") 
@@ -19,7 +21,14 @@ if (!ok) {
 	window.isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
 	if (window.isOperaMini) {
 		document.documentElement.className += " o-mini";
-	}
+	}{% if page.lead_image %}
+	window.addEventListener('load', function() {
+		var img = new Image();
+		img.onload = function() {
+			document.getElementById("leadImage").style.backgroundImage = "url('" + img.src + "')";
+		}
+		img.src = "{{page.lead_image}}";
+	}, false);{% endif %}
 }
 })();
 </script>
@@ -157,20 +166,20 @@ font-size: 1.3em;
 line-height:1;
 }
 
-.leadPage {
+.leadImage {
 	position: relative;
     height: 480px;
 	height: -webkit-calc(100vh - 160px);
 	height: calc(100vh - 160px);
 	-webkit-transition: height .3s;
 	transition: height .3s;
-	background-image: url('/img/home/4.jpg');
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3840 2160'%3E%3Crect x='0' y='0' width='769' height='433' fill='%23272d1d'/%3E%3Crect x='768' y='0' width='769' height='433' fill='%23434a1f'/%3E%3Crect x='1536' y='0' width='769' height='433' fill='%2356602e'/%3E%3Crect x='2304' y='0' width='769' height='433' fill='%23667640'/%3E%3Crect x='3072' y='0' width='769' height='433' fill='%23738758'/%3E%3Crect x='0' y='432' width='769' height='433' fill='%23363e20'/%3E%3Crect x='768' y='432' width='769' height='433' fill='%23f9ed43'/%3E%3Crect x='1536' y='432' width='769' height='433' fill='%23424a1f'/%3E%3Crect x='2304' y='432' width='769' height='433' fill='%234a572a'/%3E%3Crect x='3072' y='432' width='769' height='433' fill='%23525b37'/%3E%3Crect x='0' y='864' width='769' height='433' fill='%23edc531'/%3E%3Crect x='768' y='864' width='769' height='433' fill='%23f2d92c'/%3E%3Crect x='1536' y='864' width='769' height='433' fill='%23e7c635'/%3E%3Crect x='2304' y='864' width='769' height='433' fill='%23dcbc30'/%3E%3Crect x='3072' y='864' width='769' height='433' fill='%23d6ab2b'/%3E%3Crect x='0' y='1296' width='769' height='433' fill='%23d9b432'/%3E%3Crect x='768' y='1296' width='769' height='433' fill='%23eeda3b'/%3E%3Crect x='1536' y='1296' width='769' height='433' fill='%23dbc236'/%3E%3Crect x='2304' y='1296' width='769' height='433' fill='%23dbb530'/%3E%3Crect x='3072' y='1296' width='769' height='433' fill='%23c8a42e'/%3E%3Crect x='0' y='1728' width='769' height='433' fill='%235a7c34'/%3E%3Crect x='768' y='1728' width='769' height='433' fill='%23547332'/%3E%3Crect x='1536' y='1728' width='769' height='433' fill='%2367762a'/%3E%3Crect x='2304' y='1728' width='769' height='433' fill='%23eed033'/%3E%3Crect x='3072' y='1728' width='769' height='433' fill='%23638835'/%3E%3C/svg%3E");
 	background-size: cover;
     background-position: 40% center;
     background-repeat: no-repeat;
 	text-align: center;
 }
-.leadPage::before {
+.leadImage::before {
 	content: "";
 	position: absolute;
     top: 0;
@@ -330,7 +339,7 @@ hr.line {
 <body>
 
 <header id="pageTopHeader">
-<section class="leadPage">
+<section id="leadImage" class="leadImage">
 	<div class="logo"><a href="/">mangcut.vn</a></div>
 	<div class="slogan">mở những ô cửa</div>
 </section>
