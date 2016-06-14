@@ -33,7 +33,7 @@ if (!ok) {
 
 <!-- page data -->
 <title>{% if page.page_title %}{{page.page_title}}{% else %}{{page.title}}{% endif %}</title>
-<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{page.excerpt}}{% endif %}">
+<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{page.excerpt | strip_html}}{% endif %}">
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -68,7 +68,6 @@ if (!ok) {
 <meta property="og:url" content="{{site.url}}{{page.url|remove:'index.html'}}">
 {% if page.see_also1 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also1}}">{% endif %}
 {% if page.see_also2 %}<meta property="og:see_also" content="{{site.url}}/{{page.see_also2}}">{% endif %}
-
 <style>
 html {
 font-size: 112.5%;
@@ -247,6 +246,7 @@ font-size: 1.2em;
 letter-spacing:0.3em;
 }
 </style>
+<noscript id="moreCss"><link rel="stylesheet" type="text/css" href="/css/mangcut.css"/></noscript>
 </head>
 
 <body>
@@ -287,7 +287,6 @@ letter-spacing:0.3em;
 <p>Ghi tên tác giả kèm link đến bài gốc khi đăng lại</p>
 </footer>
 
-<noscript id="moreCss"><link rel="stylesheet" type="text/css" href="/css/mangcut.css"/></noscript>
 <script>
 (function() {
 var loadRealImages = function() {
@@ -310,8 +309,9 @@ var loadExtraCss = function() {
 	var css = document.getElementById("moreCss");
 	var tag = document.createElement("div");
 	tag.innerHTML = css.textContent;
-	document.body.appendChild(tag)
-	css.parentElement.removeChild(css);
+	var head = css.parentElement;
+	head.appendChild(tag)
+	head.removeChild(css);
 };
 
 var addAnalytics = function() {
