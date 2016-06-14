@@ -24,7 +24,7 @@ Thử nhìn lại một cách khách quan và đa chiều về những gì đã 
 	caption="Bob Kerrey nói về các bài học của cuộc chiến tranh tại Việt Nam trong 1 cuộc thảo luận - 28/4/2016."
 	svg="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 683'><rect x='0' y='0' width='205.8' height='137.6' fill='#0c0404'></rect><rect x='204.8' y='0' width='205.8' height='137.6' fill='#0c0404'></rect><rect x='409.6' y='0' width='205.8' height='137.6' fill='#160a09'></rect><rect x='614.4' y='0' width='205.8' height='137.6' fill='#0e0404'></rect><rect x='819.2' y='0' width='205.8' height='137.6' fill='#0c0404'></rect><rect x='0' y='136.6' width='205.8' height='137.6' fill='#0c0404'></rect><rect x='204.8' y='136.6' width='205.8' height='137.6' fill='#0c0404'></rect><rect x='409.6' y='136.6' width='205.8' height='137.6' fill='#9a5f4d'></rect><rect x='614.4' y='136.6' width='205.8' height='137.6' fill='#240f0c'></rect><rect x='819.2' y='136.6' width='205.8' height='137.6' fill='#0b0404'></rect><rect x='0' y='273.2' width='205.8' height='137.6' fill='#0b0404'></rect><rect x='204.8' y='273.2' width='205.8' height='137.6' fill='#140404'></rect><rect x='409.6' y='273.2' width='205.8' height='137.6' fill='#a05b4b'></rect><rect x='614.4' y='273.2' width='205.8' height='137.6' fill='#210906'></rect><rect x='819.2' y='273.2' width='205.8' height='137.6' fill='#100404'></rect><rect x='0' y='409.8' width='205.8' height='137.6' fill='#0f0404'></rect><rect x='204.8' y='409.8' width='205.8' height='137.6' fill='#160404'></rect><rect x='409.6' y='409.8' width='205.8' height='137.6' fill='#1d0d0e'></rect><rect x='614.4' y='409.8' width='205.8' height='137.6' fill='#120a0c'></rect><rect x='819.2' y='409.8' width='205.8' height='137.6' fill='#130404'></rect><rect x='0' y='546.4' width='205.8' height='137.6' fill='#510404'></rect><rect x='204.8' y='546.4' width='205.8' height='137.6' fill='#070408'></rect><rect x='409.6' y='546.4' width='205.8' height='137.6' fill='#0f0f1b'></rect><rect x='614.4' y='546.4' width='205.8' height='137.6' fill='#a7ada4'></rect><rect x='819.2' y='546.4' width='205.8' height='137.6' fill='#0e0a09'></rect></svg>" %}
 
-T**hạnh Phong là một xã nghèo ven biển** ở Bến Tre. Đây là một căn cứ địa cách mạng, nơi nhận chi viện vũ khí từ miền Bác theo đường Hồ Chí Minh trên biển. Thời đó, vùng này bị chính quyền Sài Gòn đánh dấu là [vùng bắn tự do](https://vi.wikipedia.org/wiki/V%C3%B9ng_b%E1%BA%AFn_ph%C3%A1_t%E1%BB%B1_do#C.C3.A1c_v.C3.B9ng_b.E1.BA.AFn_ph.C3.A1_t.E1.BB.B1_do_trong_chi.E1.BA.BFn_tranh_Vi.E1.BB.87t_Nam){:target="_blank"} (free-fire zone). Người dân được yêu cầu di tản đến các "ấp chiến lược", những ai không hợp tác có thể bị coi là Việt Cộng hoặc "cảm tình Cộng Sản".
+T**hạnh Phong là một xã nghèo ven biển** ở Bến Tre. Đây là một căn cứ địa cách mạng, nơi nhận chi viện vũ khí từ miền Bắc theo đường Hồ Chí Minh trên biển. Thời đó, vùng này bị chính quyền Sài Gòn đánh dấu là [vùng bắn tự do](https://vi.wikipedia.org/wiki/V%C3%B9ng_b%E1%BA%AFn_ph%C3%A1_t%E1%BB%B1_do#C.C3.A1c_v.C3.B9ng_b.E1.BA.AFn_ph.C3.A1_t.E1.BB.B1_do_trong_chi.E1.BA.BFn_tranh_Vi.E1.BB.87t_Nam){:target="_blank"} (free-fire zone). Người dân được yêu cầu di tản đến các "ấp chiến lược", những ai không hợp tác có thể bị coi là Việt Cộng hoặc "cảm tình Cộng Sản".
 {: .dropcap}
 
 {% include image.html
@@ -49,7 +49,7 @@ Tuy vậy, tiếng kêu khóc của các nạn nhân làm vài tên lính lo b�
 
 Lần mò đi sâu vào xóm, chừng 15 phút sau, đám lính bắt gặp 1 cụm dăm nhà tranh khác, ánh đèn vàng hoe hoắt bên trong. Tại đây, chúng xả súng bắn chết 15 hoặc 16 người nữa, tất cả là phụ nữ và trẻ em. Sau đó rời đi. Không tìm thấy "cán bộ Việt Cộng" hay vũ khí gì.
 
-Khi đã lên tàu rời đi, Kerrey báo cáo bằng radio với cấp trên là đã tiêu diệt 21 tên Việt Cộng. Ông được tặng Huy chương Sao Đồng vì "thành tích" này.
+Khi đã yên vị trên tàu, Kerrey báo cáo bằng radio với cấp trên rằng đã tiêu diệt 21 tên Việt Cộng. Ông được tặng Huy chương Sao Đồng vì "thành tích" này.
 
 Chỉ 3 tuần sau, Kerrey bị thương, cụt 1 phần chân trong 1 cuộc đột kích khác ở Hòn Tằm (Nha Trang), và kết thúc cuộc đời binh nghiệp ngắn ngủi tại Việt Nam với vỏn vẹn 2 chiến dịch. Ông được tặng Huân chương Danh dự, phần thưởng cao quý nhất của quân đội Mỹ cho chiến dịch ở Hòn Tằm, và trở về nước với tư cách anh hùng của cuộc chiến.
 
@@ -70,9 +70,9 @@ Vào năm 1998, nhà báo Gregory Vistica, khi đó làm việc cho tuần báo 
 
 Tuần báo Newsweek sau đó đã không đăng bài phóng sự của Vistica.
 
-Thêm 1 năm điều tra, đến tháng 4/2001, cuối cùng câu chuyện cũng hoàn tất, chuẩn bị lên trang bìa tạp chí New York Times và chương trình _60 Minutes II_ của đài CBS.
+Thêm 1 năm điều tra, đến tháng 4/2001, cuối cùng câu chuyện cũng hoàn tất, chuẩn bị lên trang bìa tạp chí New York Times và phát sóng trong chương trình _60 Minutes II_ của đài CBS.
 
-Hơn 1 tuần trước khi phát hành, Kerrey đã chủ động thú nhận trước sự việc trong 1 cuộc nói chuyện tại Học viện Quân sự Virginia. Sau đó, ông nhận trả lời của các báo đài khác về vụ việc. Rõ ràng là New York Times và CBS không thích điều này.
+Chỉ hơn 1 tuần trước khi phát hành, Kerrey đã chủ động thú nhận trước sự việc trong 1 cuộc nói chuyện tại Học viện Quân sự Virginia. Sau đó, ông nhận trả lời của các báo đài _khác_ về vụ việc. Rõ ràng là New York Times và CBS không thích điều này.
 
 LỜI KỂ CỦA BOB KERREY
 --------
@@ -97,17 +97,17 @@ Khi đi vào ngôi làng, nhóm gặp 1 căn nhà mà không biết trước do 
 
 Kerrey cũng trả lời rằng không thể bắt những người trong nhà làm tù binh được, vì còn phải tiếp tục nhiệm vụ, không thể vướng chân vướng tay hay gây động.
 
-Tiêu diệt xong những người trong ngôi nhà, toán lính men theo bờ ruộng đi sâu vào làng. Được môt lúc, họ phát hiện phía trước chừng 100 yards (91.44 mét) có 1 cụm nhà tranh. Bỗng có tiếng súng từ xa bắn phía họ (về sau ông có nói lại là cũng có thể là tiếng động gì đó ông nhầm là tiếng súng). Cho rằng có thể là phục kích của Việt Cộng, Kerry ra lệnh bắng súng chống tăng M72 LAW về phía các ngôi nhà. Sau đó, đám lính vừa xả súng trường tự động liên hồi vừa tiến về phía trước. Theo báo cáo là 1200 viên đạn.
+Tiêu diệt xong những người trong ngôi nhà, toán lính men theo bờ ruộng đi sâu vào làng. Được môt lúc, họ phát hiện phía trước chừng 100 yards (91.44 mét) có 1 cụm nhà tranh. Bỗng có tiếng súng từ xa bắn phía họ (về sau ông có nói lại là cũng có thể là tiếng động gì đó ông nhầm là tiếng súng). Cho rằng có thể là phục kích của Việt Cộng, Kerry ra lệnh bắng súng chống tăng M72 LAW về phía các ngôi nhà. Sau đó, đám lính vừa xả súng trường tự động liên hồi vừa tiến về phía trước. Theo báo cáo 1200 viên đạn được bắn ra.
 
 > Điều tôi sẽ nhớ cho đến chết là khi tôi bước vào và thấy, tôi không rõ, khoảng 14 xác, tôi thậm chí không biết con số chính xác, phụ nữ và trẻ em bị bắn chết. Tôi cứ tưởng sẽ thấy xác Việt Cộng chết cùng với vũ khí, hóa ra toàn phụ nữ và trẻ em.
 
-Kerry không giải thích vì sao bắn ở khoảng cách xa gần 100 mét trong bóng tối không thấy đối phương lại giết sạch từng người như vậy, và hơn nữa, tại sao họ lại chạy ra khỏi nhà xúm lại để chết cạnh nhau. Họ phải trốn xuống trảng kê (hầm trú ẩn) mới đúng chứ. Ông trả lời ông không biết.
+Kerry không giải thích vì sao bắn ở khoảng cách xa gần 100 mét trong bóng tối không thấy đối phương lại có thể giết sạch từng người như vậy, và hơn nữa, tại sao họ lại chạy ra khỏi nhà xúm lại để chết cạnh nhau. Họ phải trốn xuống trảng kê (hầm trú ẩn) mới đúng chứ. Ông trả lời ông không biết.
 
-Theo báo cáo của Kerrey sau cuộc đột kích, khi họ tiến vào thì có một số người bỏ chạy, và toán lính bắn vào họ, trong đêm tối không phân biệt được giới tính và tuổi tác của nạn nhân.
+Một báo cáo sau đó của Kerrey cho cấp trên viết rằng, khi họ tiến vào thì thấy có một số người bỏ chạy, và toán lính bắn vào họ, trong đêm tối không phân biệt được giới tính và tuổi tác của nạn nhân.
 
 Năm 2002, Kerrey xuất bản cuốn tự truyện _When I Was a Young Man_ (Khi tôi còn trẻ). Câu chuyện ông kể lần này tương đối khác.
 
-Theo đó, trên đường đến cụm nhà thứ 2, không có tiếng súng nào bắn vào toán lính Mỹ. Đến nơi, nhóm cử 1 người vào từng nhà kiểm tra, 6 người còn lại đứng canh các hướng. Chúng kiểm tra 3 căn nhà, đều không có họp hành hay người đàn ông nào cả. Tất cả đàn ông đã đi, và _chỗ nằm của họ chỉ mới vừa bị rời bỏ_. Đàn bà và trẻ con trong 3 ngôi nhà bị đánh thức, kéo nhau ra ngoài xem nghó nghiêng, nói chyện ríu ran. Kerrey cho rằng đám đàn ông trong làng đã được báo và chuồn đi mất. Giờ thì nhóm của Kerrey ở tình huống nguy hiểm. Chưa biết nên làm thế nào thì có tiếng súng bắn về phía họ từ hướng những người đàn bà và trẻ con. Toán lính ngay lập tức bắn lại liên hồi, vừa bắn vừa rút lui. Những người dân thường vô tình kẹt giữa làn đạn và bị giết oan.
+Theo đó, trên đường đến cụm nhà thứ 2, không có tiếng súng nào bắn vào toán lính Mỹ. Đến nơi, nhóm cử 1 người vào từng nhà kiểm tra, 6 người còn lại đứng canh các hướng. Chúng kiểm tra 3 căn nhà, đều không có họp hành hay người đàn ông nào cả. Tất cả đàn ông đã đi, và _chỗ nằm của họ chỉ mới vừa bị rời bỏ_. Đàn bà và trẻ con trong 3 ngôi nhà bị đánh thức, kéo nhau ra ngoài nghó nghiêng, nói chuyện ríu ran. Kerrey cho rằng đám đàn ông trong làng đã được báo và chuồn đi mất. Giờ thì nhóm của Kerrey ở tình huống nguy hiểm. Chưa biết nên làm thế nào thì có tiếng súng bắn về phía họ từ hướng những người đàn bà và trẻ con. Toán lính ngay lập tức bắn lại liên hồi, vừa bắn vừa rút lui. Những người dân thường vô tình kẹt giữa làn đạn và bị giết oan.
 
 <!-- Kerry cũng viết rằng đây là nhiệm vụ đầu tiên của chàng trai trẻ tuổi chưa có kinh nghiệm, lo lắng hồi hộp, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai". "Chàng trai trẻ ngây thơ đã chết ngày hôm đó" - những ảo tưởng về cuộc chiến hoàn toàn sụp đổ. -->
 
@@ -116,7 +116,7 @@ Theo đó, trên đường đến cụm nhà thứ 2, không có tiếng súng n
 Kerrey đã nhiều lần phát biểu ông thấy dày vò, ám ảnh, ân hận, hối lỗi, và xấu hổ vì những điều mình đã làm. Tuy nhiên, ông giữ quan điểm rằng sai lầm đó là một tai nạn không chủ ý. Và nó có thể hiểu được trong hoàn cảnh chiến tranh tàn khốc với sức ép và những luật bất thành văn lúc đó.
 {: .standout}
 
-**Kerry đưa ra nhiều lý lẽ**. Chẳng hạn đây là "vùng bắn tự do", họ bị cấp trên gây sức ép phải hành động, cho phép bắn nếu tự xét thấy nguy hiểm hoặc thấy cần thiết. Rằng những người trong làng là có cảm tình cộng sản, và có người thân là Việc Cộng. Rằng trong chiến tranh ai cũng làm những điều tốt lẫn những điều tệ hại muốn quên đi. Và khi đó ông cũng như cả đội còn quá trẻ non kinh nghiệm, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai".  "Chàng trai trẻ ngây thơ trong tôi đã chết ngày hôm đó", những ảo tưởng về cuộc chiến hoàn toàn sụp đổ - Kerrey viết.
+**Kerry đưa ra nhiều lý lẽ**. Chẳng hạn đây là "vùng bắn tự do", họ bị cấp trên gây sức ép phải hành động, cho phép bắn nếu tự xét thấy nguy hiểm hoặc thấy cần thiết. Rằng những người trong làng là có cảm tình cộng sản, và có người thân là Việc Cộng. Rằng trong chiến tranh ai cũng làm những điều tốt lẫn những điều tệ hại muốn quên đi. Và khi đó ông cũng như cả đội còn quá trẻ và non kinh nghiệm, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai".  "Chàng trai trẻ ngây thơ trong tôi đã chết ngày hôm đó", những ảo tưởng về cuộc chiến hoàn toàn sụp đổ - Kerrey viết.
 {: .note}
 
 __Thế nhưng,__ _một đồng đội của Kerrey hôm đó lại kể 1 câu chuyện rất khác._
@@ -126,7 +126,7 @@ LỜI KỂ CỦA GERHARD KLANN
 
 Klann là người nhiều kinh nghiệm nhất trong nhóm. Ông cũng chính là người đã đắp moóc-phin vào vết thương và bế Kerrey khi ông bị thương ở chiến dịch sau đó.
 
-Klann kể rằng trong ngôi nhà đầu tiên không phải _5 người đàn ông_, mà là _2 ông bà già và 3 đứa cháu nhỏ dưới 12 tuổi_. Khi Ambrose (người dẫn đầu) nhẹ nhàng lẻn vào kiểm tra, họ còn không phát hiện ra.
+Klann kể rằng trong ngôi nhà đầu tiên không phải _5 người đàn ông_, mà là _2 ông bà già và 3 đứa cháu nhỏ dưới 12 tuổi_. Khi Ambrose (người dẫn đầu) nhẹ nhàng lẻn vào kiểm tra, những người trong nhà còn không phát hiện ra.
 
 <section class="highlight body-section"> 
 <p><b>Phóng viên</b> Rồi chuyện gì xảy ra?</p>
@@ -167,7 +167,7 @@ Giờ thì chúng bàn với nhau xem nên làm gì với những người dân 
 <p><b>Klann</b> Chúng tôi đã bị lộ giết nhóm lúc trước rồi.</p>
 </section>
 
-Đám linh đứng từ phía sau cách khoảng 6 đến 10 feet (1,8 ~ 3 mét) và nã súng trường tự động vào các nạn nhân xếp hàng phía trước. Khoảng 30 giây dừng lại, vẫn còn tiếng rên rỉ, lại xả súng thêm 30 giây nữa.
+Đám lính từ phía sau cách khoảng 6 đến 10 feet (1,8 ~ 3 mét) nã súng trường tự động vào các nạn nhân. Khoảng 30 giây dừng lại, vẫn còn tiếng rên rỉ, lại xả súng thêm 30 giây nữa.
 
 Klann còn cho biết có 1 em bé cuối cùng vẫn còn khóc, và cũng bị giết nốt.
 
@@ -176,7 +176,7 @@ Theo ý của Klann thì có vẻ là do chúng đã "nhúng chàm" (giết 5 ng
 
 <div class="divider">***</div>
 
-Ngoài Kerrey và Klann ra, còn có Ambrose kể về vụ việc. 4 người còn lại không đồng ý trả lời.
+Ngoài Kerrey và Klann ra, còn có Ambrose (người đi đầu trong đội hình) kể về vụ việc. 4 người còn lại không đồng ý trả lời.
 {: .standout}
 
 Điểm đáng lưu ý nhất trong các câu trả lời của Ambrose là ông kịch liệt phản đối vụ "quây người dân lại bắn" mà Klann kể. Câu chuyện của Ambrose có phần giống những gì Kerrey kể trong cuốn sách _Khi tôi còn trẻ_. Theo đó, chính Ambrose đi vào lục soát 1 căn nhà và chỉ thấy phụ nữ, khi đi ra thì nhóm bị bắn và bắn trả túi bụi để bảo toàn mạng sống; trong bóng tối không nhìn rõ chỉ thấy chuyển động và những chiếc bóng, không thể biết nam hay nữ. Khoảng cách là 6~15 mét, khi bắn xong mới biết toàn phụ nữ và trẻ em.
@@ -192,27 +192,27 @@ Lời kể của các nhân chứng người Việt khá trùng hợp với nh�
 
 Sau đó, toán lính vào sâu trong làng. Bà cùng 5 đứa con, đứa lớn nhất 12 tuổi, trốn xuống hầm. Lính Mỹ vào nhà bà lục soát và đập phá. Mấy đứa nhỏ sợ quá khóc, bà phải xé mền bịt miệng lại. May thay, lũ lính không phát hiện ra.
 
-Tuy nhiên, gia đình bà **Bùi Thị Lượm** (có báo gọi là Nguyễn Thị Lượm) gần đó thì không may mắn như thế. Bà kể, khi nghe _tiếng súng nổ và la hét_ từ đầu làng vọng lại, cả gia đình và họ hàng tổng cộng 16 người lập tức xuống hầm trú ẩn. Tuy nhiên, toán lính phát hiện ra, và bắt mọi người lên, ngồi rúm ró lại 1 chỗ với nhau. Bọn chúng bàn luận xí xồ với nhau. Hai người bà quỳ lạy xin tha cho mọi người. Vô ích. Lũ lính nã đạn từ khoảng cách gần. Duy nhất bà Lượm, khi đó 12 tuổi, ở gần cửa hầm, bị sức ép hoặc bằng cách nào đó đã trở ngược được vào hầm, bò đến góc xa, và may mắn sống sót. 15 người còn lại đều bị bắn chết dã man, tất cả là đàn bà và trẻ con, trong đó theo bà Lượm thì có 2 người đang mang thai. Bà Lượm trúng đạn bị thương ở đầu gối.
+Tuy nhiên, gia đình bà **Bùi Thị Lượm** (có báo gọi là Nguyễn Thị Lượm) gần đó thì không may mắn như thế. Bà kể, khi nghe _tiếng súng nổ và la hét_ từ đầu làng vọng lại, cả gia đình và họ hàng tổng cộng 16 người lập tức xuống hầm trú ẩn. Tuy nhiên, toán lính phát hiện ra, và bắt mọi người lên, ngồi rúm ró lại 1 chỗ với nhau. Bọn chúng bàn luận xí xồ. Hai người bà quỳ lạy xin tha cho mọi người. Vô ích. Lũ lính nã đạn từ khoảng cách gần. Duy nhất bà Lượm, khi đó 12 tuổi, ở gần cửa hầm, bị sức ép hoặc bằng cách nào đó đã trở ngược được vào hầm, bò đến góc xa, và may mắn sống sót. 15 người còn lại đều bị bắn chết dã man, tất cả là đàn bà và trẻ con, trong đó theo bà Lượm thì có 2 người đang mang thai. Bà Lượm trúng đạn bị thương ở đầu gối.
 
 > Ban đầu cũng tưởng nó tra khảo rồi thả như lần trước chứ, nếu biết bắn thì đã mạnh ai nấy chạy ai sống được thì sống.
 
 Bà Nguyễn Thị Khoe cho mình là người may mắn. Bà kể: "Khuya nào tôi cũng dẫn ba đứa con đi kéo lưới, hôm đó vừa ra khỏi nhà được một chút thì thấy lính Mỹ đi từ bến tàu lên bờ, rồi đến từng nhà tìm người. Nghĩ mấy ổng cũng đi như mọi lần thôi, nhưng đang kéo lưới tôi nghe tiếng súng nổ."
 
-Một số ngường làng khác, ví dụ ông Sáu Rừng, cũng kể lại câu chuyện. Tuy nhiên, họ là người đến hiện trường sau khi lính Mỹ đã bỏ đi.
+Một số người khác, ví dụ ông Sáu Rừng, cũng kể lại câu chuyện. Tuy nhiên, họ là người đến hiện trường sau khi lính Mỹ đã bỏ đi.
 
 <section class="note body-section">
 <p><b>VÀI ĐIỂM CHƯA RÕ</b></p>
 <p>Ban đầu, khi trả lời đài CBS, bà Lượm cho biết nhìn thấy tất cả vụ hành quyết. Nhưng sau khi chương trình lên sóng, các báo quốc tế kéo nhau sang hỏi thêm, thì bà lại nói chỉ nhìn thấy tận mắt 1 số, còn lại là nghe tiếng động. Thậm chí tờ Time cho biết bà bảo không tận mắt nhìn thấy vụ hành quyết nào.</p>
 
-<p>Có thể hình dung, khi nghe tiếng kêu ở đầu làng, bà chạy tới nấp sau bụi chuối nhìn và có lẽ đã thấy lính Mỹ lôi ông lão ra ngoài hành quyết. Còn việc giết 4 người còn lại, tùy góc nhìn và vị trí (trong nhà hay ngoài) mà có thấy hoặc không. Cũng không rõ bà rời vị trí quan sát chạy về khi nào. Khoảng cách chắc ít cũng vài trăm mét (Kerrey kể đám lính lần mò mất 15 phút).</p>
+<p>Có thể hình dung, khi nghe tiếng kêu ở đầu làng, bà chạy tới nấp sau bụi chuối rình và có lẽ đã thấy lính Mỹ lôi ông lão ra ngoài hành quyết. Còn việc giết 4 người còn lại, tùy góc nhìn và vị trí (trong nhà hay ngoài) mà có thấy hoặc không. Cũng không rõ bà rời vị trí quan sát chạy về nhà khi nào. Quãng đường chắc ít cũng dăm trăm mét (Kerrey kể đám lính lần mò mất 15 phút).</p>
 
-<p>Sau đó, bà chạy về hầm nhà trốn cùng các con. Trừ khi đám lính ra khỏi nhà bà lại bò lên quan sát, còn không thì có thể chỉ nghe tiếng súng chứ không chứng kiến cảnh hành hình.</p>
+<p>Sau đó, bà chạy về hầm nhà trốn cùng các con. Trừ khi đám lính ra khỏi nhà thì bà lại bò lên quan sát, còn không thì có thể chỉ nghe tiếng súng chứ không chứng kiến cảnh hành hình.</p>
 
 <p>Lính Mỹ để nguyên hiện trường khi bỏ đi, nên người dân kể cả không chứng kiến, chỉ cần nhìn hiện trường cũng có thể hình dung ra phần nhiều câu chuyện.</p>
 
 <p>Những điểm này có thể đến phỏng vấn trực tiếp để làm rõ, tuy nhiên các báo Việt Nam gần đây đến tìm hiểu chỉ hỏi tóm lược.</p>
 
-<p>Một điểm đáng chú ý khác là bà Lượm kể "nghe thấy tiếng súng nổ" nên cả nhà chui vào hầm trú ẩn. Vụ xả súng sau đó là khi lính Mỹ lôi người dân từ hầm trú ẩn lên, nên không rõ "tiếng súng nổ" lúc trước, nếu bà Lượm nhớ là đúng, từ đâu ra.</p>
+<p>Một điểm đáng chú ý khác là bà Lượm kể "nghe thấy tiếng súng nổ" nên cả nhà chui vào hầm trú ẩn. Thời điểm đó lính Mỹ vẫn chưa xả súng vào người dân, nên không rõ "tiếng súng nổ" đó, nếu bà Lượm nhớ là đúng, từ đâu ra.</p>
 
 <p>Tuy nhiên, bất kể có tiếng súng trước đó hay không, thì nó cũng không gây chết dân. Dân chết là bị hành hình sau đó.</p>
 </section>
@@ -220,7 +220,7 @@ Một số ngường làng khác, ví dụ ông Sáu Rừng, cũng kể lại c�
 CHỨNG TÍCH
 ----------
 
-Tại xã Thạnh Phong, vẫn còn các ngôi mộ được ghi tên tuổi đầy đủ và một đài tưởng niệm. Chiếc ống cống được cho là nơi trốn của 3 em bé tại ngôi nhà đầu nay đã được trao cho Bảo tàng Chứng tích Chiến Tranh ở TP Hồ Chí Minh.
+Tại xã Thạnh Phong, vẫn còn các ngôi mộ được ghi tên tuổi đầy đủ và một đài tưởng niệm. Chiếc ống cống được cho là nơi trốn của 3 em bé tại ngôi nhà đầu, nay đã được trao cho Bảo tàng Chứng tích Chiến Tranh ở TP Hồ Chí Minh.
 
 {% include image.html
 	src="/media/ong_cong.jpg"
@@ -243,5 +243,5 @@ Vụ thảm sát này, cũng như nhiều vụ khác trong quãng thời gian đ
 
 Điều này khiến người ta khó có thể không cho rằng: khi bất lực trong việc "bình định" các vùng kháng chiến, họ đã ngầm bật đèn xanh cho các cuộc giết chóc dân lành.
 
-Mới đây, Bob Kerrey được bổ nhiệm làm Chủ tịch Hội đồng Tín thác của Đại học Fulbright Việt Nam (FUV) - quyết định này đã gây ra nhiều dư luận trái chiều.
+Mới đây, Bob Kerrey được bổ nhiệm làm Chủ tịch Hội đồng Tín thác của Đại học Fulbright Việt Nam (FUV). Do quá khứ của ông, quyết định này đã gây ra nhiều luồng dư luận trái chiều.
 {: .note}
