@@ -8,7 +8,7 @@ excerpt:
 image: /media/bob_kerrey.jpg
 lead_image: /media/bob_kerrey.jpg
 fb_title: 
-fb_description: 41 năm về trước
+fb_description: Bài viết khách quan và đa chiều
 fb_image: 
 see_also1: 4-buc-anh/4.html
 see_also2: 4-buc-anh/2.html
