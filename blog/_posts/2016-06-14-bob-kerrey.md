@@ -192,7 +192,7 @@ Lời kể của các nhân chứng người Việt khá trùng hợp với nh�
 
 Sau đó, toán lính vào sâu trong làng. Bà cùng 5 đứa con, đứa lớn nhất 12 tuổi, trốn xuống hầm. Lính Mỹ vào nhà bà lục soát và đập phá. Mấy đứa nhỏ sợ quá khóc, bà phải xé mền bịt miệng lại. May thay, lũ lính không phát hiện ra.
 
-Tuy nhiên, gia đình bà **Bùi Thị Lượm** (có báo gọi là Nguyễn Thị Lượm) gần đó thì không may mắn như thế. Bà kể, khi nghe _tiếng súng nổ và la hét_ từ đầu làng vọng lại, cả gia đình và họ hàng tổng cộng 16 người lập tức xuống hầm trú ẩn. Tuy nhiên, toán lính phát hiện ra, và bắt mọi người lên, ngồi rúm ró lại 1 chỗ với nhau. Bọn chúng bàn luận xí xồ. Hai người bà quỳ lạy xin tha cho mọi người. Vô ích. Lũ lính nã đạn từ khoảng cách gần. Duy nhất bà Lượm, khi đó 12 tuổi, ở gần cửa hầm, bị sức ép hoặc bằng cách nào đó đã trở ngược được vào hầm, bò đến góc xa, và may mắn sống sót. 15 người còn lại đều bị bắn chết dã man, tất cả là đàn bà và trẻ con, trong đó theo bà Lượm thì có 2 người đang mang thai. Bà Lượm trúng đạn bị thương ở đầu gối.
+Tuy nhiên, gia đình bà **Bùi Thị Lượm** (có báo gọi là Nguyễn Thị Lượm) gần đó thì không may mắn như thế. Bà kể, khi nghe _tiếng súng nổ và la hét_ từ đầu làng vọng lại, cả gia đình và họ hàng tổng cộng 16 người lập tức xuống hầm trú ẩn. Tuy nhiên, toán lính phát hiện ra, và bắt mọi người lên, ngồi rúm ró lại 1 chỗ với nhau. Bọn chúng bàn luận xí xồ. Hai bà lão quỳ lạy xin tha cho mọi người. Vô ích. Lũ lính nã đạn từ khoảng cách gần. Duy nhất bà Lượm, khi đó 12 tuổi, ở gần cửa hầm, bị sức ép hoặc bằng cách nào đó đã trở ngược được vào hầm, bò đến góc xa, và may mắn sống sót. 15 người còn lại đều bị bắn chết dã man, tất cả là đàn bà và trẻ con, trong đó theo bà Lượm thì có 2 người đang mang thai. Bà Lượm trúng đạn bị thương ở đầu gối.
 
 > Ban đầu cũng tưởng nó tra khảo rồi thả như lần trước chứ, nếu biết bắn thì đã mạnh ai nấy chạy ai sống được thì sống.
 
@@ -206,15 +206,14 @@ Một số người khác, ví dụ ông Sáu Rừng, cũng kể lại câu chuy
 
 <p>Có thể hình dung, khi nghe tiếng kêu ở đầu làng, bà chạy tới nấp sau bụi chuối rình và có lẽ đã thấy lính Mỹ lôi ông lão ra ngoài hành quyết. Còn việc giết 4 người còn lại, tùy góc nhìn và vị trí (trong nhà hay ngoài) mà có thấy hoặc không. Cũng không rõ bà rời vị trí quan sát chạy về nhà khi nào. Quãng đường chắc ít cũng dăm trăm mét (Kerrey kể đám lính lần mò mất 15 phút).</p>
 
-<p>Sau đó, bà chạy về hầm nhà trốn cùng các con. Trừ khi đám lính ra khỏi nhà thì bà lại bò lên quan sát, còn không thì có thể chỉ nghe tiếng súng chứ không chứng kiến cảnh hành hình.</p>
+<p>Sau đó, bà chạy về nhà trốn dưới hầm cùng các con. Trừ khi đám lính ra khỏi nhà thì bà lại bò lên quan sát, còn không thì có thể chỉ nghe tiếng súng chứ không chứng kiến cảnh hành hình.</p>
 
 <p>Lính Mỹ để nguyên hiện trường khi bỏ đi, nên người dân kể cả không chứng kiến, chỉ cần nhìn hiện trường cũng có thể hình dung ra phần nhiều câu chuyện.</p>
 
 <p>Những điểm này có thể đến phỏng vấn trực tiếp để làm rõ, tuy nhiên các báo Việt Nam gần đây đến tìm hiểu chỉ hỏi tóm lược.</p>
 
-<p>Một điểm đáng chú ý khác là bà Lượm kể "nghe thấy tiếng súng nổ" nên cả nhà chui vào hầm trú ẩn. Thời điểm đó lính Mỹ vẫn chưa xả súng vào người dân, nên không rõ "tiếng súng nổ" đó, nếu bà Lượm nhớ là đúng, từ đâu ra.</p>
+<p>Một điểm đáng chú ý khác là bà Lượm kể "nghe thấy tiếng súng nổ" nên cả nhà chui xuống hầm trú ẩn. Thời điểm đó lính Mỹ vẫn chưa xả súng vào người dân, nên không rõ "tiếng súng nổ" đó, nếu bà Lượm nhớ là đúng, từ đâu ra. Bà Lượm có lúc còn nói bà văng ngược vào hầm là do sức ép từ 1 trái lựu đạn, và bị nhiều mảnh cắm vào lưng - nếu đúng vậy thì không hiểu để giết 16 phụ nữ và trẻ em rúm ró 1 chỗ mà lính Mỹ phải bắn cả nghìn viên đạn súng trường trong 1 phút, rồi lại còn dùng thêm lựu đạn?</p>
 
-<p>Tuy nhiên, bất kể có tiếng súng trước đó hay không, thì nó cũng không gây chết dân. Dân chết là bị hành hình sau đó.</p>
 </section>
 
 CHỨNG TÍCH
@@ -238,6 +237,8 @@ Cũng tại bảo tàng này, một tấm biển ghi.
 
 LỜI KẾT
 ----------
+
+Sau vụ thảm sát, người dân Thạnh Phong đã đến trụ sở chính quyền báo cáo, sau đó có 1 cuộc điều tra nhỏ, 1 vài lính Mỹ bị đưa đến cho các nhân chứng nhận mặt. Nhưng không thấy xử lý gì thêm. Người viết bài cũng không thể đưa ra kết luận gì, tùy mỗi bạn đọc cảm nhận cho riêng mình.
 
 Vụ thảm sát này, cũng như nhiều vụ khác trong quãng thời gian đó, diễn ra theo một kịch bản tương tự nhau: lính Mỹ hoặc đồng minh vào 1 làng "thân cộng sản" để "tìm và diệt" Việt Cộng. Không tìm thấy thì tra hỏi, đập phá và hành quyết người dân. Chính quyền và quân đội Mỹ làm ngơ, giấu diếm, khi lộ thì điều tra qua loa.
 
