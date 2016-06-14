@@ -10,7 +10,7 @@ lead_image: /media/bob_kerrey.jpg
 fb_title: 
 fb_description: 41 năm về trước
 fb_image: 
-see_also1: 4-buc-anh/1.html
+see_also1: 4-buc-anh/4.html
 see_also2: 4-buc-anh/2.html
 label: BÀI MỚI
 ---
@@ -188,13 +188,15 @@ CÁC NHÂN CHỨNG NGƯỜI VIỆT
 
 Lời kể của các nhân chứng người Việt khá trùng hợp với những gì Klann đã kể.
 
-**Bà Phạm Thị Lãnh** năm đó tầm 30 tuổi, chồng bà cũng như nhiều người đàn ông khác trong làng tham gia du kích. Hôm đó, nghe tiếng kêu ở ngôi nhà đầu làng, bà chạy đến nấp sau bụi chuối và thấy lính Mỹ vào nhà lôi ông già ra cắt cổ. Vợ ông cũng bị đâm chết. 3 đứa cháu nhỏ, 2 gái 1 trai, dù sợ sệt trốn vào ống cống cũng bị lôi ra giết.
+**Bà Phạm Thị Lãnh** năm đó tầm 30 tuổi, chồng bà cũng như nhiều người đàn ông khác trong làng tham gia cách mạng. Hôm đó, nghe tiếng kêu ở ngôi nhà đầu làng, bà chạy đến nấp sau bụi chuối và thấy lính Mỹ vào nhà lôi ông già ra cắt cổ. Vợ ông cũng bị đâm chết. 3 đứa cháu nhỏ, 2 gái 1 trai, dù sợ sệt trốn vào ống cống cũng bị lôi ra giết.
 
 Sau đó, toán lính vào sâu trong làng. Bà cùng 5 đứa con, đứa lớn nhất 12 tuổi, trốn xuống hầm. Lính Mỹ vào nhà bà lục soát và đập phá. Mấy đứa nhỏ sợ quá khóc, bà phải xé mền bịt miệng lại. May thay, lũ lính không phát hiện ra.
 
 Tuy nhiên, gia đình bà **Bùi Thị Lượm** (có báo gọi là Nguyễn Thị Lượm) gần đó thì không may mắn như thế. Bà kể, khi nghe _tiếng súng nổ và la hét_ từ đầu làng vọng lại, cả gia đình và họ hàng tổng cộng 16 người lập tức xuống hầm trú ẩn. Tuy nhiên, toán lính phát hiện ra, và bắt mọi người lên, ngồi rúm ró lại 1 chỗ với nhau. Bọn chúng bàn luận xí xồ. Hai bà lão quỳ lạy xin tha cho mọi người. Vô ích. Lũ lính nã đạn từ khoảng cách gần. Duy nhất bà Lượm, khi đó 12 tuổi, ở gần cửa hầm, bị sức ép hoặc bằng cách nào đó đã trở ngược được vào hầm, bò đến góc xa, và may mắn sống sót. 15 người còn lại đều bị bắn chết dã man, tất cả là đàn bà và trẻ con, trong đó theo bà Lượm thì có 2 người đang mang thai. Bà Lượm trúng đạn bị thương ở đầu gối.
 
-> Ban đầu cũng tưởng nó tra khảo rồi thả như lần trước chứ, nếu biết bắn thì đã mạnh ai nấy chạy ai sống được thì sống.
+Cứ nghĩ đám lính sẽ chỉ tra khảo rồi đi như những lần trước. Ai ngờ.
+
+> Giá như biết chúng sẽ bắn thì mọi người cứ liều chạy đi rồi, ai sống thì sống.
 
 Bà Nguyễn Thị Khoe cho mình là người may mắn. Bà kể: "Khuya nào tôi cũng dẫn ba đứa con đi kéo lưới, hôm đó vừa ra khỏi nhà được một chút thì thấy lính Mỹ đi từ bến tàu lên bờ, rồi đến từng nhà tìm người. Nghĩ mấy ổng cũng đi như mọi lần thôi, nhưng đang kéo lưới tôi nghe tiếng súng nổ."
 
@@ -246,3 +248,36 @@ Vụ thảm sát này, cũng như nhiều vụ khác trong quãng thời gian đ
 
 Mới đây, Bob Kerrey được bổ nhiệm làm Chủ tịch Hội đồng Tín thác của Đại học Fulbright Việt Nam (FUV). Do quá khứ của ông, quyết định này đã gây ra nhiều luồng dư luận trái chiều.
 {: .note}
+
+<style scoped>
+#reference {
+font-size: 80%;
+max-width:690px;
+margin: 0 auto;
+}
+</style>
+<small>&raquo;<a href="#" onclick="document.getElementById('reference').style.display='block';return false;">Tài liệu tham khảo</a></small>
+<section id="reference" class="body-section" style="display:none">
+<ol>
+<li><a target="_blank" href="http://www.nytimes.com/2001/04/25/magazine/25KERREY.html">NYT - One Awful Night in Thanh Phong</a></li>
+<li><a target="_blank" href="http://www.cbsnews.com/news/memories-of-a-massacre-part-i/">CBS - Memories Of A Massacre (script, 3 parts)</a></li>
+<li><a target="_blank" href="http://www.npr.org/programs/morning/features/2002/june/kerrey/excerpt.html">NPR - Excerpt from <i>When I Was a Young Man</i> by Bob Kerrey</a></li>
+<li><a target="_blank" href="http://www.nytimes.com/2001/04/25/nyregion/25CND-KERREY.html">NYT - Bob Kerrey Reveals His Role in Deaths of Vietnam Civilians</a></li>
+<li><a target="_blank" href="http://content.time.com/time/world/article/0,8599,2048043,00.html">Time - The Fog of War 32 years after leaving Vietnam, Bob Kerrey admits a terrible secret</a></li>
+<li><a target="_blank" href="http://articles.latimes.com/2001/apr/29/news/mn-57238">LAT - Two Survivors Say U.S. Unit Killed Villagers 'in Cold Blood'</a></li>
+<li><a target="_blank" href="http://soha.vn/thanh-phong-nguoi-than-nan-nhan-co-tha-thu-cho-ong-bob-kerrey-2016060221383994.htm">SohaNews - Thạnh Phong: Người thân nạn nhân có tha thứ cho ông Bob Kerrey?</a></li>
+<li><a target="_blank" href="http://soha.vn/nan-nhan-vu-tham-sat-thanh-phong-thoi-thi-bo-qua-cho-thanh-than-2016060221352898.htm">SohaNews - Nạn nhân vụ thảm sát Thạnh Phong: Thôi thì bỏ qua cho thanh thản!</a></li>
+<li><a target="_blank" href="http://news.zing.vn/tham-sat-thanh-phong-tha-thu-ma-co-quen-duoc-dau-post654915.html">Zing - Thảm sát Thạnh Phong: 'Tha thứ mà có quên được đâu'</a></li>
+</ol>
+</section>
+
+<section class="recommend body-section">
+<p style="padding-top: 1.5em;margin-bottom: -20px"><small><b>BẠN ĐÃ ĐỌC CHƯA?</b></small></p>
+<h2>Chiến dịch Gió lốc: Cuộc tháo chạy tán loạn khỏi Sài Gòn</h2>
+<p>
+1. <a href="/4-buc-anh/4.html">Phần 1</a><br>
+2. <a href="/4-buc-anh/4-2.html">Phần 2</a><br>
+</p>
+</section>
+
+*[VNCH]: Việt Nam Cộng Hòa
