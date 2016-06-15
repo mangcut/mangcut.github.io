@@ -100,7 +100,7 @@ Khi đi vào ngôi làng, nhóm gặp 1 căn nhà mà không biết trước do 
 
 Kerrey cũng trả lời rằng không thể bắt những người trong nhà làm tù binh được, vì còn phải tiếp tục nhiệm vụ, không thể vướng chân vướng tay hay gây động.
 
-Tiêu diệt xong những người trong ngôi nhà, toán lính men theo bờ ruộng đi sâu vào làng. Được môt lúc, họ phát hiện phía trước chừng 100 yards (91.44 mét) có 1 cụm nhà tranh. Bỗng có tiếng súng từ xa bắn phía họ (về sau ông có nói lại là cũng có thể là tiếng động gì đó ông nhầm là tiếng súng). Cho rằng có thể là phục kích của Việt Cộng, Kerrey ra lệnh bắng súng chống tăng M72 LAW về phía các ngôi nhà. Sau đó, đám lính vừa xả súng trường tự động liên hồi vừa tiến về phía trước. Theo báo cáo 1200 viên đạn được bắn ra.
+Tiêu diệt xong những người trong ngôi nhà, toán lính men theo bờ ruộng đi sâu vào làng. Được một lúc, họ phát hiện phía trước chừng 100 yards (91.44 mét) có 1 cụm nhà tranh. Bỗng có tiếng súng từ xa bắn về phía họ (về sau ông có nói lại là cũng có thể là tiếng động gì đó ông nhầm là tiếng súng). Cho rằng có thể là phục kích của Việt Cộng, Kerrey ra lệnh bắng súng chống tăng M72 LAW về phía các ngôi nhà. Sau đó, đám lính vừa xả súng trường tự động liên hồi vừa tiến về phía trước. Theo báo cáo 1200 viên đạn được bắn ra.
 
 > Điều tôi sẽ nhớ cho đến chết là khi tôi bước vào và thấy, tôi không rõ, khoảng 14 xác, tôi thậm chí không biết con số chính xác, phụ nữ và trẻ em bị bắn chết. Tôi cứ tưởng sẽ thấy xác Việt Cộng chết cùng với vũ khí, hóa ra toàn phụ nữ và trẻ em.
 
