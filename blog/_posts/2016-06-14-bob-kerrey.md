@@ -261,8 +261,8 @@ margin: 0 auto;
 #reference a {border-bottom:0}
 #reference a:hover {text-decoration:underline}
 </style>
-<small>&raquo;<a href="#" onclick="document.getElementById('reference').style.display='block';return false;">Tài liệu tham khảo</a></small>
-<section id="reference" class="body-section" style="display:none">
+<p><b>Tài liệu tham khảo:</b></p>
+<section id="reference" class="body-section">
 <ol>
 <li><a target="_blank" href="http://www.nytimes.com/2001/04/25/magazine/25KERREY.html">NYT - One Awful Night in Thanh Phong</a></li>
 <li><a target="_blank" href="http://www.cbsnews.com/news/memories-of-a-massacre-part-i/">CBS - Memories Of A Massacre (script, 3 parts)</a></li>
