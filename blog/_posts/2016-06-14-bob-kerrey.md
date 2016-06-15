@@ -265,7 +265,7 @@ margin: 0 auto;
 <section id="reference" class="body-section">
 <ol>
 <li><a target="_blank" href="http://www.nytimes.com/2001/04/25/magazine/25KERREY.html">NYT - One Awful Night in Thanh Phong</a></li>
-<li><a target="_blank" href="http://www.cbsnews.com/news/memories-of-a-massacre-part-i/">CBS - Memories Of A Massacre (script, 3 parts)</a></li>
+<li><a target="_blank" href="http://www.cbsnews.com/news/memories-of-a-massacre-part-i/">CBS - Memories Of A Massacre (script) - Part I</a> - <a target="_blank" href="http://www.cbsnews.com/news/memories-of-a-massacre-part-ii/">Part II</a> - <a target="_blank" href="http://www.cbsnews.com/news/memories-of-a-massacre-part-iii/">Part III</a></li>
 <li><a target="_blank" href="http://www.npr.org/programs/morning/features/2002/june/kerrey/excerpt.html">NPR - Excerpt from <i>When I Was a Young Man</i> by Bob Kerrey</a></li>
 <li><a target="_blank" href="http://www.nytimes.com/2001/04/25/nyregion/25CND-KERREY.html">NYT - Bob Kerrey Reveals His Role in Deaths of Vietnam Civilians</a></li>
 <li><a target="_blank" href="http://content.time.com/time/world/article/0,8599,2048043,00.html">Time - The Fog of War 32 years after leaving Vietnam, Bob Kerrey admits a terrible secret</a></li>
