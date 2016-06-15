@@ -205,7 +205,7 @@ Bà Nguyễn Thị Khoe cho mình là người may mắn. Bà kể: "Khuya nào 
 
 Một số người khác, ví dụ ông Sáu Rừng, cũng kể lại câu chuyện. Tuy nhiên, họ là người đến hiện trường sau khi lính Mỹ đã bỏ đi.
 
-<section class="note body-section">
+<section class="note body-section" style="font-size:94.5%">
 <p><b>VÀI ĐIỂM CHƯA RÕ</b></p>
 <p>Ban đầu, khi trả lời đài CBS, bà Lượm cho biết nhìn thấy tất cả vụ hành quyết. Nhưng sau khi chương trình lên sóng, các báo quốc tế kéo nhau sang hỏi thêm, thì bà lại nói chỉ nhìn thấy tận mắt 1 số, còn lại là nghe tiếng động. Thậm chí tờ Time cho biết bà bảo không tận mắt nhìn thấy vụ hành quyết nào.</p>
 
