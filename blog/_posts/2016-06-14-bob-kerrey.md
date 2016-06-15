@@ -119,7 +119,7 @@ Theo đó, trên đường đến cụm nhà thứ 2, không có tiếng súng n
 Kerrey đã nhiều lần phát biểu ông thấy dày vò, ám ảnh, ân hận, hối lỗi, và xấu hổ vì những điều mình đã làm. Tuy nhiên, ông giữ quan điểm rằng sai lầm đó là một tai nạn không chủ ý. Và nó có thể hiểu được trong hoàn cảnh chiến tranh tàn khốc với sức ép và những luật bất thành văn lúc đó.
 {: .standout}
 
-**Kerrey đưa ra nhiều lý lẽ**. Chẳng hạn đây là "vùng bắn tự do", họ bị cấp trên gây sức ép phải hành động, cho phép bắn nếu tự xét thấy nguy hiểm hoặc thấy cần thiết. Rằng những người trong làng là có cảm tình cộng sản, và có người thân là Việt Cộng. Rằng trong chiến tranh ai cũng làm những điều tốt lẫn những điều tệ hại muốn quên đi. Và khi đó ông cũng như cả đội còn quá trẻ và non kinh nghiệm, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai".  "Chàng trai trẻ ngây thơ trong tôi đã chết ngày hôm đó", những ảo tưởng về cuộc chiến hoàn toàn sụp đổ - Kerrey viết.
+**Kerrey đưa ra nhiều lý lẽ**. Chẳng hạn đây là "vùng bắn tự do", họ bị cấp trên gây sức ép phải hành động, cho phép bắn nếu tự xét thấy nguy hiểm hoặc thấy cần thiết. Rằng những người trong làng là có cảm tình cộng sản, và có người thân là Việt Cộng. Rằng không ít lính Mỹ đã chết vì không biết là phụ nữ và trẻ em ở Việt Nam cũng có thể bất ngờ rút súng hay lựu đạn. Rằng trong chiến tranh ai cũng làm những điều tốt lẫn những điều tệ hại muốn quên đi. Và khi đó ông cũng như cả đội còn quá trẻ và non kinh nghiệm, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai".  "Chàng trai trẻ ngây thơ trong tôi đã chết ngày hôm đó", những ảo tưởng về cuộc chiến hoàn toàn sụp đổ - Kerrey viết.
 {: .note}
 
 __Thế nhưng,__ _một đồng đội của Kerrey hôm đó lại kể 1 câu chuyện rất khác._
