@@ -51,6 +51,8 @@ Lần mò đi sâu vào xóm, chừng 15 phút sau, đám lính bắt gặp 1 c�
 
 Khi đã yên vị trên tàu, Kerrey báo cáo bằng radio với cấp trên rằng đã tiêu diệt 21 tên Việt Cộng. Ông được tặng Huy chương Sao Đồng vì "thành tích" này.
 
+{% include pullshare.html %}
+
 Chỉ 3 tuần sau, Kerrey bị thương, cụt 1 phần chân trong 1 cuộc đột kích khác ở Hòn Tằm (Nha Trang), và kết thúc cuộc đời binh nghiệp ngắn ngủi tại Việt Nam với vỏn vẹn 2 chiến dịch. Ông được tặng Huân chương Danh dự, phần thưởng cao quý nhất của quân đội Mỹ cho chiến dịch ở Hòn Tằm, và trở về nước với tư cách anh hùng của cuộc chiến.
 
 <div class="divider">***</div>
@@ -66,7 +68,7 @@ Nhưng có 1 việc xảy ra làm hỏng tham vọng chính trị của ông.
 
 Vào năm 1998, nhà báo Gregory Vistica, khi đó làm việc cho tuần báo Newsweek, bắt đầu điều tra về vụ việc ở Thạnh Phong. Khi Vistica tìm thấy những tài liệu cho thấy người bị giết là phụ nữ và trẻ em, Kerrey đã đồng ý hợp tác. Liên tục những cuộc gặp trực tiếp hoặc trao đổi qua điện thoại, email giữa 2 người.
 
-Ít lâu sau Kerry tuyên bố bỏ ý định tranh cử tổng thống lần nữa, và sẽ không tái cử thượng nghĩ sỹ. Quyết định khi đó làm nhiều người bất ngờ. Ông giải thích là muốn dành thời gian để chăm lo tinh thần cũng như chuyển hướng sang giáo dục.
+Ít lâu sau Kerrey tuyên bố bỏ ý định tranh cử tổng thống lần nữa, và sẽ không tái cử thượng nghĩ sỹ. Quyết định khi đó làm nhiều người bất ngờ. Ông giải thích là muốn dành thời gian để chăm lo tinh thần cũng như chuyển hướng sang giáo dục.
 
 Tuần báo Newsweek sau đó đã không đăng bài phóng sự của Vistica.
 
@@ -77,17 +79,18 @@ Chỉ hơn 1 tuần trước khi phát hành, Kerrey đã chủ động thú nh�
 LỜI KỂ CỦA BOB KERREY
 --------
 
-Trong suốt hơn 2 năm điều tra, Kerry đã nhiều lần điều chỉnh các chi tiết trong câu chuyện của mình. Sau khi vụ việc được đăng tải, Kerrey vẫn tiếp tục nhớ lại và thay đổi các chi tiết. Phần dưới đây cố gắng tóm tắt ý của ông.
+Trong suốt hơn 2 năm điều tra, Kerrey đã nhiều lần điều chỉnh các chi tiết trong câu chuyện của mình. Sau khi vụ việc được đăng tải, Kerrey vẫn tiếp tục nhớ lại và thay đổi các chi tiết. Phần dưới đây cố gắng tóm tắt ý của ông.
 
-Khi đi vào ngôi làng, nhóm gặp 1 căn nhà mà không biết trước do không có trong thông tin tình báo trước đó. Ambrose và Klann đi trước kiểm tra rồi quay lại báo cho Kerry "Có vài người đàn ông, chúng tôi sẽ xử lý". Kerry cho biết ông không cần ra lệnh tiêu diệt mà những người trong nhóm tự biết cần làm thế nào, vì đây là cách họ đã được huấn luyện để tránh bại lộ, nếu không sẽ phải hủy cuộc đột kích. Đây có thể là ngôi nhà canh gác. Kerrey thừa nhận ông có thể ngăn việc giết chóc nhưng đã không làm thế. Ông khẳng định không tự tay hay giúp sức giết những người này, là Klann và Ambrose xử lý hết. Ông thậm chí không nhìn trong nhà và không biết những ai trong đó.
+Khi đi vào ngôi làng, nhóm gặp 1 căn nhà mà không biết trước do không có trong thông tin tình báo trước đó. Ambrose và Klann đi trước kiểm tra rồi quay lại báo cho Kerrey "Có vài người đàn ông, chúng tôi sẽ xử lý". Kerrey cho biết ông không cần ra lệnh tiêu diệt mà những người trong nhóm tự biết cần làm thế nào, vì đây là cách họ đã được huấn luyện để tránh bại lộ, nếu không sẽ phải hủy cuộc đột kích. Đây có thể là ngôi nhà canh gác. Kerrey thừa nhận ông có thể ngăn việc giết chóc nhưng đã không làm thế. Ông khẳng định không tự tay hay giúp sức giết những người này, là Klann và Ambrose xử lý hết. Ông thậm chí không nhìn trong nhà và không biết những ai trong đó.
 
 <style scoped>
 .highlight {position:relative;padding-bottom:2em;margin-bottom:0.8em;max-width:768px;margin-left:auto;margin-right:auto}
 .highlight p {margin-bottom: 0.25em}
 .highlight b {border-bottom: 1px solid #ccc;padding:0 0.3em}
 .highlight::after {position:absolute;right:0;bottom:0;display:table;content:'60 Minutes II - CBS';color:#8a8;font-size:0.8em;font-style:italic;border:1px solid #8a8;line-height:1;padding:3px 6px}
-.article-body a {color: #333;border-bottom:1px solid #2ca02c}
+.article-body a {color: inherit;border-bottom:1px solid #2ca02c}
 .article-body a:hover {color: #2ca02c;text-decoration:none}
+.article-body a.btn {color:#f5f5f5}
 </style>
 
 <section class="highlight body-section"> 
@@ -97,11 +100,11 @@ Khi đi vào ngôi làng, nhóm gặp 1 căn nhà mà không biết trước do 
 
 Kerrey cũng trả lời rằng không thể bắt những người trong nhà làm tù binh được, vì còn phải tiếp tục nhiệm vụ, không thể vướng chân vướng tay hay gây động.
 
-Tiêu diệt xong những người trong ngôi nhà, toán lính men theo bờ ruộng đi sâu vào làng. Được môt lúc, họ phát hiện phía trước chừng 100 yards (91.44 mét) có 1 cụm nhà tranh. Bỗng có tiếng súng từ xa bắn phía họ (về sau ông có nói lại là cũng có thể là tiếng động gì đó ông nhầm là tiếng súng). Cho rằng có thể là phục kích của Việt Cộng, Kerry ra lệnh bắng súng chống tăng M72 LAW về phía các ngôi nhà. Sau đó, đám lính vừa xả súng trường tự động liên hồi vừa tiến về phía trước. Theo báo cáo 1200 viên đạn được bắn ra.
+Tiêu diệt xong những người trong ngôi nhà, toán lính men theo bờ ruộng đi sâu vào làng. Được môt lúc, họ phát hiện phía trước chừng 100 yards (91.44 mét) có 1 cụm nhà tranh. Bỗng có tiếng súng từ xa bắn phía họ (về sau ông có nói lại là cũng có thể là tiếng động gì đó ông nhầm là tiếng súng). Cho rằng có thể là phục kích của Việt Cộng, Kerrey ra lệnh bắng súng chống tăng M72 LAW về phía các ngôi nhà. Sau đó, đám lính vừa xả súng trường tự động liên hồi vừa tiến về phía trước. Theo báo cáo 1200 viên đạn được bắn ra.
 
 > Điều tôi sẽ nhớ cho đến chết là khi tôi bước vào và thấy, tôi không rõ, khoảng 14 xác, tôi thậm chí không biết con số chính xác, phụ nữ và trẻ em bị bắn chết. Tôi cứ tưởng sẽ thấy xác Việt Cộng chết cùng với vũ khí, hóa ra toàn phụ nữ và trẻ em.
 
-Kerry không giải thích vì sao bắn ở khoảng cách xa gần 100 mét trong bóng tối không thấy đối phương lại có thể giết sạch từng người như vậy, và hơn nữa, tại sao họ lại chạy ra khỏi nhà xúm lại để chết cạnh nhau. Họ phải trốn xuống trảng kê (hầm trú ẩn) mới đúng chứ. Ông trả lời ông không biết.
+Kerrey không giải thích vì sao bắn ở khoảng cách xa gần 100 mét trong bóng tối không thấy đối phương lại có thể giết sạch từng người như vậy, và hơn nữa, tại sao họ lại chạy ra khỏi nhà xúm lại để chết cạnh nhau. Họ phải trốn xuống trảng kê (hầm trú ẩn) mới đúng chứ. Ông trả lời ông không biết.
 
 Một báo cáo sau đó của Kerrey cho cấp trên viết rằng, khi họ tiến vào thì thấy có một số người bỏ chạy, và toán lính bắn vào họ, trong đêm tối không phân biệt được giới tính và tuổi tác của nạn nhân.
 
@@ -109,14 +112,14 @@ Năm 2002, Kerrey xuất bản cuốn tự truyện _When I Was a Young Man_ (Kh
 
 Theo đó, trên đường đến cụm nhà thứ 2, không có tiếng súng nào bắn vào toán lính Mỹ. Đến nơi, nhóm cử 1 người vào từng nhà kiểm tra, 6 người còn lại đứng canh các hướng. Chúng kiểm tra 3 căn nhà, đều không có họp hành hay người đàn ông nào cả. Tất cả đàn ông đã đi, và _chỗ nằm của họ chỉ mới vừa bị rời bỏ_. Đàn bà và trẻ con trong 3 ngôi nhà bị đánh thức, kéo nhau ra ngoài nghó nghiêng, nói chuyện ríu ran. Kerrey cho rằng đám đàn ông trong làng đã được báo và chuồn đi mất. Giờ thì nhóm của Kerrey ở tình huống nguy hiểm. Chưa biết nên làm thế nào thì có tiếng súng bắn về phía họ từ hướng những người đàn bà và trẻ con. Toán lính ngay lập tức bắn lại liên hồi, vừa bắn vừa rút lui. Những người dân thường vô tình kẹt giữa làn đạn và bị giết oan.
 
-<!-- Kerry cũng viết rằng đây là nhiệm vụ đầu tiên của chàng trai trẻ tuổi chưa có kinh nghiệm, lo lắng hồi hộp, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai". "Chàng trai trẻ ngây thơ đã chết ngày hôm đó" - những ảo tưởng về cuộc chiến hoàn toàn sụp đổ. -->
+<!-- Kerrey cũng viết rằng đây là nhiệm vụ đầu tiên của chàng trai trẻ tuổi chưa có kinh nghiệm, lo lắng hồi hộp, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai". "Chàng trai trẻ ngây thơ đã chết ngày hôm đó" - những ảo tưởng về cuộc chiến hoàn toàn sụp đổ. -->
 
 <div class="divider">***</div>
 
 Kerrey đã nhiều lần phát biểu ông thấy dày vò, ám ảnh, ân hận, hối lỗi, và xấu hổ vì những điều mình đã làm. Tuy nhiên, ông giữ quan điểm rằng sai lầm đó là một tai nạn không chủ ý. Và nó có thể hiểu được trong hoàn cảnh chiến tranh tàn khốc với sức ép và những luật bất thành văn lúc đó.
 {: .standout}
 
-**Kerry đưa ra nhiều lý lẽ**. Chẳng hạn đây là "vùng bắn tự do", họ bị cấp trên gây sức ép phải hành động, cho phép bắn nếu tự xét thấy nguy hiểm hoặc thấy cần thiết. Rằng những người trong làng là có cảm tình cộng sản, và có người thân là Việc Cộng. Rằng trong chiến tranh ai cũng làm những điều tốt lẫn những điều tệ hại muốn quên đi. Và khi đó ông cũng như cả đội còn quá trẻ và non kinh nghiệm, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai".  "Chàng trai trẻ ngây thơ trong tôi đã chết ngày hôm đó", những ảo tưởng về cuộc chiến hoàn toàn sụp đổ - Kerrey viết.
+**Kerrey đưa ra nhiều lý lẽ**. Chẳng hạn đây là "vùng bắn tự do", họ bị cấp trên gây sức ép phải hành động, cho phép bắn nếu tự xét thấy nguy hiểm hoặc thấy cần thiết. Rằng những người trong làng là có cảm tình cộng sản, và có người thân là Việc Cộng. Rằng trong chiến tranh ai cũng làm những điều tốt lẫn những điều tệ hại muốn quên đi. Và khi đó ông cũng như cả đội còn quá trẻ và non kinh nghiệm, "mồ hôi vã ra lưng áo", "mạch đập thình thịch trong tai".  "Chàng trai trẻ ngây thơ trong tôi đã chết ngày hôm đó", những ảo tưởng về cuộc chiến hoàn toàn sụp đổ - Kerrey viết.
 {: .note}
 
 __Thế nhưng,__ _một đồng đội của Kerrey hôm đó lại kể 1 câu chuyện rất khác._
@@ -137,7 +140,7 @@ Klann kể rằng trong ngôi nhà đầu tiên không phải _5 người đàn 
 
 Ambrose ra hiệu Klann đưa ông già nằm gần cửa ra. Klann lấy tay bịt miệng xách ông ra. Nhưng ông già chống cự rất quyết liệt. Klann ra hiệu cần giúp đỡ. Ambrose đứng canh còn Kerrey đi lại, dùng gối đè lên ngực ông già để Klann cắt cổ. Trong lúc đó thì những người còn lại giết nốt người bà và 3 đứa cháu.
 
-__Kerrey ban đầu cho biết không nhớ những người trong ngôi nhà bị giết ra sao__. Sau khi biết về lời khai của Klann, Kerrey nói rằng có nhớ sơ sơ Klann cần sự giúp đỡ và ai đó đã đến giúp, nhưng không phải ông. Kerry bảo ông nhớ ra là ai, nhưng không cần thiết nói ra.
+__Kerrey ban đầu cho biết không nhớ những người trong ngôi nhà bị giết ra sao__. Sau khi biết về lời khai của Klann, Kerrey nói rằng có nhớ sơ sơ Klann cần sự giúp đỡ và ai đó đã đến giúp, nhưng không phải ông. Kerrey bảo ông nhớ ra là ai, nhưng không cần thiết nói ra.
 {: .note}
 
 <div class="divider">***</div>
@@ -255,6 +258,8 @@ font-size: 80%;
 max-width:690px;
 margin: 0 auto;
 }
+#reference a {border-bottom:0}
+#reference a:hover {text-decoration:underline}
 </style>
 <small>&raquo;<a href="#" onclick="document.getElementById('reference').style.display='block';return false;">Tài liệu tham khảo</a></small>
 <section id="reference" class="body-section" style="display:none">
