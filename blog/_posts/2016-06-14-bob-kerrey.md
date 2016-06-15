@@ -243,7 +243,7 @@ Cũng tại bảo tàng này, một tấm biển ghi.
 LỜI KẾT
 ----------
 
-Sau vụ thảm sát, người dân Thạnh Phong đã đến trụ sở chính quyền báo cáo, sau đó có 1 cuộc điều tra nhỏ, 1 vài lính Mỹ bị đưa đến cho các nhân chứng nhận mặt. Nhưng không thấy xử lý gì thêm. Người viết bài cũng không thể đưa ra kết luận gì, tùy mỗi bạn đọc cảm nhận cho riêng mình.
+Sau vụ thảm sát, người dân Thạnh Phong đã đến trụ sở chính quyền báo cáo, sau đó có 1 cuộc điều tra nhỏ, 1 vài lính Mỹ bị đưa đến cho các nhân chứng nhận mặt. Nhưng không thấy xử lý gì thêm. Người viết bài này cũng không muốn đưa ra kết luận gì, tùy mỗi bạn đọc cảm nhận cho riêng mình.
 
 Vụ thảm sát này, cũng như nhiều vụ khác trong quãng thời gian đó, diễn ra theo một kịch bản tương tự nhau: lính Mỹ hoặc đồng minh vào 1 làng "thân cộng sản" để "tìm và diệt" Việt Cộng. Không tìm thấy thì tra hỏi, đập phá và hành quyết người dân. Chính quyền và quân đội Mỹ làm ngơ, giấu diếm, khi lộ thì điều tra qua loa.
 
