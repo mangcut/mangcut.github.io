@@ -1,3 +1,5 @@
+---
+---
 html {
 -ms-text-size-adjust: 100%;
 -webkit-text-size-adjust: 100%;
@@ -87,7 +89,19 @@ hr.line {
 	font-size: 90%;
 }
 
-.btn {
+.share-hint {
+	display: block;
+	background-color: {{site.data.theme.sepia.background}};
+	float: right;
+	padding: 10px 0 10px 10px;
+	margin: 10px 10px 10px 20px;
+	width: 106px;
+	font-size: 0.8em;
+	color: {{site.data.theme.sepia.text}};
+	border: 1px solid {{site.data.theme.sepia.shy}};
+}
+
+a.btn {
 	display: table;
 	padding: 6px 20px 5px 10px;
 	text-decoration: none;
