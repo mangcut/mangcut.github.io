@@ -13,7 +13,7 @@
 	<header class="article-body">
 		<p>{{mc_i_entry.description}}</p>
 		<p class="by-line">
-			<a href="/about.html">Trương Hồng Thi</a>
+			{% if mc_i_entry.author %}{{mc_i_entry.author}}{% else %}<a href="/about.html">Trương Hồng Thi</a>{% endif %}
 			{% if mc_i_entry.date %}
 				- <time datetime='{{ mc_i_entry.date | date: "%Y-%m-%d" }}'>{{ mc_i_entry.date | date: "%-d/%-m/%Y" }}</time>
 			{% endif %}

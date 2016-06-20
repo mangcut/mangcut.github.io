@@ -244,3 +244,7 @@ a.btn {
     background-color: #a02c2c;
     content: "";
 }
+
+.footnotes {
+	font-size: 85%;
+}

@@ -1,6 +1,5 @@
 ---
 layout: article
-categories: blog
 permalink: /bob-kerrey.html
 title: Bob Kerrey và cuộc thảm sát ở Thạnh Phong năm 1969
 description: 

@@ -20,13 +20,13 @@ if (!ok) {
 	if (window.isOperaMini) {
 		document.documentElement.className += " o-mini";
 	}{% if page.lead_image %}
-	window.addEventListener('load', function() {
+	//window.addEventListener('load', function() {
 		var img = new Image();
 		img.onload = function() {
 			document.getElementById("leadImage").src = img.src;
 		}
 		img.src = "{{page.lead_image}}";
-	}, false);{% endif %}
+	//}, false);{% endif %}
 }
 })();
 </script>
@@ -90,7 +90,7 @@ font-family: Verdana, sans-serif;
 }
 }
 
-.article-body>p,.article-header>p,.body-section>p, h1, h2, figcaption {
+.article-body>p,.article-header>p,.body-section>p, h1, h2, figcaption, ul, ol, .footnotes {
 margin-left: 6.25%;
 margin-right: 6.25%;
 }
@@ -121,7 +121,7 @@ font-size: 0.7em;
 }
 
 @media (min-width:768px) {
-.article-body>p,.article-header>p,.body-section>p, h1, h2, figcaption {
+.article-body>p,.article-header>p,.body-section>p, h1, h2, figcaption, ul, ol, .footnotes {
 width: 690px;
 margin-left: auto;
 margin-right: auto;
@@ -259,7 +259,7 @@ letter-spacing:0.3em;
 <article class="article">
 <header class="article-header">
 <h1>{{page.title}}</h1>
-<p class="by-line"><a href="/about.html">Trương Hồng Thi</a><br><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%-d/%-m/%Y" }}</time> - dài {{ page.content | strip_html | number_of_words | divided_by:351 | plus:1}} phút</p>
+<p class="by-line">{% if page.author %}{{page.author}}{% else %}<a href="/about.html">Trương Hồng Thi</a>{% endif %}<br><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%-d/%-m/%Y" }}</time> - dài {{ page.content | strip_html | number_of_words | divided_by:351 | plus:1}} phút</p>
 </header>
 
 <section class="article-body">
@@ -269,7 +269,7 @@ letter-spacing:0.3em;
 <footer class="article-footer">
 <section class="body-section">
 <br>
-<p class="label">Nếu bạn thấy hay, hãy chia sẻ. Điều đó động viên tôi viết tiếp.</p>
+<p class="label">{% if page.share_text %}{{page.share_text}}{% else %}Nếu bạn thấy hay, hãy chia sẻ. Điều đó động viên tôi viết tiếp.{% endif %}</p>
 <p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | cgi_escape }}{{ page.url|remove:'index.html' | cgi_escape }}" class="btn btn-fb" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" height="16" width="8"><path fill="#f5f5f5" d="M5.143 16V8.89H7.43L8 5.925H5.143V4.74c0-1.185.572-1.777 1.714-1.777H8V0H5.714c-2.1 0-3.428 1.707-3.428 4.148v1.778H0V8.89h2.286V16h2.857z"/></svg>Chia sẻ</a></p>
 <br>
 <p class="label">Nhận thông báo khi có bài đáng đọc.</p>
