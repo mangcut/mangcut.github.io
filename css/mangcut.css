@@ -245,13 +245,6 @@ a.btn {
     content: "";
 }
 
-.footnotes {
-	font-size: 85%;
-    word-wrap: break-word;
-    word-break: break-all;
-    overflow-x: hidden;
-}
-
 .about-author {
 	font-size: 90%;
 	background-color: rgb(217,230,240);
