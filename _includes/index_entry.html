@@ -35,6 +35,6 @@
 	</section>
 
 	<footer class="article-footer">
-		<p><a href="{{mc_i_entry.url}}">{% if include.show_page %}[Chi tiết...]{% else %}[Đọc bài...]{% endif %}</a></p>
+		<p>{% if mc_i_entry.part_text %}{{mc_i_entry.part_text}}{% else %}<a href="{{mc_i_entry.url}}">{% if include.show_page %}[Chi tiết...]{% else %}[Đọc bài...]{% endif %}</a>{% endif %}</p>
 	</footer>
 </article>

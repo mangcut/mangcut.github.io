@@ -90,7 +90,7 @@ font-family: Verdana, sans-serif;
 }
 }
 
-.article-body>p,.article-header>p,.body-section>p, h1, h2, figcaption, ul, ol {
+.article-body>p,.article-header>p,.body-section>p, h1, h2, h3, figcaption, ul, ol {
 margin-left: 6.25%;
 margin-right: 6.25%;
 }
@@ -109,7 +109,7 @@ line-height: 1em;
 vertical-align: middle;
 padding: 2px 10px;
 background-color: #000;
-opacity: 0.3;
+opacity: 0.85;
 display: table;
 position: absolute;
 top: 0;
@@ -124,7 +124,7 @@ font-size: 0.7em;
 }
 
 @media (min-width:768px) {
-.article-body>p,.article-header>p,.body-section>p, h1, h2, figcaption, ul, ol {
+.article-body>p,.article-header>p,.body-section>p, h1, h2, h3, figcaption, ul, ol {
 width: 690px;
 margin-left: auto;
 margin-right: auto;
@@ -204,7 +204,7 @@ margin-right: .06em;
 color: #a02c2c;
 }
 
-h1, h2 {
+h1, h2, h3 {
 color: #a02c2c;
 font-weight: normal;
 }
@@ -273,7 +273,7 @@ letter-spacing:0.3em;
 <article class="article">
 <header class="article-header">
 <h1>{{page.title}}</h1>
-<p class="by-line">{% if page.author %}{{page.author}}{% else %}<a href="/about.html">Trương Hồng Thi</a>{% endif %}<br><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%-d/%-m/%Y" }}</time> - dài {{ page.content | strip_html | number_of_words | divided_by:351 | plus:1}} phút</p>
+<p class="by-line">{% if page.author %}<a href="{{page.author_url}}">{{page.author}}</a>{% else %}<a href="/about.html">Trương Hồng Thi</a>{% endif %}<br><time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date: "%-d/%-m/%Y" }}</time> - dài {{ page.content | strip_html | number_of_words | divided_by:351 | plus:1}} phút</p>
 </header>
 
 <section class="article-body">
