@@ -81,7 +81,7 @@ __Hệ quả:__ Luôn luôn có 2 sao chính (1 thuộc chòm Tử Vi, 1 thuộc
 
 14. __Quan điểm về tốt xấu__. Sao chỉ có "đặc tính", không có "tốt" hay "xấu", quan trọng là "làm việc nhóm" thôi. Thử nghĩ mà xem, qua mỗi thời kỳ, quan niệm về người phụ nữ đẹp khác nhau, ngày xưa thấy đẹp bây giờ có khi lại thấy xấu. Các sao có gốc Tị Hợi (như Cự, Hao, Không, Kiếp, v.v.) bị coi là xấu do tính thay đổi, phản đối, đi ngược lại đám đông. Dĩ nhiên người xưa coi thế là không tốt. Nhưng không có những sao như vậy thì lấy đâu ra đột phá? Vì vậy, Tử Vi Măng Cụt hạn chế việc đánh giá tốt xấu theo tiêu chuẩn xã hội.
 
-15. __Nguyên lý tích tụ__. Lá số Tử Vi đại diện cho 1 giờ, sang giờ khác lá số khác. Lá số lấy vào giờ sinh sẽ có ảnh hưởng nhất (cái gì ban đầu chả ảnh hưởng hơn về sau). Tuy nhiên, trong suốt cuộc đời, mỗi giờ trôi qua ứng với 1 lá số và có 1 chút ảnh hưởng lên từng người. _Đây là điều rất quan trọng khi xem hạn_. Hình dung đặt "lá số của hạn" lên trên là số của người xem để xem tính tương thích, phối hợp.
+15. __Nguyên lý tích tụ__. Lá số Tử Vi đại diện cho 1 giờ, sang giờ khác lá số khác. Lá số lấy vào giờ sinh sẽ có ảnh hưởng nhất (cái gì ban đầu chả ảnh hưởng hơn về sau). Tuy nhiên, trong suốt cuộc đời, mỗi giờ trôi qua ứng với 1 lá số và có 1 chút ảnh hưởng lên từng người. _Đây là điều rất quan trọng khi xem hạn_. Hình dung đặt "lá số của hạn" lên trên lá số của người xem để xem tính tương thích, phối hợp.
 
 Tạm thời liệt kê thế đã, cho đỡ tẩu hỏa nhập ma. Có gì sẽ bổ sung sau.
 
