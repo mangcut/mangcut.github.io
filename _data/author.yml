@@ -11,6 +11,7 @@ thith:
   intro: "Trương Hồng Thi, thường gọi là Thi măng cụt hoặc Thi bờm, sống ở Hà Nội cùng vợ và 2 con gái."
 thientx:
   is_guest: true
+  title: Nhà thơ
   name: Trương Xuân Thiên
   pen_name: Thiên Anh
   website: https://www.facebook.com/profile.php?id=100010815677880
@@ -22,8 +23,9 @@ thientx:
   intro: "Trương Xuân Thiên, bút danh Thiên Anh, nhà thơ, nhà báo tự do."
 g:
   is_guest: true
+  title: Bác sỹ
   name: Bí mật
-  pen_name: Tiến sỹ G
+  pen_name: G
   website: https://www.facebook.com/profile.php?id=100010815677880
   facebook: 
   twitter: 
