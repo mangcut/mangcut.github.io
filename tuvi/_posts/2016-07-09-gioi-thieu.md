@@ -4,8 +4,9 @@ categories: linhtinh
 permalink: /tuvi/gioi-thieu.html
 page_title: "Phương pháp luận của Tử Vi Măng Cụt"
 title: "Tử Vi theo cách Măng Cụt"
+fb_title: "Tử Vi theo cách Măng Cụt"
 description: Giới thiệu phương pháp Tử Vi riêng
-image: 
+external_image: http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=292
 see_also1: 
 see_also2: 
 label: Tử Vi
