@@ -44,6 +44,8 @@ Tử Vi chỉ để tham khảo. Bạn dĩ nhiên phải hoàn toàn chịu trá
 
 ### 2. Tử Vi theo tinh thần Măng Cụt
 
+Phần này dành cho người biết chút về Tử Vi rồi. Ai chưa biết gì nên đi ra cho đỡ nhức đầu.
+
 Do mắc bệnh "nhìn đâu cũng ra quy luật" (nói cách khác: nhìn đâu cũng ra ngoại lệ), nên tôi không bằng lòng với Tử Vi truyên thống, vì vậy bày ra Tử Vi Măng Cụt.
 
 Có rất nhiều điểm lạ, tách hẳn với Tử Vi truyền thống. Tôi gạch đầu dòng các điểm chính.
