@@ -33,7 +33,7 @@ Dữ liệu đầu vào gồm:
 
 <u>Giờ âm lịch là gì:</u> mỗi ngày chia thành 12 giờ (mỗi giờ bằng 2 giờ dương lịch), từ giờ Tý đến giờ Hợi. Giờ Tý tính từ 23 giờ đêm hôm trước đến 1 giờ sáng hôm sau. Giữa đêm là "chính Tý" (giữa giờ Tý) còn giữa trưa là chính Ngọ.
 
-Các nhà Tử Vi bằng lý thuyết và kiểm nghiệm tìm ra các quy luật về sự phối hợp giữa các yếu tố đầu vào trên với tính cách con người và số phận con người. Nói nôm na, nếu bạn chuyên làm phần mềm thì nó giống nhận dạng mẫu (pattern), làm chứng khoán thì nó hao hao "phân tích kỹ thuật", lô đề thì nó giống... tính cầu (hic, hạ nhục Tử Vi quá :( ).
+Các nhà Tử Vi bằng lý thuyết và kiểm nghiệm tìm ra các quy luật về sự phối hợp giữa các yếu tố đầu vào trên với tính cách con người và số phận con người. Nói nôm na, nếu bạn chuyên làm phần mềm thì nó giống nhận dạng mẫu (pattern), làm chứng khoán thì nó hao hao "phân tích kỹ thuật", lô đề thì nó giống... tính cầu (hic, hạ nhục Tử Vi quá :( ). Tóm lại là dùng quy luật trong quá khứ để dự đoán tương lai (kiểu chuồn chuồn bay thấp thì mưa), không phải luôn đúng nhưng xác xuất cao hơn trung bình nên dùng để dự đoán được.
 
 Từ 5 yếu tố đầu vào mà bình giải luôn thì chả khác gì đánh cờ tưởng. Vì vậy, các nhà Tử Vi lập ra "lá số Tử Vi" để nhìn vào đó mà luận đoán. Lá số chia thành 12 ô, gọi là "cung", đại diện cho 12 lĩnh vực có tác động quan trọng đến cuộc đợi (số mệnh, bệnh tật tai ách, công việc, tiền bạc, vợ/chồng, con cái, nhà cửa, v.v.). Sau đó, sắp xếp (gọi là "an") các "sao" vào các cung đó. Mỗi sao có ý nghĩa riêng, hơn nữa còn phụ thuộc nó nằm ở cung nào, hội họp với các sao nào, ảnh hưởng chi phối lẫn nhau. Nói chung là cũng khá rắc rối, nên các thầy luận giải khác, thậm chí ngược nhau, là chuyện thường xảy ra.
 
