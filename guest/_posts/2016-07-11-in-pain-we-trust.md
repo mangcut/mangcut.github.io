@@ -5,6 +5,7 @@ permalink: /guest/in-pain-we-trust.html
 author: "Bác sỹ G"
 author_url: https://www.facebook.com/profile.php?id=100011684418381
 cover_image: 
+lead_image: /media/pain_hand.jpg
 title: "In pain we trust"
 description: 
 excerpt: Một loại thông điệp oánh vào trái tim khác
@@ -67,8 +68,8 @@ Nếu hai bài trước tại [đây](crowd.html){: .under} và [đây](fear.htm
 
 ## 1. Thông điệp nâng đỡ hay là Gieo mầm hy vọng
 
-{% include image.html
-	src="/media/pain_hand.jpg"
+{% include lead_image.html
+	svg="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 291'><rect x='0' y='0' width='141' height='59.2' fill='#0f1920'></rect><rect x='140' y='0' width='141' height='59.2' fill='#0d1318'></rect><rect x='280' y='0' width='141' height='59.2' fill='#253b45'></rect><rect x='420' y='0' width='141' height='59.2' fill='#0c171e'></rect><rect x='560' y='0' width='141' height='59.2' fill='#0e1a22'></rect><rect x='0' y='58.2' width='141' height='59.2' fill='#162933'></rect><rect x='140' y='58.2' width='141' height='59.2' fill='#1c252d'></rect><rect x='280' y='58.2' width='141' height='59.2' fill='#2e4551'></rect><rect x='420' y='58.2' width='141' height='59.2' fill='#0e171d'></rect><rect x='560' y='58.2' width='141' height='59.2' fill='#121e25'></rect><rect x='0' y='116.4' width='141' height='59.2' fill='#0f1c23'></rect><rect x='140' y='116.4' width='141' height='59.2' fill='#20262d'></rect><rect x='280' y='116.4' width='141' height='59.2' fill='#283b45'></rect><rect x='420' y='116.4' width='141' height='59.2' fill='#101920'></rect><rect x='560' y='116.4' width='141' height='59.2' fill='#0b1319'></rect><rect x='0' y='174.6' width='141' height='59.2' fill='#141f25'></rect><rect x='140' y='174.6' width='141' height='59.2' fill='#3d5561'></rect><rect x='280' y='174.6' width='141' height='59.2' fill='#3f525c'></rect><rect x='420' y='174.6' width='141' height='59.2' fill='#1e2023'></rect><rect x='560' y='174.6' width='141' height='59.2' fill='#090c0e'></rect><rect x='0' y='232.8' width='141' height='59.2' fill='#1d2b33'></rect><rect x='140' y='232.8' width='141' height='59.2' fill='#496878'></rect><rect x='280' y='232.8' width='141' height='59.2' fill='#6e8b98'></rect><rect x='420' y='232.8' width='141' height='59.2' fill='#0b0f14'></rect><rect x='560' y='232.8' width='141' height='59.2' fill='#050709'></rect></svg>"
 	width="700" height="291"
 	alt="Gieo mầm hy vọng" %}
 
