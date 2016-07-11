@@ -215,7 +215,7 @@ Dù tất nhiên thi thoảng mụn cũng quay trở lại và tô điểm thêm
 <p style="padding-top: 1.5em;margin-bottom: -20px"><small><b>BẠN ĐÃ ĐỌC CHƯA?</b></small></p>
 <h2>Bài liên quan</h2>
 <p>
-1. <a href="/guest/crowd.html">Sex sells. And ... does twice as better.</a><br>
-2. <a href="/guest/brexit.html">Different is the next Conventional ...</a><br>
+1. <a href="/guest/fear.html">Fear unites, Fear divides, Fear conquers ...</a><br>
+2. <a href="/guest/crowd.html">Sex sells. And ... does twice better.</a><br>
 </p>
 </section>
