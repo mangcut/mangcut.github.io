@@ -6,8 +6,8 @@ author: "Bác sỹ G"
 author_url: https://www.facebook.com/profile.php?id=100011684418381
 cover_image: 
 title: "In pain we trust"
-description: Một loại thông điệp oánh vào trái tim khác
-excerpt: 
+description: 
+excerpt: Một loại thông điệp oánh vào trái tim khác
 modest: 
 image: /media/pain_rocker.jpg
 fb_image: 
