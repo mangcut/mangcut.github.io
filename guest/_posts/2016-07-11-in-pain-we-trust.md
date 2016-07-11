@@ -4,8 +4,8 @@ categories: blog
 permalink: /guest/in-pain-we-trust.html
 author: "Bác sỹ G"
 author_url: https://www.facebook.com/profile.php?id=100011684418381
-cover_image: 
-lead_image: /media/pain_hand.jpg
+cover_image: /media/pain_cover.jpg
+lead_image: http://sugarscape.cdnds.net/16/14/1460122512-power.gif
 title: "In pain we trust"
 description: 
 excerpt: Một loại thông điệp oánh vào trái tim khác
@@ -21,7 +21,20 @@ label: BÀI CỦA KHÁCH
 ---
 
 <style scoped>
-
+.cover_image {
+	background-color: #000;
+	background-image: url('/media/pain_cover.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 315px;
+}
+@media (max-width:840px) {
+	.cover_image {
+		background-size: contain;
+		background-position: center;
+		height: 240px;
+	}
+}
 .page-header a {
 background-color: #a02c2c;
 opacity: 0.5;
