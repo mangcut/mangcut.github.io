@@ -24,9 +24,9 @@ Hàng ngày, 5 phút trước khi ngủ:
 
 2. Tưởng tượng đang đi dạo dọc con đường mòn ở một nơi yên vắng thanh bình và trong lành. Mỗi chiếc răng là 1 hòn đá tảng to nặng, chắc chắn, ngập sâu vững chắc xuống nền đất sét
 
-3. Từ từ "đi" qua từng chiếc răng. Cảm giác thật chậm chắc chắn (solid) bên trong từng chiếc răng, sự ôm ấp mềm mại kết dính yêu thương giữa lợi và răng, tạo ra cảm giác khỏe khoắn, bao bọc. Giữ tâm trạng yên bình  thật tự nhiên.
+3. Từ từ "đi" qua từng chiếc răng. Cảm giác thật chậm sự đặc chắc bên trong từng chiếc răng, sự ôm ấp mềm mại kết dính yêu thương giữa lợi và răng, tạo ra cảm giác khỏe khoắn, bao bọc. Giữ tâm trạng yên bình  thật tự nhiên.
 
-4. Dừng lại đủ lâu ở 1 răng rồi đi sang răng tiếp (tập trung vào cái răng đang có vấn đề)
+4. Dừng lại đủ lâu ở 1 răng rồi đi sang chiếc tiếp theo. Đi đủ 1 lượt nhưng _tập trung nhiều thời gian vào cái răng đang có vấn đề_
 
 Tóm lại là thế. Xong rồi ngủ (hoặc làm gì thì tùy).
 

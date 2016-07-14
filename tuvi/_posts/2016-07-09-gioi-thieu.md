@@ -87,4 +87,4 @@ Tạm thời liệt kê thế đã, cho đỡ tẩu hỏa nhập ma. Có gì s�
 
 Đây là ý chính. Các chi tiết sẽ làm rõ dần dần.
 
-[Thảo luận trên Linkhay (70 bình luận)](http://linkhay.com/tu-vi-theo-cach-mang-cut/1202309){:target="_blank"}
+[Thảo luận trên Linkhay (100 bình luận)](http://linkhay.com/tu-vi-theo-cach-mang-cut/1202309){:target="_blank"}
