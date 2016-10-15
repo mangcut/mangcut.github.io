@@ -24,6 +24,19 @@ dark:
   hilight:
     background:
     text:
+sky:
+  background: "#158"
+  text: "#cde"
+  header: "#cde"
+  link: "#cde"
+  modest: "#9aa"
+  shy: "#9aa"
+  note:
+    background:
+    text:
+  hilight:
+    background:
+    text:
 sepia:
   background: "#EFE0B9"
   text: "#643B0F"
