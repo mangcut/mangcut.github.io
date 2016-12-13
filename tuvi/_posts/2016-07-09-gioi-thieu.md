@@ -15,7 +15,7 @@ symbol: " tử vi"
 
 _Tử Vi Măng Cụt_ là cách tôi diễn giải Tử Vi theo phương pháp riêng của mình. Bài này sẽ giới thiệu "cách Măng Cụt" là cách như thế nào. Loạt bài tiếp sau tôi sẽ dần dần đi vào các chi tiết.
 
-Với tinh thần cầu thị để hoàn thiện lý thuyết và đối chiếu thực tiễn, tôi viết ra đây cùng _thảo luận_ ([tại đây](http://linkhay.com/tu-vi-theo-cach-mang-cut/1202309){:target="_blank"}).
+Với tinh thần cầu thị để hoàn thiện lý thuyết và đối chiếu thực tiễn, tôi viết ra đây cùng _thảo luận_ ([_đã đóng thảo luận_]).
 
 __Chú ý:__
 
@@ -86,5 +86,3 @@ __Hệ quả:__ Luôn luôn có 2 sao chính (1 thuộc chòm Tử Vi, 1 thuộc
 Tạm thời liệt kê thế đã, cho đỡ tẩu hỏa nhập ma. Có gì sẽ bổ sung sau.
 
 Đây là ý chính. Các chi tiết sẽ làm rõ dần dần.
-
-[Thảo luận trên Linkhay (100 bình luận)](http://linkhay.com/tu-vi-theo-cach-mang-cut/1202309){:target="_blank"}
