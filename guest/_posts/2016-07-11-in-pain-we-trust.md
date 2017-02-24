@@ -1,6 +1,6 @@
 ---
 layout: article
-categories: blog
+categories: 
 permalink: /guest/in-pain-we-trust.html
 author: "Bác sỹ G"
 author_url: https://www.facebook.com/profile.php?id=100011684418381

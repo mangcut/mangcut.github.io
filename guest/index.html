@@ -1,14 +1,12 @@
 ---
 layout: empty
-lead_image: /img/home/4.jpg
 ---
 <!DOCTYPE html>
 <html lang="vi" class="no-js">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width">
-<link rel="preload" href="{{page.lead_image}}" as="image">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
 <script>
 (function() {
 var ok = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") 
@@ -21,14 +19,7 @@ if (!ok) {
 	window.isOperaMini = Object.prototype.toString.call(window.operamini) === "[object OperaMini]";
 	if (window.isOperaMini) {
 		document.documentElement.className += " o-mini";
-	}{% if page.lead_image %}
-	window.addEventListener('load', function() {
-		var img = new Image();
-		img.onload = function() {
-			document.getElementById("leadImage").style.backgroundImage = "url('" + img.src + "')";
-		}
-		img.src = "{{page.lead_image}}";
-	}, false);{% endif %}
+	}
 }
 })();
 </script>
@@ -77,7 +68,7 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif
 line-height: 1.4;
 }
 
-.article-body>p,.article-header>p,.article-footer>p, ol, h1, figure, .links, .page-footer {
+.article-body>p,.article-header>p,.article-footer>p, ol, h1, figure, .links, .page-footer, .hint-container {
 margin-left: 6.25%;
 margin-right: 6.25%;
 }
@@ -98,11 +89,12 @@ font-size: 0.7em;
 }
 
 @media (min-width:768px) {
-.article-body>p,.article-header>p,.article-footer>p, ol, h1, figure, hr, .links, .page-footer {
+.article-body>p,.article-header>p,.article-footer>p, ol, h1, figure, .links, hr, .page-footer, .hint-container {
 width: 690px;
 margin-left: auto;
 margin-right: auto;
 }
+hr {width: 768px;}
 }
 
 ol.series_list {font-style:italic; font-family:Georgia, serif; font-size:1.5em;color:#999;line-height:1.4;}
@@ -166,27 +158,27 @@ font-size: 1.3em;
 line-height:1;
 }
 
-.leadImage {
+.leadPage {
 	position: relative;
     height: 480px;
 	height: -webkit-calc(100vh - 160px);
 	height: calc(100vh - 160px);
 	-webkit-transition: height .3s;
 	transition: height .3s;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3840 2160'%3E%3Crect x='0' y='0' width='769' height='433' fill='%23272d1d'/%3E%3Crect x='768' y='0' width='769' height='433' fill='%23434a1f'/%3E%3Crect x='1536' y='0' width='769' height='433' fill='%2356602e'/%3E%3Crect x='2304' y='0' width='769' height='433' fill='%23667640'/%3E%3Crect x='3072' y='0' width='769' height='433' fill='%23738758'/%3E%3Crect x='0' y='432' width='769' height='433' fill='%23363e20'/%3E%3Crect x='768' y='432' width='769' height='433' fill='%23f9ed43'/%3E%3Crect x='1536' y='432' width='769' height='433' fill='%23424a1f'/%3E%3Crect x='2304' y='432' width='769' height='433' fill='%234a572a'/%3E%3Crect x='3072' y='432' width='769' height='433' fill='%23525b37'/%3E%3Crect x='0' y='864' width='769' height='433' fill='%23edc531'/%3E%3Crect x='768' y='864' width='769' height='433' fill='%23f2d92c'/%3E%3Crect x='1536' y='864' width='769' height='433' fill='%23e7c635'/%3E%3Crect x='2304' y='864' width='769' height='433' fill='%23dcbc30'/%3E%3Crect x='3072' y='864' width='769' height='433' fill='%23d6ab2b'/%3E%3Crect x='0' y='1296' width='769' height='433' fill='%23d9b432'/%3E%3Crect x='768' y='1296' width='769' height='433' fill='%23eeda3b'/%3E%3Crect x='1536' y='1296' width='769' height='433' fill='%23dbc236'/%3E%3Crect x='2304' y='1296' width='769' height='433' fill='%23dbb530'/%3E%3Crect x='3072' y='1296' width='769' height='433' fill='%23c8a42e'/%3E%3Crect x='0' y='1728' width='769' height='433' fill='%235a7c34'/%3E%3Crect x='768' y='1728' width='769' height='433' fill='%23547332'/%3E%3Crect x='1536' y='1728' width='769' height='433' fill='%2367762a'/%3E%3Crect x='2304' y='1728' width='769' height='433' fill='%23eed033'/%3E%3Crect x='3072' y='1728' width='769' height='433' fill='%23638835'/%3E%3C/svg%3E");
+	background-image: url('/img/home/5.jpg');
 	background-size: cover;
-    background-position: 40% center;
+    background-position: 20% center;
     background-repeat: no-repeat;
 	text-align: center;
 }
-.leadImage::before {
+.leadPage::before {
 	content: "";
 	position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-	background: rgba(0,0,0,.15);
+	background-color: rgba(0,0,0,0.4)
 }
 
 .logo {
@@ -259,7 +251,24 @@ hr.line {
     border: 0;
     height: 1px;
 	background: rgba(64, 64, 64, 0.3);
-    background: linear-gradient(to right, rgba(64, 64, 64, 0.3), rgba(64, 64, 64, 0));
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(64, 64, 64, 0.3) 17%, rgba(0,0,0,0) 67%);
+}
+.hint {
+background-color: #585;
+color: #f5f5f5;
+padding: 0.5em 1em;
+margin-bottom:0;
+box-sizing: border-box;
+display: table;
+font-size: 1.1em;
+}
+.hint a {
+border-bottom: 1px solid #f5f5f5;
+color:#fff
+}
+.hint a:hover {
+text-decoration:none;
+border-bottom-width: 2px;
 }
 
 .breadscump {
@@ -332,6 +341,22 @@ hr.line {
 	text-transform: uppercase;
 }
 
+.fancy-font {
+font-family: constantia, corbel, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+}
+
+.all-small-caps {
+text-transform: lowercase;
+font-variant: small-caps;
+}
+
+.small-caps {
+text-transform: lowercase;
+font-variant: small-caps;
+}
+
+small {font-size: 85%}
+
 </style>
 
 </head>
@@ -339,7 +364,7 @@ hr.line {
 <body>
 
 <header id="pageTopHeader">
-<section id="leadImage" class="leadImage">
+<section class="leadPage">
 	<div class="logo"><a href="/">mangcut.vn</a></div>
 	<div class="slogan">mở những ô cửa</div>
 </section>
@@ -347,22 +372,22 @@ hr.line {
 	<ul>
 	<li><a href="/">DÀI</a></li>
 	<li><a href="/linhtinh/">NGẮN</a></li>
-	<li><a href="/guest/">KHÁCH</a></li>
-	<li class="active"><a href="/tho/">THƠ</a></li>
+	<li class="active"><a href="/guest/">KHÁCH</a></li>
+	<li><a href="/tho/">THƠ</a></li>
 	<!--li><a href="/work.html">NGHỊCH</a></li-->
 	</ul>
 </nav>
 </header>
 
-<section class="breadscump">
-	<header class="scump-head">THI CA</header>
-	<svg xmlns="http://www.w3.org/2000/svg" height="149" width="95" viewBox="0 0 19.000479 24.000002"><path d="m0.344 0.007c-0.206 0.07-0.354 0.283-0.344 0.5v23c0 0.26 0.238 0.5 0.5 0.5h18c0.262 0 0.5-0.238 0.5-0.5v-23c0-0.26-0.238-0.5-0.5-0.5h-18c-0.05-0.01-0.104-0.01-0.156 0z" stroke="#555" fill="none"/><path fill="#ff6363" d="m5.5 3.01c0.615 0 1.08 0.293 1.47 0.625 0.39-0.334 0.884-0.627 1.5-0.626 0.658 0 1.28 0.196 1.75 0.626s0.75 1.08 0.75 1.84c0 0.89-0.604 1.59-1.31 2.25-0.71 0.66-1.59 1.32-2.38 1.97-0.176 0.14-0.45 0.14-0.625 0-0.79-0.647-1.67-1.3-2.38-1.97-0.708-0.666-1.31-1.37-1.31-2.25 0-0.757 0.28-1.41 0.75-1.84 0.467-0.433 1.12-0.627 1.78-0.627z"/><path d="m3.22 12h0.124c0.05-0.01 0.105-0.01 0.156 0h12c0.264 0 0.507 0.236 0.507 0.5s-0.242 0.504-0.506 0.5h-12c-0.262 0.074-0.567-0.1-0.64-0.36-0.074-0.26 0.097-0.566 0.36-0.64z"/><path d="m3.22 15h0.124c0.05-0.01 0.105-0.01 0.156 0h8c0.264 0 0.507 0.236 0.507 0.5s-0.242 0.504-0.506 0.5h-8c-0.262 0.073-0.567-0.1-0.64-0.36-0.074-0.26 0.097-0.566 0.36-0.64z"/><path d="m3.22 18h0.124c0.05-0.01 0.105-0.01 0.156 0h6c0.264 0 0.507 0.235 0.507 0.5 0 0.263-0.242 0.503-0.506 0.5h-6c-0.262 0.073-0.567-0.1-0.64-0.36-0.074-0.26 0.097-0.566 0.36-0.64z"/></svg>
-	<small class="scump-tail">Ta cầm nước mắt mà thương hoa quỳnh</small>
-</section>
-<hr class="line">
-<br>
 <section class="article-list">
-{% for post in site.categories.tho %}{% include index_poem.html %}{% endfor %}
+	<section class="breadscump">
+		<header class="scump-head">BÀI CỦA KHÁCH</header>
+		<small class="scump-tail">Các bài của khách gửi cho Blog Măng Cụt</small>
+	</section>
+
+		{% for post in site.categories.guest %}
+	{% if post.modest != true %}{% include index_blog.html %}{% endif %}
+	{% endfor %}
 </section>
 
 <section class="links">
@@ -385,6 +410,57 @@ hr.line {
 <p>&copy; 2016 - Blog Măng cụt<p>
 <p>Ghi tên tác giả kèm link đến bài gốc khi đăng lại</p>
 </footer>
+
+<style scoped>
+#popupMenu {
+display: none;
+position: fixed;
+top: 0; left: 0; right: 0; bottom: 0;
+background-color: {{site.data.theme.light.background}};
+color: {{site.data.theme.light.text}};
+text-align: center;
+overflow-x: hidden;
+overflow-y: scroll;
+-webkit-overflow-scrolling: touch;
+}
+#popupMenu h1 {
+margin-top:30px;
+margin-bottom:20px;
+}
+#popupMenu h1 a {
+color: {{site.data.theme.light.header}};
+}
+#popupMenu li a:hover {
+text-decoration: none;
+border-bottom: 1px solid {{site.data.theme.light.link}};
+}
+#popupMenu ul {
+list-style-type: none;
+margin:0;padding:0;
+}
+#popupMenu li {
+font-size: 1em;
+line-height: 1.6;
+padding: 0.5em 20px;
+}
+#popupMenu li::first-letter {
+font-size: 1.1em;
+line-height: 1;
+}
+
+#popupMenu footer {
+padding-left: 1em;
+font-variant: small-caps;
+}
+#popupMenu .by-line {
+margin-bottom: 0.5em;
+}
+
+</style>
+<nav id="popupMenu">
+<h1><a href="#" onclick="document.getElementById('popupMenu').style.display='none';return false;">[&times;] CLOSE</a></h1>
+<ul>{% for item in site.data.recommend.short %}<li><a href="{{item}}">{% include url2prop.html url=item prop="title" %}</a><p class="by-line fancy-font all-small-caps">dài {% include read_time.html url=item %} phút{% include view_count.html url=item min_count=1 %}</p></li>{% endfor %}</ul>
+</nav>
 
 {% include analytics.js withTag=true %}
 
