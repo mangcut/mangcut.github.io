@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+/* -----------------------------------------------------------------------
+
+
+ Blueprint CSS Framework 1.0.1
+ http://blueprintcss.org
+
+   * Copyright (c) 2007-Present. See LICENSE for more info.
+   * See README for instructions on how to use Blueprint.
+   * For credits and origins, see AUTHORS.
+   * This is a compressed file. See the sources in the 'src' directory.
+
+----------------------------------------------------------------------- */
+
+/* reset.css */
+html {margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1.5;background:white;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;float:none !important;}
+table, th, td {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+:focus {outline:0;}
+
+/* typography.css */
+html {font-size:100.01%;}
+body {font-size:85%;color:#222;background:#ccc;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;}
+
+.clearfix, .container {display:block;}
+.container {max-width:950px;margin:0 auto;background:#fafafa;}
+.clearfix:after, .container:after {content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clear {clear:both;}
+
+/* Specific CSS */
+.leaf{
+    margin: 0.5rem;
+}
+.leaf p{
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+.text-center {
+    text-align: center;
+}
+td{
+    vertical-align: top;
+}
+td, th {
+    padding: 0;
+}
+.leaf table{
+    width: 100%;
+    border: 1px solid #545454;
+    font-size: 14px;
+    border-collapse: inherit;
+	border-spacing: 0;
+}
+.leaf table ul{
+	margin:2px;
+	padding:2px;
+	list-style: outside none none;
+}
+.leaf table td{
+    border: 1px solid #999;
+    position: relative;
+}
+.leaf div.thien-ban
+{
+	padding: 10px;
+	font-size: 16px;
+	margin: 20px 0 0 20px;
+}
+.leaf div.thien-ban div.section-thienban
+{
+	margin-bottom: 20px;
+}
+.leaf div.thien-ban p{
+	color: #666;	
+	margin-top: 5px;
+}
+.chamber{
+    width: 25%;
+	/*height: 230px;*/
+}
+
+.section-top{
+    margin-bottom: 10px;
+}
+
+.chamber .area-hanging{
+	font-weight: bold;
+	font-size: 14px;
+	padding-top:5px;
+}
+
+.section-top{
+}
+
+.zone-1 {
+    left: 9px;
+    position: absolute;
+    top: 5px;
+}
+
+p.area-name{
+	text-align: center;
+    font-size: 14px;
+	font-weight: bold;
+	padding:5px 0;
+	text-transform: uppercase;
+}
+.zone-2 {
+	
+}
+.zone-3 {
+    border: 1px solid #ccc;
+	color: #999;
+    padding: 1px 3px;
+    position: relative;
+	left: 3px;
+	font-weight: normal;
+}
+
+.area-name .than {
+	font-weight: bold;
+	color: #c20000;
+	border-color: #c20000
+}
+
+.zone-4{
+    position: absolute;
+    top: 5px;
+    right: 9px;
+	font-weight: bold;
+}
+
+.section-middle{
+    margin-bottom: 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.zone-7{
+    width: 46%;
+    float: left;
+    padding-left: 5px;
+}
+.zone-8{
+    float: right;
+    width: 46%;
+    text-align: right;
+    padding-right: 5px;
+}
+.section-bottom{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+}
+.zone-9{
+    position: absolute;
+    left: 9px;
+    bottom: 0;
+	font-weight: bold;
+}
+.zone-10{
+	text-transform: uppercase;
+}
+.zone-11 {
+    position: absolute;
+    right: 9px;
+    bottom: 0;	
+}
+
+.color-green, .linh-tinh, .da-la, .dia-khong, .hoa-ky {
+    color: #0b0;
+	font-weight: bold;
+}
+.color-red, .hoa-tinh, .kinh-duong, .dia-kiep, .thien-hinh {
+    color: red;
+	font-weight: bold;
+}
+.color-blue, .thien-khoi, .thien-viet {
+    color: blue;
+	font-weight: bold;
+}
+.text-underline, .hoa-loc, .hoa-quyen, .hoa-khoa {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.tuan, .triet, .hi-back{
+    padding: 0 10px 2px;
+    color: #FFFFFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.triet{
+    background-color: red;
+}
+.tuan{
+    background-color: #666;
+}
+
+.hi-back0{
+    background-color: #060;
+}
+.hi-back1{
+    background-color: #03b;
+}
+.hi-back2{
+    background-color: #0b0;
+}
+.hi-back3{
+    background-color: #06f;
+}
+
+.year-input {
+	width: 4em;
+}
+p.small {
+	font-weight: normal;
+	font-size: 75%;
+}
+
+/*
+.star-noname {
+	color: #999;
+}
+*/
+
+.hide-noname .star-noname,
+.hide-factor-yb .star-factor-yb,
+.hide-factor-ys .star-factor-ys,
+.hide-factor-m .star-factor-m, .hide-factor-m .star-factor-m\+d, .hide-factor-m .dau-quan, .hide-factor-m .thien-tai, .hide-factor-m .thien-tho,
+.hide-factor-d .star-factor-d, .hide-factor-d .star-factor-m\+d, .hide-factor-d .star-factor-d-h,
+.hide-factor-d12 .star-factor-d12,
+.hide-factor-h .star-factor-h, .hide-factor-h .star-factor-d-h, .hide-factor-h .dau-quan, .hide-factor-h .thien-tai, .hide-factor-h .thien-tho,
+.hide-zone1 .zone-1, .hide-extra-zones .zone-1,
+.hide-zone2 .zone-2, .hide-extra-zones .zone-2,
+.hide-zone3 .zone-3, .hide-extra-zones .zone-3, .hide-extra-than .zone-3,
+.hide-zone4 .zone-4, .hide-extra-zones .zone-4,
+.hide-zone5 .zone-5, .hide-extra-zones .zone-5,
+.hide-zone6 .zone-6, .hide-extra-zones .zone-6,
+.hide-zone7 .zone-7,
+.hide-zone8 .zone-8,
+.hide-zone9 .zone-9, .hide-extra-zones .zone-9,
+.hide-zone10 .zone-10, .hide-extra-zones .zone-10,
+.hide-zone11 .zone-11, .hide-extra-zones .zone-11 {
+	display:none;
+}
+
+.hide-extra-than .than {
+	display: inline;
+}
+

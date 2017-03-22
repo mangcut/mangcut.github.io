@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+  <head>
+	<meta charset="utf-8"> 
+    <title>Lá số tử vi</title>
+    <link rel="stylesheet" href="css/screen.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="clearfix"></div><!--br>
+      <h1 class="text-center">LÁ SỐ TỬ VI</h1>
+      <h2 class="text-center">Phong cách Măng cụt</h2-->
+	  
+      <div class="leaf">
+        <table id="leaf_table" class="hide-noname hide-extra-than">
+		<tr>
+		  <td class="chamber"></td>
+		  <td class="chamber"></td>
+		  <td class="chamber"></td>
+		  <td class="chamber"></td>
+		</tr>
+		<tr>
+		  <td class="chamber"></td>
+		  <td colspan="2" rowspan="2">
+			<div class="thien-ban">
+			  <div class="section-thienban" id="client_info"></div>
+			  <div class="section-thienban">
+				<p>
+					<button class="btn-shift" data-shift="h" data-delta="-1" data-max="11">Giờ -</button>
+					<button class="btn-shift" data-shift="h" data-delta="1" data-max="11">Giờ +</button>
+					<button class="btn-shift" data-shift="d" data-delta="-1" data-max="29">Ngày -</button>
+					<button class="btn-shift" data-shift="d" data-delta="1" data-max="29">Ngày +</button>
+					<button class="btn-shift" data-shift="m" data-delta="-1"  data-max="11">Tháng -</button>
+					<button class="btn-shift" data-shift="m" data-delta="1" data-max="11">Tháng +</button>
+				</p>
+				<p>
+					<button class="btn-shiftYear" data-delta="-1">Năm -</button>
+					<button class="btn-shiftYear" data-delta="1">Năm +</button>
+					<button class="btn-shiftGender" data-delta="1">Đổi giới tính</button>
+				</p>
+				<!--button>Reset</button></p-->
+				<!--p>An phi tinh năm
+					<input maxlength="4" type="number" class="year-input" value="2017">
+					<button>An</button></p>
+				<p>An phi tinh tháng 
+					<select>
+						<option selected>1
+						<option>2
+						<option>3
+						<option>4
+						<option>5
+						<option>6
+						<option>7
+						<option>8
+						<option>9
+						<option>10
+						<option>11
+						<option>11
+					</select>
+					<button>An</button>
+				</p-->
+			  </div>
+
+				<div class="section-thienban">
+					<h6>Toggle:</h6>
+					<p>
+						<button class="btn-toggle" data-toggle="hide-noname">Sao không tên</button>
+						<button class="btn-toggle" data-toggle="hide-extra-than">Extra Thân</button>
+					</p>
+					<p>
+						<button class="btn-toggle" data-toggle="hide-extra-zones">Extra zones</button>
+						<button class="btn-toggle" data-toggle="hide-extra-zones hide-factor-m hide-factor-h">Chỉ phi tinh năm</button>
+					</p>
+					<p>
+						<!--button class="btn-toggle" data-toggle="hide-factor-ys">Sao can năm</button>
+						<button class="btn-toggle" data-toggle="hide-factor-yb">Sao chi năm</button-->
+						<button class="btn-toggle" data-toggle="hide-factor-m">Sao tháng</button>
+						<button class="btn-toggle" data-toggle="hide-factor-h">Sao giờ</button>
+					</p>
+				</div>
+				<div class="section-thienban">
+					<h6>Highlight:</h6>
+					<p><button class="btn-highlight" data-highlight="2">Tứ Sinh</button>
+					<button class="btn-highlight" data-highlight="3">Tứ Vượng</button>
+					<button class="btn-highlight" data-highlight="4">Tứ Mộ</button>
+					<button class="btn-highlight" data-highlight="-1">Reset</button></p>
+			  </div>
+			</div>
+		  </td>
+		  <td class="chamber"></td>
+		</tr>
+		<tr>
+		  <td class="chamber"></td>
+		  <td class="chamber"></td>
+		</tr>
+		<tr>
+		  <td class="chamber"></td>
+		  <td class="chamber"></td>
+		  <td class="chamber"></td>
+		  <td class="chamber"></td>
+		</tr>
+        </table>
+      </div>
+    </div>
+	<script type="text/template" id="chamber-template">
+		<div class="section-top">
+		  <span class="zone-1"></span><span class="zone-4"></span>
+		  <p class="area-name"><span class="zone-2"></span> <span class="zone-3"></span></p>
+		  <div class="area-hanging">
+			<p class="text-center"><span class="zone-5"></span></p>
+			<p class="text-center"><span class="zone-6"></span></p>
+		  </div>
+		</div>
+		<div class="section-middle clearfix">
+		  <ul class="zone-7"></ul>
+		  <ul class="zone-8"></ul>
+		</div>
+		<div class="section-bottom">
+		  <span class="zone-9"></span><span class="zone-11"></span>
+		  <p class="text-center"><span class="zone-10"></span></p>
+		</div>
+	</script>
+	<script type="text/template" id="regular-star-template"><span class="<%= className %>" title="<%= tooltip %>"><%= name %></span></script>
+	<script type="text/template" id="client-info-template">
+		<h6>Thông tin chung:</h6>
+		<p><%= name %> (<%= yinyang %> <%= gender %>)</p>
+		<p>Sinh giờ <%= hour %> <%= day %>/<%= month %> <%= stem %> <%= branch %></p>
+		<p>Mệnh <%= menhElement %> - Cục <%= cucElement %></p>
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://underscorejs.org/underscore-min.js"></script>
+	<script src="http://backbonejs.org/backbone-min.js"></script>
+	<script src="js/amlich-aa98.js"></script>
+	<script src="js/stars.js"></script>
+  </body>
+</html>
