@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+		<link rel="stylesheet" href="css/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>ĐIỀU KIỆN TÌM KIẾM</p>
+      </div>
+    </div>
+    
+		<!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">QUẢN LÝ KHO</div>
+            <div class="right">
+              <a href="#" class="link icon-only open-panel"> <i class="f7-icons">filter</i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+						<!-- Floating Action Button -->
+						<a href="#" class="floating-button">
+							<i class="f7-icons">add</i>
+						</a>
+            <!-- Scrollable page content-->
+            <div class="page-content">
+								<div class="list-block media-list" style="margin:0">
+									<ul>
+										<li>
+											<a href="#" class="item-link item-content">
+												<div class="item-media"><img src="img/1.png" width="80"></div>
+												<div class="item-inner">
+													<div class="item-title-row">
+														<div class="item-title">Nguyễn Văn Khang</div>
+													</div>
+													<div class="item-subtitle">6/10/2017 8:30AM<span class="tag tag-red">XUẤT</span></div>
+													<div class="item-text">Hậu Lộc - Nghi Sơn<br>Xi măng x 2</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="item-link item-content">
+												<div class="item-media"><img src="img/2.png" width="80"></div>
+												<div class="item-inner">
+													<div class="item-title-row">
+														<div class="item-title">Lê Quang Lan</div>
+													</div>
+													<div class="item-subtitle">7/10/2017 12:30PM<span class="tag tag-green">NHẬP</span></div>
+													<div class="item-text">Bá Thước - Nghi Sơn<br>Sắt x 3</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="item-link item-content">
+												<div class="item-media"><img src="img/1.png" width="80"></div>
+												<div class="item-inner">
+													<div class="item-title-row">
+														<div class="item-title">Nguyễn Văn Khang</div>
+													</div>
+													<div class="item-subtitle">6/10/2017 8:30AM<span class="tag tag-red">XUẤT</span></div>
+													<div class="item-text">Hậu Lộc - Nghi Sơn<br>Xi măng x 2</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="item-link item-content">
+												<div class="item-media"><img src="img/2.png" width="80"></div>
+												<div class="item-inner">
+													<div class="item-title-row">
+														<div class="item-title">Lê Quang Lan</div>
+													</div>
+													<div class="item-subtitle">7/10/2017 12:30PM<span class="tag tag-green">NHẬP</span></div>
+													<div class="item-text">Bá Thước - Nghi Sơn<br>Sắt x 3</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="item-link item-content">
+												<div class="item-media"><img src="img/1.png" width="80"></div>
+												<div class="item-inner">
+													<div class="item-title-row">
+														<div class="item-title">Nguyễn Văn Khang</div>
+													</div>
+													<div class="item-subtitle">6/10/2017 8:30AM<span class="tag tag-red">XUẤT</span></div>
+													<div class="item-text">Hậu Lộc - Nghi Sơn<br>Xi măng x 2</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="item-link item-content">
+												<div class="item-media"><img src="img/2.png" width="80"></div>
+												<div class="item-inner">
+													<div class="item-title-row">
+														<div class="item-title">Lê Quang Lan</div>
+													</div>
+													<div class="item-subtitle">7/10/2017 12:30PM<span class="tag tag-green">NHẬP</span></div>
+													<div class="item-text">Bá Thước - Nghi Sơn<br>Sắt x 3</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <!--div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div-->
+      </div>
+    </div>
+		
+		<div class="login-screen modal-in">
+				<div class="view">
+					<div class="page">
+						<div class="page-content login-screen-content">
+							<div class="login-screen-title">QUẢN LÝ KHO</div>
+							<form>
+								<div class="list-block">
+									<ul>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title label">Kho</div>
+												<div class="item-input">
+													<input type="text" placeholder="Chạm để chọn kho" readonly id="storePicker">
+												</div>
+											</div>
+										</div>
+									</li>
+										<li class="item-content">
+											<div class="item-inner">
+												<div class="item-title label">Mật khẩu</div>
+												<div class="item-input">
+													<input type="password" name="password" placeholder="Điền mật khẩu">
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="list-block">
+									<ul>
+										<li><a href="#" class="item-link list-button close-login-screen">ĐĂNG NHẬP</a></li>
+									</ul>
+									<div class="list-block-label">
+										<p>Gặp trục trặc? Hãy liên hệ với quản trị viên.</p>
+										<p><a href="#" class="close-login-screen">Liên hệ quản trị viên</a></p>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+    
+		<!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
