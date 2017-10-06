@@ -24,3 +24,42 @@
 .size-18 {
 	font-size: 18px;
 }
+
+.text-right {
+	text-align: right;
+}
+
+.small-img-list {
+}
+
+.small-img-list img {
+	height: 64px;
+	padding: 1px;
+}
+
+.hide {
+	display: none;
+}
+
+.small-img-list .small-img {
+	display: inline-block;
+	position: relative;	
+}
+
+.small-img-list .small-img i {
+	position: absolute;
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	top: 3px;
+	right: 3px;
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #f5f5f5;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.smart-select-page li:first-of-type {
+	display: none;
+}
