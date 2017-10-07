@@ -12,53 +12,6 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-var storePicker = myApp.picker({
-    input: '#storePicker',
-    cols: [
-        {
-            textAlign: 'center',
-            values: ['Kho Cầu Hạc', 'Kho Cầu Bố', 'Kho Bãi Cạn', 'Kho Lam Sơn', 'Kho Nghi Sơn', 'Kho Lang Chánh', 'Kho Tĩnh Gia']
-        }
-    ]
-});
-
-var pdfDef = {
-	content: [
-		{ 
-			text: 'PHIẾU XUẤT KHO\n\n', 
-			style: 'header' 
-		},
-		{
-			text: [
-				{ text: 'Tên kho: ', bold: true },
-				'Nghi Sơn\n',
-				{ text: 'Thời gian: ', bold: true },
-				'18:45, ngày 27/4/2018\n\n',
-				{ text: 'Biển số xe: ', bold: true },
-				'36A-3451\n',
-				{ text: 'Tài xế: ', bold: true },
-				'Lê Văn Việt\n',
-				{ text: 'Kích thước thùng xe: ', bold: true },
-				'5',
-				{ text: ' (m3)\n\n', fontSize: 10},
-				{ text: 'Cung đường: ', bold: true },
-				'Tĩnh Gia - Ngọc Lặc\n\n',
-				{ text: 'Mặt hàng: ', bold: true },
-				'Xi măng\n',
-				{ text: 'Số lượng: ', bold: true },
-				'35\n\n',
-			]
-		},
-		{ text: 'Hình ảnh kèm theo:', bold: true }
-	],
-	styles: {
-		header: {
-			fontSize: 15,
-			bold: true
-		}
-	}
-}
-
 function getDataUri(img) {
 	var canvas = document.createElement('canvas');
 	canvas.width = 120 * img.naturalWidth / img.naturalHeight;
@@ -74,11 +27,6 @@ function getDataUri(img) {
 }
 
 $$("#btnLogin").on("click", function(){
-	if (!storePicker.value){
-		myApp.alert("Vui lòng chọn kho!");
-		return;
-	}
-	
 	if (!$$("#password").val().trim()) {
 		myApp.alert("Vui lòng điền mật khẩu!", function(){
 			$$("#password").focus();
@@ -127,7 +75,11 @@ myApp.onPageInit('form', function (page) {
 				'N/A\n\n',
 			]
 		});
-		pdfMake.createPdf(pdfDef).open();
+		if (myApp.support.touch) {
+			pdfMake.createPdf(pdfDef).download();
+		} else {
+			pdfMake.createPdf(pdfDef).open();
+		}
 	});	
 });
 
@@ -141,6 +93,42 @@ myApp.onPageInit('view', function (page) {
 	});
 	
 	$$('.viewPdf').on('click', function () {
+		var pdfDef = {
+			content: [
+				{ 
+					text: 'PHIẾU XUẤT KHO\n\n', 
+					style: 'header' 
+				},
+				{
+					text: [
+						{ text: 'Tên kho: ', bold: true },
+						'Nghi Sơn\n',
+						{ text: 'Thời gian: ', bold: true },
+						'18:45, ngày 27/4/2018\n\n',
+						{ text: 'Biển số xe: ', bold: true },
+						'36A-3451\n',
+						{ text: 'Tài xế: ', bold: true },
+						'Lê Văn Việt\n',
+						{ text: 'Kích thước thùng xe: ', bold: true },
+						'5',
+						{ text: ' (m3)\n\n', fontSize: 10},
+						{ text: 'Cung đường: ', bold: true },
+						'Tĩnh Gia - Ngọc Lặc\n\n',
+						{ text: 'Mặt hàng: ', bold: true },
+						'Xi măng\n',
+						{ text: 'Số lượng: ', bold: true },
+						'35\n\n',
+					]
+				},
+				{ text: 'Hình ảnh kèm theo:', bold: true }
+			],
+			styles: {
+				header: {
+					fontSize: 15,
+					bold: true
+				}
+			}
+		}
 		$$('.small-img img').each(function(){
 			var uri = getDataUri(this);
 			console.log(uri);
@@ -152,6 +140,10 @@ myApp.onPageInit('view', function (page) {
 				'N/A\n\n',
 			]
 		});
-		pdfMake.createPdf(pdfDef).open();
+		if (myApp.support.touch) {
+			pdfMake.createPdf(pdfDef).download();
+		} else {
+			pdfMake.createPdf(pdfDef).open();
+		}
 	});
 });
