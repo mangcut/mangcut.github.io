@@ -21,8 +21,7 @@ function getDataUri(img) {
 
 	return {
 		image: canvas.toDataURL('image/png'),
-		width: canvas.width,
-		height: canvas.height
+		width: canvas.width
 	}
 }
 
@@ -65,6 +64,7 @@ function createPdf() {
 	}
 	$$('.small-img img').each(function(){
 		var uri = getDataUri(this);
+		pdfDef.content.push(uri);
 	});
 	pdfDef.content.push({
 		text: [
@@ -110,7 +110,7 @@ myApp.onPageInit('form', function (page) {
 	$$('#btnAddImg').on('click', function () {
 		document.getElementById("fileImg").click();
 	});
-	$$('.small-img i').on('click', function () {
+	$$('.small-img-list').on('click', '.small-img i', function () {
 		$$(this).parent().remove();
 	});
 	$$('.voucher-type').on('click', function () {

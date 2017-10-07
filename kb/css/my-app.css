@@ -39,6 +39,10 @@
 }
 
 .small-img-list .small-img i {
+	cursor: pointer;
+}
+
+.small-img-list .small-img i {
 	position: absolute;
 	display: inline-block;
 	width: 22px;
