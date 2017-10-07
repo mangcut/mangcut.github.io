@@ -19,12 +19,108 @@
     <!-- Panels overlay-->
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
+    <div class="panel panel-right panel-cover">
       <div class="content-block">
-        <p>ĐIỀU KIỆN TÌM KIẾM</p>
-				<p>(chưa làm)</p>
+        <div class="content-block-title">ĐIỀU KIỆN LỌC</div>
+				<div class="list-block">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner"> 
+									<div class="item-title label">Loại phiếu</div>
+									<div class="item-input">
+										<select>
+											<option>(bất kì)</option>
+											<option>Xuất kho</option>
+											<option>Nhập kho</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner"> 
+									<div class="item-title label">Từ ngày</div>
+									<div class="item-input">
+										<input type="date" value="2017-10-07" />
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner"> 
+									<div class="item-title label">Đến ngày</div>
+									<div class="item-input">
+										<input type="date" value="2017-10-07" />
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner"> 
+									<div class="item-title label">Biển số</div>
+									<div class="item-input">
+										<select>
+											<option>(bất kì)</option>
+											<option>36A-3452</option>
+											<option>37H-4567</option>
+											<option>30K-9998</option>
+											<option>18B-9765</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner"> 
+									<div class="item-title label">Cung đường</div>
+									<div class="item-input">
+										<select>
+											<option>(bất kì)</option>
+											<option>Tĩnh Gia - Nghi Sơn</option>
+											<option>Quảng Xương - Nông Cống</option>
+											<option>Hoằng Hóa - Diễn Châu</option>
+											<option>Hậu Lộc - Như Thanh</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner"> 
+									<div class="item-title label">Mặt hàng</div>
+									<div class="item-input">
+										<select>
+											<option>(bất kì)</option>
+											<option>xi măng</option>
+											<option>Sắt thép</option>
+											<option>Gạch</option>
+											<option>Đá</option>
+											<option>Cát</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
       </div>
-    </div>
+      <div class="content-block">
+        <div class="row">
+          <div class="col-50">
+            <a href="#" class="button close-panel active">Áp dụng</a>
+          </div>
+					<div class="col-50">
+            <a href="#" class="button close-panel">Hủy</a>
+          </div>
+        </div>
+      </div>
+		</div>
     
 		<!-- Views-->
     <div class="views">
@@ -36,7 +132,7 @@
             <!-- We have home navbar without left link-->
             <div class="center sliding">QUẢN LÝ KHO BÃI</div>
             <div class="right">
-              <a href="#" class="link icon-only open-panel"> <i class="f7-icons">filter</i></a>
+              <a href="#" data-panel="right"  class="link icon-only open-panel"> <i class="f7-icons">filter</i></a>
             </div>
           </div>
         </div>
@@ -50,16 +146,18 @@
 						</a>
             <!-- Scrollable page content-->
             <div class="page-content">
-								<div class="list-block media-list" style="margin:0">
+								<div class="content-block-title">KHO NGHI SƠN - 7/10/2017</div>
+								<div class="list-block media-list">
 									<ul>
 										<li>
 											<a href="view.html" class="item-link item-content">
 												<div class="item-media"><img src="img/1.png" width="80"></div>
 												<div class="item-inner">
 													<div class="item-title-row">
-														<div class="item-title">36A-2354<span class="tag tag-red">XUẤT</span></div>
+														<div class="item-title">36A-2354</div>
+														<div class="item-after"><span class="badge tag tag-red">XUẤT</span></div>
 													</div>
-													<div class="item-subtitle">6/10/2017 8:30AM</div>
+													<div class="item-subtitle">7/10/2017 8:30AM</div>
 													<div class="item-text">Hậu Lộc - Nghi Sơn<br>Xi măng x 2</div>
 												</div>
 											</a>
@@ -69,7 +167,8 @@
 												<div class="item-media"><img src="img/2.png" width="80"></div>
 												<div class="item-inner">
 													<div class="item-title-row">
-														<div class="item-title">37A-5683<span class="tag tag-green">NHẬP</span></div>
+														<div class="item-title">37A-5683</div>
+														<div class="item-after"><span class="badge tag tag-green">NHẬP</span></div>
 													</div>
 													<div class="item-subtitle">7/10/2017 12:30PM</div>
 													<div class="item-text">Bá Thước - Nghi Sơn<br>Sắt x 3</div>
@@ -81,9 +180,10 @@
 												<div class="item-media"><img src="img/1.png" width="80"></div>
 												<div class="item-inner">
 													<div class="item-title-row">
-														<div class="item-title">29A-5438<span class="tag tag-red">XUẤT</span></div>
+														<div class="item-title">29A-5438</div>
+														<div class="item-after"><span class="badge tag tag-red">XUẤT</span></div>
 													</div>
-													<div class="item-subtitle">6/10/2017 8:30AM</div>
+													<div class="item-subtitle">7/10/2017 8:30AM</div>
 													<div class="item-text">Hậu Lộc - Nghi Sơn<br>Xi măng x 2</div>
 												</div>
 											</a>
@@ -93,7 +193,8 @@
 												<div class="item-media"><img src="img/2.png" width="80"></div>
 												<div class="item-inner">
 													<div class="item-title-row">
-														<div class="item-title">18K-3452<span class="tag tag-green">NHẬP</span></div>
+														<div class="item-title">18K-3452</div>
+														<div class="item-after"><span class="badge tag tag-green">NHẬP</span></div>
 													</div>
 													<div class="item-subtitle">7/10/2017 12:30PM</div>
 													<div class="item-text">Bá Thước - Nghi Sơn<br>Sắt x 3</div>
@@ -105,9 +206,10 @@
 												<div class="item-media"><img src="img/1.png" width="80"></div>
 												<div class="item-inner">
 													<div class="item-title-row">
-														<div class="item-title">36H-2905<span class="tag tag-red">XUẤT</span></div>
+														<div class="item-title">36H-2905</div>
+														<div class="item-after"><span class="badge tag tag-red">XUẤT</span></div>
 													</div>
-													<div class="item-subtitle">6/10/2017 8:30AM</div>
+													<div class="item-subtitle">7/10/2017 8:30AM</div>
 													<div class="item-text">Hậu Lộc - Nghi Sơn<br>Xi măng x 2</div>
 												</div>
 											</a>
@@ -117,7 +219,8 @@
 												<div class="item-media"><img src="img/2.png" width="80"></div>
 												<div class="item-inner">
 													<div class="item-title-row">
-														<div class="item-title">52G-3598<span class="tag tag-green">NHẬP</span></div>
+														<div class="item-title">52G-3598</div>
+														<div class="item-after"><span class="badge tag tag-green">NHẬP</span></div>
 													</div>
 													<div class="item-subtitle">7/10/2017 12:30PM</div>
 													<div class="item-text">Bá Thước - Nghi Sơn<br>Sắt x 3</div>

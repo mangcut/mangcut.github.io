@@ -22,8 +22,6 @@ var storePicker = myApp.picker({
     ]
 });
 
-// playground requires you to assign document definition to a variable called dd
-
 var pdfDef = {
 	content: [
 		{ 
@@ -34,8 +32,6 @@ var pdfDef = {
 			text: [
 				{ text: 'Tên kho: ', bold: true },
 				'Nghi Sơn\n',
-				{ text: 'Tên quản lý kho: ', bold: true },
-				'Nguyễn Hải Hà\n',
 				{ text: 'Thời gian: ', bold: true },
 				'18:45, ngày 27/4/2018\n\n',
 				{ text: 'Biển số xe: ', bold: true },
@@ -47,7 +43,7 @@ var pdfDef = {
 				{ text: ' (m3)\n\n', fontSize: 10},
 				{ text: 'Cung đường: ', bold: true },
 				'Tĩnh Gia - Ngọc Lặc\n\n',
-				{ text: 'Loại hàng hóa: ', bold: true },
+				{ text: 'Mặt hàng: ', bold: true },
 				'Xi măng\n',
 				{ text: 'Số lượng: ', bold: true },
 				'35\n\n',
@@ -137,7 +133,7 @@ myApp.onPageInit('form', function (page) {
 
 myApp.onPageInit('view', function (page) {
 	var myPhotoBrowser = myApp.photoBrowser({
-			photos: ['/img/1.png', '/img/2.png']
+			photos: ['img/1.png', 'img/2.png']
 	});   
 	
 	$$('.small-img').on('click', function () {

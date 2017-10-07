@@ -1,14 +1,6 @@
 .tag {
-	display: inline-block;
     font-size: 10px;
-    line-height: 1;
-    padding: 4px 8px 3px;
-    text-align: center;
-    margin-left: 6px;
-    font-weight: bold;
-    vertical-align: text-bottom;
-	border-radius: 8px;
-	
+	font-weight: bold;
 }
 
 .tag-green {
@@ -62,4 +54,28 @@
 
 .smart-select-page li:first-of-type {
 	display: none;
+}
+
+.panel-right {
+	width: 300px;
+	background-color: #fff;
+}
+
+.panel-right .content-block {
+	color: #6d6d72;
+}
+.panel-right .list-block .item-content {
+	padding-left: 0;
+}
+.panel-right .content-block-title {
+	font-weight: bold;
+	font-size: 16px;
+	margin-left: 0;
+}
+.panel-right .list-block .item-title.label {
+	width: 40%;
+}
+
+.panel-overlay {
+	background: rgba(0,0,0,.6);
 }
