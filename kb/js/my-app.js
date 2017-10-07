@@ -26,6 +26,59 @@ function getDataUri(img) {
 	}
 }
 
+function createPdf() {
+	var pdfDef = {
+		content: [
+			{ 
+				text: 'PHIẾU XUẤT KHO\n\n', 
+				style: 'header' 
+			},
+			{
+				text: [
+					{ text: 'Tên kho: ', bold: true },
+					'Nghi Sơn\n',
+					{ text: 'Thời gian: ', bold: true },
+					'18:45, ngày 27/4/2018\n\n',
+					{ text: 'Biển số xe: ', bold: true },
+					'36A-3451\n',
+					{ text: 'Tài xế: ', bold: true },
+					'Lê Văn Việt\n',
+					{ text: 'Kích thước thùng xe: ', bold: true },
+					'5',
+					{ text: ' (m3)\n\n', fontSize: 10},
+					{ text: 'Cung đường: ', bold: true },
+					'Tĩnh Gia - Ngọc Lặc\n\n',
+					{ text: 'Mặt hàng: ', bold: true },
+					'Xi măng\n',
+					{ text: 'Số lượng: ', bold: true },
+					'35\n\n',
+				]
+			},
+			{ text: 'Hình ảnh kèm theo:', bold: true }
+		],
+		styles: {
+			header: {
+				fontSize: 15,
+				bold: true
+			}
+		}
+	}
+	$$('.small-img img').each(function(){
+		var uri = getDataUri(this);
+	});
+	pdfDef.content.push({
+		text: [
+			{ text: '\nGhi chú: ', bold: true },
+			'N/A\n\n',
+		]
+	});
+	if (myApp.support.touch) {
+		pdfMake.createPdf(pdfDef).download();
+	} else {
+		pdfMake.createPdf(pdfDef).open();
+	}
+}
+
 $$("#btnLogin").on("click", function(){
 	if (!$$("#password").val().trim()) {
 		myApp.alert("Vui lòng điền mật khẩu!", function(){
@@ -63,24 +116,7 @@ myApp.onPageInit('form', function (page) {
 	$$('.voucher-type').on('click', function () {
 		$$('.voucher-type').toggleClass("active");
 	});
-	$$('#btnCreate').on('click', function () {
-		$$('.small-img img').each(function(){
-			var uri = getDataUri(this);
-			console.log(uri);
-			pdfDef.content.push(uri);
-		});
-		pdfDef.content.push({
-			text: [
-				{ text: '\nGhi chú: ', bold: true },
-				'N/A\n\n',
-			]
-		});
-		if (myApp.support.touch) {
-			pdfMake.createPdf(pdfDef).download();
-		} else {
-			pdfMake.createPdf(pdfDef).open();
-		}
-	});	
+	$$('#btnCreate').on('click', createPdf);
 });
 
 myApp.onPageInit('view', function (page) {
@@ -92,58 +128,5 @@ myApp.onPageInit('view', function (page) {
 		myPhotoBrowser.open($$(this).index());
 	});
 	
-	$$('.viewPdf').on('click', function () {
-		var pdfDef = {
-			content: [
-				{ 
-					text: 'PHIẾU XUẤT KHO\n\n', 
-					style: 'header' 
-				},
-				{
-					text: [
-						{ text: 'Tên kho: ', bold: true },
-						'Nghi Sơn\n',
-						{ text: 'Thời gian: ', bold: true },
-						'18:45, ngày 27/4/2018\n\n',
-						{ text: 'Biển số xe: ', bold: true },
-						'36A-3451\n',
-						{ text: 'Tài xế: ', bold: true },
-						'Lê Văn Việt\n',
-						{ text: 'Kích thước thùng xe: ', bold: true },
-						'5',
-						{ text: ' (m3)\n\n', fontSize: 10},
-						{ text: 'Cung đường: ', bold: true },
-						'Tĩnh Gia - Ngọc Lặc\n\n',
-						{ text: 'Mặt hàng: ', bold: true },
-						'Xi măng\n',
-						{ text: 'Số lượng: ', bold: true },
-						'35\n\n',
-					]
-				},
-				{ text: 'Hình ảnh kèm theo:', bold: true }
-			],
-			styles: {
-				header: {
-					fontSize: 15,
-					bold: true
-				}
-			}
-		}
-		$$('.small-img img').each(function(){
-			var uri = getDataUri(this);
-			console.log(uri);
-			pdfDef.content.push(uri);
-		});
-		pdfDef.content.push({
-			text: [
-				{ text: '\nGhi chú: ', bold: true },
-				'N/A\n\n',
-			]
-		});
-		if (myApp.support.touch) {
-			pdfMake.createPdf(pdfDef).download();
-		} else {
-			pdfMake.createPdf(pdfDef).open();
-		}
-	});
+	$$('.viewPdf').on('click', createPdf);
 });
