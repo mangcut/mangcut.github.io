@@ -1,5 +1,7 @@
 // Initialize your app
-var myApp = new Framework7();
+var myApp = new Framework7({
+	modalTitle: ""
+});
 
 // Export selectors engine
 var $$ = Dom7;
@@ -75,7 +77,22 @@ function getDataUri(img) {
 	}
 }
 
-// Callbacks to run specific code for specific pages, for example for About page:
+$$("#btnLogin").on("click", function(){
+	if (!storePicker.value){
+		myApp.alert("Vui lòng chọn kho!");
+		return;
+	}
+	
+	if (!$$("#password").val().trim()) {
+		myApp.alert("Vui lòng điền mật khẩu!", function(){
+			$$("#password").focus();
+		});
+		return;
+	}
+	
+	myApp.closeModal();
+});
+
 myApp.onPageInit('form', function (page) {
 	FileReaderJS.setupInput(document.getElementById("fileImg"), {
 	readAsDefault: "DataURL",
@@ -116,4 +133,29 @@ myApp.onPageInit('form', function (page) {
 		});
 		pdfMake.createPdf(pdfDef).open();
 	});	
+});
+
+myApp.onPageInit('view', function (page) {
+	var myPhotoBrowser = myApp.photoBrowser({
+			photos: ['/img/1.png', '/img/2.png']
+	});   
+	
+	$$('.small-img').on('click', function () {
+		myPhotoBrowser.open($$(this).index());
+	});
+	
+	$$('.viewPdf').on('click', function () {
+		$$('.small-img img').each(function(){
+			var uri = getDataUri(this);
+			console.log(uri);
+			pdfDef.content.push(uri);
+		});
+		pdfDef.content.push({
+			text: [
+				{ text: '\nGhi chú: ', bold: true },
+				'N/A\n\n',
+			]
+		});
+		pdfMake.createPdf(pdfDef).open();
+	});
 });
