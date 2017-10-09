@@ -12,6 +12,12 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+var calendarRange = myApp.calendar({
+    input: '#calendar-range',
+    dateFormat: 'dd/mm',
+    rangePicker: true
+});
+
 function getDataUri(img) {
 	var canvas = document.createElement('canvas');
 	canvas.width = 120 * img.naturalWidth / img.naturalHeight;
