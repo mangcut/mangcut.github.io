@@ -244,6 +244,7 @@
 				<div class="view">
 					<div class="page">
 						<div class="page-content login-screen-content">
+							<div class="logo"><img src="img/logo.jpg" /></div>
 							<div class="login-screen-title">QUẢN LÝ KHO BÃI</div>
 							<form>
 								<div class="list-block">
@@ -251,26 +252,38 @@
 									<li>
 										<div class="item-content">
 											<div class="item-inner">
-												<div class="item-title label">Kho</div>
+												<div class="item-title label">Kho/mỏ</div>
 												<div class="item-input">
 													<select>
-														<option>Nghi Sơn</option>
-														<option>Quảng Xương</option>
-														<option>Hoằng Hóa</option>
-														<option>Hậu Lộc</option>
+														<option disabled selected value="-1" style="display:none">(vui lòng chọn)</option>
+														<option value="0">Kho Trường Lâm</option>
+														<option value="1">Kho đất F</option>
+														<option value="2">Kho Trạm đập</option>
+														<option value="3">Mỏ đá đen Thanh Kỳ</option>
+														<option value="4">Mỏ Basalt Thanh Kỳ</option>
+														<option value="5">Mỏ đất sắt Thanh Kỳ (Anh Phát)</option>
+														<option value="6">Mỏ Đất giàu sắt Tượng Sơn</option>
 													</select>
 												</div>
 											</div>
 										</div>
 									</li>
-										<li class="item-content">
-											<div class="item-inner">
-												<div class="item-title label">Mật khẩu</div>
-												<div class="item-input">
-													<input type="password" name="password" id="password" placeholder="Điền mật khẩu">
-												</div>
+									<li class="item-content">
+										<div class="item-inner">
+											<div class="item-title label">Mật khẩu</div>
+											<div class="item-input">
+												<input type="password" name="password" id="password" placeholder="Điền mật khẩu">
 											</div>
-										</li>
+										</div>
+									</li>
+									<li class="item-content">
+										<div class="item-inner">
+											<div class="item-input">
+												<br><label><input id="chkPwd" name="chkPwd" type="checkbox"> Không hỏi lại</label>
+											</div>
+										</div>
+									</li>
+
 									</ul>
 								</div>
 								<div class="list-block">
