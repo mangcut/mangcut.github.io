@@ -83,3 +83,11 @@
 .panel-overlay {
 	background: rgba(0,0,0,.6);
 }
+
+.logo {
+	text-align: center;
+}
+
+.logo img {
+	max-width: 100%;
+}
