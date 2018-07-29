@@ -6,7 +6,7 @@ page_title: "Tử Vi theo cách Măng Cụt"
 title: "Tử Vi theo cách Măng Cụt"
 fb_title: "Tử Vi theo cách Măng Cụt"
 description: Giới thiệu phương pháp tiếp cận Tử Vi của Blog Măng Cụt
-external_image: http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=292
+external_image: https://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=292
 see_also1: 
 see_also2: 
 label: Tử Vi

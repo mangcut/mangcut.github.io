@@ -3,7 +3,7 @@ layout: post_linhtinh
 page_title: Chữa bệnh bằng cách... tưởng tượng
 title: Chữa bệnh bằng cách... tưởng tượng
 description: Đã mấy ngày nay tôi bắt đầu một bài tập nhỏ.
-external_image: http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=292
+external_image: https://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=292
 see_also1: 
 see_also2: 
 ---

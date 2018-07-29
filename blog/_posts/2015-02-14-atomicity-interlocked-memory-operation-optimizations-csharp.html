@@ -8,7 +8,7 @@ description: An Explanation of C# Atomicity, Interlocked, Volatile, and Memory O
 topic: C#
 vn_topic: Lập trình
 modest: true
-external_image: http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=292
+external_image: https://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=292
 disqus_id: blog/2015-02-14-atomicity-interlocked-memory-operation-optimizations-csharp
 excerpt: An Explanation of C# Atomicity, Interlocked, Volatile, and Memory Operation Optimizations in Multi-threaded Programs.
 ---
@@ -79,7 +79,7 @@ void OptimizeMe()
 
 <p>However, when taking possible optimizations into account, anything can happen.</p>
 <ol>
-<li>The JIT compiler might attempt <a target="_blank" href="http://en.wikipedia.org/wiki/Loop-invariant_code_motion">hoisting</a> the read of <code>ready</code> out of the while loop at line 16. In other words, it decides to read <code>ready</code> just once and saves for subsequent iteration instead of repeatedly reading it. This optimization causes update from <code>thread2</code> is ignored, and the program hangs.</li>
+<li>The JIT compiler might attempt <a target="_blank" href="https://en.wikipedia.org/wiki/Loop-invariant_code_motion">hoisting</a> the read of <code>ready</code> out of the while loop at line 16. In other words, it decides to read <code>ready</code> just once and saves for subsequent iteration instead of repeatedly reading it. This optimization causes update from <code>thread2</code> is ignored, and the program hangs.</li>
 <li>On a multiprocessor machine, each thread might run on a different processor. For performance reason, each processor has its own private cache. To keep caches consistent between processors, caches have to talk not only to main memory but also to caches on other processors. That takes time and cause the CPUs to wait. To reduce CPU's wait time and utilize bus traffic, modern multiprocessor systems might buffer or queue tasks for processing later when more resources are available. This makes operations executed in a specific order by one processor are visible to other processors in a different order. Back to our example, let's consider 2 scenarios:
 <ul>
 <li>On <code>thread2</code>'s CPU, <i>write 1</i> is buffered and <i>write 2</i> is completed. Main thread running on a different CPU then observes that <code>ready</code> is <code>true</code> while <code>data</code> is <code>0</code> (default value), and it prints <code>0</code>.</li>

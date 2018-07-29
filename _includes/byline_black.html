@@ -1,6 +1,6 @@
 <div class="article-byline-black font-small">
 	<div style="position:relative">
-		<div style="display:inline-block;"><a rel="author" href="/about.html"><img width="40px" height="40px" src="http://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=40" class="avatar-photo" style="border-radius:50%"></a></div>
+		<div style="display:inline-block;"><a rel="author" href="/about.html"><img width="40px" height="40px" src="https://www.gravatar.com/avatar/7a64ed9293c645e5857255e8f2320a8d?s=40" class="avatar-photo" style="border-radius:50%"></a></div>
 		<div style="display:inline-block;margin-left:14px;position:relative;top:12px;">
 		<div><address><a rel="author" href="/about.html"><i>{% if page.author %}{{ page.author }}{% else %}Trương Hồng Thi{% endif %}</i></a><address></div>
 		<div class="font-xsmall" style="padding-top:3px"><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%-d/%-m/%Y" }}<time> - dài {{ page.content | strip_html | number_of_words | divided_by:351 | plus:1}} phút</div>

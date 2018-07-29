@@ -185,7 +185,7 @@ function doWork(url) {
 	var feed = new google.feeds.Feed(url);
 	feed.setNumEntries(100)
 	feed.load(function(result){
-		var postUrls = ["http://www.mangcut.vn"];
+		var postUrls = ["https://mangcut.vn"];
 		var postTitles = ["Trang chủ"];
 		if (!result.error) {
 			for (var i = 0; i < result.feed.entries.length; i++) {
@@ -205,7 +205,7 @@ function doWork(url) {
 
 
 $(document).ready(function() {
-	var url = "http://www.mangcut.vn/atom/all.xml";
+	var url = "https://mangcut.vn/atom/all.xml";
 	doWork(url);
 });
 
