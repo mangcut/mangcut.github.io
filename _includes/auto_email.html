@@ -83,7 +83,7 @@
 			<div><input type="email" name="EMAIL" placeholder="Email" style="width:95%;max-width:none;font-size:16px"></div>
 			<div style="margin:12px 0 0 4px"><input type="submit" value="ĐĂNG KÍ" style="font-weight:bold">&nbsp;&nbsp;<span class="progress-pane font-xsmall hide">Đang xử lý...</span></div>
 			
-			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0a540965b36e2af1d641c5db3_aa6b788882" tabindex="-1" value=""></div>
+			<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_661f25198ea4106946ef46fb3_15234df566" tabindex="-1" value=""></div>
 		</form>
 	</div>
 	<div class="mail-success-pane hide">
@@ -145,12 +145,11 @@ $(".email-form").on("submit", function(ev) {
 	} else {
 		$successPane.removeClass("gmail");
 	}
-	
 	if ($P.validateEmail(email)) {
 		$error.addClass("invisible");
 		$progress.show();
 		$.ajax({
-			url: "//mangcut.us10.list-manage.com/subscribe/post-json?u=0a540965b36e2af1d641c5db3&amp;id=aa6b788882",
+			url: "//gmail.us20.list-manage.com/subscribe/post-json?u=661f25198ea4106946ef46fb3&amp;id=15234df566",
 			data: $form.serialize(),
 			dataType: 'jsonp',
 			jsonp: 'c',
